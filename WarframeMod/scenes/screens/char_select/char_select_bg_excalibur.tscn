@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4k2ig4l2q5cw"]
+
+[ext_resource type="Texture2D" uid="uid://bq7c3u88i4fex" path="res://WarframeMod/images/charui/char_select_bg_excalibur.png" id="1_nl1pr"]
+
+[sub_resource type="Curve" id="Curve_ayggo"]
+_data = [Vector2(0, 0.321019), 0.0, 0.0, 0, 0, Vector2(0.502521, 0.507939), 0.0, 0.0, 0, 0, Vector2(1, 0.36242), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_7n14s"]
+offsets = PackedFloat32Array(0, 0.0765864, 0.153173, 0.236324, 0.292123, 0.353392, 0.420131, 0.479212, 0.535011, 0.59081, 0.650985, 0.684902, 0.994413)
+colors = PackedColorArray(0.34902, 0.34902, 0.34902, 1, 0.176419, 0.176419, 0.176419, 1, 0.583297, 0.583297, 0.583297, 1, 0.724643, 0.724643, 0.724643, 1, 0.281187, 0.281187, 0.281187, 1, 0.542982, 0.542982, 0.542982, 1, 0.37981, 0.379811, 0.37981, 1, 0.779291, 0.779291, 0.779291, 1, 0.473976, 0.473976, 0.473975, 1, 0.246588, 0.246588, 0.246588, 1, 0.615422, 0.615422, 0.615422, 1, 0.513233, 0.513233, 0.513233, 1, 0.34902, 0.34902, 0.34902, 1)
+
+[node name="ExcaliburBg" type="TextureRect"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -523.0
+offset_right = 1600.0
+offset_bottom = 677.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(1280, 600)
+texture = ExtResource("1_nl1pr")
+stretch_mode = 4
+
+[node name="light6" type="CPUParticles2D" parent="."]
+visible = false
+position = Vector2(1297, 1263)
+scale = Vector2(5.22916, 5)
+skew = -0.00067937374
+amount = 2
+local_coords = true
+spread = 20.21
+gravity = Vector2(0, 0)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+scale_amount_curve = SubResource("Curve_ayggo")
+color = Color(0.764706, 0.262745, 0.219608, 0.552941)
+color_ramp = SubResource("Gradient_7n14s")
+
+[node name="light7" type="CPUParticles2D" parent="."]
+visible = false
+position = Vector2(737, 1324)
+scale = Vector2(5.22916, 5)
+skew = -0.00067937374
+amount = 2
+local_coords = true
+spread = 20.21
+gravity = Vector2(0, 0)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+scale_amount_curve = SubResource("Curve_ayggo")
+color = Color(0.764706, 0.470588, 0.219608, 0.552941)
+color_ramp = SubResource("Gradient_7n14s")

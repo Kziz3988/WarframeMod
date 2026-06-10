@@ -1,0 +1,11 @@
+{
+  "id": "WarframeMod",
+  "name": "Warframe Mod",
+  "author": "Kziz3988",
+  "description": "A mod inspired by Digital Extreme's Warframe.",
+  "version": "0.0.1",
+  "has_pck": true,
+  "has_dll": true,
+  "dependencies": ["BaseLib"],
+  "affects_gameplay": true
+}

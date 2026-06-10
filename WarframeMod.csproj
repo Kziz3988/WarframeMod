@@ -1,0 +1,72 @@
+<Project Sdk="Godot.NET.Sdk/4.5.1" InitialTargets="CheckDependencyPaths">
+  <Import Project=".\Sts2PathDiscovery.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>WarframeMod</RootNamespace>
+    <AssemblyName>WarframeMod</AssemblyName>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefaultItemExcludes>$(DefaultItemExcludes);packages/**;.godot/**</DefaultItemExcludes>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <AppOutputBase>$(MSBuildProjectDirectory)\</AppOutputBase>
+    <PathMap>$(AppOutputBase)=.\</PathMap>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);MSB3270</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <Optimize>false</Optimize>
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup Condition="Exists('$(Sts2DataDir)')">
+    <Reference Include="0Harmony">
+      <HintPath>$(Sts2DataDir)/0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="sts2">
+      <HintPath>$(Sts2DataDir)/sts2.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+        <Reference Include="SmartFormat">
+      <HintPath>$(Sts2DataDir)/SmartFormat.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Alchyr.Sts2.BaseLib" Version="0.1.*" PrivateAssets="All" />
+    <AdditionalFiles Include="WarframeMod/localization/**/*.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="WarframeMod/**" />
+    <Compile Remove=".godot/**" />
+    <EmbeddedResource Remove="WarframeMod/**" />
+    <EmbeddedResource Remove=".godot/**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Condition="Exists('Directory.Build.props')" Include="Directory.Build.props" />
+    <None Include="mod_manifest.json" />
+    <None Include="project.godot" />
+    <None Include="export_presets.cfg" />
+    <None Include="WarframeMod/**" />
+  </ItemGroup>
+
+  <Target Name="CheckDependencyPaths">
+    <Error Text=" Slay the Spire 2 data not found at path '$(Sts2DataDir)'" Condition="'$(Sts2DataDir)' == '' or !Exists('$(Sts2DataDir)')" />
+  </Target>
+</Project>

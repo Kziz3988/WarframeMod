@@ -1,0 +1,14 @@
+{
+  "WARFRAMEMOD-EXCALIBUR.title": "Excalibur",
+  "WARFRAMEMOD-EXCALIBUR.description": "Excalibur是战士精神的缩影。他是卓越武学的化身。",
+  "WARFRAMEMOD-EXCALIBUR.titleObject": "Excalibur",
+  "WARFRAMEMOD-EXCALIBUR.pronounObject": "他",
+  "WARFRAMEMOD-EXCALIBUR.possessiveAdjective": "他的",
+  "WARFRAMEMOD-EXCALIBUR.pronounPossessive": "他的",
+  "WARFRAMEMOD-EXCALIBUR.pronounSubject": "他",
+  "WARFRAMEMOD-EXCALIBUR.cardsModifierTitle": "Excalibur卡牌",
+  "WARFRAMEMOD-EXCALIBUR.cardsModifierDescription": "Excalibur的卡牌现在会出现在奖励和商店中。",
+  "WARFRAMEMOD-EXCALIBUR.eventDeathPrevention": "...",
+  "WARFRAMEMOD-EXCALIBUR.banter.alive.endTurnPing": "[sine]Move and strike, we have to win this![/sine]",
+  "WARFRAMEMOD-EXCALIBUR.banter.dead.endTurnPing": "..."
+}

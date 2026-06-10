@@ -1,0 +1,180 @@
+[gd_scene load_steps=35 format=3 uid="uid://fc5x7hciyofl"]
+
+[ext_resource type="Texture2D" uid="uid://bhf1gmnk2s7xy" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 00.png" id="1_t04qg"]
+[ext_resource type="Texture2D" uid="uid://cta6duheo3nxl" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 01.png" id="2_oau0y"]
+[ext_resource type="Texture2D" uid="uid://b2c4x2p1onlpj" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 02.png" id="3_u74h2"]
+[ext_resource type="Texture2D" uid="uid://m82j2yrknaqc" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 03.png" id="4_s2qwc"]
+[ext_resource type="Texture2D" uid="uid://dgx82d1eoe1xv" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 04.png" id="5_2aesd"]
+[ext_resource type="Texture2D" uid="uid://cttt3dv1cb6qy" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 05.png" id="6_ttx0i"]
+[ext_resource type="Texture2D" uid="uid://bnhmsu0ysa852" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 06.png" id="7_v3rbg"]
+[ext_resource type="Texture2D" uid="uid://dynnwddvg2q10" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 07.png" id="8_ctuoe"]
+[ext_resource type="Texture2D" uid="uid://cm18baqml08ox" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 08.png" id="9_su44w"]
+[ext_resource type="Texture2D" uid="uid://cy0bvf0b5apjs" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 09.png" id="10_q2801"]
+[ext_resource type="Texture2D" uid="uid://b63fb5jo3ikh6" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 10.png" id="11_2ijnf"]
+[ext_resource type="Texture2D" uid="uid://c3aoxkprhb6uv" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 11.png" id="12_qq3v4"]
+[ext_resource type="Texture2D" uid="uid://dbtm5i7pg27ih" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 12.png" id="13_t82fc"]
+[ext_resource type="Texture2D" uid="uid://ws31bi34lqkm" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 13.png" id="14_011vn"]
+[ext_resource type="Texture2D" uid="uid://c4vmjr16d15pm" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 14.png" id="15_lyy46"]
+[ext_resource type="Texture2D" uid="uid://bgf51bx1a08wn" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 15.png" id="16_lp46b"]
+[ext_resource type="Texture2D" uid="uid://bfvsl4e8qgpsp" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 16.png" id="17_1uo7m"]
+[ext_resource type="Texture2D" uid="uid://cnuk46nmk1d00" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 17.png" id="18_xkk28"]
+[ext_resource type="Texture2D" uid="uid://bdj2aof5l326q" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 18.png" id="19_ypphn"]
+[ext_resource type="Texture2D" uid="uid://dibm1dvkc75e6" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 19.png" id="20_lxws0"]
+[ext_resource type="Texture2D" uid="uid://bgt40v0ejj4qd" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 20.png" id="21_7qtwg"]
+[ext_resource type="Texture2D" uid="uid://b06odi0riwpfd" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 21.png" id="22_x0mjg"]
+[ext_resource type="Texture2D" uid="uid://r2ejklqwtcte" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 22.png" id="23_moynv"]
+[ext_resource type="Texture2D" uid="uid://u333bpr6788i" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 23.png" id="24_riwbq"]
+[ext_resource type="Texture2D" uid="uid://doa0quoud1mc3" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 24.png" id="25_ak4q8"]
+[ext_resource type="Texture2D" uid="uid://b0xoqioknel4v" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 25.png" id="26_gefry"]
+[ext_resource type="Texture2D" uid="uid://d20seon3qsq8h" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 26.png" id="27_ivj12"]
+[ext_resource type="Texture2D" uid="uid://b6ioy3bqk63a" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 27.png" id="28_o03o7"]
+[ext_resource type="Texture2D" uid="uid://b5ti351b5uvxo" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 28.png" id="29_hxyas"]
+[ext_resource type="Texture2D" uid="uid://xajwy0rdr05n" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 29.png" id="30_nnr36"]
+[ext_resource type="Texture2D" uid="uid://de5ig31od0gvf" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 30.png" id="31_doxdu"]
+[ext_resource type="Texture2D" uid="uid://bg6vswsh5cnwe" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 31.png" id="32_vm2bp"]
+[ext_resource type="Texture2D" uid="uid://3oe2itfn1adw" path="res://WarframeMod/images/animations/characters/excalibur/rest/excalibur_rest 32.png" id="33_l3udg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5iy7b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_t04qg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_oau0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u74h2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_s2qwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2aesd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ttx0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_v3rbg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ctuoe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_su44w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_q2801")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2ijnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_qq3v4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_t82fc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_011vn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_lyy46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_lp46b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_1uo7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_xkk28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ypphn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_lxws0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_7qtwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_x0mjg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_moynv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_riwbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ak4q8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_gefry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ivj12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_o03o7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_hxyas")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_nnr36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_doxdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_vm2bp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_l3udg")
+}],
+"loop": true,
+"name": &"Rest",
+"speed": 12.0
+}]
+
+[node name="ExcaliburRestSite" type="Node2D"]
+position = Vector2(-2, 42)
+scale = Vector2(0.760006, 0.760006)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5iy7b")
+animation = &"Rest"
+autoplay = "Rest"
+frame_progress = 0.26714686
+
+[node name="ControlRoot" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Hitbox" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = -155.0
+offset_top = -351.0
+offset_right = 266.0
+offset_bottom = 332.0
+
+[node name="ThoughtBubbleRight" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 209.209
+offset_top = -317.103
+offset_right = 209.209
+offset_bottom = -317.103
+
+[node name="ThoughtBubbleLeft" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = -73.6836
+offset_top = -324.997
+offset_right = -73.6836
+offset_bottom = -324.997

@@ -1,0 +1,85 @@
+[gd_scene load_steps=15 format=3 uid="uid://dt14luwusxnb5"]
+
+[ext_resource type="Texture2D" uid="uid://4quqit4lnvwe" path="res://WarframeMod/images/animations/characters/excalibur/merchant/excalibur_merchant 01.png" id="1_wbiei"]
+[ext_resource type="Texture2D" uid="uid://hup8fyksrr5m" path="res://WarframeMod/images/animations/characters/excalibur/merchant/excalibur_merchant 02.png" id="2_reudb"]
+[ext_resource type="Texture2D" uid="uid://bpqhw8flcto21" path="res://WarframeMod/images/animations/characters/excalibur/merchant/excalibur_merchant 03.png" id="3_p222d"]
+[ext_resource type="Texture2D" uid="uid://dkfi6vgy8qgpd" path="res://WarframeMod/images/animations/characters/excalibur/merchant/excalibur_merchant 04.png" id="4_ybdw7"]
+[ext_resource type="Texture2D" uid="uid://dvltai05om4ja" path="res://WarframeMod/images/animations/characters/excalibur/merchant/excalibur_merchant 05.png" id="5_uhbag"]
+[ext_resource type="Texture2D" uid="uid://c7xmm7fdy8pep" path="res://WarframeMod/images/animations/characters/excalibur/merchant/excalibur_merchant 06.png" id="6_cd7lo"]
+[ext_resource type="Texture2D" uid="uid://xmomum8q2vtc" path="res://WarframeMod/images/animations/characters/excalibur/merchant/excalibur_merchant 07.png" id="7_5qlve"]
+[ext_resource type="Texture2D" uid="uid://b6a7sfsrjxvqn" path="res://WarframeMod/images/animations/characters/excalibur/merchant/excalibur_merchant 08.png" id="8_xtyvv"]
+[ext_resource type="Texture2D" uid="uid://v6bqoefhjsko" path="res://WarframeMod/images/animations/characters/excalibur/merchant/excalibur_merchant 09.png" id="9_ydowc"]
+[ext_resource type="Texture2D" uid="uid://t0bx0h463drd" path="res://WarframeMod/images/animations/characters/excalibur/merchant/excalibur_merchant 10.png" id="10_tnkcx"]
+[ext_resource type="Texture2D" uid="uid://lsjnkkgi75iq" path="res://WarframeMod/images/animations/characters/excalibur/merchant/excalibur_merchant 11.png" id="11_wtd13"]
+[ext_resource type="Texture2D" uid="uid://bxo2206u81at3" path="res://WarframeMod/images/animations/characters/excalibur/merchant/excalibur_merchant 12.png" id="12_iirbd"]
+[ext_resource type="Texture2D" uid="uid://yvd0kyb3j0vj" path="res://WarframeMod/images/animations/characters/excalibur/merchant/excalibur_merchant 13.png" id="13_s36rr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_doelf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wbiei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_reudb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_p222d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ybdw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uhbag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cd7lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5qlve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xtyvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ydowc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tnkcx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_wtd13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_iirbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_s36rr")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}]
+
+[node name="ExcaliburMerchant" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_doelf")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.91621107
+offset = Vector2(0, -150)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.0
+offset_top = -540.0
+offset_right = 432.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)

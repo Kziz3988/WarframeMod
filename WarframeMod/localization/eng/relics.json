@@ -1,0 +1,34 @@
+{
+    "WARFRAMEMOD-ARCANE_HUSK.title": "Arcane Husk",
+    "WARFRAMEMOD-ARCANE_HUSK.description": "Start each combat with [blue]{TotalShield}[/blue] [gold]Shield[/gold], [blue]{ShieldCapacity}[/blue] [gold]Shield Capacity[/gold] and [blue]{ShieldRecharge}[/blue] [gold]Shield Recharge[/gold].",
+    "WARFRAMEMOD-ARCANE_HUSK.flavor": "[red]Details for this relic will be revealed in the future...[/red]",
+
+    "WARFRAMEMOD-ARCANE_RETALIATION.title": "Arcane Retaliation",
+    "WARFRAMEMOD-ARCANE_RETALIATION.description": "For every [blue]{TotalShield}[/blue] [gold]Shield[/gold] or [gold]Overshield[/gold] at the end of your turn, deal [blue]{Damage}[/blue] damage to a random enemy.",
+    "WARFRAMEMOD-ARCANE_RETALIATION.flavor": "[red]Details for this relic will be revealed in the future...[/red]",
+
+    "WARFRAMEMOD-ARCANE_AEGIS.title": "Arcane Aegis",
+    "WARFRAMEMOD-ARCANE_AEGIS.description": "Whenever [gold]Shield[/gold] takes damage, temporarily gain [blue]{ShieldRecharge}[/blue] [gold]Shield Recharge[/gold] for [blue]{Turns}[/blue] {Turns:plural:turn|turns}.",
+    "WARFRAMEMOD-ARCANE_AEGIS.flavor": "[red]Details for this relic will be revealed in the future...[/red]",
+    "WARFRAMEMOD-ARCANE_CREPUSCULAR.title": "Arcane Crepuscular",
+    "WARFRAMEMOD-ARCANE_CREPUSCULAR.description": "When you are [gold]Invisible[/gold], temporarily gain [blue]{ShieldRecharge}[/blue] [gold]Shield Recharge[/gold].",
+    "WARFRAMEMOD-ARCANE_CREPUSCULAR.flavor": "[red]Details for this relic will be revealed in the future...[/red]",
+
+    "WARFRAMEMOD-ARCANE_ICE_STORM.title": "Arcane Ice Storm",
+    "WARFRAMEMOD-ARCANE_ICE_STORM.description": "Whenever you apply [blue]{ColdPower}[/blue] [gold]Cold[/gold], gain [blue]{StrengthPower}[/blue] [gold]Strength[/gold].",
+    "WARFRAMEMOD-ARCANE_ICE_STORM.flavor": "[red]Details for this relic will be revealed in the future...[/red]",
+    "WARFRAMEMOD-ARCANE_INFLUENCE.title": "Arcane Influence",
+    "WARFRAMEMOD-ARCANE_INFLUENCE.description": "Whenever you apply [blue]{ElectricityPower}[/blue] [gold]Electricity[/gold], apply [blue]1[/blue] [gold]Electricity[/gold] to all enemies.",
+    "WARFRAMEMOD-ARCANE_INFLUENCE.flavor": "[red]Details for this relic will be revealed in the future...[/red]",
+    "WARFRAMEMOD-ARCANE_MELT.title": "Arcane Melt",
+    "WARFRAMEMOD-ARCANE_MELT.description": "Whenever you apply [blue]{HeatPower}[/blue] [gold]Heat[/gold], apply [blue]1[/blue] [gold]Heat[/gold] to a random enemy.",
+    "WARFRAMEMOD-ARCANE_MELT.flavor": "[red]Details for this relic will be revealed in the future...[/red]",
+
+    "WARFRAMEMOD-ARCANE_OVERCHARGE.title": "Arcane Overcharge",
+    "WARFRAMEMOD-ARCANE_OVERCHARGE.description": "Whenever you gain [gold]Overshield[/gold], deal [blue]{Damage}[/blue] damage to a random enemy.",
+    "WARFRAMEMOD-ARCANE_OVERCHARGE.flavor": "[red]Details for this relic will be revealed in the future...[/red]",
+
+    "WARFRAMEMOD-ARCANE_BARRIER.title": "Arcane Barrier",
+    "WARFRAMEMOD-ARCANE_BARRIER.description": "Start each combat with [blue]{TotalShield}[/blue] [gold]Shield[/gold], [blue]{ShieldCapacity}[/blue] [gold]Shield Capacity[/gold] and [blue]{ShieldRecharge}[/blue] [gold]Shield Recharge[/gold].\nWhen [gold]Shield[/gold] takes damage, recharge ALL [gold]Shield[/gold], then goes to sleep for [blue]{Turns}[/blue] {Turns:plural:turn|turns}.",
+    "WARFRAMEMOD-ARCANE_BARRIER.flavor": "[red]Details for this relic will be revealed in the future...[/red]"
+}

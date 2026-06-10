@@ -1,0 +1,8 @@
+*.pck
+*.dll
+*.lnk
+*.exe
+
+.godot/
+.vscode/
+bin/

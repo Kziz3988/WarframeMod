@@ -1,0 +1,14 @@
+{
+  "WARFRAMEMOD-EXCALIBUR.title": "Excalibur",
+  "WARFRAMEMOD-EXCALIBUR.description": "Excalibur epitomizes the warrior spirit. He is the embodiment of martial excellence.",
+  "WARFRAMEMOD-EXCALIBUR.titleObject": "Excalibur",
+  "WARFRAMEMOD-EXCALIBUR.pronounObject": "him",
+  "WARFRAMEMOD-EXCALIBUR.possessiveAdjective": "his",
+  "WARFRAMEMOD-EXCALIBUR.pronounPossessive": "his",
+  "WARFRAMEMOD-EXCALIBUR.pronounSubject": "he",
+  "WARFRAMEMOD-EXCALIBUR.cardsModifierTitle": "Excalibur Cards",
+  "WARFRAMEMOD-EXCALIBUR.cardsModifierDescription": "Excalibur cards will now appear in rewards and shops.",
+  "WARFRAMEMOD-EXCALIBUR.eventDeathPrevention": "...",
+  "WARFRAMEMOD-EXCALIBUR.banter.alive.endTurnPing": "[sine]Move and strike, we have to win this![/sine]",
+  "WARFRAMEMOD-EXCALIBUR.banter.dead.endTurnPing": "..."
+}

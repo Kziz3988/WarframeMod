@@ -1,0 +1,45 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.ValueProps;
+using WarframeMod.Code.Powers.Buff;
+
+namespace WarframeMod.Code.Cards.Uncommon;
+
+public class AegisStorm() : WarframeModCard(0, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)
+{
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        HoverTipFactory.FromPower<ShieldPower>()
+	];
+	protected override IEnumerable<DynamicVar> CanonicalVars => [
+        new CalculationBaseVar(0m),
+        new ExtraDamageVar(2m),
+        new CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => card.Owner.Creature.GetPower<ShieldPower>()?.TotalShield ?? 0)
+	];
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Ethereal];
+    
+    protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
+    {
+        ShieldPower? shield = base.Owner.Creature.GetPower<ShieldPower>();
+        if (shield == null)
+        {
+            return;
+        }
+        await ShieldPower.ApplyShield(base.Owner.Creature, -shield.TotalShield, 0, 0, base.Owner.Creature, this);
+		await DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this)
+			.TargetingAllOpponents(base.CombatState)
+			.WithHitFx("vfx/vfx_giant_horizontal_slash")
+			.Execute(choiceContext);
+    }
+
+    protected override void OnUpgrade()
+    {
+        base.RemoveKeyword(CardKeyword.Ethereal);
+    }
+}
