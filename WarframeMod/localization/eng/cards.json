@@ -195,7 +195,7 @@
     "WARFRAMEMOD-REGULATORS.title": "Regulators",
     "WARFRAMEMOD-REGULATORS.description": "Deal {CalculatedDamage:diff()} damage.\nDeals an additonal {ExtraDamage:diff()} damage for every [gold]Regulators[/gold] in your [gold]Exhaust Pile[/gold].",
     "WARFRAMEMOD-SPROUDLING.title": "Sproudling",
-    "WARFRAMEMOD-SPROUDLING.description": "Gain {Energy:energyIcons()}.\nCosts {energyPrefix:energyIcons(1)} more for every {CardsAmount:diff()} {Cards:plural:card|cards} in your [gold]Exhaust Pile[/gold].",
+    "WARFRAMEMOD-SPROUDLING.description": "Gain {Energy:energyIcons()}.\nCosts {energyPrefix:energyIcons(1)} more for every {CardsAmount:diff()} {CardsAmount:plural:card|cards} in your [gold]Exhaust Pile[/gold].",
     "WARFRAMEMOD-TALON.title": "Talon",
     "WARFRAMEMOD-TALON.description": "Apply {SlashPower:diff()} [gold]Slash[/gold] to all enemies.",
 
