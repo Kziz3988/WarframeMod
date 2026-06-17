@@ -1,0 +1,23 @@
+{
+    "WARFRAMEMOD-JACKAL.name": "Jackal",
+    "WARFRAMEMOD-JACKAL.moves.SHOCKWAVE.title": "Rippling Shockwave",
+    "WARFRAMEMOD-JACKAL.moves.PLASMA_GRENADE.title": "Plasma Grenade Cluster",
+    "WARFRAMEMOD-JACKAL.moves.GRID_WALL.title": "Grid Wall",
+    "WARFRAMEMOD-JACKAL.banter1": "[shake]Trivial threat detected.[/shake]",
+    "WARFRAMEMOD-JACKAL.banter2": "[shake]Enemy analysis: Organic. Threat level: Impotent.[/shake]",
+    "WARFRAMEMOD-JACKAL.banter3": "[shake]Threat Level Upgraded. Classification: Pathetic.[/shake]",
+
+    "WARFRAMEMOD-THE_SERGEANT.name": "The Sergeant",
+    "WARFRAMEMOD-THE_SERGEANT.moves.LANKA_SHOT.title": "Lanka Shot",
+    "WARFRAMEMOD-THE_SERGEANT.moves.FLASH_BANG.title": "Flash Bang",
+    "WARFRAMEMOD-THE_SERGEANT.banter1": "Is this a gathering of the freaks?",
+    "WARFRAMEMOD-THE_SERGEANT.banter2": "I'm only just warming up.",
+    "WARFRAMEMOD-THE_SERGEANT.banter3": "This is your final warning.",
+    "WARFRAMEMOD-THE_SERGEANT.banter4": "I grow tired of waiting.",
+    "WARFRAMEMOD-THE_SERGEANT.banter5": "You call that skill?",
+
+    "WARFRAMEMOD-TUSK_THUMPER.name": "Tusk Thumper",
+    "WARFRAMEMOD-TUSK_THUMPER.moves.TELESCOPIC_CANNON.title": "Large Telescopic Cannon",
+    "WARFRAMEMOD-TUSK_THUMPER.moves.AUTOCANNON.title": "Rapid-Fire Autocannon",
+    "WARFRAMEMOD-TUSK_THUMPERT.moves.GROUNDPOUNDER.title": "Pneumatic Groundpounder"
+}

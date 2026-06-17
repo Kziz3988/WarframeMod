@@ -11,6 +11,9 @@ using System.Linq;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Models;
+using System;
+using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Nodes.CommonUi;
 
 namespace WarframeMod.Code.Cards;
 
@@ -30,6 +33,8 @@ public abstract class WarframeModCard(int cost, CardType type, CardRarity rarity
     //Uses card_portraits/card_name.png as image path. These should be smaller images.
     public override string PortraitPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
     public override string BetaPortraitPath => $"beta/{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
+
+    public virtual string CustomOverlayPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.tscn".CardOverlayScenePath();
 
     public static async Task<T?> CreateInHand<T>(Player owner, CombatState combatState) 
         where T : WarframeModCard
@@ -55,4 +60,44 @@ public abstract class WarframeModCard(int cost, CardType type, CardRarity rarity
             PileType.Hand, addedByPlayer: true);
         return cards;
     }
+
+    public static CardModel? CreateCard(Type cardType, Player owner, CombatState combatState)
+    {
+        var method = typeof(CombatState).GetMethod("CreateCard", [typeof(Player)]);
+        if (method != null)
+        {
+            var genericMethod = method.MakeGenericMethod(cardType);
+            return (CardModel)genericMethod.Invoke(combatState, [owner]);
+        }
+        return null;
+    }
+
+    public static IHoverTip GetHoverTip(Type cardType, bool upgrade = false)
+    {
+        var method = typeof(HoverTipFactory).GetMethod("FromCard", [typeof(bool)]);
+        if (method != null)
+        {
+            var genericMethod = method.MakeGenericMethod(cardType);
+            return (IHoverTip)genericMethod.Invoke(null, [upgrade]);
+        }
+        
+        throw new InvalidOperationException($"Failed to create hover tip for card type {cardType.Name}");
+    }
+
+    public static CardModel GetCard(Type cardType)
+    {
+        var method = typeof(ModelDb).GetMethod("Card", System.Type.EmptyTypes);
+        if (method != null)
+        {
+            var genericMethod = method.MakeGenericMethod(cardType);
+            return (CardModel)genericMethod.Invoke(null, null);
+        }
+        
+        throw new InvalidOperationException($"Failed to get card of type {cardType.Name}");
+    }
+
+    public static async Task<CardPileAddResult?> TransformTo(CardModel original, CardModel replacement, CardPreviewStyle style = CardPreviewStyle.HorizontalLayout)
+	{
+		return await CardCmd.Transform(original, replacement, style);
+	}
 }

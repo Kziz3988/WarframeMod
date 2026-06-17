@@ -124,7 +124,7 @@
     "WARFRAMEMOD-WORMHOLE.title": "Wormhole",
     "WARFRAMEMOD-WORMHOLE.description": "In this turn, whenever you draw a card, draw {WormholePower:diff()} additional {WormholePower:plural:card|cards} at the start of next turn.",
     "WARFRAMEMOD-WRATHFUL_ADVANCE.title": "Wrathful Advance",
-    "WARFRAMEMOD-WRATHFUL_ADVANCE.description": "Gain {StrengthPower:diff()} [gold]Strength[/gold].\nDraw cards until you draw {Cards:diff()} {Cards:plural:Attack|Attacks}. Play {Cards:plural:the Attack| these Attacks}.",
+    "WARFRAMEMOD-WRATHFUL_ADVANCE.description": "Gain {StrengthPower:diff()} [gold]Strength[/gold].\nDraw cards until you draw {Cards:diff()} {Cards:plural:Attack|Attacks}. Play {Cards:plural:the Attack| these Attacks} from your [gold]Hand[/gold].",
 
     "WARFRAMEMOD-AVALANCHE.title": "Avalanche",
     "WARFRAMEMOD-AVALANCHE.description": "Deal {Damage:diff()} damage to all enemies, then apply {ColdPower:diff()} [gold]Cold[/gold] and {FrailPower:diff()} [gold]Frail[/gold] to them.",
@@ -203,6 +203,8 @@
     "WARFRAMEMOD-CRYSTALLIZE.description": "Deal {Damage:diff()} damage.\nWhenever an enemy is hit, reduce the damage by {Decrement:diff()}, then deal damage to adjacent enemies.",
     "WARFRAMEMOD-FINAL_STAND.title": "Final Stand",
     "WARFRAMEMOD-FINAL_STAND.description": "At the start of your turn, add {FinalStandPower:diff()} [gold]{FinalStandPower:plural:Axios Javelin|Axios Javelins}[/gold] into your [gold]Hand[/gold].",
+    "WARFRAMEMOD-RIVEN.title": "Riven",
+    "WARFRAMEMOD-RIVEN.description": "{IsUnveiled:{Deal {Damage} damage{IsTargettingAllEnemies: to all enemies|}{HasRepeat: {Repeat} times|}.{HasDraw:\nDraw {Draw} cards.|}{HasAdd:\nAdd {Add} random {Add:plural:card|cards} into your [gold]Hand[/gold].|}{HasHeal:\nHeal {Heal} HP.|}{HasBonusPower:\nApply {BonusPower} [gold]{BonusPowerName}[/gold]{IsTargettingAllEnemies: to all enemies|}.|}{HasMalusCard:\nAdd {MalusCard} [gold]{MalusCardName}[/gold] into your [gold]Discard Pile[/gold].|}{HasMalusPower:\nGain {MalusPower} [gold]{MalusPowerName}[/gold].|}|Unveil its possibilities, both rapturous and unfavorable.}",
     "WARFRAMEMOD-WYRD_SCYTHES.title": "Wyrd Scythes",
     "WARFRAMEMOD-WYRD_SCYTHES.description": "Deal {Damage:diff()} damage and apply {VulnerablePower:diff()} [gold]Vulnerable[/gold] to a random enemy {Repeat:diff()} {Repeat:plural:time|times}."
 }

@@ -4,7 +4,12 @@ using WarframeMod.Code.Extensions;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.HoverTips;
+using System.Threading.Tasks;
+using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.Commands;
+using WarframeMod.Code.Powers.Debuff;
 using System;
+using MegaCrit.Sts2.Core.Models;
 
 namespace WarframeMod.Code.Powers;
 
@@ -50,5 +55,59 @@ public abstract class WarframeModPower : CustomPowerModel
     protected virtual HoverTip GetExtraHoverTip()
     {
         return new HoverTip();
+    }
+
+    public static async Task Stun(Creature target)
+    {
+        if (target.Player != null && target.GetPower<PlayerStunnedPower>() == null)
+        {
+            await PowerCmd.Apply<PlayerStunnedPower>(target, 1, null, null);
+        }
+        if (target.Monster != null)
+        {
+            await CreatureCmd.Stun(target);
+        }
+    }
+
+    public static async Task Apply(Type powerType, Creature target, decimal amount, Creature? applier, CardModel? cardSource, bool silent = false)
+    {
+        var method = typeof(PowerCmd).GetMethod("Apply",
+        [
+            typeof(Creature),   // target
+            typeof(decimal),    // value
+            typeof(Creature),   // applier
+            typeof(CardModel),  // cardSource
+            typeof(bool)        // silent
+        ]);
+        
+        if (method != null)
+        {
+            var genericMethod = method.MakeGenericMethod(powerType);
+            await (Task)genericMethod.Invoke(null, [target, amount, applier, cardSource, silent]);
+        }
+    }
+
+    public static IHoverTip GetHoverTip(Type powerType)
+    {
+        var method = typeof(HoverTipFactory).GetMethod("FromPower", System.Type.EmptyTypes);
+        if (method != null)
+        {
+            var genericMethod = method.MakeGenericMethod(powerType);
+            return (IHoverTip)genericMethod.Invoke(null, null);
+        }
+        
+        throw new InvalidOperationException($"Failed to create hover tip for power type {powerType.Name}");
+    }
+
+    public static PowerModel GetPower(Type powerType)
+    {
+        var method = typeof(ModelDb).GetMethod("Power", System.Type.EmptyTypes);
+        if (method != null)
+        {
+            var genericMethod = method.MakeGenericMethod(powerType);
+            return (PowerModel)genericMethod.Invoke(null, null);
+        }
+        
+        throw new InvalidOperationException($"Failed to get power of type {powerType.Name}");
     }
 }

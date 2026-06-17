@@ -70,6 +70,11 @@ public static class StringExtensions
         return Path.Join(MainFile.ResPath, "images", "charui", path);
     }
 
+    public static string UiPath(this string path)
+    {
+        return Path.Join(MainFile.ResPath, "images", "ui", path);
+    }
+
     public static string CharacterIconScenePath(this string path)
     {
         return Path.Join(MainFile.ResPath, "scenes", "ui", "character_icons", path);
@@ -98,6 +103,16 @@ public static class StringExtensions
     public static string CharacterMerchantAnimationScenePath(this string path)
     {
         return Path.Join(MainFile.ResPath, "scenes", "merchant", "characters", path);
+    }
+
+    public static string EventBackgroundPath(this string path)
+    {
+        return Path.Join(MainFile.ResPath, "images", "events", path);
+    }
+
+    public static string CardOverlayScenePath(this string path)
+    {
+        return Path.Join(MainFile.ResPath, "scenes", "cards", "overlays", path);
     }
 
     public static string VfxPath(this string path)

@@ -34,9 +34,12 @@ public class WrathfulAdvance() : WarframeModCard(2, CardType.Skill, CardRarity.U
             }
 		}
 		while (cardModel != null && cardCount < base.DynamicVars.Cards.IntValue && CardPile.GetCards(base.Owner, PileType.Hand).Count() < 10);
-        for (int i = 0; i < cardCount; i++)
+        foreach (CardModel card in cards)
         {
-            await CardCmd.AutoPlay(choiceContext, cards[i], null);
+            if (card != null && card.Pile?.Type == PileType.Hand)
+            {
+                await CardCmd.AutoPlay(choiceContext, card, null);
+            }
         }
     }
 

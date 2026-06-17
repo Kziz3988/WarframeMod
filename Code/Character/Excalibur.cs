@@ -45,6 +45,7 @@ public class Excalibur : PlaceholderCharacterModel
     
     public override string CustomIconPath => "excalibur_icon.tscn".CharacterIconScenePath();
     public override string CustomIconTexturePath => "character_icon_excalibur.png".CharacterUiPath();
+    public override string CustomIconOutlineTexturePath => "character_icon_excalibur_outline.png".CharacterUiPath();
     public override string CustomCharacterSelectIconPath => "char_select_excalibur.png".CharacterUiPath();
     public override string CustomCharacterSelectLockedIconPath => "char_select_excalibur_locked.png".CharacterUiPath();
     public override string CustomMapMarkerPath => "map_marker_excalibur.png".CharacterUiPath();

@@ -31,11 +31,11 @@ public class AegisStorm() : WarframeModCard(0, CardType.Attack, CardRarity.Uncom
         {
             return;
         }
-        await ShieldPower.ApplyShield(base.Owner.Creature, -shield.TotalShield, 0, 0, base.Owner.Creature, this);
-		await DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this)
+        await DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this)
 			.TargetingAllOpponents(base.CombatState)
 			.WithHitFx("vfx/vfx_giant_horizontal_slash")
 			.Execute(choiceContext);
+        await ShieldPower.ApplyShield(base.Owner.Creature, -shield.TotalShield, 0, 0, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

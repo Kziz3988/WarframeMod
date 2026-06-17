@@ -1,0 +1,23 @@
+{
+    "WARFRAMEMOD-JACKAL.name": "豺狼",
+    "WARFRAMEMOD-JACKAL.moves.SHOCKWAVE.title": "涟漪冲击波",
+    "WARFRAMEMOD-JACKAL.moves.PLASMA_GRENADE.title": "集束离子榴弹",
+    "WARFRAMEMOD-JACKAL.moves.GRID_WALL.title": "激光栅格",
+    "WARFRAMEMOD-JACKAL.banter1": "[shake]侦测到轻度威胁。[/shake]",
+    "WARFRAMEMOD-JACKAL.banter2": "[shake]敌人分析：有机体。威胁级别：贫弱无力。[/shake]",
+    "WARFRAMEMOD-JACKAL.banter3": "[shake]威胁等级提升。分类：不值一提。[/shake]",
+
+    "WARFRAMEMOD-THE_SERGEANT.name": "海军陆战队中士",
+    "WARFRAMEMOD-THE_SERGEANT.moves.LANKA_SHOT.title": "兰卡射击",
+    "WARFRAMEMOD-THE_SERGEANT.moves.FLASH_BANG.title": "炸裂闪光",
+    "WARFRAMEMOD-THE_SERGEANT.banter1": "这是怪胎们的集会吗？",
+    "WARFRAMEMOD-THE_SERGEANT.banter2": "这只是我的热身。",
+    "WARFRAMEMOD-THE_SERGEANT.banter3": "这是我给你的最后警告。",
+    "WARFRAMEMOD-THE_SERGEANT.banter4": "我厌倦了等待。",
+    "WARFRAMEMOD-THE_SERGEANT.banter5": "你把这个称为技能？",
+
+    "WARFRAMEMOD-TUSK_THUMPER.name": "巨牙重击者",
+    "WARFRAMEMOD-TUSK_THUMPER.moves.TELESCOPIC_CANNON.title": "大型伸缩式加农炮",
+    "WARFRAMEMOD-TUSK_THUMPER.moves.AUTOCANNON.title": "快速射击式自动加农炮",
+    "WARFRAMEMOD-TUSK_THUMPERT.moves.GROUNDPOUNDER.title": "气动式捶地机"
+}

@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://c80i0d87i4g8q"]
+
+[ext_resource type="Texture2D" uid="uid://bh3s84joeq11a" path="res://WarframeMod/images/monsters/tusk_thumper.png" id="1_kut62"]
+
+[node name="TuskThumper" type="Node2D"]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Visuals" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -236)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_kut62")
+
+[node name="Bounds" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_top = -492.0
+offset_right = 256.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CenterPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -236)
+
+[node name="IntentPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -492)

@@ -40,7 +40,7 @@ public partial class ColdPower : WarframeModPower
     {
         if(amount >= 10)
 		{
-			await CreatureCmd.Stun(target);
+			await Stun(target);
 		}
     }
 
@@ -48,7 +48,7 @@ public partial class ColdPower : WarframeModPower
     {
         if (power == this && base.Amount / 10 != (base.Amount + (int)amount) / 10)
         {
-            await CreatureCmd.Stun(base.Owner);
+            await Stun(base.Owner);
         }
     }
 

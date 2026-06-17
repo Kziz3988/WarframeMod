@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8agpaxaw3v1j"
-path="res://.godot/imported/intent_stunned_00.png-34f00a896841a94dd2504013e77be28e.ctex"
+uid="uid://n04xxx7jc6jm"
+path="res://.godot/imported/electrified_power.png-12d57ae6582b1fe2f9f65ea233e9d0a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://WarframeMod/images/powers/intent_stunned_00.png"
-dest_files=["res://.godot/imported/intent_stunned_00.png-34f00a896841a94dd2504013e77be28e.ctex"]
+source_file="res://WarframeMod/images/powers/electrified_power.png"
+dest_files=["res://.godot/imported/electrified_power.png-12d57ae6582b1fe2f9f65ea233e9d0a0.ctex"]
 
 [params]
 

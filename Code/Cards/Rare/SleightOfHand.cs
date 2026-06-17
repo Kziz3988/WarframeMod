@@ -34,11 +34,7 @@ public class SleightOfHand() : WarframeModCard(1, CardType.Attack, CardRarity.Ra
 		List<CardModel> list = (await CardSelectCmd.FromSimpleGrid(choiceContext, cardsIn, base.Owner, new CardSelectorPrefs(CardSelectorPrefs.TransformSelectionPrompt, base.DynamicVars.Cards.IntValue))).ToList();
 		foreach (CardModel item in list)
 		{
-			CardPileAddResult? cardPileAddResult = await CardCmd.TransformTo<SleightOfHand>(item);
-			if (base.IsUpgraded && cardPileAddResult.HasValue)
-			{
-				CardCmd.Upgrade(cardPileAddResult.Value.cardAdded);
-			}
+			await TransformTo(item, this.CreateClone());
 		}
     }
 

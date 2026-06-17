@@ -16,7 +16,7 @@ public partial class ElectricityPower : WarframeModPower
 
     public override async Task AfterApplied(Creature? applier, CardModel? cardSource)
     {
-        await CreatureCmd.Stun(base.Owner);
+        await Stun(base.Owner);
     }
 
     public override async Task BeforeTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)

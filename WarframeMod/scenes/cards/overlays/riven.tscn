@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://rhup5hqaj6ss"]
+
+[ext_resource type="Texture2D" uid="uid://dvhxcspn0tfuj" path="res://WarframeMod/images/card_overlays/riven.png" id="1_w5fov"]
+
+[node name="Riven" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="VisualLayer1" type="Sprite2D" parent="."]
+scale = Vector2(0.552, 0.55)
+texture = ExtResource("1_w5fov")

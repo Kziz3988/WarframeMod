@@ -81,8 +81,7 @@ public sealed class ShieldPower : WarframeModPower
         }
         else if (allowNull)
         {
-            await PowerCmd.Apply<ShieldPower>(target, 1m, applier, cardSource);
-            shield = target.GetPower<ShieldPower>();
+            shield = await PowerCmd.Apply<ShieldPower>(target, 1m, applier, cardSource);
             shield.SetShield(new ShieldData(total, capacity, recharge));
         }
     }
@@ -111,6 +110,12 @@ public sealed class ShieldPower : WarframeModPower
         InvokeDisplayAmountChanged();
 		Owner.InvokePowerModified(this, 0, false);
         OnShieldChanged?.Invoke(this, oldShield, shield);
+    }
+
+    public void DamageShield(int amount, Creature? applier = null, CardModel? cardSource = null)
+    {
+        ModifyShield(-amount, 0, 0);
+        OnShieldDamaged?.Invoke(this, amount, applier, cardSource);
     }
 
     public void RechargeShield()
@@ -145,11 +150,11 @@ public sealed class ShieldPower : WarframeModPower
         locString.Add("ShieldRecharge", ShieldRecharge);
         locString.Add("NormalShield", NormalShield);
         locString.Add("OverShield", OverShield);
+        locString.Add("OnPlayer", base.Owner.IsPlayer);
 		DynamicVars.AddTo(locString);
 		stringBuilder.Append(locString.GetFormattedText());
 		return new HoverTip(this, stringBuilder.ToString(), true);
 	}
-
 
     public override decimal ModifyHpLostAfterOsty(Creature target, decimal amount, ValueProp props, Creature? dealer, CardModel? cardSource)
     {

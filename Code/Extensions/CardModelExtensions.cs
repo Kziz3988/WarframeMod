@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Hooks;
@@ -10,6 +9,7 @@ using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.ValueProps;
+using WarframeMod.Code.Powers;
 using WarframeMod.Code.Powers.Debuff;
 
 namespace WarframeMod.Code.Extensions;
@@ -23,9 +23,7 @@ public class ElementData
         {"ColdPower", typeof(ColdPower)},
         {"ElectricityPower", typeof(ElectricityPower)},
         {"HeatPower", typeof(HeatPower)},
-        {"PoisonPower", typeof(PoisonPower)},
-        {"SlashPower", typeof(SlashPower)},
-        {"TauPower", typeof(TauPower)},
+        {"PoisonPower", typeof(PoisonPower)}
     };
 
     public ElementData()
@@ -55,20 +53,7 @@ public class ElementData
         {
             if (PowerTypeMap.TryGetValue(kvp.Key, out var powerType))
             {
-                var method = typeof(PowerCmd).GetMethod("Apply",
-                [
-                    typeof(Creature),   // target
-                    typeof(decimal),    // value
-                    typeof(Creature),   // applier
-                    typeof(CardModel),  // cardSource
-                    typeof(bool)        // silent
-                ]);
-                
-                if (method != null)
-                {
-                    var genericMethod = method.MakeGenericMethod(powerType);
-                    await (Task)genericMethod.Invoke(null, [target, kvp.Value, applier, cardSource, silent]);
-                }
+                await WarframeModPower.Apply(powerType, target, kvp.Value, applier, cardSource, silent);
             }
         }
     }
