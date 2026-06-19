@@ -21,5 +21,14 @@
     "WARFRAMEMOD-RIVEN_MAKER.pages.ALL.options.KEEP_NEW_VERSION.description": "更新[gold]裂罅[/gold]的属性。",
     "WARFRAMEMOD-RIVEN_MAKER.pages.ALL.options.KEEP_OLD_VERSION.title": "保留原有属性",
     "WARFRAMEMOD-RIVEN_MAKER.pages.ALL.options.KEEP_OLD_VERSION.description": "丢弃本次循环生成的[gold]裂罅[/gold]属性。",
-    "WARFRAMEMOD-RIVEN_MAKER.loss": "{character}因裂罅而倾家荡产。"
+    "WARFRAMEMOD-RIVEN_MAKER.loss": "{character}因裂罅而倾家荡产。",
+
+    "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.title": "Simaris的圣殿",
+    "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.pages.INITIAL.description": "一个[gold]由黄色光芒组成的奇怪形体[/gold]突然出现在你眼前。\n[jitter]“我是中枢 Simaris, 一名破坏者, 永存之赋予者。这里是我的[gold]圣殿[/gold]。若你愿意协助我进行[gold]结合仪式[/gold], 它将会启发你。你去狩猎我所需要的生灵, 并将他们转化为[gold]圣殿[/gold]中的存在。这便是[gold]结合仪式[/gold]。这是谋杀吗? 并非如此。所谓万物终有一死, 而唯有被遗忘的人们才是真正的死亡。”[/jitter]\n看起来，如果你不接受，它会一直喋喋不休下去。",
+    "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.pages.INITIAL.options.A_FEW_TARGETS.title": "少量目标",
+    "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.pages.INITIAL.options.A_FEW_TARGETS.description": "将1张[gold]结合扫描器[/gold]加入你的[gold]牌组[/gold]。",
+    "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.pages.INITIAL.options.LOTS_OF_TARGETS.title": "大量目标",
+    "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.pages.INITIAL.options.LOTS_OF_TARGETS.description": "将2张[gold]结合扫描器+[/gold]加入你的[gold]牌组[/gold]。",
+    "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.pages.STRAT_HUNTING.description": "[jitter]“非常好，即便他人被微不足道的道德观所蒙蔽双眼之际，你仍旧认同了[gold]圣殿[/gold]的美德。”[/jitter]",
+    "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.loss": "“圣所没有你仍会继续迈进，但你失去了圣所还能持续向前吗？”"
 }

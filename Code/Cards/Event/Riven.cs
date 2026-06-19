@@ -368,6 +368,12 @@ public class Riven() : WarframeModCard(1, CardType.Attack, CardRarity.Event, Tar
 		}
     }
 
+    private int GetAttribute(string propertyName)
+    {
+        var property = GetType().GetProperty(propertyName, BindingFlags.Public | BindingFlags.Instance);
+        return (int?)property?.GetValue(this) ?? 0;
+    }
+
     private void SetAttribute(string propertyName, int value)
     {
         var property = GetType().GetProperty(propertyName, BindingFlags.Public | BindingFlags.Instance);
@@ -718,6 +724,14 @@ public class Riven() : WarframeModCard(1, CardType.Attack, CardRarity.Event, Tar
             {
                 await WarframeModPower.Apply(powerType, choiceContext, base.Owner.Creature, base.DynamicVars[power].BaseValue, base.Owner.Creature, this);
             }
+        }
+    }
+
+    protected override void AfterDowngraded()
+    {
+        foreach (var attribute in base.DynamicVars)
+        {
+            SetAttribute(attribute.Key, GetAttribute(attribute.Key));
         }
     }
 

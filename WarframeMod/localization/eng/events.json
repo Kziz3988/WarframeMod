@@ -21,5 +21,14 @@
     "WARFRAMEMOD-RIVEN_MAKER.pages.ALL.options.KEEP_NEW_VERSION.description": "Update the attributes of the [gold]Riven[/gold].",
     "WARFRAMEMOD-RIVEN_MAKER.pages.ALL.options.KEEP_OLD_VERSION.title": "Keep the Old Version",
     "WARFRAMEMOD-RIVEN_MAKER.pages.ALL.options.KEEP_OLD_VERSION.description": "Discard the [gold]Riven[/gold] attributes generated in this cycle.",
-    "WARFRAMEMOD-RIVEN_MAKER.loss": "{character} lost everything due to [gold]Rivens[/gold]."
+    "WARFRAMEMOD-RIVEN_MAKER.loss": "{character} lost everything due to [gold]Rivens[/gold].",
+
+    "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.title": "The Sanctuary of Simaris",
+    "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.pages.INITIAL.description": "[gold]A strange shape composed of yellow light[/gold] suddenly appears in front of you.\n[jitter]\"I am Cephalon Simaris. The destroyer. The immortalizer. This is my [gold]Sanctuary[/gold]. It will enlighten you, should you assist me in performing [gold]Synthesis[/gold]. You will hunt the creatures I require and transform them into beings of the [gold]Sanctuary[/gold]. That is [gold]Synthesis[/gold]. Is this murder? No. All beings of substance die eventually. But only those forgotten are truly dead.\"[/jitter]\nIf you don't accept it, its incessant chatter seems to never stop.",
+    "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.pages.INITIAL.options.A_FEW_TARGETS.title": "A Few Targets",
+    "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.pages.INITIAL.options.A_FEW_TARGETS.description": "Add 1 [gold]Synthesis Scanner[/gold] into your [gold]Pile[/gold].",
+    "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.pages.INITIAL.options.LOTS_OF_TARGETS.title": "Lots of Targets",
+    "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.pages.INITIAL.options.LOTS_OF_TARGETS.description": "Add 2 [gold]Synthesis Scanners+[/gold] into your [gold]Pile[/gold].",
+    "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.pages.STRAT_HUNTING.description": "[jitter]\"Good. Even while others are blinded by petty morality, you recognized the virtue of the [gold]Sanctuary[/gold].\"[/jitter]",
+    "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.loss": "\"The Sanctuary will go on without you, but can you go on without the Sanctuary?\""
 }
