@@ -40,7 +40,7 @@ public class Kumihimo() : WarframeModCard(1, CardType.Attack, CardRarity.Rare, T
                 costs.Add(cost);
                 costSum += cost;
                 elements += chosenCard.GetElements();
-                await CardPileCmd.AddGeneratedCardToCombat(chosenCard, PileType.Hand, addedByPlayer: true);
+                await CardPileCmd.AddGeneratedCardToCombat(chosenCard, PileType.Hand, base.Owner);
             }
             else
             {
@@ -56,7 +56,7 @@ public class Kumihimo() : WarframeModCard(1, CardType.Attack, CardRarity.Rare, T
         {
             foreach (Creature hittableEnemy in base.CombatState.HittableEnemies)
             {
-                await elements.Apply(hittableEnemy, base.Owner.Creature, this);
+                await elements.Apply(choiceContext, hittableEnemy, base.Owner.Creature, this);
             }
         }
     }

@@ -30,7 +30,7 @@ public class Landslide() : WarframeModCard(1, CardType.Attack, CardRarity.Common
             .FromCard(this).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
-		await PowerCmd.Apply<RubblePower>(cardPlay.Target, base.DynamicVars["RubblePower"].BaseValue, base.Owner.Creature, this);
+		await PowerCmd.Apply<RubblePower>(choiceContext, cardPlay.Target, base.DynamicVars["RubblePower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

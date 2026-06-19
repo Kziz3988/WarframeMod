@@ -29,7 +29,7 @@ public class Arcsphere() : WarframeModCard(2, CardType.Attack, CardRarity.Uncomm
 			.TargetingAllOpponents(base.CombatState)
 			.WithHitFx("vfx/vfx_attack_slash")
 			.Execute(choiceContext);
-		await PowerCmd.Apply<ElectricityPower>(base.CombatState.HittableEnemies, base.DynamicVars["ElectricityPower"].BaseValue, base.Owner.Creature, this);
+		await PowerCmd.Apply<ElectricityPower>(choiceContext, base.CombatState.HittableEnemies, base.DynamicVars["ElectricityPower"].BaseValue, base.Owner.Creature, this);
 
         if (enemyCount >= 3)
         {

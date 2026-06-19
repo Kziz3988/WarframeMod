@@ -31,8 +31,8 @@ public class Banish() : WarframeModCard(1, CardType.Attack, CardRarity.Uncommon,
 		await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
-        await PowerCmd.Apply<BanishmentPower>(cardPlay.Target, base.DynamicVars["BanishmentPower"].BaseValue, base.Owner.Creature, this);
-        await PowerCmd.Apply<IntangiblePower>(cardPlay.Target, base.DynamicVars["BanishmentPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<BanishmentPower>(choiceContext, cardPlay.Target, base.DynamicVars["BanishmentPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<IntangiblePower>(choiceContext, cardPlay.Target, base.DynamicVars["BanishmentPower"].BaseValue, base.Owner.Creature, this);
 	}
 
     protected override void OnUpgrade()

@@ -50,13 +50,13 @@ public class ArcaneRetaliation : WarframeModRelic
         return Task.CompletedTask;
     }
 
-    public override Task AfterPowerAmountChanged(PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
+    public override Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
     {
         if (shield == null && power.Owner == base.Owner.Creature && power.GetType() == typeof(ShieldPower))
         {
             Initialize(power as ShieldPower);
         }
-        return Task.CompletedTask;
+        return Task.CompletedTask;        
     }
 
     private void AfterShieldChanged(ShieldPower power, ShieldData old, ShieldData current)
@@ -75,7 +75,7 @@ public class ArcaneRetaliation : WarframeModRelic
         InvokeDisplayAmountChanged();
     }
 
-    public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
+    public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
         if (shield != null && side == base.Owner.Creature.Side)
         {

@@ -28,7 +28,7 @@ public class ExaltedBlade() : WarframeModCard(0, CardType.Attack, CardRarity.Bas
 			.Targeting(cardPlay.Target)
 			.WithHitFx("vfx/vfx_giant_horizontal_slash")
 			.Execute(choiceContext);
-		await PowerCmd.Apply<SlashPower>(cardPlay.Target, base.DynamicVars["SlashPower"].BaseValue, base.Owner.Creature, this);
+		await PowerCmd.Apply<SlashPower>(choiceContext, cardPlay.Target, base.DynamicVars["SlashPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

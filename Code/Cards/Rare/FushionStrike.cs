@@ -32,8 +32,8 @@ public class FusionStrike() : WarframeModCard(3, CardType.Attack, CardRarity.Rar
 			.TargetingAllOpponents(base.CombatState)
 			.WithHitFx("vfx/vfx_giant_horizontal_slash")
 			.Execute(choiceContext);
-		await PowerCmd.Apply<FrailPower>(base.CombatState.HittableEnemies, base.DynamicVars["FrailPower"].BaseValue, base.Owner.Creature, this);
-		await PowerCmd.Apply<TauPower>(base.CombatState.HittableEnemies, base.DynamicVars["TauPower"].BaseValue, base.Owner.Creature, this);
+		await PowerCmd.Apply<FrailPower>(choiceContext, base.CombatState.HittableEnemies, base.DynamicVars["FrailPower"].BaseValue, base.Owner.Creature, this);
+		await PowerCmd.Apply<TauPower>(choiceContext, base.CombatState.HittableEnemies, base.DynamicVars["TauPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

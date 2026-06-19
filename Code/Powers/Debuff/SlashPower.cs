@@ -1,6 +1,8 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.ValueProps;
@@ -13,8 +15,8 @@ public partial class SlashPower : WarframeModPower
 	public override PowerType Type => PowerType.Debuff;
     public override PowerStackType StackType => PowerStackType.Counter;
 
-	public override async Task AfterSideTurnStartLate(CombatSide side, CombatState combatState)
-	{
+    public override async Task AfterSideTurnStartLate(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
+    {
 		if (side != base.Owner.Side)
 		{
 			return;
@@ -43,6 +45,6 @@ public partial class SlashPower : WarframeModPower
 		else
 		{
 			await Cmd.CustomScaledWait(0.1f, 0.25f);
-		}
-	}
+		}        
+    }
 }

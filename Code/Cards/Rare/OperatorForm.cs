@@ -22,7 +22,7 @@ public class OperatorForm() : WarframeModCard(3, CardType.Power, CardRarity.Rare
     ];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<OperatorFormPower>(base.Owner.Creature, base.DynamicVars["OperatorFormPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<OperatorFormPower>(choiceContext, base.Owner.Creature, base.DynamicVars["OperatorFormPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

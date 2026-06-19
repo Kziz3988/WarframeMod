@@ -30,10 +30,10 @@ public class PrismaticCrystal() : WarframeModCard(1, CardType.Skill, CardRarity.
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<ColdPower>(cardPlay.Target, base.DynamicVars["ColdPower"].BaseValue, base.Owner.Creature, this);
-        await PowerCmd.Apply<ElectricityPower>(cardPlay.Target, base.DynamicVars["ElectricityPower"].BaseValue, base.Owner.Creature, this);
-		await PowerCmd.Apply<HeatPower>(cardPlay.Target, base.DynamicVars["HeatPower"].BaseValue, base.Owner.Creature, this);
-        await PowerCmd.Apply<PoisonPower>(cardPlay.Target, base.DynamicVars["PoisonPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<ColdPower>(choiceContext, cardPlay.Target, base.DynamicVars["ColdPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<ElectricityPower>(choiceContext, cardPlay.Target, base.DynamicVars["ElectricityPower"].BaseValue, base.Owner.Creature, this);
+		await PowerCmd.Apply<HeatPower>(choiceContext, cardPlay.Target, base.DynamicVars["HeatPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<PoisonPower>(choiceContext, cardPlay.Target, base.DynamicVars["PoisonPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

@@ -15,7 +15,7 @@ public class CelestialTwin() : WarframeModCard(2, CardType.Power, CardRarity.Rar
     protected override IEnumerable<DynamicVar> CanonicalVars => [new EnergyVar(3)];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<CelestialTwinPower>(base.Owner.Creature, base.DynamicVars.Energy.BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<CelestialTwinPower>(choiceContext, base.Owner.Creature, base.DynamicVars.Energy.BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

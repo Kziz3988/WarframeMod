@@ -31,7 +31,7 @@ public class RecompenseDagger() : WarframeModCard(1, CardType.Attack, CardRarity
             .Execute(choiceContext);
     }
 
-    public override async Task OnTurnEndInHand(PlayerChoiceContext choiceContext)
+    protected override async Task OnTurnEndInHand(PlayerChoiceContext choiceContext)
 	{
 		VfxCmd.PlayOnCreatureCenter(base.Owner.Creature, "vfx/vfx_bloody_impact");
 		await CreatureCmd.Damage(choiceContext, base.Owner.Creature, base.DynamicVars["SelfDamage"].BaseValue, ValueProp.Unpowered, this);

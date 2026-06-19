@@ -24,7 +24,7 @@ public class RazorGyre() : WarframeModCard(2, CardType.Attack, CardRarity.Uncomm
         await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
-		await PowerCmd.Apply<RazorGyrePower>(base.Owner.Creature, base.DynamicVars["RazorGyrePower"].BaseValue, base.Owner.Creature, this);
+		await PowerCmd.Apply<RazorGyrePower>(choiceContext, base.Owner.Creature, base.DynamicVars["RazorGyrePower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

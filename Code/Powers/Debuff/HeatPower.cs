@@ -32,7 +32,7 @@ public partial class HeatPower : WarframeModPower
 		return 0.75m;
 	}
 
-    public override async Task BeforeTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
+	public override async Task BeforeSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
     	if (side != base.Owner.Side)
 		{

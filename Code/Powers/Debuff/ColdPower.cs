@@ -52,8 +52,8 @@ public partial class ColdPower : WarframeModPower
         }
     }
 
-	public override async Task AfterSideTurnStart(CombatSide side, CombatState combatState)
-	{
+	public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
+    {
 		if (side != base.Owner.Side)
 		{
 			return;
@@ -65,6 +65,6 @@ public partial class ColdPower : WarframeModPower
 		else
 		{
 			await Cmd.CustomScaledWait(0.1f, 0.25f);
-		}
-	}
+		}        
+    }
 }

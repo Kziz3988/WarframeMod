@@ -26,7 +26,7 @@ public class SnowGlobe() : WarframeModCard(1, CardType.Power, CardRarity.Uncommo
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.Block, cardPlay);
-        await PowerCmd.Apply<SnowGlobePower>(base.Owner.Creature, base.DynamicVars["SnowGlobePower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<SnowGlobePower>(choiceContext, base.Owner.Creature, base.DynamicVars["SnowGlobePower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

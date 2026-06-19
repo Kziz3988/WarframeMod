@@ -31,8 +31,8 @@ public class FireBlast() : WarframeModCard(1, CardType.Attack, CardRarity.Uncomm
         await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
-        await PowerCmd.Apply<HeatPower>(cardPlay.Target, base.DynamicVars["HeatPower"].BaseValue, base.Owner.Creature, this);
-		await PowerCmd.Apply<FrailPower>(cardPlay.Target, base.DynamicVars["FrailPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<HeatPower>(choiceContext, cardPlay.Target, base.DynamicVars["HeatPower"].BaseValue, base.Owner.Creature, this);
+		await PowerCmd.Apply<FrailPower>(choiceContext, cardPlay.Target, base.DynamicVars["FrailPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

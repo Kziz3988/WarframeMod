@@ -31,7 +31,7 @@ public class Freeze() : WarframeModCard(1, CardType.Attack, CardRarity.Common, T
         await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
-		await PowerCmd.Apply<ColdPower>(cardPlay.Target, base.DynamicVars["ColdPower"].BaseValue, base.Owner.Creature, this);
+		await PowerCmd.Apply<ColdPower>(choiceContext, cardPlay.Target, base.DynamicVars["ColdPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

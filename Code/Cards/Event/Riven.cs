@@ -559,7 +559,7 @@ public class Riven() : WarframeModCard(1, CardType.Attack, CardRarity.Event, Tar
         "DazedCount",
         "DebrisCount",
         "SlimedCount",
-        "WoundCount",
+        "WoundCount"
     ];
 
     private static List<string> MalusPowers => [
@@ -648,7 +648,7 @@ public class Riven() : WarframeModCard(1, CardType.Attack, CardRarity.Event, Tar
             {
                 if (base.DynamicVars[power].BaseValue > 0 && PowerNames.TryGetValue(power, out var powerType))
                 {
-                    await WarframeModPower.Apply(powerType, cardPlay.Target, base.DynamicVars[power].BaseValue, base.Owner.Creature, this);
+                    await WarframeModPower.Apply(powerType, choiceContext, cardPlay.Target, base.DynamicVars[power].BaseValue, base.Owner.Creature, this);
                 }
             }
         }
@@ -667,7 +667,7 @@ public class Riven() : WarframeModCard(1, CardType.Attack, CardRarity.Event, Tar
                 {
                     if (base.DynamicVars[power].BaseValue > 0 && PowerNames.TryGetValue(power, out var powerType))
                     {
-                        await WarframeModPower.Apply(powerType, enemy, base.DynamicVars[power].BaseValue, base.Owner.Creature, this);
+                        await WarframeModPower.Apply(powerType, choiceContext, enemy, base.DynamicVars[power].BaseValue, base.Owner.Creature, this);
                     }
                 }          
             }
@@ -677,7 +677,7 @@ public class Riven() : WarframeModCard(1, CardType.Attack, CardRarity.Event, Tar
         //Draw cards
         if (HasDraw)
         {
-            await CardPileCmd.Draw(choiceContext, base.Owner);
+            await CardPileCmd.Draw(choiceContext, base.DynamicVars["Draw"].IntValue, base.Owner);
         }
 
         //Add bonus cards
@@ -688,7 +688,7 @@ public class Riven() : WarframeModCard(1, CardType.Attack, CardRarity.Event, Tar
                 select c, base.DynamicVars["Add"].IntValue, base.Owner.RunState.Rng.CombatCardGeneration).ToList();
             foreach (CardModel card in cards)
             {
-                await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, addedByPlayer: true);
+                await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, base.Owner);
             }
         }
 
@@ -706,7 +706,7 @@ public class Riven() : WarframeModCard(1, CardType.Attack, CardRarity.Event, Tar
                 CardModel? c = CreateCard(cardType, base.Owner, base.CombatState);
                 if (c != null)
                 {
-		            CardCmd.PreviewCardPileAdd(await CardPileCmd.AddGeneratedCardToCombat(c, PileType.Discard, addedByPlayer: true));                    
+		            CardCmd.PreviewCardPileAdd(await CardPileCmd.AddGeneratedCardToCombat(c, PileType.Discard, base.Owner));                    
                 }
             }
         }
@@ -716,7 +716,7 @@ public class Riven() : WarframeModCard(1, CardType.Attack, CardRarity.Event, Tar
         {
             if (base.DynamicVars[power].BaseValue > 0 && PowerNames.TryGetValue(power, out var powerType))
             {
-                await WarframeModPower.Apply(powerType, base.Owner.Creature, base.DynamicVars[power].BaseValue, base.Owner.Creature, this);
+                await WarframeModPower.Apply(powerType, choiceContext, base.Owner.Creature, base.DynamicVars[power].BaseValue, base.Owner.Creature, this);
             }
         }
     }

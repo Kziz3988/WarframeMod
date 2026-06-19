@@ -24,7 +24,7 @@ public class Tectonics() : WarframeModCard(2, CardType.Skill, CardRarity.Uncommo
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.Block, cardPlay);
-        await PowerCmd.Apply<TectonicsPower>(base.Owner.Creature, base.DynamicVars["TectonicsPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<TectonicsPower>(choiceContext, base.Owner.Creature, base.DynamicVars["TectonicsPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

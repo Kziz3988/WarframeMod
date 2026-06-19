@@ -37,9 +37,9 @@ public class TransmutationProbe() : WarframeModCard(1, CardType.Skill, CardRarit
         {
             Rng combatCardGeneration = base.Owner.RunState.Rng.CombatCardGeneration;
             CardModel[] cards = [CardFactory.GetDistinctForCombat(base.Owner, cardPool, base.DynamicVars.Cards.IntValue, combatCardGeneration).First()];
-            await CardPileCmd.AddGeneratedCardsToCombat(cards, PileType.Hand, addedByPlayer: true);
+            await CardPileCmd.AddGeneratedCardsToCombat(cards, PileType.Hand, base.Owner);
         }
-        await PowerCmd.Apply<TransmutationProbePower>(base.Owner.Creature, base.DynamicVars["TransmutationProbePower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<TransmutationProbePower>(choiceContext, base.Owner.Creature, base.DynamicVars["TransmutationProbePower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

@@ -15,6 +15,7 @@ using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 using WarframeMod.Code.Extensions;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 
 namespace WarframeMod.Code.Monsters;
 
@@ -59,7 +60,7 @@ public sealed class Jackal : CustomMonsterModel
         TalkCmd.Play(line, base.Creature, VfxColor.Cyan);
         await DamageCmd.Attack(ShockwaveDamage).FromMonster(this)
 			.Execute(null);
-        await PowerCmd.Apply<ElectrifiedPower>(base.Creature, 2m, base.Creature, null);
+        await PowerCmd.Apply<ElectrifiedPower>(new ThrowingPlayerChoiceContext(), base.Creature, 2m, base.Creature, null);
 	}
 
 	private async Task PlasmaGrenadeMove(IReadOnlyList<Creature> targets)
@@ -75,6 +76,6 @@ public sealed class Jackal : CustomMonsterModel
 	{
         LocString line = MonsterModel.L10NMonsterLookup("WARFRAMEMOD-JACKAL.banter3");
 		TalkCmd.Play(line, base.Creature, VfxColor.Cyan);
-		await PowerCmd.Apply<StrengthPower>(base.Creature, BuffStrengthGain, base.Creature, null);
+		await PowerCmd.Apply<StrengthPower>(new ThrowingPlayerChoiceContext(), base.Creature, BuffStrengthGain, base.Creature, null);
 	}
 }

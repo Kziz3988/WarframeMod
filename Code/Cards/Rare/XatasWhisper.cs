@@ -17,7 +17,7 @@ public class XatasWhisper() : WarframeModCard(2, CardType.Power, CardRarity.Rare
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Ethereal];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<XatasWhisperPower>(base.Owner.Creature, base.DynamicVars["XatasWhisperPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<XatasWhisperPower>(choiceContext, base.Owner.Creature, base.DynamicVars["XatasWhisperPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

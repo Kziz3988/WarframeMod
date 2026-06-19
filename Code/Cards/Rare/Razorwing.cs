@@ -25,7 +25,7 @@ public class Razorwing() : WarframeModCard(0, CardType.Skill, CardRarity.Rare, T
 			num++;
 		}
 		if (num > 0) {
-			await PowerCmd.Apply<NewSoarPower>(base.Owner.Creature, num, base.Owner.Creature, this);
+			await PowerCmd.Apply<NewSoarPower>(choiceContext, base.Owner.Creature, num, base.Owner.Creature, this);
 			await Cmd.Wait(0.1f);
 		}
 		DexPixia dexPixia = await CreateInHand<DexPixia>(base.Owner, base.CombatState);

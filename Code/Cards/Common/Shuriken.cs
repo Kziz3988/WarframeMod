@@ -27,7 +27,7 @@ public class Shuriken() : WarframeModCard(0, CardType.Attack, CardRarity.Common,
             .FromCard(this).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
-		await PowerCmd.Apply<SlashPower>(cardPlay.Target, base.DynamicVars["SlashPower"].BaseValue, base.Owner.Creature, this);
+		await PowerCmd.Apply<SlashPower>(choiceContext, cardPlay.Target, base.DynamicVars["SlashPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

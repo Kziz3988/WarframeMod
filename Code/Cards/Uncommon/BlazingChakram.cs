@@ -31,7 +31,7 @@ public class BlazingChakram() : WarframeModCard(3, CardType.Attack, CardRarity.U
 		{
 			if ((await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(hittableEnemy)
 			.WithHitFx("vfx/vfx_attack_slash")
-			.Execute(choiceContext)).Results.Any((DamageResult r) => r.WasTargetKilled))
+			.Execute(choiceContext)).Results.SelectMany((List<DamageResult> r) => r).Any((DamageResult r) => r.WasTargetKilled))
 			{
 				if (!flag) {
 					await PlayerCmd.GainEnergy(base.DynamicVars.Energy.IntValue, base.Owner);
@@ -41,7 +41,7 @@ public class BlazingChakram() : WarframeModCard(3, CardType.Attack, CardRarity.U
 					flag = true;
 				}
 			}
-			await PowerCmd.Apply<HeatPower>(hittableEnemy, base.DynamicVars["HeatPower"].BaseValue, base.Owner.Creature, this);
+			await PowerCmd.Apply<HeatPower>(choiceContext, hittableEnemy, base.DynamicVars["HeatPower"].BaseValue, base.Owner.Creature, this);
 		}
 
     }

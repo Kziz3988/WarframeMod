@@ -37,7 +37,7 @@ public sealed class RadialDisarmPower : WarframeModPower
 		});
 	}
 
-    public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
+    public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
         if (base.Owner.Player != null && side == base.Owner.Side)
         {
@@ -45,7 +45,7 @@ public sealed class RadialDisarmPower : WarframeModPower
             {
                 if (Stunned(creature.Monster))
                 {
-                    await PowerCmd.Apply<WeakPower>(creature, base.Amount, base.Owner, null);
+                    await PowerCmd.Apply<WeakPower>(choiceContext, creature, base.Amount, base.Owner, null);
                 }
             }
         }

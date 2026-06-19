@@ -31,7 +31,7 @@ public class Immolation() : WarframeModCard(0, CardType.Attack, CardRarity.Uncom
         await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
-        await PowerCmd.Apply<HeatPower>(cardPlay.Target, base.DynamicVars["HeatPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<HeatPower>(choiceContext, cardPlay.Target, base.DynamicVars["HeatPower"].BaseValue, base.Owner.Creature, this);
         base.EnergyCost.AddThisCombat(-base.DynamicVars["CostDecrement"].IntValue);
     }
 

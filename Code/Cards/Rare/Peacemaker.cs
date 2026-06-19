@@ -18,11 +18,11 @@ public class Peacemaker() : WarframeModCard(1, CardType.Power, CardRarity.Rare, 
     {
         if (base.IsUpgraded)
         {
-            await PowerCmd.Apply<PeacemakerUpgradedPower>(base.Owner.Creature, base.DynamicVars.Cards.BaseValue, base.Owner.Creature, this);
+            await PowerCmd.Apply<PeacemakerUpgradedPower>(choiceContext, base.Owner.Creature, base.DynamicVars.Cards.BaseValue, base.Owner.Creature, this);
         }
         else
         {
-            await PowerCmd.Apply<PeacemakerPower>(base.Owner.Creature, base.DynamicVars.Cards.BaseValue, base.Owner.Creature, this);
+            await PowerCmd.Apply<PeacemakerPower>(choiceContext, base.Owner.Creature, base.DynamicVars.Cards.BaseValue, base.Owner.Creature, this);
         }
     }
 }

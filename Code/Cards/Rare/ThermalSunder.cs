@@ -28,8 +28,8 @@ public class ThermalSunder() : WarframeModCard(0, CardType.Skill, CardRarity.Rar
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-		await PowerCmd.Apply<HeatPower>(base.CombatState.HittableEnemies, base.DynamicVars["HeatPower"].BaseValue, base.Owner.Creature, this);
-        await PowerCmd.Apply<ColdPower>(base.CombatState.HittableEnemies, base.DynamicVars["ColdPower"].BaseValue, base.Owner.Creature, this);
+		await PowerCmd.Apply<HeatPower>(choiceContext, base.CombatState.HittableEnemies, base.DynamicVars["HeatPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<ColdPower>(choiceContext, base.CombatState.HittableEnemies, base.DynamicVars["ColdPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

@@ -10,6 +10,7 @@ using MegaCrit.Sts2.Core.Commands;
 using WarframeMod.Code.Powers.Debuff;
 using System;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 
 namespace WarframeMod.Code.Powers;
 
@@ -61,7 +62,7 @@ public abstract class WarframeModPower : CustomPowerModel
     {
         if (target.Player != null && target.GetPower<PlayerStunnedPower>() == null)
         {
-            await PowerCmd.Apply<PlayerStunnedPower>(target, 1, null, null);
+            await PowerCmd.Apply<PlayerStunnedPower>(new ThrowingPlayerChoiceContext(), target, 1, null, null);
         }
         if (target.Monster != null)
         {
@@ -69,21 +70,22 @@ public abstract class WarframeModPower : CustomPowerModel
         }
     }
 
-    public static async Task Apply(Type powerType, Creature target, decimal amount, Creature? applier, CardModel? cardSource, bool silent = false)
+    public static async Task Apply(Type powerType, PlayerChoiceContext choiceContext, Creature target, decimal amount, Creature? applier, CardModel? cardSource, bool silent = false)
     {
         var method = typeof(PowerCmd).GetMethod("Apply",
         [
-            typeof(Creature),   // target
-            typeof(decimal),    // value
-            typeof(Creature),   // applier
-            typeof(CardModel),  // cardSource
-            typeof(bool)        // silent
+            typeof(PlayerChoiceContext), // choiceContext
+            typeof(Creature),            // target
+            typeof(decimal),             // value
+            typeof(Creature),            // applier
+            typeof(CardModel),           // cardSource
+            typeof(bool)                 // silent
         ]);
         
         if (method != null)
         {
             var genericMethod = method.MakeGenericMethod(powerType);
-            await (Task)genericMethod.Invoke(null, [target, amount, applier, cardSource, silent]);
+            await (Task<object?>)genericMethod.Invoke(null, [choiceContext, target, amount, applier, cardSource, silent]);
         }
     }
 

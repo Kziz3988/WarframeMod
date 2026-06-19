@@ -67,7 +67,7 @@ public sealed class ArmorPlatePower : WarframeModPower
             {
                 Flash();
                 await CreatureCmd.Stun(base.Owner);
-                await PowerCmd.Apply<StrengthPower>(base.Owner, base.Amount, base.Owner, null);
+                await PowerCmd.Apply<StrengthPower>(choiceContext, base.Owner, base.Amount, base.Owner, null);
             }
             GetInternalData<Data>().damageReceived += result.UnblockedDamage;
             InvokeDisplayAmountChanged();

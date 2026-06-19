@@ -54,7 +54,7 @@ public sealed class SporesPower : WarframeModPower
 		return 1 + Increment / 100m;
 	}
 
-    public override async Task BeforeSideTurnStart(PlayerChoiceContext choiceContext, CombatSide side, CombatState combatState)
+    public override async Task BeforeSideTurnStart(PlayerChoiceContext choiceContext, CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
         if (side != base.Owner.Side)
         {
@@ -69,8 +69,8 @@ public sealed class SporesPower : WarframeModPower
                 return;
             }
             Flash();
-            await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), target, base.Amount, ValueProp.Unpowered, base.Owner, null);
-            await PowerCmd.Apply<FrailPower>(target, base.Amount, base.Owner, null);
-        }
+            await CreatureCmd.Damage(choiceContext, target, base.Amount, ValueProp.Unpowered, base.Owner, null);
+            await PowerCmd.Apply<FrailPower>(choiceContext, target, base.Amount, base.Owner, null);
+        }        
     }
 }

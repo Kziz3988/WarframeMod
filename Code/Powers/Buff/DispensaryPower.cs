@@ -28,11 +28,11 @@ public sealed class DispensaryPower : WarframeModPower
 		return new Data();
 	}
 
-	public override bool IsInstanced => true;
+	public override PowerInstanceType InstanceType => PowerInstanceType.Instanced;
 
 	public override int DisplayAmount => GetInternalData<Data>().turnCounter % 3 + 1;
 
-    public override async Task BeforeHandDraw(Player player, PlayerChoiceContext choiceContext, CombatState combatState)
+    public override async Task BeforeHandDraw(Player player, PlayerChoiceContext choiceContext, ICombatState combatState)
     {
         if (player != base.Owner.Player)
 		{
@@ -61,7 +61,7 @@ public sealed class DispensaryPower : WarframeModPower
                 {
                     Rng combatCardGeneration = base.Owner.Player.RunState.Rng.CombatCardGeneration;
                     CardModel[] cards = [CardFactory.GetDistinctForCombat(player, cardPool, 1, combatCardGeneration).First()];
-                    await CardPileCmd.AddGeneratedCardsToCombat(cards, PileType.Hand, addedByPlayer: true);
+                    await CardPileCmd.AddGeneratedCardsToCombat(cards, PileType.Hand, base.Owner.Player);
                 }
                 break;
             }

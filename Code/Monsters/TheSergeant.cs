@@ -16,6 +16,7 @@ using WarframeMod.Code.Extensions;
 using WarframeMod.Code.Powers.Buff;
 using MegaCrit.Sts2.Core.Models.Singleton;
 using MegaCrit.Sts2.Core.Runs;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 
 namespace WarframeMod.Code.Monsters;
 
@@ -48,7 +49,7 @@ public sealed class TheSergeant : CustomMonsterModel
 	public override async Task AfterAddedToRoom()
 	{
 		await base.AfterAddedToRoom();
-		await PowerCmd.Apply<ShieldPower>(base.Creature, 1m, base.Creature, null);
+		await PowerCmd.Apply<ShieldPower>(new ThrowingPlayerChoiceContext(), base.Creature, 1m, base.Creature, null);
 		
 		int scale = (int)(CombatState.Players.Count * MultiplayerScalingModel.GetMultiplayerScaling(CombatState.Encounter, RunManager.Instance.DebugOnlyGetState()?.CurrentActIndex ?? 0));
 		await ShieldPower.ApplyShield(base.Creature, InitialShield * scale, InitialShield * scale, InitialShieldRecharge * scale, base.Creature, null);
@@ -76,7 +77,7 @@ public sealed class TheSergeant : CustomMonsterModel
 	private async Task FlashBangMove(IReadOnlyList<Creature> targets)
 	{
         TalkCmd.Play(GetNextBanter(), base.Creature, VfxColor.Cyan);
-		await PowerCmd.Apply<WeakPower>(targets, DebuffWeakApply, base.Creature, null);
-		await PowerCmd.Apply<InvisiblePower>(base.Creature, BuffInvisibleGain, base.Creature, null);
+		await PowerCmd.Apply<WeakPower>(new ThrowingPlayerChoiceContext(), targets, DebuffWeakApply, base.Creature, null);
+		await PowerCmd.Apply<InvisiblePower>(new ThrowingPlayerChoiceContext(), base.Creature, BuffInvisibleGain, base.Creature, null);
 	}
 }

@@ -47,7 +47,7 @@ public sealed class TransmutationProbePower : WarframeModPower
         }
         if (cardSource != null && cardSource.Owner.Creature == base.Owner && cardSource.Type == CardType.Attack)
 		{
-            await PowerCmd.Apply<ElectricityPower>(target, result.UnblockedDamage, base.Owner, null);
+            await PowerCmd.Apply<ElectricityPower>(choiceContext, target, result.UnblockedDamage, base.Owner, null);
 		}
     }
 }

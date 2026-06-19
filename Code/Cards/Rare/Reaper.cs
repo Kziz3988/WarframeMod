@@ -21,7 +21,7 @@ public class Reaper() : WarframeModCard(1, CardType.Skill, CardRarity.Rare, Targ
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Ethereal];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<ReaperPower>(base.Owner.Creature, base.DynamicVars["ReaperPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<ReaperPower>(choiceContext, base.Owner.Creature, base.DynamicVars["ReaperPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

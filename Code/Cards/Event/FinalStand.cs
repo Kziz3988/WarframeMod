@@ -23,7 +23,7 @@ public class FinalStand() : WarframeModCard(1, CardType.Power, CardRarity.Event,
 	protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<FinalStandPower>(1m)];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<FinalStandPower>(base.Owner.Creature, base.DynamicVars["FinalStandPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<FinalStandPower>(choiceContext, base.Owner.Creature, base.DynamicVars["FinalStandPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.MonsterMoves.Intents;
@@ -15,7 +16,8 @@ public partial class BanishmentPower : WarframeModPower
 	protected override IEnumerable<IHoverTip> ExtraHoverTips => [
 		StunIntent.GetStaticHoverTip()
 	];
-    public override async Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+
+	public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
         if (side != base.Owner.Side)
 		{
@@ -29,6 +31,6 @@ public partial class BanishmentPower : WarframeModPower
 		else
 		{
 			await Cmd.CustomScaledWait(0.1f, 0.25f);
-		}
+		}        
     }
 }

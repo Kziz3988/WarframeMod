@@ -39,7 +39,7 @@ public sealed class NullStarPower : WarframeModPower
         {
             Flash();
             await CreatureCmd.Damage(choiceContext, dealer, 3m, ValueProp.Unpowered | ValueProp.SkipHurtAnim, base.Owner, null);
-            await PowerCmd.ModifyAmount(this, -10, null, null);
+            await PowerCmd.ModifyAmount(choiceContext, this, -10, null, null);
         }
     }
 }

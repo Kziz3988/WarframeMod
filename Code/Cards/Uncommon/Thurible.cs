@@ -18,9 +18,9 @@ public class Thurible() : WarframeModCard(0, CardType.Skill, CardRarity.Uncommon
         new EnergyVar("TotalEnergy", 0)
     ];
 
-    public override Task BeforeHandDraw(Player player, PlayerChoiceContext choiceContext, CombatState combatState)
+    public override Task BeforeHandDraw(Player player, PlayerChoiceContext choiceContext, ICombatState combatState)
     {
-        if (player == base.Owner)
+       if (player == base.Owner)
         {
             ThuriblePower? power = base.Owner.Creature.GetPower<ThuriblePower>();
             if (power == null)
@@ -49,7 +49,7 @@ public class Thurible() : WarframeModCard(0, CardType.Skill, CardRarity.Uncommon
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<ThuriblePower>(base.Owner.Creature, base.DynamicVars.Energy.BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<ThuriblePower>(choiceContext, base.Owner.Creature, base.DynamicVars.Energy.BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

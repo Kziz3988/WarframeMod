@@ -15,7 +15,7 @@ public class ShatterShield() : WarframeModCard(1, CardType.Skill, CardRarity.Com
 	protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<ShatterShieldPower>(100m)];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<ShatterShieldPower>(base.Owner.Creature, base.DynamicVars["ShatterShieldPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<ShatterShieldPower>(choiceContext, base.Owner.Creature, base.DynamicVars["ShatterShieldPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

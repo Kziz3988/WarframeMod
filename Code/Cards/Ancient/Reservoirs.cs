@@ -24,7 +24,7 @@ public class Reservoirs() : WarframeModCard(3, CardType.Power, CardRarity.Ancien
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
 		await CreatureCmd.GainMaxHp(base.Owner.Creature, base.DynamicVars.MaxHp.BaseValue);
-		await PowerCmd.Apply<ReservoirsPower>(base.Owner.Creature, base.DynamicVars["ReservoirsPower"].BaseValue, base.Owner.Creature, this);
+		await PowerCmd.Apply<ReservoirsPower>(choiceContext, base.Owner.Creature, base.DynamicVars["ReservoirsPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

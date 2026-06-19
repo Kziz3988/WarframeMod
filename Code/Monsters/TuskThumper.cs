@@ -11,6 +11,7 @@ using MegaCrit.Sts2.Core.MonsterMoves.MonsterMoveStateMachine;
 using BaseLib.Abstracts;
 using WarframeMod.Code.Extensions;
 using WarframeMod.Code.Powers.Buff;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 
 namespace WarframeMod.Code.Monsters;
 
@@ -43,7 +44,7 @@ public sealed class TuskThumper : CustomMonsterModel
 	public override async Task AfterAddedToRoom()
 	{
 		await base.AfterAddedToRoom();
-        ArmorPlatePower armorPlate = await PowerCmd.Apply<ArmorPlatePower>(base.Creature, BuffStrengthGain, base.Creature, null);
+        ArmorPlatePower armorPlate = await PowerCmd.Apply<ArmorPlatePower>(new ThrowingPlayerChoiceContext(), base.Creature, BuffStrengthGain, base.Creature, null);
         armorPlate.InitDamageAmount(ArmorPlateHp);
 	}
 
@@ -78,6 +79,6 @@ public sealed class TuskThumper : CustomMonsterModel
 	{
         await DamageCmd.Attack(GroundpounderDamage).WithHitCount(GroundpounderRepeat).FromMonster(this)
 			.Execute(null);
-        await PowerCmd.Apply<WeakPower>(targets, DebuffWeakApply, base.Creature, null);
+        await PowerCmd.Apply<WeakPower>(new ThrowingPlayerChoiceContext(), targets, DebuffWeakApply, base.Creature, null);
 	}
 }

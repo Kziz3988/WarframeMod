@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
@@ -25,7 +26,7 @@ public class Sproudling() : WarframeModCard(0, CardType.Skill, CardRarity.Token,
         base.EnergyCost.SetThisCombat(base.DynamicVars.Energy.IntValue * (exhaustPileCount / base.DynamicVars["CardsAmount"].IntValue));
     }
 
-    public override Task AfterCardGeneratedForCombat(CardModel card, bool addedByPlayer)
+    public override Task AfterCardGeneratedForCombat(CardModel card, Player? creator)
     {
         UpdateCost();
         return Task.CompletedTask;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Hooks;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization;
@@ -47,13 +48,13 @@ public class ElementData
         return result;
     }
 
-    public async Task Apply(Creature target, Creature? applier, CardModel? cardSource, bool silent = false)
+    public async Task Apply(PlayerChoiceContext choiceContext, Creature target, Creature? applier, CardModel? cardSource, bool silent = false)
     {
         foreach (var kvp in Elements)
         {
             if (PowerTypeMap.TryGetValue(kvp.Key, out var powerType))
             {
-                await WarframeModPower.Apply(powerType, target, kvp.Value, applier, cardSource, silent);
+                await WarframeModPower.Apply(powerType, choiceContext, target, kvp.Value, applier, cardSource, silent);
             }
         }
     }

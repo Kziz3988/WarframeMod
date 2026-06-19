@@ -28,8 +28,8 @@ public class InfernoComet() : WarframeModCard(0, CardType.Attack, CardRarity.Rar
 			.WithHitFx("vfx/vfx_giant_horizontal_slash")
 			.Execute(choiceContext);
         int enemyCount = base.CombatState.HittableEnemies.Count;
-        await PowerCmd.Apply<HeatPower>(base.CombatState.HittableEnemies, base.DynamicVars["HeatPower"].BaseValue, base.Owner.Creature, this);
-        await PowerCmd.Apply<InfernoCometPower>(base.Owner.Creature, enemyCount, base.Owner.Creature, this);
+        await PowerCmd.Apply<HeatPower>(choiceContext, base.CombatState.HittableEnemies, base.DynamicVars["HeatPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<InfernoCometPower>(choiceContext, base.Owner.Creature, enemyCount, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

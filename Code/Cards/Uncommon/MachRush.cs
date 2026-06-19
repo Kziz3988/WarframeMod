@@ -22,6 +22,6 @@ public class MachRush() : WarframeModCard(0, CardType.Skill, CardRarity.Uncommon
             num++;
         }
         await CardPileCmd.Draw(choiceContext, num, base.Owner);
-		await PowerCmd.Apply<MachRushPower>(base.Owner.Creature, 1m, base.Owner.Creature, this);
+		await PowerCmd.Apply<MachRushPower>(choiceContext, base.Owner.Creature, 1m, base.Owner.Creature, this);
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
@@ -27,11 +28,11 @@ public partial class DeathsHarvestPower : WarframeModPower
 		return 1m + (decimal)base.Amount / 100m;
 	}
 
-	public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
-	{
+	public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
+    {
 		if (side == base.Owner.Side)
 		{
             await PowerCmd.Remove(this);
 		}
-	}
+    }
 }

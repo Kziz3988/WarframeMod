@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
+using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.HoverTips;
 using WarframeMod.Code.Cards;
@@ -16,7 +17,7 @@ public sealed class FinalStandPower : WarframeModPower
 		HoverTipFactory.FromCard<AxiosJavelin>()
 	];
 
-    public override async Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+    public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
         if (base.Owner.Player != null && side == base.Owner.Side)
         {

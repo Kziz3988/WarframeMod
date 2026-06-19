@@ -37,13 +37,13 @@ public class Fireball() : WarframeModCard(2, CardType.Attack, CardRarity.Common,
                 await DamageCmd.Attack(base.DynamicVars["DirectDamage"].BaseValue).FromCard(this).Targeting(hittableEnemy)
 			    .WithHitFx("vfx/vfx_attack_slash")
 			    .Execute(choiceContext);
-			    await PowerCmd.Apply<HeatPower>(hittableEnemy, base.DynamicVars["DirectHeatPower"].BaseValue, base.Owner.Creature, this);
+			    await PowerCmd.Apply<HeatPower>(choiceContext, hittableEnemy, base.DynamicVars["DirectHeatPower"].BaseValue, base.Owner.Creature, this);
             }
             else{
                 await DamageCmd.Attack(base.DynamicVars["SplashDamage"].BaseValue).FromCard(this).Targeting(hittableEnemy)
 			    .WithHitFx("vfx/vfx_attack_slash")
 			    .Execute(choiceContext);
-			    await PowerCmd.Apply<HeatPower>(hittableEnemy, base.DynamicVars["SplashHeatPower"].BaseValue, base.Owner.Creature, this);
+			    await PowerCmd.Apply<HeatPower>(choiceContext, hittableEnemy, base.DynamicVars["SplashHeatPower"].BaseValue, base.Owner.Creature, this);
             }
 		}
     }

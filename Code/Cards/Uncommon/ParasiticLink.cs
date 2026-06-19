@@ -18,8 +18,8 @@ public class ParasiticLink() : WarframeModCard(1, CardType.Skill, CardRarity.Unc
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
-		await PowerCmd.Apply<ParasiticLinkPower>(cardPlay.Target, base.DynamicVars["ParasiticLinkPower"].BaseValue, base.Owner.Creature, this);
-        await PowerCmd.Apply<ParasiticLinkPower>(base.Owner.Creature, base.DynamicVars["ParasiticLinkPower"].BaseValue, base.Owner.Creature, this);
+		await PowerCmd.Apply<ParasiticLinkPower>(choiceContext, cardPlay.Target, base.DynamicVars["ParasiticLinkPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<ParasiticLinkPower>(choiceContext, base.Owner.Creature, base.DynamicVars["ParasiticLinkPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

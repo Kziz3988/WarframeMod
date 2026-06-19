@@ -17,7 +17,7 @@ public class MesmerSkin() : WarframeModCard(3, CardType.Skill, CardRarity.Rare, 
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<MesmerSkinPower>(base.Owner.Creature, base.DynamicVars["MesmerSkinPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<MesmerSkinPower>(choiceContext, base.Owner.Creature, base.DynamicVars["MesmerSkinPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

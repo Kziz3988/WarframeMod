@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Relics;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
@@ -58,7 +59,7 @@ public class ArcaneCrepuscular : WarframeModRelic
         return Task.CompletedTask;
     }
 
-    public override Task AfterPowerAmountChanged(PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
+    public override Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
     {
         if (power.Owner == base.Owner.Creature)
         {
@@ -78,7 +79,7 @@ public class ArcaneCrepuscular : WarframeModRelic
                 }
             }
         }
-        return Task.CompletedTask;
+        return Task.CompletedTask;        
     }
 
     public override Task AfterCombatEnd(CombatRoom _)

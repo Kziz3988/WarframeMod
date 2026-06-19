@@ -26,15 +26,15 @@ public sealed class TectonicsPower : WarframeModPower
     {
 		if (target == base.Owner && result.BlockedDamage > 0 && props.IsPoweredAttack() && dealer != null)
 		{
-			await PowerCmd.Apply<SlashPower>(dealer, base.Amount, base.Owner, null);
+			await PowerCmd.Apply<SlashPower>(choiceContext, dealer, base.Amount, base.Owner, null);
 		}
     }
 
-    public override async Task AfterSideTurnStart(CombatSide side, CombatState combatState)
-	{
+	public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
+    {
 		if (side == base.Owner.Side)
 		{
 			await PowerCmd.Remove(this);
-		}
-	}
+		}        
+    }
 }

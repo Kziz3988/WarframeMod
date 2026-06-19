@@ -19,7 +19,7 @@ public class Spores() : WarframeModCard(1, CardType.Power, CardRarity.Uncommon, 
     ];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<SporesPower>(base.Owner.Creature, base.DynamicVars["SporesPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<SporesPower>(choiceContext, base.Owner.Creature, base.DynamicVars["SporesPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

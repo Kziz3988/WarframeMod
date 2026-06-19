@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
@@ -37,13 +38,13 @@ public sealed class ShatterShieldPower : WarframeModPower
         return Task.CompletedTask;
     }
 
-    public override Task AfterPowerAmountChanged(PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
+    public override Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
     {
         if (shield == null && power.Owner == base.Owner && power.GetType() == typeof(ShieldPower))
         {
             Initialize(power as ShieldPower);
         }
-        return Task.CompletedTask;
+        return Task.CompletedTask;        
     }
 
     private async void AfterShieldDamaged(ShieldPower power, int amount, Creature? dealer, CardModel? cardSource)
@@ -57,7 +58,7 @@ public sealed class ShatterShieldPower : WarframeModPower
         await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), dealer, reflectAmount, ValueProp.Unpowered, base.Owner, null);
     }
 
-    public override async Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+    public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
         if (side == base.Owner.Side)
 		{
@@ -66,6 +67,6 @@ public sealed class ShatterShieldPower : WarframeModPower
                 shield.OnShieldDamaged -= AfterShieldDamaged;
             }
             await PowerCmd.Remove(this);
-		}
+		}        
     }
 }

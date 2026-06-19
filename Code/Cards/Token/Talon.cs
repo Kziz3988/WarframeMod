@@ -20,7 +20,7 @@ public class Talon() : WarframeModCard(0, CardType.Skill, CardRarity.Token, Targ
 	
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<SlashPower>(base.CombatState.HittableEnemies, base.DynamicVars["SlashPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<SlashPower>(choiceContext, base.CombatState.HittableEnemies, base.DynamicVars["SlashPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

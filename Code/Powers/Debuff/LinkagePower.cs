@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
@@ -27,8 +28,8 @@ public partial class LinkagePower : WarframeModPower
         await CreatureCmd.Damage(choiceContext, base.Owner, result.UnblockedDamage, ValueProp.Unpowered | ValueProp.SkipHurtAnim, null, null);
     }
 
-	public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
-	{
+	public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
+    {
         if (side != base.Owner.Side)
 		{
 			return;
@@ -41,5 +42,5 @@ public partial class LinkagePower : WarframeModPower
 		{
 			await PowerCmd.Remove(this);
 		}
-	}
+    }
 }

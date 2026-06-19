@@ -38,11 +38,11 @@ public class Eclipse() : WarframeModCard(0, CardType.Skill, CardRarity.Common, T
 		ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
 		if (cardPlay.Target.Monster.IntendsToAttack)
 		{
-			await PowerCmd.Apply<WeakPower>(cardPlay.Target, base.DynamicVars.Weak.BaseValue, base.Owner.Creature, this);
+			await PowerCmd.Apply<WeakPower>(choiceContext, cardPlay.Target, base.DynamicVars.Weak.BaseValue, base.Owner.Creature, this);
 		}
 		if (IntendsToDefend(cardPlay.Target.Monster))
 		{
-			await PowerCmd.Apply<VulnerablePower>(cardPlay.Target, base.DynamicVars.Weak.BaseValue, base.Owner.Creature, this);
+			await PowerCmd.Apply<VulnerablePower>(choiceContext, cardPlay.Target, base.DynamicVars.Weak.BaseValue, base.Owner.Creature, this);
 		}
 	}
 

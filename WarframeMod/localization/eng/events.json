@@ -14,11 +14,11 @@
     "WARFRAMEMOD-RIVEN_MAKER.pages.KEEP.description": "[sine]\"...Here is your new [gold]Riven[/gold]...\"[/sine]",
     "WARFRAMEMOD-RIVEN_MAKER.pages.STOP_HERE.description": "You bid farewell to this mysterious woman with your brand new [gold]Riven[/gold].",
     "WARFRAMEMOD-RIVEN_MAKER.pages.ALL.options.CYCLE.title": "Cycle",
-    "WARFRAMEMOD-RIVEN_MAKER.pages.ALL.options.CYCLE.description": "Lose [red]{Damage}[/red] HP. Regenerate the attributes of all [gold]Rivens[/gold] in your [gold]Deck[/gold].",
+    "WARFRAMEMOD-RIVEN_MAKER.pages.ALL.options.CYCLE.description": "Lose [red]{Damage}[/red] HP. Select a [gold]Riven[/gold] in your [gold]Deck[/gold], regenerate the attributes of it.",
     "WARFRAMEMOD-RIVEN_MAKER.pages.ALL.options.STOP_HERE.title": "Stop Here",
     "WARFRAMEMOD-RIVEN_MAKER.pages.ALL.options.STOP_HERE.description": "You are satisfied with the attribute of your [gold]Riven[/gold].",
     "WARFRAMEMOD-RIVEN_MAKER.pages.ALL.options.KEEP_NEW_VERSION.title": "Keep the New Version",
-    "WARFRAMEMOD-RIVEN_MAKER.pages.ALL.options.KEEP_NEW_VERSION.description": "Update the attributes of all [gold]Rivens[/gold] in your [gold]Deck[/gold].",
+    "WARFRAMEMOD-RIVEN_MAKER.pages.ALL.options.KEEP_NEW_VERSION.description": "Update the attributes of the [gold]Riven[/gold].",
     "WARFRAMEMOD-RIVEN_MAKER.pages.ALL.options.KEEP_OLD_VERSION.title": "Keep the Old Version",
     "WARFRAMEMOD-RIVEN_MAKER.pages.ALL.options.KEEP_OLD_VERSION.description": "Discard the [gold]Riven[/gold] attributes generated in this cycle.",
     "WARFRAMEMOD-RIVEN_MAKER.loss": "{character} lost everything due to [gold]Rivens[/gold]."

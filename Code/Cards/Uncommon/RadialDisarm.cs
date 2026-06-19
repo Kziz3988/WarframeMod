@@ -20,7 +20,7 @@ public class RadialDisarm() : WarframeModCard(1, CardType.Power, CardRarity.Unco
 	protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<WeakPower>(2m)];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<RadialDisarmPower>(base.Owner.Creature, base.DynamicVars.Weak.BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<RadialDisarmPower>(choiceContext, base.Owner.Creature, base.DynamicVars.Weak.BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

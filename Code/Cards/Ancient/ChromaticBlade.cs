@@ -33,8 +33,8 @@ public class ChromaticBlade() : WarframeModCard(0, CardType.Attack, CardRarity.A
 			.TargetingAllOpponents(base.CombatState)
 			.WithHitFx("vfx/vfx_giant_horizontal_slash")
 			.Execute(choiceContext);
-        await PowerCmd.Apply<SlashPower>(base.CombatState.HittableEnemies, base.DynamicVars["SlashPower"].BaseValue, base.Owner.Creature, this);
-        await PowerCmd.Apply<ElectricityPower>(base.CombatState.HittableEnemies, base.DynamicVars["ElectricityPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<SlashPower>(choiceContext, base.CombatState.HittableEnemies, base.DynamicVars["SlashPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<ElectricityPower>(choiceContext, base.CombatState.HittableEnemies, base.DynamicVars["ElectricityPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

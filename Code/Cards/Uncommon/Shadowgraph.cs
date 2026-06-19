@@ -39,7 +39,7 @@ public class Shadowgraph() : WarframeModCard(1, CardType.Attack, CardRarity.Unco
         if (card != null)
         {
             card.SetToFreeThisTurn();
-            await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, addedByPlayer: true);
+            await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, base.Owner);
         }
     }
 

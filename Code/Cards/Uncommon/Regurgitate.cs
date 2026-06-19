@@ -31,7 +31,7 @@ public class Regurgitate() : WarframeModCard(1, CardType.Skill, CardRarity.Uncom
                 await CardCmd.AutoPlay(choiceContext, card, null);
             }
         }
-        await PowerCmd.Apply<PoisonPower>(base.CombatState.HittableEnemies, amount, base.Owner.Creature, this);
+        await PowerCmd.Apply<PoisonPower>(choiceContext, base.CombatState.HittableEnemies, amount, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

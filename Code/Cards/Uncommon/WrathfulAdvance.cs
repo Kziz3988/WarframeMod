@@ -20,7 +20,7 @@ public class WrathfulAdvance() : WarframeModCard(2, CardType.Skill, CardRarity.U
     ];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<StrengthPower>(base.Owner.Creature, base.DynamicVars.Strength.BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<StrengthPower>(choiceContext, base.Owner.Creature, base.DynamicVars.Strength.BaseValue, base.Owner.Creature, this);
         CardModel cardModel;
         int cardCount = 0;
         CardModel[] cards = new CardModel[base.DynamicVars.Cards.IntValue];

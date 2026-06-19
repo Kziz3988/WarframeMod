@@ -15,7 +15,7 @@ public class RadialJavelin() : WarframeModCard(1, CardType.Skill, CardRarity.Bas
 	protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<SlashPower>(2m)];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-		await PowerCmd.Apply<SlashPower>(base.CombatState.HittableEnemies, base.DynamicVars["SlashPower"].BaseValue, base.Owner.Creature, this);
+		await PowerCmd.Apply<SlashPower>(choiceContext, base.CombatState.HittableEnemies, base.DynamicVars["SlashPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

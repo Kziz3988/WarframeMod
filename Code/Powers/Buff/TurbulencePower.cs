@@ -60,14 +60,14 @@ public sealed class TurbulencePower : WarframeModPower
         return 1m - base.DisplayAmount / 100m;
     }
 
-    public override Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+    public override Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
         if (side == base.Owner.Side)
         {
             GetInternalData<Data>().cardsDrawn = 0;
             InvokeDisplayAmountChanged();
         }
-        return Task.CompletedTask;
+        return Task.CompletedTask;        
     }
 
     public override Task AfterCardDrawn(PlayerChoiceContext choiceContext, CardModel card, bool fromHandDraw)

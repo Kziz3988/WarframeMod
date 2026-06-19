@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
@@ -26,7 +27,7 @@ public partial class VoidPower : WarframeModPower
 		return 1.20m;
 	}
 
-    public override async Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+	public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
         if (side != base.Owner.Side)
 		{
@@ -39,6 +40,6 @@ public partial class VoidPower : WarframeModPower
 		else
 		{
 			await Cmd.CustomScaledWait(0.1f, 0.25f);
-		}
+		}        
     }
 }

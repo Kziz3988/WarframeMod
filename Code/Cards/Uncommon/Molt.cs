@@ -31,11 +31,11 @@ public class Molt() : WarframeModCard(2, CardType.Skill, CardRarity.Uncommon, Ta
 		
 		foreach (PowerModel power in powersToDecrement)
 		{
-			await PowerCmd.ModifyAmount(power, -base.DynamicVars["Decrement"].BaseValue, self, this);
+			await PowerCmd.ModifyAmount(choiceContext, power, -base.DynamicVars["Decrement"].BaseValue, self, this);
 		}
 		foreach (PowerModel power in powersToIncrement)
 		{
-			await PowerCmd.ModifyAmount(power, base.DynamicVars["Decrement"].BaseValue, self, this);
+			await PowerCmd.ModifyAmount(choiceContext, power, base.DynamicVars["Decrement"].BaseValue, self, this);
 		}
 
         await CardPileCmd.Draw(choiceContext, base.DynamicVars.Cards.BaseValue, base.Owner);

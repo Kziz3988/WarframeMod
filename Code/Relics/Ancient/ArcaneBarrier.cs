@@ -87,8 +87,8 @@ public sealed class ArcaneBarrier : WarframeModRelic
         base.Status = RelicStatus.Normal;
     }
 
-	public override Task AfterSideTurnStart(CombatSide side, CombatState combatState)
-	{
+	public override Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
+    {
 		if (side == base.Owner.Creature.Side)
 		{
 			Cooldown--;
@@ -98,8 +98,8 @@ public sealed class ArcaneBarrier : WarframeModRelic
 				InvokeDisplayAmountChanged();
 			}
 		}
-        return Task.CompletedTask;
-	}
+        return Task.CompletedTask;        
+    }
 
 	public override Task AfterCombatEnd(CombatRoom _)
 	{

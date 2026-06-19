@@ -16,7 +16,7 @@ public class Wormhole() : WarframeModCard(1, CardType.Skill, CardRarity.Uncommon
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<WormholePower>(base.Owner.Creature, base.DynamicVars["WormholePower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<WormholePower>(choiceContext, base.Owner.Creature, base.DynamicVars["WormholePower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

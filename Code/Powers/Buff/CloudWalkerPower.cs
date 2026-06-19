@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
@@ -28,7 +29,7 @@ public sealed class CloudWalkerPower : WarframeModPower
 		return new Data();
 	}
 
-	public override bool IsInstanced => true;
+	public override PowerInstanceType InstanceType => PowerInstanceType.Instanced;
 
 	public override int DisplayAmount => base.Amount - GetInternalData<Data>().cardsDrawn % base.Amount;
 
@@ -46,15 +47,15 @@ public sealed class CloudWalkerPower : WarframeModPower
 		}
     }
 
-	public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
-	{
+    public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
+    {
 		if (side == base.Owner.Side)
 		{
 			if (GetInternalData<Data>().cardsDrawn == 0)
 			{
-				await PowerCmd.Apply<IntangiblePower>(base.Owner, 1m, null, null);
+				await PowerCmd.Apply<IntangiblePower>(choiceContext, base.Owner, 1m, null, null);
 			}
             await PowerCmd.Remove(this);
 		}
-	}
+    }
 }

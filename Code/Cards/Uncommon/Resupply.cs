@@ -26,7 +26,7 @@ public class Resupply() : WarframeModCard(3, CardType.Skill, CardRarity.Uncommon
         foreach (CardModel card in cardPool)
         {
             card.SetToFreeThisTurn();
-            await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, addedByPlayer: true);
+            await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, base.Owner);
         }
 	}
 

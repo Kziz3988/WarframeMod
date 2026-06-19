@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
@@ -21,15 +22,15 @@ public sealed class ReaperPower : WarframeModPower
 	{
 		if (dealer != null && (dealer == base.Owner || dealer.PetOwner?.Creature == base.Owner) && cardSource != null && cardSource.Type == CardType.Attack && props.IsPoweredAttack() && result.TotalDamage > 0)
 		{
-			await PowerCmd.Apply<DeathsHarvestPower>(target, base.Amount, base.Owner, null);
+			await PowerCmd.Apply<DeathsHarvestPower>(choiceContext, target, base.Amount, base.Owner, null);
 		}
 	}
 
-    public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
-	{
+	public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
+    {
 		if (side == base.Owner.Side)
 		{
             await PowerCmd.Remove(this);
 		}
-	}
+    }
 }

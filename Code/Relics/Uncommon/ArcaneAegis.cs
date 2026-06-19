@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Relics;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
@@ -99,13 +100,13 @@ public sealed class ArcaneAegis : WarframeModRelic
         return Task.CompletedTask;
     }
 
-    public override Task AfterPowerAmountChanged(PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
+    public override Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
     {
         if (shield == null && power.Owner == base.Owner.Creature && power.GetType() == typeof(ShieldPower))
         {
             Initialize(power as ShieldPower);
         }
-        return Task.CompletedTask;
+        return Task.CompletedTask;        
     }
 
     private void AfterShieldDamaged(ShieldPower shield, int amount, Creature? dealer, CardModel? cardSource)
@@ -117,8 +118,8 @@ public sealed class ArcaneAegis : WarframeModRelic
         TakeEffect();
     }
 
-	public override Task AfterSideTurnStart(CombatSide side, CombatState combatState)
-	{
+	public override Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
+    {
 		if (side == base.Owner.Creature.Side)
 		{
 			Cooldown--;
@@ -127,8 +128,8 @@ public sealed class ArcaneAegis : WarframeModRelic
                 LoseEffect();
 			}
 		}
-        return Task.CompletedTask;
-	}
+        return Task.CompletedTask;        
+    }
 
 	public override Task AfterCombatEnd(CombatRoom _)
 	{

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
@@ -16,23 +17,23 @@ public sealed class SmokeScreenPower : WarframeModPower
 
     public override async Task BeforeApplied(Creature target, decimal amount, Creature? applier, CardModel? cardSource)
     {
-        await PowerCmd.Apply<StrengthPower>(target, amount, applier, cardSource);
+        await PowerCmd.Apply<StrengthPower>(new ThrowingPlayerChoiceContext(), target, amount, applier, cardSource);
     }
 
-	public override async Task AfterPowerAmountChanged(PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
-	{
+	public override async Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
+    {
 		if (!(amount == base.Amount) && power == this)
 		{
-			await PowerCmd.Apply<StrengthPower>(base.Owner, amount, applier, cardSource);
-		}
-	}
+			await PowerCmd.Apply<StrengthPower>(choiceContext, base.Owner, amount, applier, cardSource);
+		}        
+    }
 
-	public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
-	{
+	public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
+    {
 		if (side == base.Owner.Side)
 		{
-            await PowerCmd.Apply<StrengthPower>(base.Owner, -base.Amount, null, null);
+            await PowerCmd.Apply<StrengthPower>(choiceContext, base.Owner, -base.Amount, null, null);
 			await PowerCmd.Remove(this);
 		}
-	}
+    }
 }

@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Relics;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
@@ -44,7 +45,7 @@ public class ArcaneInfluence : WarframeModRelic
         return Task.CompletedTask;
 	}
 
-    public override async Task AfterPowerAmountChanged(PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
+    public override async Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
     {
         if (isApplyingEffect)
         {
@@ -59,12 +60,12 @@ public class ArcaneInfluence : WarframeModRelic
             {
                 Flash();
                 isApplyingEffect = true;
-                await PowerCmd.Apply<ElectricityPower>(base.Owner.Creature.CombatState.HittableEnemies, deltaEffect, base.Owner.Creature, null);
+                await PowerCmd.Apply<ElectricityPower>(choiceContext, base.Owner.Creature.CombatState.HittableEnemies, deltaEffect, base.Owner.Creature, null);
                 isApplyingEffect = false;
                 effectCounter = targetEffectCounter;
             }
             InvokeDisplayAmountChanged();
-        }
+        }        
     }
 
     public override Task AfterCombatEnd(CombatRoom _)

@@ -36,13 +36,13 @@ public abstract class WarframeModCard(int cost, CardType type, CardRarity rarity
 
     public virtual string CustomOverlayPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.tscn".CardOverlayScenePath();
 
-    public static async Task<T?> CreateInHand<T>(Player owner, CombatState combatState) 
+    public static async Task<T?> CreateInHand<T>(Player owner, ICombatState combatState) 
         where T : WarframeModCard
     {
         return (await CreateInHand<T>(owner, 1, combatState)).FirstOrDefault();
     }
 
-    public static async Task<IEnumerable<T>> CreateInHand<T>(Player owner, int count, CombatState combatState) 
+    public static async Task<IEnumerable<T>> CreateInHand<T>(Player owner, int count, ICombatState combatState) 
         where T : WarframeModCard
     {
         if (count == 0 || CombatManager.Instance.IsOverOrEnding)
@@ -57,13 +57,13 @@ public abstract class WarframeModCard(int cost, CardType type, CardRarity rarity
         }
         
         await CardPileCmd.AddGeneratedCardsToCombat(cards.Cast<CardModel>().ToList(), 
-            PileType.Hand, addedByPlayer: true);
+            PileType.Hand, owner);
         return cards;
     }
 
-    public static CardModel? CreateCard(Type cardType, Player owner, CombatState combatState)
+    public static CardModel? CreateCard(Type cardType, Player owner, ICombatState combatState)
     {
-        var method = typeof(CombatState).GetMethod("CreateCard", [typeof(Player)]);
+        var method = typeof(ICombatState).GetMethod("CreateCard", [typeof(Player)]);
         if (method != null)
         {
             var genericMethod = method.MakeGenericMethod(cardType);

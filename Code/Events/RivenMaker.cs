@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BaseLib.Abstracts;
-using Godot;
-using HarmonyLib;
+using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Gold;
@@ -78,29 +77,6 @@ public sealed class RivenMaker : CustomEventModel
         return list;
     }
 
-    private List<CardHoverTip> GetOldRivenHoverTips()
-    {
-        List<CardHoverTip> hoverTips = [];
-        var cards = base.Owner.Deck.Cards
-            .Where(c => c.GetType() == typeof(Riven))
-            .ToList();
-        foreach (CardModel card in cards)
-        {
-            hoverTips.Add(new CardHoverTip(card));
-        }
-        return hoverTips;
-    }
-
-    private List<CardHoverTip> GetNewRivenHoverTips(List<Riven> cards)
-    {
-        List<CardHoverTip> hoverTips = [];
-        foreach (CardModel card in cards)
-        {
-            hoverTips.Add(new CardHoverTip(card));
-        }
-        return hoverTips;
-    }
-
     private Riven CreateRiven()
     {
         Riven riven = base.Owner.RunState.CreateCard<Riven>(base.Owner);
@@ -124,20 +100,17 @@ public sealed class RivenMaker : CustomEventModel
         ]);
     }
 
-    private void GenerateKeepOptions()
+    private async void GenerateKeepOptions()
     {
-        int rivenCount = base.Owner.Deck.Cards
-            .Where(c => c.GetType() == typeof(Riven))
-            .Count();
-        List<Riven> newRivens = [];
-        for (int i = 0; i < rivenCount; i++)
+        if ((await CardSelectCmd.FromDeckGeneric(base.Owner, new CardSelectorPrefs(CardSelectorPrefs.TransformSelectionPrompt, 1), c => c.GetType() == typeof(Riven)))
+            .ToList().FirstOrDefault() is not Riven riven)
         {
-            newRivens.Add(CreateRiven());
+            return;
         }
-
+        Riven newRiven = CreateRiven();
         SetEventState(L10NLookup("WARFRAMEMOD-RIVEN_MAKER.pages.KEEP.description"), [
-            new EventOption(this, () => KeepNewVersion(newRivens), "WARFRAMEMOD-RIVEN_MAKER.pages.ALL.options.KEEP_NEW_VERSION", GetNewRivenHoverTips(newRivens)),
-            new EventOption(this, KeepOldVersion, "WARFRAMEMOD-RIVEN_MAKER.pages.ALL.options.KEEP_OLD_VERSION", GetOldRivenHoverTips())
+            new EventOption(this, () => KeepNewVersion(riven, newRiven), "WARFRAMEMOD-RIVEN_MAKER.pages.ALL.options.KEEP_NEW_VERSION", new CardHoverTip(newRiven)),
+            new EventOption(this, KeepOldVersion, "WARFRAMEMOD-RIVEN_MAKER.pages.ALL.options.KEEP_OLD_VERSION", new CardHoverTip(riven))
         ]);
     }
 
@@ -177,15 +150,9 @@ public sealed class RivenMaker : CustomEventModel
         return Task.CompletedTask;
     }
 
-    private async Task KeepNewVersion(List<Riven> rivens)
+    private async Task KeepNewVersion(Riven original, Riven replacement)
     {
-        var cards = base.Owner.Deck.Cards
-            .Where(c => c.GetType() == typeof(Riven))
-            .ToList();
-        for (int i = 0; i < cards.Count; i++)
-        {
-            await WarframeModCard.TransformTo(cards[i], rivens[i]);
-        }
+        await WarframeModCard.TransformTo(original, replacement);
         GenerateCycleOptions();
     }
 }

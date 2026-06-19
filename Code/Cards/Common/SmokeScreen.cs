@@ -20,8 +20,8 @@ public class SmokeScreen() : WarframeModCard(1, CardType.Skill, CardRarity.Commo
 	];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-		await PowerCmd.Apply<InvisiblePower>(base.Owner.Creature, base.DynamicVars["InvisiblePower"].BaseValue, base.Owner.Creature, this);
-        await PowerCmd.Apply<SmokeScreenPower>(base.Owner.Creature, base.DynamicVars["SmokeScreenPower"].BaseValue, base.Owner.Creature, this);
+		await PowerCmd.Apply<InvisiblePower>(choiceContext, base.Owner.Creature, base.DynamicVars["InvisiblePower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<SmokeScreenPower>(choiceContext, base.Owner.Creature, base.DynamicVars["SmokeScreenPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

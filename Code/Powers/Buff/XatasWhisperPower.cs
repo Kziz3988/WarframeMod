@@ -20,7 +20,7 @@ public sealed class XatasWhisperPower : WarframeModPower
 	{
 		if (dealer != null && (dealer == base.Owner || dealer.PetOwner?.Creature == base.Owner) && cardSource != null && cardSource.Type == CardType.Attack && props.IsPoweredAttack() && result.TotalDamage > 0)
 		{
-			await PowerCmd.Apply<VoidPower>(target, base.Amount, base.Owner, null);
+			await PowerCmd.Apply<VoidPower>(choiceContext, target, base.Amount, base.Owner, null);
 		}
 	}
 }

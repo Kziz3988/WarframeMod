@@ -50,13 +50,13 @@ public sealed class ThuriblePower : WarframeModPower
 		return new HoverTip(this, stringBuilder.ToString(), true);
 	}
 
-    public override Task AfterPowerAmountChanged(PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
+    public override Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
     {
         if (power == this && amount > 0)
         {
             GetInternalData<Data>().maxEnergyLost += 1;
         }
-        return Task.CompletedTask;
+        return Task.CompletedTask;        
     }
 
     public override decimal ModifyMaxEnergy(Player player, decimal amount)
@@ -68,14 +68,14 @@ public sealed class ThuriblePower : WarframeModPower
         return amount - GetInternalData<Data>().maxEnergyLost;
     }
 
-    public override Task BeforeSideTurnStart(PlayerChoiceContext choiceContext, CombatSide side, CombatState combatState)
+    public override Task BeforeSideTurnStart(PlayerChoiceContext choiceContext, CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
         if (side == base.Owner.Side)
         {
             GetInternalData<Data>().totalEnergyGain += base.Amount;
             InvokeDisplayAmountChanged();
         }
-        return Task.CompletedTask;
+        return Task.CompletedTask;        
     }
 
     public override Task AfterCardDrawn(PlayerChoiceContext choiceContext, CardModel card, bool fromHandDraw)

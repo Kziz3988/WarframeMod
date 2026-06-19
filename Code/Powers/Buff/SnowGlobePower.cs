@@ -27,7 +27,7 @@ public sealed class SnowGlobePower : WarframeModPower
     {
 		if (target == base.Owner && result.UnblockedDamage > 0 && props.IsPoweredAttack() && dealer != null)
 		{
-			await PowerCmd.Apply<ColdPower>(dealer, base.Amount, base.Owner, null);
+			await PowerCmd.Apply<ColdPower>(choiceContext, dealer, base.Amount, base.Owner, null);
 		}
     }
 }

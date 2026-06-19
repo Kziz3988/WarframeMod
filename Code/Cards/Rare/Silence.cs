@@ -41,11 +41,11 @@ public class Silence() : WarframeModCard(2, CardType.Skill, CardRarity.Rare, Tar
 		
 		foreach (PowerModel power in powersToDecrement)
 		{
-			await PowerCmd.ModifyAmount(power, -base.DynamicVars["Decrement"].BaseValue, target, this);
+			await PowerCmd.ModifyAmount(choiceContext, power, -base.DynamicVars["Decrement"].BaseValue, target, this);
 		}
 		foreach (PowerModel power in powersToIncrement)
 		{
-			await PowerCmd.ModifyAmount(power, base.DynamicVars["Decrement"].BaseValue, target, this);
+			await PowerCmd.ModifyAmount(choiceContext, power, base.DynamicVars["Decrement"].BaseValue, target, this);
 		}
     }
 

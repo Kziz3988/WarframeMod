@@ -16,7 +16,7 @@ public class Turbulence() : WarframeModCard(2, CardType.Power, CardRarity.Uncomm
     ];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<TurbulencePower>(base.Owner.Creature, base.DynamicVars["TurbulencePower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<TurbulencePower>(choiceContext, base.Owner.Creature, base.DynamicVars["TurbulencePower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

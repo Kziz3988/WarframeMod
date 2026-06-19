@@ -6,6 +6,7 @@ using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
@@ -81,7 +82,7 @@ public sealed class ShieldPower : WarframeModPower
         }
         else if (allowNull)
         {
-            shield = await PowerCmd.Apply<ShieldPower>(target, 1m, applier, cardSource);
+            shield = await PowerCmd.Apply<ShieldPower>(new ThrowingPlayerChoiceContext(), target, 1m, applier, cardSource);
             shield.SetShield(new ShieldData(total, capacity, recharge));
         }
     }
@@ -177,12 +178,12 @@ public sealed class ShieldPower : WarframeModPower
         }
     }
 
-    public override Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+    public override Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
         if (side == base.Owner.Side && base.Owner.IsAlive)
         {
             RechargeShield();
         }
-        return Task.CompletedTask;
+        return Task.CompletedTask;        
     }
 }

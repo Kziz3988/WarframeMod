@@ -15,7 +15,7 @@ public class SwitchTeleport() : WarframeModCard(1, CardType.Power, CardRarity.Ra
     ];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<SwitchTeleportPower>(base.Owner.Creature, base.DynamicVars["SwitchTeleportPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<SwitchTeleportPower>(choiceContext, base.Owner.Creature, base.DynamicVars["SwitchTeleportPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

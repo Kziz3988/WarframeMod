@@ -19,10 +19,9 @@ public class AegisStorm() : WarframeModCard(0, CardType.Attack, CardRarity.Uncom
 	];
 	protected override IEnumerable<DynamicVar> CanonicalVars => [
         new CalculationBaseVar(0m),
-        new ExtraDamageVar(2m),
+        new ExtraDamageVar(1m),
         new CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => card.Owner.Creature.GetPower<ShieldPower>()?.TotalShield ?? 0)
 	];
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Ethereal];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -40,6 +39,6 @@ public class AegisStorm() : WarframeModCard(0, CardType.Attack, CardRarity.Uncom
 
     protected override void OnUpgrade()
     {
-        base.RemoveKeyword(CardKeyword.Ethereal);
+        base.DynamicVars.ExtraDamage.UpgradeValueBy(1m);
     }
 }

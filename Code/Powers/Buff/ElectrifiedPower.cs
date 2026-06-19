@@ -23,22 +23,27 @@ public sealed class ElectrifiedPower : WarframeModPower
 		StunIntent.GetStaticHoverTip()
 	];
 
-	public override async Task AfterAttack(AttackCommand command)
-	{
-		if (command.Attacker != base.Owner || command.TargetSide == base.Owner.Side || !command.DamageProps.IsPoweredAttack() || !command.Results.Any((DamageResult r) => r.UnblockedDamage > 0))
+    public override async Task AfterAttack(PlayerChoiceContext choiceContext, AttackCommand command)
+    {
+		if (command.Attacker != base.Owner || command.TargetSide == base.Owner.Side || !command.DamageProps.IsPoweredAttack())
+		{
+			return;
+		}
+		List<DamageResult> list = command.Results.SelectMany((List<DamageResult> r) => r).ToList();
+		if (!list.Any((DamageResult r) => r.UnblockedDamage > 0))
 		{
 			return;
 		}
 		Dictionary<Creature, List<DamageResult>> damageResultsByCreature = new Dictionary<Creature, List<DamageResult>>();
-		foreach (DamageResult result in command.Results)
+		foreach (DamageResult item in list)
 		{
-			if (result.Receiver.IsPlayer)
+			if (item.Receiver.IsPlayer)
 			{
-				if (!damageResultsByCreature.ContainsKey(result.Receiver))
+				if (!damageResultsByCreature.ContainsKey(item.Receiver))
 				{
-					damageResultsByCreature.Add(result.Receiver, new List<DamageResult>());
+					damageResultsByCreature.Add(item.Receiver, new List<DamageResult>());
 				}
-				damageResultsByCreature[result.Receiver].Add(result);
+				damageResultsByCreature[item.Receiver].Add(item);
 			}
 		}
 		bool flag = false;
@@ -46,15 +51,15 @@ public sealed class ElectrifiedPower : WarframeModPower
 		{
 			int num = damageResultsByCreature[target].Count((DamageResult r) => r.UnblockedDamage > 0);
 			flag = flag || num > 0;
-			await PowerCmd.Apply<ElectricityPower>(target, num, base.Owner, null);
+			await PowerCmd.Apply<ElectricityPower>(new ThrowingPlayerChoiceContext(), target, num, base.Owner, null);
 		}
 		if (flag)
 		{
 			Flash();
 		}
-	}
-    
-    public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
+    }
+
+    public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
 		if (side != base.Owner.Side)
 		{

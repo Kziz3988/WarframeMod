@@ -14,7 +14,7 @@ public class Merulina() : WarframeModCard(1, CardType.Power, CardRarity.Uncommon
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Ethereal];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<MerulinaPower>(base.Owner.Creature, base.DynamicVars["MerulinaPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<MerulinaPower>(choiceContext, base.Owner.Creature, base.DynamicVars["MerulinaPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

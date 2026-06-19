@@ -23,7 +23,7 @@ public class CloudWalker() : WarframeModCard(1, CardType.Skill, CardRarity.Rare,
 	];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-		await PowerCmd.Apply<CloudWalkerPower>(base.Owner.Creature, base.DynamicVars["CloudWalkerPower"].BaseValue, base.Owner.Creature, this);
+		await PowerCmd.Apply<CloudWalkerPower>(choiceContext, base.Owner.Creature, base.DynamicVars["CloudWalkerPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

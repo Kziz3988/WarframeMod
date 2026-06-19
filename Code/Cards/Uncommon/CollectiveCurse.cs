@@ -24,8 +24,8 @@ public class CollectiveCurse() : WarframeModCard(0, CardType.Skill, CardRarity.U
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
-        await PowerCmd.Apply<LinkagePower>(cardPlay.Target, base.DynamicVars["LinkagePower"].BaseValue, base.Owner.Creature, this);
-        await PowerCmd.Apply<WeakPower>(cardPlay.Target, base.DynamicVars["WeakPower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<LinkagePower>(choiceContext, cardPlay.Target, base.DynamicVars["LinkagePower"].BaseValue, base.Owner.Creature, this);
+        await PowerCmd.Apply<WeakPower>(choiceContext, cardPlay.Target, base.DynamicVars["WeakPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()
