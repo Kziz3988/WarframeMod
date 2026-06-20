@@ -214,7 +214,7 @@
     "WARFRAMEMOD-REBUILD_SHIELD.title": "Rebuild Shield",
     "WARFRAMEMOD-REBUILD_SHIELD.description": "Recharge your [gold]Shield[/gold] to its [gold]Capacity[/gold].{InCombat:\n(Gain {TotalShield:diff()} [gold]Shield[/gold])|}",
     "WARFRAMEMOD-RIVEN.title": "Riven",
-    "WARFRAMEMOD-RIVEN.description": "{IsUnveiled:Deal {Damage} damage{IsTargettingAllEnemies: to all enemies|}{HasRepeat: {Repeat} times|}.{HasDraw:\nDraw {Draw} cards.|}{HasAdd:\nAdd {Add} random {Add:plural:card|cards} into your [gold]Hand[/gold].|}{HasHeal:\nHeal {Heal} HP.|}{HasBonusPower:\nApply {BonusPower} [gold]{BonusPowerName}[/gold]{IsTargettingAllEnemies: to all enemies|}.|}{HasMalusCard:\nAdd {MalusCard} [gold]{MalusCardName}[/gold] into your [gold]Discard Pile[/gold].|}{HasMalusPower:\nGain {MalusPower} [gold]{MalusPowerName}[/gold].|}|Unveil its possibilities, both rapturous and unfavorable.}",
+    "WARFRAMEMOD-RIVEN.description": "{IsUnveiled:Deal {Damage:diff()} damage{IsTargettingAllEnemies: to all enemies|}{HasRepeat: {Repeat} times|}.{HasDraw:\nDraw {Draw} cards.|}{HasAdd:\nAdd {Add} random {Add:plural:card|cards} into your [gold]Hand[/gold].|}{HasHeal:\nHeal {Heal} HP.|}{HasBonusPower:\nApply {BonusPower} [gold]{BonusPowerName}[/gold]{IsTargettingAllEnemies: to all enemies|}.|}{HasMalusCard:\nAdd {MalusCard} [gold]{MalusCardName}[/gold] into your [gold]Discard Pile[/gold].|}{HasMalusPower:\nGain {MalusPower} [gold]{MalusPowerName}[/gold].|}|Unveil its possibilities, both rapturous and unfavorable.}",
     "WARFRAMEMOD-SICKENING_PULSE.title": "Sickening Pulse",
     "WARFRAMEMOD-SICKENING_PULSE.description": "Increase [gold]Debuffs[/gold] of an enemy by {Increment:diff()}.",
     "WARFRAMEMOD-SERENE_STORM.title": "Serene Storm",

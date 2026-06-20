@@ -86,7 +86,8 @@ public abstract class WarframeModPower : CustomPowerModel
         if (method != null)
         {
             var genericMethod = method.MakeGenericMethod(powerType);
-            await (Task<object?>)genericMethod.Invoke(null, [choiceContext, target, amount, applier, cardSource, silent]);
+            var task = (Task)genericMethod.Invoke(null, [choiceContext, target, amount, applier, cardSource, silent]);
+            await task.ConfigureAwait(false);
         }
     }
 

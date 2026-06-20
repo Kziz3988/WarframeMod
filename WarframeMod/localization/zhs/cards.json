@@ -212,7 +212,7 @@
     "WARFRAMEMOD-INFESTED_MOBILITY.title": "感染敏捷性",
     "WARFRAMEMOD-INFESTED_MOBILITY.description": "抽{Cards:diff()}张牌。",
     "WARFRAMEMOD-RIVEN.title": "裂罅",
-    "WARFRAMEMOD-RIVEN.description": "{IsUnveiled:{IsTargettingAllEnemies:对所有敌人|}造成{Damage}点伤害{HasRepeat:{Repeat}次|}。{HasDraw:\n抽{Draw}张牌。|}{HasAdd:\n将{Add}张随机牌加入你的[gold]手牌[/gold]。|}{HasHeal:\n回复{Heal}点生命。|}{HasBonusPower:\n给予{IsTargettingAllEnemies:所有敌人|}{BonusPower}层[gold]{BonusPowerName}[/gold]。|}{HasMalusCard:\n将{MalusCard}张[gold]{MalusCardName}[/gold]加入你的[gold]弃牌堆[/gold]。|}{HasMalusPower:\n获得{MalusPower}层[gold]{MalusPowerName}[/gold]。|}|揭示它的可能性，包括狂喜和不快。}",
+    "WARFRAMEMOD-RIVEN.description": "{IsUnveiled:{IsTargettingAllEnemies:对所有敌人|}造成{Damage:diff()}点伤害{HasRepeat:{Repeat}次|}。{HasDraw:\n抽{Draw}张牌。|}{HasAdd:\n将{Add}张随机牌加入你的[gold]手牌[/gold]。|}{HasHeal:\n回复{Heal}点生命。|}{HasBonusPower:\n给予{IsTargettingAllEnemies:所有敌人|}{BonusPower}层[gold]{BonusPowerName}[/gold]。|}{HasMalusCard:\n将{MalusCard}张[gold]{MalusCardName}[/gold]加入你的[gold]弃牌堆[/gold]。|}{HasMalusPower:\n获得{MalusPower}层[gold]{MalusPowerName}[/gold]。|}|揭示它的可能性，包括狂喜和不快。}",
     "WARFRAMEMOD-REBUILD_SHIELD.title": "重塑护盾",
     "WARFRAMEMOD-REBUILD_SHIELD.description": "回复你的[gold]护盾[/gold]，直到其达到[gold]护盾容量[/gold]。{InCombat:\n（获得{TotalShield:diff()}点[gold]护盾[/gold]）|}",
     "WARFRAMEMOD-SERENE_STORM.title": "宁静风暴",
