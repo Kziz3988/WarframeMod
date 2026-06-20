@@ -20,7 +20,9 @@ public static class TrashHeapPatch
             var customCardList = new List<CardModel>(__result)
             {
                 ModelDb.Card<Crystallize>(),
-                ModelDb.Card<WyrdScythes>()
+                ModelDb.Card<FinalStand>(),
+                ModelDb.Card<SereneStorm>(),
+                ModelDb.Card<WyrdScythes>(),
             };
             
             _cachedCustomCards = customCardList.ToArray();

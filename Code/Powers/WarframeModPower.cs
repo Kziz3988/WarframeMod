@@ -11,6 +11,7 @@ using WarframeMod.Code.Powers.Debuff;
 using System;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using System.Reflection;
 
 namespace WarframeMod.Code.Powers;
 
@@ -91,11 +92,16 @@ public abstract class WarframeModPower : CustomPowerModel
 
     public static IHoverTip GetHoverTip(Type powerType)
     {
-        var method = typeof(HoverTipFactory).GetMethod("FromPower", System.Type.EmptyTypes);
+        var method = typeof(HoverTipFactory).GetMethod("FromPower", 
+            BindingFlags.Public | BindingFlags.Static,
+            null,
+            [typeof(int?)],
+            null);
+
         if (method != null)
         {
             var genericMethod = method.MakeGenericMethod(powerType);
-            return (IHoverTip)genericMethod.Invoke(null, null);
+            return (IHoverTip)genericMethod.Invoke(null, [null]);
         }
         
         throw new InvalidOperationException($"Failed to create hover tip for power type {powerType.Name}");
