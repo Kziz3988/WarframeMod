@@ -21,7 +21,7 @@ public class Eclipse() : WarframeModCard(0, CardType.Skill, CardRarity.Common, T
 	];
     protected override IEnumerable<DynamicVar> CanonicalVars => [
 		new PowerVar<WeakPower>(2),
-		new PowerVar<VulnerablePower>(1)
+		new PowerVar<VulnerablePower>(2)
 	];
 
 	private static bool IntendsToDefend(MonsterModel monster)
@@ -48,6 +48,6 @@ public class Eclipse() : WarframeModCard(0, CardType.Skill, CardRarity.Common, T
 
     protected override void OnUpgrade()
     {
-		base.DynamicVars.Vulnerable.UpgradeValueBy(1m);
+		AddKeyword(CardKeyword.Retain);
     }
 }

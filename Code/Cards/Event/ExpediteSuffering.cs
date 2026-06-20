@@ -31,8 +31,7 @@ public class ExpediteSuffering() : WarframeModCard(1, CardType.Skill, CardRarity
     ];
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => [
-        CardKeyword.Ethereal,
-        CardKeyword.Exhaust
+        CardKeyword.Ethereal
     ];
 
     private static decimal GetTotalDamage(Creature? target)
