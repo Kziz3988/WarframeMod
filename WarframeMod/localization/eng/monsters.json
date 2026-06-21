@@ -7,8 +7,25 @@
     "WARFRAMEMOD-JACKAL.banter2": "[shake]Enemy analysis: Organic. Threat level: Impotent.[/shake]",
     "WARFRAMEMOD-JACKAL.banter3": "[shake]Threat Level Upgraded. Classification: Pathetic.[/shake]",
 
+    "WARFRAMEMOD-LEEKTER.name": "Leekter",
+    "WARFRAMEMOD-LEEKTER.moves.BROKK.title": "Brokk",
+    "WARFRAMEMOD-LEEKTER.moves.FLASH_GRENADE.title": "Flash Grenade",
+    "WARFRAMEMOD-LEEKTER.banter1": "[jitter]I want to play with these ones.[/jitter]",
+    "WARFRAMEMOD-LEEKTER.banter2": "[jitter]You looks so... slippery.[/jitter]",
+    "WARFRAMEMOD-LEEKTER.teammateDeathLine": "[jitter]You are going to suffer for that![/jitter]",
+
+    "WARFRAMEMOD-SHIK_TAL.name": "Shik Tal",
+    "WARFRAMEMOD-SHIK_TAL.moves.MARELOK.title": "Marelok",
+    "WARFRAMEMOD-SHIK_TAL.moves.RIOT_SHIELD.title": "Riot Shield",
+    "WARFRAMEMOD-SHIK_TAL.banter1": "[jitter]Boooooring![/jitter]",
+    "WARFRAMEMOD-SHIK_TAL.banter2": "[jitter]Are we sure these are the targets? They seem so inconsequential.[/jitter]",
+    "WARFRAMEMOD-SHIK_TAL.banter3": "[jitter]Do not waste my time![/jitter]",
+    "WARFRAMEMOD-SHIK_TAL.banter4": "[jitter]You are beneath us![/jitter]",
+    "WARFRAMEMOD-SHIK_TAL.banter5": "[jitter]One of them is wearing a scarf![/jitter]",
+    "WARFRAMEMOD-SHIK_TAL.teammateDeathLine": "[jitter]That one will be difficult to replace.[/jitter]",
+
     "WARFRAMEMOD-THE_SERGEANT.name": "The Sergeant",
-    "WARFRAMEMOD-THE_SERGEANT.moves.LANKA_SHOT.title": "Lanka Shot",
+    "WARFRAMEMOD-THE_SERGEANT.moves.LANKAT.title": "Lanka",
     "WARFRAMEMOD-THE_SERGEANT.moves.FLASH_BANG.title": "Flash Bang",
     "WARFRAMEMOD-THE_SERGEANT.banter1": "Is this a gathering of the freaks?",
     "WARFRAMEMOD-THE_SERGEANT.banter2": "I'm only just warming up.",
@@ -19,5 +36,16 @@
     "WARFRAMEMOD-TUSK_THUMPER.name": "Tusk Thumper",
     "WARFRAMEMOD-TUSK_THUMPER.moves.TELESCOPIC_CANNON.title": "Large Telescopic Cannon",
     "WARFRAMEMOD-TUSK_THUMPER.moves.AUTOCANNON.title": "Rapid-Fire Autocannon",
-    "WARFRAMEMOD-TUSK_THUMPERT.moves.GROUNDPOUNDER.title": "Pneumatic Groundpounder"
+    "WARFRAMEMOD-TUSK_THUMPER.moves.GROUNDPOUNDER.title": "Pneumatic Groundpounder",
+
+    "WARFRAMEMOD-VEM_TABOOK.name": "Vem Tabook",
+    "WARFRAMEMOD-VEM_TABOOK.moves.HEK.title": "Hek",
+    "WARFRAMEMOD-VEM_TABOOK.moves.LEADER.title": "Leader",
+    "WARFRAMEMOD-VEM_TABOOK.banter1": "[jitter]You are the scrawniest of them all![/jitter]",
+    "WARFRAMEMOD-VEM_TABOOK.banter2": "[jitter]Are you the best they have?![/jitter]",
+    "WARFRAMEMOD-VEM_TABOOK.teammateDeathLine": "[jitter]Unacceptable![/jitter]",
+
+    "WARFRAMEMOD-ZANUKA_HUNTER.name": "Zanuka Hunter",
+    "WARFRAMEMOD-ZANUKA_HUNTER.moves.MISSILE_STRIKE.title": "Missile Strike",
+    "WARFRAMEMOD-ZANUKA_HUNTER.moves.FROST_BOMB.title": "Frost Bomb"
 }

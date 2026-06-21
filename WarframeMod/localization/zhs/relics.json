@@ -30,5 +30,9 @@
 
     "WARFRAMEMOD-ARCANE_BARRIER.title": "赋能·壁垒",
     "WARFRAMEMOD-ARCANE_BARRIER.description": "在每场战斗开始时，获得[blue]{TotalShield}[/blue]点[gold]护盾[/gold]、[blue]{ShieldCapacity}[/blue]点[gold]护盾容量[/gold]和[blue]{ShieldRecharge}[/blue]点[gold]护盾恢复[/gold]。\n当[gold]护盾[/gold]受到伤害时，回复所有[gold]护盾[/gold]，然后休眠[blue]{Turns}[/blue]回合。",
-    "WARFRAMEMOD-ARCANE_BARRIER.flavor": "[red]这个遗物的细节将在未来揭晓……[/red]"
+    "WARFRAMEMOD-ARCANE_BARRIER.flavor": "[red]这个遗物的细节将在未来揭晓……[/red]",
+
+    "WARFRAMEMOD-GRUSTRAG_BOLT.title": "Grustrag枷锁",
+    "WARFRAMEMOD-GRUSTRAG_BOLT.description": "在下[blue]{RemainingCombats}[/blue]场战斗中，你的卡牌造成的伤害减少[blue]{Decrement}%[/blue]。",
+    "WARFRAMEMOD-GRUSTRAG_BOLT.flavor": "[red]这个遗物的细节将在未来揭晓……[/red]"
 }

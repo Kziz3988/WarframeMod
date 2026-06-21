@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://oprw2s4xi1p8"]
+
+[ext_resource type="Texture2D" uid="uid://c1wvr3u6syx45" path="res://WarframeMod/images/monsters/zanuka_hunter.png" id="1_qd1mr"]
+
+[node name="ZanukaHunter" type="Node2D"]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Visuals" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -108)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_qd1mr")
+
+[node name="Bounds" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -236.0
+offset_right = 128.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CenterPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -108)
+
+[node name="IntentPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -236)

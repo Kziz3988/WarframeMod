@@ -1,4 +1,22 @@
 {
+    "WARFRAMEMOD-DEATH_MARK_OF_CORPUS.title": "死亡标记",
+    "WARFRAMEMOD-DEATH_MARK_OF_CORPUS.pages.INITIAL.description": "[sine][blue]“感谢你持续关注 Zanuka 研究。我们的一名工作人员将在短期内为你提供帮助…”[/blue][/sine]你听到了一阵电子音。\n[purple]一个身影[/purple]正从远处快速逼近。",
+    "WARFRAMEMOD-DEATH_MARK_OF_CORPUS.pages.INITIAL.options.FIGHT.title": "谁怕谁？",
+    "WARFRAMEMOD-DEATH_MARK_OF_CORPUS.pages.INITIAL.options.FIGHT.description": "战斗以获取1件稀有[gold]遗物[/gold]。",
+    "WARFRAMEMOD-DEATH_MARK_OF_CORPUS.pages.INITIAL.options.RUN.title": "快跑！",
+    "WARFRAMEMOD-DEATH_MARK_OF_CORPUS.pages.INITIAL.options.RUN.description": "将你的[gold]牌组[/gold]中的随机[blue]{Cards}[/blue]张牌[gold]变化[/gold]为[gold]空手[/gold]。",
+    "WARFRAMEMOD-DEATH_MARK_OF_CORPUS.pages.RUN_AWAY.description": "你拼命逃跑，但根本无法逃离这个[purple]四足生物[/purple]。\n[jitter]它扑了上来[/jitter]，你失去了意识。\n醒来后，你发觉自己失去了一些东西。",
+    "WARFRAMEMOD-DEATH_MARK_OF_CORPUS.loss": "真是可悲。",
+    
+    "WARFRAMEMOD-DEATH_MARK_OF_GRINEER.title": "死亡标记",
+    "WARFRAMEMOD-DEATH_MARK_OF_GRINEER.pages.INITIAL.description": "[jitter][red]“你还在继续协助我们的敌人。这种多管闲事的行为是不能容忍的。”[/red][/jitter]你听到了一阵怒吼。\n[green]三个身影[/green]正从远处快速逼近。",
+    "WARFRAMEMOD-DEATH_MARK_OF_GRINEER.pages.INITIAL.options.FIGHT.title": "谁怕谁？",
+    "WARFRAMEMOD-DEATH_MARK_OF_GRINEER.pages.INITIAL.options.FIGHT.description": "战斗以获取1件稀有[gold]遗物[/gold]。",
+    "WARFRAMEMOD-DEATH_MARK_OF_GRINEER.pages.INITIAL.options.RUN.title": "快跑！",
+    "WARFRAMEMOD-DEATH_MARK_OF_GRINEER.pages.INITIAL.options.RUN.description": "获得[gold]Grustrag枷锁[/gold]。",
+    "WARFRAMEMOD-DEATH_MARK_OF_GRINEER.pages.RUN_AWAY.description": "你拼命逃跑，但还是被他们追上了。\n他们将一个[green]古怪的物件[/green][jitter]强行套在了你的身上[/jitter]。你感到浑身无力。",
+    "WARFRAMEMOD-DEATH_MARK_OF_GRINEER.loss": "真是可悲。",
+    
     "WARFRAMEMOD-HELMINTH.title": "Helminth",
     "WARFRAMEMOD-HELMINTH.pages.INITIAL.description": "[red]一大团肿胀的团块[/red]颤抖着，发出古怪的声音。你仔细辨认它的话语。\n[jitter]“我可以分泌使你更强大、更全能的注入物...但要这样做的话，你必须先饲喂我，你会饲喂我吗？”[/jitter]",
     "WARFRAMEMOD-HELMINTH.pages.INITIAL.options.FEED_COMMON.title": "饲喂普通牌",

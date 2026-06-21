@@ -30,5 +30,9 @@
 
     "WARFRAMEMOD-ARCANE_BARRIER.title": "Arcane Barrier",
     "WARFRAMEMOD-ARCANE_BARRIER.description": "Start each combat with [blue]{TotalShield}[/blue] [gold]Shield[/gold], [blue]{ShieldCapacity}[/blue] [gold]Shield Capacity[/gold] and [blue]{ShieldRecharge}[/blue] [gold]Shield Recharge[/gold].\nWhen [gold]Shield[/gold] takes damage, recharge ALL [gold]Shield[/gold], then goes to sleep for [blue]{Turns}[/blue] {Turns:plural:turn|turns}.",
-    "WARFRAMEMOD-ARCANE_BARRIER.flavor": "[red]Details for this relic will be revealed in the future...[/red]"
+    "WARFRAMEMOD-ARCANE_BARRIER.flavor": "[red]Details for this relic will be revealed in the future...[/red]",
+
+    "WARFRAMEMOD-GRUSTRAG_BOLT.title": "Grustrag Bolt",
+    "WARFRAMEMOD-GRUSTRAG_BOLT.description": "In the next [blue]{RemainingCombats}[/blue] {RemainingCombats:plural:combat|combats}, your cards deal [blue]{Decrement}%[/blue] less damage.",
+    "WARFRAMEMOD-GRUSTRAG_BOLT.flavor": "[red]Details for this relic will be revealed in the future...[/red]"
 }

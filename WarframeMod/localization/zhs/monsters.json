@@ -7,8 +7,25 @@
     "WARFRAMEMOD-JACKAL.banter2": "[shake]敌人分析：有机体。威胁级别：贫弱无力。[/shake]",
     "WARFRAMEMOD-JACKAL.banter3": "[shake]威胁等级提升。分类：不值一提。[/shake]",
 
+    "WARFRAMEMOD-LEEKTER.name": "里克特",
+    "WARFRAMEMOD-LEEKTER.moves.BROKK.title": "布洛克战锤",
+    "WARFRAMEMOD-LEEKTER.moves.FLASH_GRENADE.title": "闪光手雷",
+    "WARFRAMEMOD-LEEKTER.banter1": "[jitter]我想跟这些人玩玩。[/jitter]",
+    "WARFRAMEMOD-LEEKTER.banter2": "[jitter]你看起来还真……脆弱啊。[/jitter]",
+    "WARFRAMEMOD-LEEKTER.teammateDeathLine": "[jitter]你将为此承受苦痛！[/jitter]",
+    
+    "WARFRAMEMOD-SHIK_TAL.name": "希克·塔尔",
+    "WARFRAMEMOD-SHIK_TAL.moves.MARELOK.title": "玛瑞火枪",
+    "WARFRAMEMOD-SHIK_TAL.moves.RIOT_SHIELD.title": "防暴盾",
+    "WARFRAMEMOD-SHIK_TAL.banter1": "[jitter]无聊！[/jitter]",
+    "WARFRAMEMOD-SHIK_TAL.banter2": "[jitter]我们能确定他们就是目标吗？他们看起来是多么微不足道。[/jitter]",
+    "WARFRAMEMOD-SHIK_TAL.banter3": "[jitter]不要浪费我的时间。[/jitter]",
+    "WARFRAMEMOD-SHIK_TAL.banter4": "[jitter]你臣服在我们脚下！[/jitter]",
+    "WARFRAMEMOD-SHIK_TAL.banter5": "[jitter]他们其中有人戴着披巾吗？[/jitter]",
+    "WARFRAMEMOD-SHIK_TAL.teammateDeathLine": "[jitter]这家伙是难以取代的。[/jitter]",
+
     "WARFRAMEMOD-THE_SERGEANT.name": "海军陆战队中士",
-    "WARFRAMEMOD-THE_SERGEANT.moves.LANKA_SHOT.title": "兰卡射击",
+    "WARFRAMEMOD-THE_SERGEANT.moves.LANKA.title": "兰卡",
     "WARFRAMEMOD-THE_SERGEANT.moves.FLASH_BANG.title": "炸裂闪光",
     "WARFRAMEMOD-THE_SERGEANT.banter1": "这是怪胎们的集会吗？",
     "WARFRAMEMOD-THE_SERGEANT.banter2": "这只是我的热身。",
@@ -19,5 +36,16 @@
     "WARFRAMEMOD-TUSK_THUMPER.name": "巨牙重击者",
     "WARFRAMEMOD-TUSK_THUMPER.moves.TELESCOPIC_CANNON.title": "大型伸缩式加农炮",
     "WARFRAMEMOD-TUSK_THUMPER.moves.AUTOCANNON.title": "快速射击式自动加农炮",
-    "WARFRAMEMOD-TUSK_THUMPERT.moves.GROUNDPOUNDER.title": "气动式捶地机"
+    "WARFRAMEMOD-TUSK_THUMPER.moves.GROUNDPOUNDER.title": "气动式捶地机",
+
+    "WARFRAMEMOD-VEM_TABOOK.name": "维姆·塔布克",
+    "WARFRAMEMOD-VEM_TABOOK.moves.HEK.title": "海克",
+    "WARFRAMEMOD-VEM_TABOOK.moves.LEADER.title": "领队",
+    "WARFRAMEMOD-VEM_TABOOK.banter1": "[jitter]你是他们之中最弱小的。[/jitter]",
+    "WARFRAMEMOD-VEM_TABOOK.banter2": "[jitter]你是他们之中最强的？[/jitter]",
+    "WARFRAMEMOD-VEM_TABOOK.teammateDeathLine": "[jitter]不可接受！[/jitter]",
+
+    "WARFRAMEMOD-ZANUKA_HUNTER.name": "Zanuka猎犬",
+    "WARFRAMEMOD-ZANUKA_HUNTER.moves.MISSILE_STRIKE.title": "飞弹打击",
+    "WARFRAMEMOD-ZANUKA_HUNTER.moves.FROST_BOMB.title": "冰霜炸弹"
 }

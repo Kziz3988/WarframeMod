@@ -34,7 +34,6 @@ public class DexPixia() : WarframeModCard(0, CardType.Attack, CardRarity.Token, 
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars.Damage.UpgradeValueBy(2m);
         base.DynamicVars["SlashPower"].UpgradeValueBy(1m);
     }
 }

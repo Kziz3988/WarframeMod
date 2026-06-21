@@ -26,6 +26,6 @@ public class Diwata() : WarframeModCard(0, CardType.Attack, CardRarity.Token, Ta
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars.Damage.UpgradeValueBy(2m);
+        base.DynamicVars.Damage.UpgradeValueBy(1m);
     }
 }

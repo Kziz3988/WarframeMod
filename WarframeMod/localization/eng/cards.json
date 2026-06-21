@@ -151,7 +151,7 @@
     "WARFRAMEMOD-NOURISH.title": "Nourish",
     "WARFRAMEMOD-NOURISH.description": "Apply {VulnerablePower:diff()} [gold]Vulnerable[/gold] to all enemies.\nWhenever you gain {energyPrefix:energyIcons(1)}, gain additional {Energy:energyIcons()}.",
     "WARFRAMEMOD-OPERATOR_FORM.title": "Operator Form",
-    "WARFRAMEMOD-OPERATOR_FORM.description": "If you end your turn without playing Attacks, gain {OperatorFormPower:diff()} [gold]Intangible[/gold].\nAt the start of your turn, gain {OperatorFormPower:diff()} [gold]Tranference Static[/gold].",
+    "WARFRAMEMOD-OPERATOR_FORM.description": "If you end your turn without playing Attacks, gain {OperatorFormPower:diff()} [gold]Intangible[/gold].\nAt the start of your turn, gain {OperatorFormPower:diff()} [gold]Transference Static[/gold].",
     "WARFRAMEMOD-PEACEMAKER.title": "Peacemaker",
     "WARFRAMEMOD-PEACEMAKER.description": "At the start of your turn, add {Cards:diff()} [gold]{IfUpgraded:show:Regulators+|Regulators}[/gold] into your [gold]Hand[/gold].\nYou may not draw cards during your turn.",
     "WARFRAMEMOD-PSYCHIC_BOLTS.title": "Psychic Bolts",
@@ -221,6 +221,8 @@
     "WARFRAMEMOD-SERENE_STORM.description": "Deal {Damage:diff()} damage to a random enemy X times.",
     "WARFRAMEMOD-SYNTHESIS_SCANNER.title": "Synthesis Scanner",
     "WARFRAMEMOD-SYNTHESIS_SCANNER.description": "Deal {Damage:diff()} damage.\nIf [gold]Fatal[/gold], obtain a random [gold]Relic[/gold] and remove this card from your [gold]Deck[/gold] at the end of combat.",
+    "WARFRAMEMOD-UNARMED.title": "Unarmed",
+    "WARFRAMEMOD-UNARMED.description": "Deal {Damage:diff()} damage.",
     "WARFRAMEMOD-WYRD_SCYTHES.title": "Wyrd Scythes",
     "WARFRAMEMOD-WYRD_SCYTHES.description": "Deal {Damage:diff()} damage and apply {VulnerablePower:diff()} [gold]Vulnerable[/gold] to a random enemy {Repeat:diff()} {Repeat:plural:time|times}."
 }

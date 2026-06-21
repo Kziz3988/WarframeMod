@@ -221,6 +221,8 @@
     "WARFRAMEMOD-SICKENING_PULSE.description": "将一名敌人的[gold]负面效果[/gold]的层数增加{Increment:diff()}。",
     "WARFRAMEMOD-SYNTHESIS_SCANNER.title": "结合扫描器",
     "WARFRAMEMOD-SYNTHESIS_SCANNER.description": "造成{Damage:diff()}点伤害。[gold]斩杀[/gold]后，在战斗结束时获得1件随机[gold]遗物[/gold]，并从你的[gold]牌组[/gold]中移除这张牌。",
+    "WARFRAMEMOD-UNARMED.title": "空手",
+    "WARFRAMEMOD-UNARMED.description": "造成{Damage:diff()}点伤害。",
     "WARFRAMEMOD-WYRD_SCYTHES.title": "命定镰刃",
     "WARFRAMEMOD-WYRD_SCYTHES.description": "随机对敌人造成{Damage:diff()}点伤害并给予{VulnerablePower:diff()}层[gold]易伤[/gold]{Repeat:diff()}次。"
 }

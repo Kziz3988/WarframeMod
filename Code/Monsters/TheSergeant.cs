@@ -28,7 +28,7 @@ public sealed class TheSergeant : CustomMonsterModel
 
 	public override int MaxInitialHp => AscensionHelper.GetValueIfAscension(AscensionLevel.ToughEnemies, 80, 70);
 
-    private int LankaShotDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 19, 17);
+    private int LankaDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 19, 17);
 
     private int InitialShield => AscensionHelper.GetValueIfAscension(AscensionLevel.ToughEnemies, 15, 10);
 
@@ -58,19 +58,19 @@ public sealed class TheSergeant : CustomMonsterModel
 	protected override MonsterMoveStateMachine GenerateMoveStateMachine()
 	{
 		List<MonsterState> list = new List<MonsterState>();
-		MoveState lankaShotMove = new MoveState("LANKA_SHOT_MOVE", LankaShotMove, new SingleAttackIntent(LankaShotDamage));
+		MoveState lankaMove = new MoveState("LANKA_MOVE", LankaMove, new SingleAttackIntent(LankaDamage));
 		MoveState flashBangMove = new MoveState("FLASH_BANG_MOVE", FlashBangMove, new DebuffIntent(), new BuffIntent());
-		lankaShotMove.FollowUpState = flashBangMove;
-        flashBangMove.FollowUpState = lankaShotMove;
-		list.Add(lankaShotMove);
+		lankaMove.FollowUpState = flashBangMove;
+        flashBangMove.FollowUpState = lankaMove;
+		list.Add(lankaMove);
         list.Add(flashBangMove);
 		return new MonsterMoveStateMachine(list, flashBangMove);
 	}
 
-	private async Task LankaShotMove(IReadOnlyList<Creature> targets)
+	private async Task LankaMove(IReadOnlyList<Creature> targets)
 	{
         TalkCmd.Play(GetNextBanter(), base.Creature, VfxColor.Cyan);
-        await DamageCmd.Attack(LankaShotDamage).FromMonster(this)
+        await DamageCmd.Attack(LankaDamage).FromMonster(this)
 			.Execute(null);
 	}
 

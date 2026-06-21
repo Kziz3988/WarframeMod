@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://iqghbk5hikal"]
+
+[ext_resource type="Texture2D" uid="uid://blckvmskcnfbw" path="res://WarframeMod/images/monsters/shik_tal.png" id="1_d85o2"]
+
+[node name="ShikTal" type="Node2D"]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Visuals" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -147)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_d85o2")
+
+[node name="Bounds" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -293.0
+offset_right = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CenterPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -147)
+
+[node name="IntentPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -310)

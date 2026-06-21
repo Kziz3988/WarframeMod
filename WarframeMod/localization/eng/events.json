@@ -1,4 +1,22 @@
 {
+    "WARFRAMEMOD-DEATH_MARK_OF_CORPUS.title": "Death Mark",
+    "WARFRAMEMOD-DEATH_MARK_OF_CORPUS.pages.INITIAL.description": "[sine][blue]\"Thank you for your continued interest in the Zanuka Project. A member of our staff will assist you shortly...\"[/blue][/sin]You heard an electronic sound.\n[purple]A figure[/purple] is rapidly approaching from a distance.",
+    "WARFRAMEMOD-DEATH_MARK_OF_CORPUS.pages.INITIAL.options.FIGHT.title": "Bring it on!",
+    "WARFRAMEMOD-DEATH_MARK_OF_CORPUS.pages.INITIAL.options.FIGHT.description": "Fight to obtain a rare [gold]Relic[/gold].",
+    "WARFRAMEMOD-DEATH_MARK_OF_CORPUS.pages.INITIAL.options.RUN.title": "Run!",
+    "WARFRAMEMOD-DEATH_MARK_OF_CORPUS.pages.INITIAL.options.RUN.description": "[gold]Transform[/gold] [blue]{Cards}[/blue] random {Cards:plural:card|cards} in your [gold]Deck[/gold] to [gold]Unarmed[/gold].",
+    "WARFRAMEMOD-DEATH_MARK_OF_CORPUS.pages.RUN_AWAY.description": "You ran away desperately, but you couldn't escape this [purple]four legged creature[/purple]. \n[jitter]It pounced[/jitter] and you lost consciousness. \nAfter waking up, you realize that you have lost something.",
+    "WARFRAMEMOD-DEATH_MARK_OF_CORPUS.loss": "Pathetic.",
+
+    "WARFRAMEMOD-DEATH_MARK_OF_GRINEER.title": "Death Mark",
+    "WARFRAMEMOD-DEATH_MARK_OF_GRINEER.pages.INITIAL.description": "[jitter][red]\"You continue to assist our enemies. Your meddling will NOT be tolerated.\"[/red][/jitter]You heard a roar.\n[green]Three figures[/green] are rapidly approaching from a distance.",
+    "WARFRAMEMOD-DEATH_MARK_OF_GRINEER.pages.INITIAL.options.FIGHT.title": "Bring it on!",
+    "WARFRAMEMOD-DEATH_MARK_OF_GRINEER.pages.INITIAL.options.FIGHT.description": "Fight to obtain a rare [gold]Relic[/gold].",
+    "WARFRAMEMOD-DEATH_MARK_OF_GRINEER.pages.INITIAL.options.RUN.title": "Run!",
+    "WARFRAMEMOD-DEATH_MARK_OF_GRINEER.pages.INITIAL.options.RUN.description": "Obtain [gold]Grustrag Bolt[/gold].",
+    "WARFRAMEMOD-DEATH_MARK_OF_GRINEER.pages.RUN_AWAY.description": "You ran away desperately, but they still caught up with you.\tThey [jitter]forcibly placed[/jitter] [green]a strange object[/green] on you. You feel powerless all over.",
+    "WARFRAMEMOD-DEATH_MARK_OF_GRINEER.loss": "Pathetic.",
+
     "WARFRAMEMOD-HELMINTH.title": "Helminth",
     "WARFRAMEMOD-HELMINTH.pages.INITIAL.description": "A large distended mass quivers and makes strange noises. You carefully identify its words.\n[jitter]\"I can secrete Infusions that will make you stronger, more versatile... but to do this, you must feed me... will you feed me?\"[/jitter]",
     "WARFRAMEMOD-HELMINTH.pages.INITIAL.options.FEED_COMMON.title": "Feed a Common card",
