@@ -14,7 +14,7 @@ using MegaCrit.Sts2.Core.Rewards;
 using MegaCrit.Sts2.Core.Runs;
 using WarframeMod.Code.Encounters;
 using WarframeMod.Code.Extensions;
-using WarframeMod.Code.Relics.Ancient;
+using WarframeMod.Code.Relics.Event;
 
 namespace WarframeMod.Code.Events;
 

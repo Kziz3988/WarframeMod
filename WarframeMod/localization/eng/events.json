@@ -1,4 +1,7 @@
 {
+    "COLORFUL_PHILOSOPHERS.pages.INITIAL.options.CARD_POOL∴WARFRAMEMOD-WARFRAME_MOD_CARD_POOL.title": "Peacock Blue",
+    "COLORFUL_PHILOSOPHERS.pages.INITIAL.options.CARD_POOL∴WARFRAMEMOD-WARFRAME_MOD_CARD_POOLE.description": "Obtain [blue]{Cards}[/blue] Excalibur {Cards:plural:card|cards}.",
+
     "WARFRAMEMOD-DEATH_MARK_OF_CORPUS.title": "Death Mark",
     "WARFRAMEMOD-DEATH_MARK_OF_CORPUS.pages.INITIAL.description": "[sine][blue]\"Thank you for your continued interest in the Zanuka Project. A member of our staff will assist you shortly...\"[/blue][/sin]You heard an electronic sound.\n[purple]A figure[/purple] is rapidly approaching from a distance.",
     "WARFRAMEMOD-DEATH_MARK_OF_CORPUS.pages.INITIAL.options.FIGHT.title": "Bring it on!",
@@ -34,14 +37,23 @@
     "WARFRAMEMOD-HELMINTH.pages.INJECTED.description": "[jitter]\"Our work never truly ends.\"[/jitter]",
     "WARFRAMEMOD-HELMINTH.loss": "\"Sacs, stomachs, bladders - all full. I grow torpid.\"",
 
+    "WARFRAMEMOD-MAROOS_BAZAAR.title": "Maroo's Bazaar",
+    "WARFRAMEMOD-MAROOS_BAZAAR.pages.INITIAL.description": "You find yourself standing in the center of a [gold]stunningly large marketplace[/gold]. [purple]Various vendors[/purple] [sine]shuttle around you[/sine], with calculations hidden in their eyes, but their mouths are filled with enthusiasm - each one wants to get something from you, this new face. Soon, two of them block your way.\nThe one on the left leans in mysteriously, opens his palm, and reveals [orange]small round objects that look like nuts[/orange]. He lowers his voice and confidently declars that there are [sine][gold]once-in-a-lifetime treasures[/gold][/sine] sealed inside.\nThe one on the right claps his chest and tells you that if you buy his [blue]Aya[/blue], you can get [jitter]anything you want[/jitter] in this market.",
+    "WARFRAMEMOD-MAROOS_BAZAAR.pages.INITIAL.options.RANDOM_RELIC.title": "The Left One",
+    "WARFRAMEMOD-MAROOS_BAZAAR.pages.INITIAL.options.RANDOM_RELIC.description": "Pay [red]{PriceOfRelic}[/red] [gold]Gold[/gold]. Obtain [blue]1[/blue] random [gold]Void Relic[/gold].",
+    "WARFRAMEMOD-MAROOS_BAZAAR.pages.INITIAL.options.AYA.title": "The Right One",
+    "WARFRAMEMOD-MAROOS_BAZAAR.pages.INITIAL.options.AYA.description": "Pay [red]{PriceOfAya}[/red] [gold]Gold[/gold]. Obtain [gold]Aya[/gold].",
+    "WARFRAMEMOD-MAROOS_BAZAAR.pages.TOOK_A_RELIC.description": "He happily takes your gold and hands you [orange]one of the nuts[/orange].",
+    "WARFRAMEMOD-MAROOS_BAZAAR.pages.YOU_ARE_FOOLED.description": "He [jitter]impatiently grabs your gold and stuffs a blue droplet shaped object[/blue] into your hand. When you come to your senses, you realize that he has disappeared without a trace.",
+
     "WARFRAMEMOD-RIVEN_MAKER.title": "Riven Maker",
     "WARFRAMEMOD-RIVEN_MAKER.pages.INITIAL.description": "A masked woman appeared before your eyes.\n[sine]\"I am Palladino, Holy speaker of the [red]Red Veil[/red], like my mother, and hers before...\"[/sine]\nYou cannot understand her words, but your attention is drawn to a few [sine][purple]strange purple cards[/sine][/purple].",
     "WARFRAMEMOD-RIVEN_MAKER.pages.INITIAL.options.BUY_ONE_RIVEN.title": "Buy One",
-    "WARFRAMEMOD-RIVEN_MAKER.pages.INITIAL.options.BUY_ONE_RIVEN.description": "Add 1 [gold]Riven[/gold] with random attributes into your [gold]Deck[/gold].",
+    "WARFRAMEMOD-RIVEN_MAKER.pages.INITIAL.options.BUY_ONE_RIVEN.description": "Pay [red]{PriceOfOneRiven}[/red] [gold]Gold[/gold]. Add [blue]1[/blue] [gold]Riven[/gold] with random attributes into your [gold]Deck[/gold].",
     "WARFRAMEMOD-RIVEN_MAKER.pages.INITIAL.options.BUY_ONE_RIVEN_LOCKED.title": "Locked",
     "WARFRAMEMOD-RIVEN_MAKER.pages.INITIAL.options.BUY_ONE_RIVEN_LOCKED.description": "Requires [blue]{PriceOfOneRiven}[/blue] [gold]Gold[/gold].",
     "WARFRAMEMOD-RIVEN_MAKER.pages.INITIAL.options.BUY_TWO_RIVENS.title": "Buy ALL",
-    "WARFRAMEMOD-RIVEN_MAKER.pages.INITIAL.options.BUY_TWO_RIVENS.description": "Add 2 [gold]Rivens[/gold] with random attributes into your [gold]Deck[/gold].",
+    "WARFRAMEMOD-RIVEN_MAKER.pages.INITIAL.options.BUY_TWO_RIVENS.description": "Pay [red]{PriceOfTwoRivens}[/red] [gold]Gold[/gold]. Add [blue]2[/blue] [gold]Rivens[/gold] with random attributes into your [gold]Deck[/gold].",
     "WARFRAMEMOD-RIVEN_MAKER.pages.INITIAL.options.BUY_TWO_RIVENS_LOCKED.title": "Locked",
     "WARFRAMEMOD-RIVEN_MAKER.pages.INITIAL.options.BUY_TWO_RIVENS_LOCKED.description": "Requires [blue]{PriceOfTwoRivens}[/blue] [gold]Gold[/gold].",
     "WARFRAMEMOD-RIVEN_MAKER.pages.IF_CYCLE.description": "[sine]\"...Do you want to [red]Cycle[/red] the [gold]Riven[/gold]? No cost too great, no blood too precious...\"[/sine]",
@@ -61,9 +73,9 @@
     "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.title": "The Sanctuary of Simaris",
     "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.pages.INITIAL.description": "[gold]A strange shape composed of yellow light[/gold] suddenly appears in front of you.\n[jitter]\"I am Cephalon Simaris. The destroyer. The immortalizer. This is my [gold]Sanctuary[/gold]. It will enlighten you, should you assist me in performing [gold]Synthesis[/gold]. You will hunt the creatures I require and transform them into beings of the [gold]Sanctuary[/gold]. That is [gold]Synthesis[/gold]. Is this murder? No. All beings of substance die eventually. But only those forgotten are truly dead.\"[/jitter]\nIf you don't accept it, its incessant chatter seems to never stop.",
     "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.pages.INITIAL.options.A_FEW_TARGETS.title": "A Few Targets",
-    "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.pages.INITIAL.options.A_FEW_TARGETS.description": "Add 1 [gold]Synthesis Scanner[/gold] into your [gold]Pile[/gold].",
+    "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.pages.INITIAL.options.A_FEW_TARGETS.description": "Add [blue]1[/blue] [gold]Synthesis Scanner[/gold] into your [gold]Pile[/gold].",
     "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.pages.INITIAL.options.LOTS_OF_TARGETS.title": "Lots of Targets",
-    "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.pages.INITIAL.options.LOTS_OF_TARGETS.description": "Add 2 [gold]Synthesis Scanners+[/gold] into your [gold]Pile[/gold].",
+    "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.pages.INITIAL.options.LOTS_OF_TARGETS.description": "Add [blue]2[/blue] [gold]Synthesis Scanners+[/gold] into your [gold]Pile[/gold].",
     "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.pages.STRAT_HUNTING.description": "[jitter]\"Good. Even while others are blinded by petty morality, you recognized the virtue of the [gold]Sanctuary[/gold].\"[/jitter]",
     "WARFRAMEMOD-SANCTUARY_OF_SIMARIS.loss": "\"The Sanctuary will go on without you, but can you go on without the Sanctuary?\""
 }

@@ -12,7 +12,7 @@ using WarframeMod.Code.Powers.Buff;
 
 namespace WarframeMod.Code.Cards.Uncommon;
 
-public class Penance() : WarframeModCard(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
+public class Penance() : WarframeModCard(0, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.FromPower<ShieldPower>()

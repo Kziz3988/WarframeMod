@@ -1,4 +1,6 @@
 {
     "WARFRAMEMOD-ELEMENT.title": "Element",
-    "WARFRAMEMOD-ELEMENT.description": "[gold]Cold[/gold], [gold]Electricity[/gold], [gold]Heat[/gold], and [gold]Poison[/gold]."
+    "WARFRAMEMOD-ELEMENT.description": "[gold]Cold[/gold], [gold]Electricity[/gold], [gold]Heat[/gold], and [gold]Poison[/gold].",
+    "WARFRAMEMOD-VOID_RELIC.title": "Void Relic",
+    "WARFRAMEMOD-VOID_RELIC.description": "Kill a certain amount of non-minion enemies to obtain a reward at the end of combat."
 }

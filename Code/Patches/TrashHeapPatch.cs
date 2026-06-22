@@ -19,6 +19,7 @@ public static class TrashHeapPatch
         {
             var customCardList = new List<CardModel>(__result)
             {
+                ModelDb.Card<CollectiveCurse>(),
                 ModelDb.Card<Crystallize>(),
                 ModelDb.Card<FinalStand>(),
                 ModelDb.Card<SereneStorm>(),

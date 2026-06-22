@@ -1,15 +1,14 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.MonsterMoves.Intents;
+using WarframeMod.Code.Extensions;
 
 namespace WarframeMod.Code.Cards.Common;
 
@@ -24,15 +23,6 @@ public class Eclipse() : WarframeModCard(0, CardType.Skill, CardRarity.Common, T
 		new PowerVar<VulnerablePower>(2)
 	];
 
-	private static bool IntendsToDefend(MonsterModel monster)
-	{
-		return monster.NextMove.Intents.Any(delegate(AbstractIntent intent)
-		{
-			IntentType intentType = intent.IntentType;
-			return intentType == IntentType.Defend;
-		});
-	}
-
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
 	{
 		ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
@@ -40,7 +30,7 @@ public class Eclipse() : WarframeModCard(0, CardType.Skill, CardRarity.Common, T
 		{
 			await PowerCmd.Apply<WeakPower>(choiceContext, cardPlay.Target, base.DynamicVars.Weak.BaseValue, base.Owner.Creature, this);
 		}
-		if (IntendsToDefend(cardPlay.Target.Monster))
+		if (cardPlay.Target.Monster.IntendsTo(IntentType.Defend))
 		{
 			await PowerCmd.Apply<VulnerablePower>(choiceContext, cardPlay.Target, base.DynamicVars.Weak.BaseValue, base.Owner.Creature, this);
 		}

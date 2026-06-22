@@ -9,21 +9,21 @@ using MegaCrit.Sts2.Core.Rooms;
 using MegaCrit.Sts2.Core.Saves.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 
-namespace WarframeMod.Code.Relics.Ancient;
+namespace WarframeMod.Code.Relics.Event;
 
 public sealed class GrustragBolt : WarframeModRelic
 {
+    public const int TotalCombats = 1;
+
 	public override RelicRarity Rarity => RelicRarity.Event;
 	public override bool ShowCounter => DisplayAmount > 0;
     public override int DisplayAmount => Math.Max(0, base.DynamicVars["TotalCombats"].IntValue - Combats);
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DynamicVar("TotalCombats", _totalCombats),
+        new DynamicVar("TotalCombats", TotalCombats),
         new DynamicVar("Decrement", 50m),
-        new DynamicVar("RemainingCombats", _totalCombats),
+        new DynamicVar("RemainingCombats", TotalCombats),
     ];
-
-    private int _totalCombats = 1;
 
     private int _combats = 0;
 

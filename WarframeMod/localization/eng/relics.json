@@ -32,7 +32,25 @@
     "WARFRAMEMOD-ARCANE_BARRIER.description": "Start each combat with [blue]{TotalShield}[/blue] [gold]Shield[/gold], [blue]{ShieldCapacity}[/blue] [gold]Shield Capacity[/gold] and [blue]{ShieldRecharge}[/blue] [gold]Shield Recharge[/gold].\nWhen [gold]Shield[/gold] takes damage, recharge ALL [gold]Shield[/gold], then goes to sleep for [blue]{Turns}[/blue] {Turns:plural:turn|turns}.",
     "WARFRAMEMOD-ARCANE_BARRIER.flavor": "[red]Details for this relic will be revealed in the future...[/red]",
 
+    "WARFRAMEMOD-AXI.title": "Axi",
+    "WARFRAMEMOD-AXI.description": "Kill [blue]{RemainingEnemies}[/blue] more non-minion {RemainingEnemies:plural:enemy|enemies} to obtain a random [gold]Relic[/gold] at the end of combat.{IsTriggered:\n[red]This Void Relic has already been opened.[/red]|}",
+    "WARFRAMEMOD-AXI.flavor": "[red]Details for this relic will be revealed in the future...[/red]",
+    "WARFRAMEMOD-DRIPPY.title": "Aya???",
+    "WARFRAMEMOD-DRIPPY.description": "You feel like you've been fooled.",
+    "WARFRAMEMOD-DRIPPY.flavor": "[red]etails for this relic will be revealed in the future...[/red]",
     "WARFRAMEMOD-GRUSTRAG_BOLT.title": "Grustrag Bolt",
     "WARFRAMEMOD-GRUSTRAG_BOLT.description": "In the next [blue]{RemainingCombats}[/blue] {RemainingCombats:plural:combat|combats}, your cards deal [blue]{Decrement}%[/blue] less damage.",
-    "WARFRAMEMOD-GRUSTRAG_BOLT.flavor": "[red]Details for this relic will be revealed in the future...[/red]"
+    "WARFRAMEMOD-GRUSTRAG_BOLT.flavor": "[red]Details for this relic will be revealed in the future...[/red]",
+    "WARFRAMEMOD-LITH.title": "Lith",
+    "WARFRAMEMOD-LITH.description": "Kill [blue]{RemainingEnemies}[/blue] more non-minion {RemainingEnemies:plural:enemy|enemies} to procure a random [gold]Potion[/gold] at the end of combat.{IsTriggered:\n[red]This Void Relic has already been opened.[/red]|}",
+    "WARFRAMEMOD-LITH.flavor": "[red]Details for this relic will be revealed in the future...[/red]",
+    "WARFRAMEMOD-MESO.title": "Meso",
+    "WARFRAMEMOD-MESO.description": "Kill [blue]{RemainingEnemies}[/blue] more non-minion {RemainingEnemies:plural:enemy|enemies} to gain an additional card reward at the end of combat.{IsTriggered:\n[red]This Void Relic has already been opened.[/red]|}",
+    "WARFRAMEMOD-MESO.flavor": "[red]Details for this relic will be revealed in the future...[/red]",
+    "WARFRAMEMOD-NEO.title": "Neo",
+    "WARFRAMEMOD-NEO.description": "Kill [blue]{RemainingEnemies}[/blue] more non-minion {RemainingEnemies:plural:enemy|enemies} to gain a Colorless card reward at the end of combat.{IsTriggered:\n[red]This Void Relic has already been opened.[/red]|}",
+    "WARFRAMEMOD-NEO.flavor": "[red]Details for this relic will be revealed in the future...[/red]",
+    "WARFRAMEMOD-REQUIEM.title": "Requiem",
+    "WARFRAMEMOD-REQUIEM.description": "Kill [blue]{RemainingEnemies}[/blue] more non-minion {RemainingEnemies:plural:enemy|enemies} to gain a card reward which contains cards from other colors at the end of combat.{IsTriggered:\n[red]This Void Relic has already been opened.[/red]|}",
+    "WARFRAMEMOD-REQUIEM.flavor": "[red]Details for this relic will be revealed in the future...[/red]"
 }

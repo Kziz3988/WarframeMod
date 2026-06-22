@@ -1,4 +1,6 @@
 {
     "WARFRAMEMOD-ELEMENT.title": "元素",
-    "WARFRAMEMOD-ELEMENT.description": "[gold]冰冻[/gold]，[gold]电击[/gold]，[gold]火焰[/gold]和[gold]中毒[/gold]。"
+    "WARFRAMEMOD-ELEMENT.description": "[gold]冰冻[/gold]，[gold]电击[/gold]，[gold]火焰[/gold]和[gold]中毒[/gold]。",
+    "WARFRAMEMOD-VOID_RELIC.title": "虚空遗物",
+    "WARFRAMEMOD-VOID_RELIC.description": "杀死一定量的非爪牙敌人后，在战斗结束时获得奖励。"
 }
