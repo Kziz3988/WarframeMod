@@ -115,6 +115,11 @@ public static class StringExtensions
         return Path.Join(MainFile.ResPath, "scenes", "cards", "overlays", path);
     }
 
+    public static string MonsterTexturePath(this string path)
+    {
+        return Path.Join(MainFile.ResPath, "images", "monsters", path);
+    }
+
     public static string VfxPath(this string path)
     {
         return Path.Join(MainFile.ResPath, "scenes", "vfx", path);

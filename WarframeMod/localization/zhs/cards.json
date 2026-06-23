@@ -226,5 +226,8 @@
     "WARFRAMEMOD-UNARMED.title": "空手",
     "WARFRAMEMOD-UNARMED.description": "造成{Damage:diff()}点伤害。",
     "WARFRAMEMOD-WYRD_SCYTHES.title": "命定镰刃",
-    "WARFRAMEMOD-WYRD_SCYTHES.description": "随机对敌人造成{Damage:diff()}点伤害并给予{VulnerablePower:diff()}层[gold]易伤[/gold]{Repeat:diff()}次。"
+    "WARFRAMEMOD-WYRD_SCYTHES.description": "随机对敌人造成{Damage:diff()}点伤害并给予{VulnerablePower:diff()}层[gold]易伤[/gold]{Repeat:diff()}次。",
+
+    "WARFRAMEMOD-EXPLOSIVE_POWER_CELL.title": "能量炸弹",
+    "WARFRAMEMOD-EXPLOSIVE_POWER_CELL.description": "当这张牌被丢弃时，给这张牌添加[gold]虚无[/gold]。"
 }

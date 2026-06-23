@@ -36,7 +36,7 @@ public sealed class ShikTal : CustomMonsterModel
 
 	private LocString GetNextBanter()
 	{
-		int lineIndex = RunRng.MonsterAi.NextInt(1, 5);
+		int lineIndex = RunRng.MonsterAi.NextInt(1, 6);
 		return MonsterModel.L10NMonsterLookup($"WARFRAMEMOD-SHIK_TAL.banter{lineIndex}");
 	}
 

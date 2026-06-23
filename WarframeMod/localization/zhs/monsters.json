@@ -13,6 +13,16 @@
     "WARFRAMEMOD-LEEKTER.banter1": "[jitter]我想跟这些人玩玩。[/jitter]",
     "WARFRAMEMOD-LEEKTER.banter2": "[jitter]你看起来还真……脆弱啊。[/jitter]",
     "WARFRAMEMOD-LEEKTER.teammateDeathLine": "[jitter]你将为此承受苦痛！[/jitter]",
+
+    "WARFRAMEMOD-NEMES_RT.name": "自爆机RT",
+    "WARFRAMEMOD-NEMES_RT.moves.EXPLODE.title": "自爆",
+
+    "WARFRAMEMOD-RAPTOR.name": "猛禽{Type}",
+    "WARFRAMEMOD-RAPTOR.moves.RESPAWN.title": "重生",
+    "WARFRAMEMOD-RAPTOR.moves.LASER_BOLT.title": "闪电激光",
+    "WARFRAMEMOD-RAPTOR.moves.ENERGY_MORTAR.title": "能量迫击炮",
+    "WARFRAMEMOD-RAPTOR.moves.NEMES_RT.title": "部署自爆机",
+    "WARFRAMEMOD-RAPTOR.moves.LASER_BARRAGE.title": "巨型激光",
     
     "WARFRAMEMOD-SHIK_TAL.name": "希克·塔尔",
     "WARFRAMEMOD-SHIK_TAL.moves.MARELOK.title": "玛瑞火枪",

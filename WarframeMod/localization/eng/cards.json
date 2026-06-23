@@ -226,5 +226,8 @@
     "WARFRAMEMOD-UNARMED.title": "Unarmed",
     "WARFRAMEMOD-UNARMED.description": "Deal {Damage:diff()} damage.",
     "WARFRAMEMOD-WYRD_SCYTHES.title": "Wyrd Scythes",
-    "WARFRAMEMOD-WYRD_SCYTHES.description": "Deal {Damage:diff()} damage and apply {VulnerablePower:diff()} [gold]Vulnerable[/gold] to a random enemy {Repeat:diff()} {Repeat:plural:time|times}."
+    "WARFRAMEMOD-WYRD_SCYTHES.description": "Deal {Damage:diff()} damage and apply {VulnerablePower:diff()} [gold]Vulnerable[/gold] to a random enemy {Repeat:diff()} {Repeat:plural:time|times}.",
+
+    "WARFRAMEMOD-EXPLOSIVE_POWER_CELL.title": "Explosive Power Cell",
+    "WARFRAMEMOD-EXPLOSIVE_POWER_CELL.description": "When this card is discarded, add [gold]Ethereal[/gold] to it."
 }

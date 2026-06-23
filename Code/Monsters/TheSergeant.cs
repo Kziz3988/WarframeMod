@@ -42,7 +42,7 @@ public sealed class TheSergeant : CustomMonsterModel
 
 	private LocString GetNextBanter()
 	{
-		int lineIndex = RunRng.MonsterAi.NextInt(1, 5);
+		int lineIndex = RunRng.MonsterAi.NextInt(1, 6);
 		return MonsterModel.L10NMonsterLookup($"WARFRAMEMOD-THE_SERGEANT.banter{lineIndex}");
 	}
 

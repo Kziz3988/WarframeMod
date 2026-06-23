@@ -14,6 +14,16 @@
     "WARFRAMEMOD-LEEKTER.banter2": "[jitter]You looks so... slippery.[/jitter]",
     "WARFRAMEMOD-LEEKTER.teammateDeathLine": "[jitter]You are going to suffer for that![/jitter]",
 
+    "WARFRAMEMOD-NEMES_RT.name": "Nemes RT",
+    "WARFRAMEMOD-NEMES_RT.moves.EXPLODE.title": "Explode",
+
+    "WARFRAMEMOD-RAPTOR.name": "Raptor {Type}",
+    "WARFRAMEMOD-RAPTOR.moves.RESPAWN.title": "Respawn",
+    "WARFRAMEMOD-RAPTOR.moves.LASER_BOLT.title": "Laser Bolt",
+    "WARFRAMEMOD-RAPTOR.moves.ENERGY_MORTAR.title": "Energy Mortar",
+    "WARFRAMEMOD-RAPTOR.moves.NEMES_RT.title": "Summon Nemes",
+    "WARFRAMEMOD-RAPTOR.moves.LASER_BARRAGE.title": "Laser Barrage",
+
     "WARFRAMEMOD-SHIK_TAL.name": "Shik Tal",
     "WARFRAMEMOD-SHIK_TAL.moves.MARELOK.title": "Marelok",
     "WARFRAMEMOD-SHIK_TAL.moves.RIOT_SHIELD.title": "Riot Shield",
@@ -25,7 +35,7 @@
     "WARFRAMEMOD-SHIK_TAL.teammateDeathLine": "[jitter]That one will be difficult to replace.[/jitter]",
 
     "WARFRAMEMOD-THE_SERGEANT.name": "The Sergeant",
-    "WARFRAMEMOD-THE_SERGEANT.moves.LANKAT.title": "Lanka",
+    "WARFRAMEMOD-THE_SERGEANT.moves.LANKA.title": "Lanka",
     "WARFRAMEMOD-THE_SERGEANT.moves.FLASH_BANG.title": "Flash Bang",
     "WARFRAMEMOD-THE_SERGEANT.banter1": "Is this a gathering of the freaks?",
     "WARFRAMEMOD-THE_SERGEANT.banter2": "I'm only just warming up.",

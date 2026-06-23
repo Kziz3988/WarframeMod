@@ -1,6 +1,8 @@
 {
     "WARFRAMEMOD-JACKAL_BOSS.title": "Jackal",
     "WARFRAMEMOD-JACKAL_BOSS.loss": "{character} destruction analytics: Recorded.",
+    "WARFRAMEMOD-RAPTOR_BOSS.title": "Raptor",
+    "WARFRAMEMOD-RAPTOR_BOSS.loss": "{character} have become another prey of the Raptors.",
     "WARFRAMEMOD-THE_GRUSTRAG_THREE.title": "The Grustrag Three",
     "WARFRAMEMOD-THE_GRUSTRAG_THREE.loss": "{character}'s punishment has been served.",
     "WARFRAMEMOD-THE_SERGEANT_ELITE.title": "The Sergeant",

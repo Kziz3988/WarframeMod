@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0iuwfrlfa0f"]
+
+[ext_resource type="Texture2D" uid="uid://xvgp5sut4p7y" path="res://WarframeMod/images/monsters/nemes_rt.png" id="1_sfitn"]
+
+[node name="NemesRt" type="Node2D"]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Visuals" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -64)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_sfitn")
+
+[node name="Bounds" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -128.0
+offset_right = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CenterPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -64)
+
+[node name="IntentPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -138)

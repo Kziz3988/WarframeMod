@@ -33,7 +33,7 @@ public sealed class Leekter : CustomMonsterModel
 
 	private LocString GetNextBanter()
 	{
-		int lineIndex = RunRng.MonsterAi.NextInt(1, 2);
+		int lineIndex = RunRng.MonsterAi.NextInt(1, 3);
 		return MonsterModel.L10NMonsterLookup($"WARFRAMEMOD-LEEKTER.banter{lineIndex}");
 	}
 

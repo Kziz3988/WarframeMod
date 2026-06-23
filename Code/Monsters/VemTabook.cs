@@ -36,7 +36,7 @@ public sealed class VemTabook : CustomMonsterModel
 
 	private LocString GetNextBanter()
 	{
-		int lineIndex = RunRng.MonsterAi.NextInt(1, 2);
+		int lineIndex = RunRng.MonsterAi.NextInt(1, 3);
 		return MonsterModel.L10NMonsterLookup($"WARFRAMEMOD-VEM_TABOOK.banter{lineIndex}");
 	}
 
