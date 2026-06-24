@@ -58,6 +58,8 @@ public sealed class Raptor : CustomMonsterModel
 			return title;
 		}
 	}
+
+    public override bool ShouldDisappearFromDoom => false;
     
     private MoveState _deadState;
     
