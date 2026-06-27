@@ -9,13 +9,13 @@ using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.MonsterMoves.Intents;
 using MegaCrit.Sts2.Core.MonsterMoves.MonsterMoveStateMachine;
 using BaseLib.Abstracts;
-using WarframeMod.Code.Powers.Debuff;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 using WarframeMod.Code.Extensions;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using WarframeMod.Code.Powers.Buff;
 
 namespace WarframeMod.Code.Monsters;
 

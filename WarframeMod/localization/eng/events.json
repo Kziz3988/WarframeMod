@@ -37,6 +37,15 @@
     "WARFRAMEMOD-HELMINTH.pages.INJECTED.description": "[jitter]\"Our work never truly ends.\"[/jitter]",
     "WARFRAMEMOD-HELMINTH.loss": "\"Sacs, stomachs, bladders - all full. I grow torpid.\"",
 
+    "WARFRAMEMOD-KUBROW_DEN.title": "Kubrow Den",
+    "WARFRAMEMOD-KUBROW_DEN.pages.INITIAL.description": "After a combat, you discover that a wild beast's den nearby has been destroyed by your attack.\nA [gold]single unguarded egg[/gold] lies abandoned there.",
+    "WARFRAMEMOD-KUBROW_DEN.pages.INITIAL.options.EAT.title": "Eat the Egg",
+    "WARFRAMEMOD-KUBROW_DEN.pages.INITIAL.options.EAT.description": "Heal [green]{Heal}[/green] HP.",
+    "WARFRAMEMOD-KUBROW_DEN.pages.INITIAL.options.TAKE.title": "Take the Egg",
+    "WARFRAMEMOD-KUBROW_DEN.pages.INITIAL.options.TAKE.description": "Add a [gold]Kubrow Egg[/gold] into your[gold]Deck[/gold].",
+    "WARFRAMEMOD-KUBROW_DEN.pages.EAT.description": "You crack the egg open and gobble it up.\nAs a lunch, you have eaten worse than this.",
+    "WARFRAMEMOD-KUBROW_DEN.pages.TAKE.description": "You gently scoop up the egg and stow it, thinking it may [green]hatch[/green] into something useful later.",
+
     "WARFRAMEMOD-MAROOS_BAZAAR.title": "Maroo's Bazaar",
     "WARFRAMEMOD-MAROOS_BAZAAR.pages.INITIAL.description": "You find yourself standing in the center of a [gold]stunningly large marketplace[/gold]. [purple]Various vendors[/purple] [sine]shuttle around you[/sine], with calculations hidden in their eyes, but their mouths are filled with enthusiasm - each one wants to get something from you, this new face. Soon, two of them block your way.\nThe one on the left leans in mysteriously, opens his palm, and reveals [orange]small round objects that look like nuts[/orange]. He lowers his voice and confidently declars that there are [sine][gold]once-in-a-lifetime treasures[/gold][/sine] sealed inside.\nThe one on the right claps his chest and tells you that if you buy his [blue]Aya[/blue], you can get [jitter]anything you want[/jitter] in this market.",
     "WARFRAMEMOD-MAROOS_BAZAAR.pages.INITIAL.options.RANDOM_RELIC.title": "The Left One",

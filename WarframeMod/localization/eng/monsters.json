@@ -1,4 +1,10 @@
 {
+    "WARFRAMEMOD-CHESA_KUBROW.name": "Chesa Kubrow",
+    "WARFRAMEMOD-CHESA_KUBROW.moves.NOTHING.title": "Nothing",
+
+    "WARFRAMEMOD-HURAS_KUBROW.name": "Huras Kubrow",
+    "WARFRAMEMOD-HURAS_KUBROW.moves.NOTHING.title": "Nothing",
+    
     "WARFRAMEMOD-JACKAL.name": "Jackal",
     "WARFRAMEMOD-JACKAL.moves.SHOCKWAVE.title": "Rippling Shockwave",
     "WARFRAMEMOD-JACKAL.moves.PLASMA_GRENADE.title": "Plasma Grenade Cluster",
@@ -17,12 +23,23 @@
     "WARFRAMEMOD-NEMES_RT.name": "Nemes RT",
     "WARFRAMEMOD-NEMES_RT.moves.EXPLODE.title": "Explode",
 
+    "WARFRAMEMOD-PHORID.name": "Phorid",
+    "WARFRAMEMOD-PHORID.moves.CLAW_SWIPE.title": "Claw Swipe",
+    "WARFRAMEMOD-PHORID.moves.SONIC_SCREAM.title": "Sonic Scream",
+    "WARFRAMEMOD-PHORID.moves.SPINE_STRIKE.title": "Spine Strike",
+
+    "WARFRAMEMOD-RAKSA_KUBROW.name": "Raksa Kubrow",
+    "WARFRAMEMOD-RAKSA_KUBROW.moves.NOTHING.title": "Nothing",
+
     "WARFRAMEMOD-RAPTOR.name": "Raptor {Type}",
     "WARFRAMEMOD-RAPTOR.moves.RESPAWN.title": "Respawn",
     "WARFRAMEMOD-RAPTOR.moves.LASER_BOLT.title": "Laser Bolt",
     "WARFRAMEMOD-RAPTOR.moves.ENERGY_MORTAR.title": "Energy Mortar",
     "WARFRAMEMOD-RAPTOR.moves.NEMES_RT.title": "Summon Nemes",
     "WARFRAMEMOD-RAPTOR.moves.LASER_BARRAGE.title": "Laser Barrage",
+    
+    "WARFRAMEMOD-SAHASA_KUBROW.name": "Sahasa Kubrow",
+    "WARFRAMEMOD-SAHASA_KUBROW.moves.NOTHING.title": "Nothing",
 
     "WARFRAMEMOD-SHIK_TAL.name": "Shik Tal",
     "WARFRAMEMOD-SHIK_TAL.moves.MARELOK.title": "Marelok",
@@ -33,6 +50,9 @@
     "WARFRAMEMOD-SHIK_TAL.banter4": "[jitter]You are beneath us![/jitter]",
     "WARFRAMEMOD-SHIK_TAL.banter5": "[jitter]One of them is wearing a scarf![/jitter]",
     "WARFRAMEMOD-SHIK_TAL.teammateDeathLine": "[jitter]That one will be difficult to replace.[/jitter]",
+
+    "WARFRAMEMOD-SUNIKA_KUBROW.name": "Sunika Kubrow",
+    "WARFRAMEMOD-SUNIKA_KUBROW.moves.NOTHING.title": "Nothing",
 
     "WARFRAMEMOD-THE_SERGEANT.name": "The Sergeant",
     "WARFRAMEMOD-THE_SERGEANT.moves.LANKA.title": "Lanka",

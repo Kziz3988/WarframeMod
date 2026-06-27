@@ -120,6 +120,11 @@ public static class StringExtensions
         return Path.Join(MainFile.ResPath, "images", "monsters", path);
     }
 
+    public static string RestSiteUiPath(this string path)
+    {
+        return Path.Join(MainFile.ResPath, "images", "rest_site", path);
+    }
+
     public static string VfxPath(this string path)
     {
         return Path.Join(MainFile.ResPath, "scenes", "vfx", path);

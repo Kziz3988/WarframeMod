@@ -203,6 +203,8 @@
     "WARFRAMEMOD-COLLECTIVE_CURSE.description": "Apply {LinkagePower:diff()} [gold]Linkage[/gold] and {WeakPower:diff()} [gold]Weak[/gold].",
     "WARFRAMEMOD-CRYSTALLIZE.title": "Crystallize",
     "WARFRAMEMOD-CRYSTALLIZE.description": "Deal {Damage:diff()} damage.\nWhenever an enemy is hit, reduce the damage by {Decrement:diff()}, then deal damage to adjacent enemies.",
+    "WARFRAMEMOD-DIG.title": "Dig",
+    "WARFRAMEMOD-DIG.description": "Gain {Energy:energyIcons()}.\nAdd {Cards:diff()} random {Cards:plural:card|cards} into your [gold]Hand[/gold], it is free to play this turn.",
     "WARFRAMEMOD-EMPOWER.title": "Empower",
     "WARFRAMEMOD-EMPOWER.description": "This turn, your next Attack deals an addtional {EmpowerPower:diff()} damage.",
     "WARFRAMEMOD-ENERGIZED_MUNITIONS.title": "Energized Munitions",
@@ -211,6 +213,10 @@
     "WARFRAMEMOD-EXPEDITE_SUFFERING.description": "Condense all [gold]Poison[/gold] and [gold]Slash[/gold] of an enemy into a single damage instance.{InCombat:\n(The enemy will take {CalculatedDamage:diff()} damage)|}",
     "WARFRAMEMOD-FINAL_STAND.title": "Final Stand",
     "WARFRAMEMOD-FINAL_STAND.description": "At the start of your turn, add {FinalStandPower:diff()} [gold]{FinalStandPower:plural:Axios Javelin|Axios Javelins}[/gold] into your [gold]Hand[/gold].",
+    "WARFRAMEMOD-GNAW_TO_NEUTRALIZE.title": "Gnaw to Neutralize",
+    "WARFRAMEMOD-GNAW_TO_NEUTRALIZE.description": "Apply {WeakPower:diff()} [gold]Weak[/gold].",
+    "WARFRAMEMOD-HOWL_TO_PROTECT.title": "Howl to Protect",
+    "WARFRAMEMOD-HOWL_TO_PROTECT.description": "Apply {WeakPower:diff()} [gold]Weak[/gold] to all enemies.\nGain {TotalShield:diff()} [gold]Shield[/gold], {ShieldCapacity:diff()} [gold]Shield Capacity[/gold] and {ShieldRecharge:diff()} [gold]Shield Recharge[/gold].",
     "WARFRAMEMOD-INFESTED_MOBILITY.title": "Infested Mobility",
     "WARFRAMEMOD-INFESTED_MOBILITY.description": "Draw {Cards:diff()} {Cards:plural:card|cards}.",
     "WARFRAMEMOD-REBUILD_SHIELD.title": "Rebuild Shield",
@@ -221,13 +227,20 @@
     "WARFRAMEMOD-SICKENING_PULSE.description": "Increase [gold]Debuffs[/gold] of an enemy by {Increment:diff()}.",
     "WARFRAMEMOD-SERENE_STORM.title": "Serene Storm",
     "WARFRAMEMOD-SERENE_STORM.description": "Deal {Damage:diff()} damage to a random enemy X times.",
+    "WARFRAMEMOD-STALK_TO_HUNT.title": "Stalk to Hunt",
+    "WARFRAMEMOD-STALK_TO_HUNT.description": "Gain {InvisiblePower:diff()} [gold]Invisible[/gold].\nDeal {Damage:diff()} damage.",
     "WARFRAMEMOD-SYNTHESIS_SCANNER.title": "Synthesis Scanner",
     "WARFRAMEMOD-SYNTHESIS_SCANNER.description": "Deal {Damage:diff()} damage.\nIf [gold]Fatal[/gold], obtain a random [gold]Relic[/gold] and remove this card from your [gold]Deck[/gold] at the end of combat.",
     "WARFRAMEMOD-UNARMED.title": "Unarmed",
     "WARFRAMEMOD-UNARMED.description": "Deal {Damage:diff()} damage.",
+    "WARFRAMEMOD-UNLEASHED_SAVAGERY.title": "Unleashed Savagery",
+    "WARFRAMEMOD-UNLEASHED_SAVAGERY.description": "Deal {Damage:diff()} damage and apply {WeakPower:diff()} [gold]Weak[/gold] to all enemies.\nThis card deals TRIPLE damage to enemies with [gold]Block[/gold].",
     "WARFRAMEMOD-WYRD_SCYTHES.title": "Wyrd Scythes",
     "WARFRAMEMOD-WYRD_SCYTHES.description": "Deal {Damage:diff()} damage and apply {VulnerablePower:diff()} [gold]Vulnerable[/gold] to a random enemy {Repeat:diff()} {Repeat:plural:time|times}.",
 
     "WARFRAMEMOD-EXPLOSIVE_POWER_CELL.title": "Explosive Power Cell",
-    "WARFRAMEMOD-EXPLOSIVE_POWER_CELL.description": "When this card is discarded, add [gold]Ethereal[/gold] to it."
+    "WARFRAMEMOD-EXPLOSIVE_POWER_CELL.description": "When this card is discarded, add [gold]Ethereal[/gold] to it.",
+
+    "WARFRAMEMOD-KUBROW_EGG.title": "Kubrow Egg",
+    "WARFRAMEMOD-KUBROW_EGG.description": "Can be hatched at a [gold]Rest Site[/gold]."
 }

@@ -10,8 +10,9 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.MonsterMoves.Intents;
 using MegaCrit.Sts2.Core.ValueProps;
+using WarframeMod.Code.Powers.Debuff;
 
-namespace WarframeMod.Code.Powers.Debuff;
+namespace WarframeMod.Code.Powers.Buff;
 
 public sealed class ElectrifiedPower : WarframeModPower
 {

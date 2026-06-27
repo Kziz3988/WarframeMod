@@ -11,7 +11,7 @@ using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.MonsterMoves.Intents;
 using MegaCrit.Sts2.Core.MonsterMoves.MonsterMoveStateMachine;
 using WarframeMod.Code.Extensions;
-using WarframeMod.Code.Powers.Debuff;
+using WarframeMod.Code.Powers.Buff;
 
 namespace WarframeMod.Code.Monsters;
 

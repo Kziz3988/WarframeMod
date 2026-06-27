@@ -37,6 +37,15 @@
     "WARFRAMEMOD-HELMINTH.pages.INJECTED.description": "[jitter]“我们的工作永远不会真正结束。”[/jitter]",
     "WARFRAMEMOD-HELMINTH.loss": "“储囊、胃、膀胱——都满了。我困了。”",
 
+    "WARFRAMEMOD-KUBROW_DEN.title": "库狛兽穴",
+    "WARFRAMEMOD-KUBROW_DEN.pages.INITIAL.description": "在一场战斗结束后，你发现附近有一座野兽的巢穴被你的攻击摧毁了。\n一颗[gold]无人看守的蛋[/gold]被遗弃在了那里。",
+    "WARFRAMEMOD-KUBROW_DEN.pages.INITIAL.options.EAT.title": "吃掉这颗蛋",
+    "WARFRAMEMOD-KUBROW_DEN.pages.INITIAL.options.EAT.description": "回复[green]{Heal}[/green]点生命。",
+    "WARFRAMEMOD-KUBROW_DEN.pages.INITIAL.options.TAKE.title": "带走这颗蛋",
+    "WARFRAMEMOD-KUBROW_DEN.pages.INITIAL.options.TAKE.description": "将一张[gold]库狛蛋[/gold]加入你的[gold]牌组[/gold]。",
+    "WARFRAMEMOD-KUBROW_DEN.pages.EAT.description": "你敲开了蛋壳，将其大口吞下。\n作为午餐，你吃过比这个更差的。",
+    "WARFRAMEMOD-KUBROW_DEN.pages.TAKE.description": "你小心翼翼地捧起这颗蛋并将其收好，心想着它之后或许能[green]孵化[/green]成什么有用的东西。",
+
     "WARFRAMEMOD-MAROOS_BAZAAR.title": "Maroo的市集",
     "WARFRAMEMOD-MAROOS_BAZAAR.pages.INITIAL.description": "你发现自己正站在一座[gold]庞大得令人眩晕的集市[/gold]中央。形形色色的[purple]商贩[/purple][sine]在你身边穿梭[/sine]，眼神里藏着算计，嘴上却堆满了热情————每一个都想从你这个新面孔身上捞到点什么。\n很快，两个人拦住了你的去路。左边那人诡秘地凑近，摊开手掌，露出一把[orange]形似坚果的小物件[/orange]。他压低声音信誓旦旦地说，这里面封着[sine][gold]千载难逢的稀世之宝[/gold][/sine]。\n而右边那位则拍着胸脯告诉你，买他的[blue]阿耶精华[/blue]，你就能在这个集市里换到[jitter]任何你想要的东西[/jitter]。",
     "WARFRAMEMOD-MAROOS_BAZAAR.pages.INITIAL.options.RANDOM_RELIC.title": "左边的",

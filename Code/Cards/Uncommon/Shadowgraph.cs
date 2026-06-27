@@ -2,10 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Factories;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
@@ -28,18 +30,29 @@ public class Shadowgraph() : WarframeModCard(1, CardType.Attack, CardRarity.Unco
         List<CardModel> cards = CardFactory.GetDistinctForCombat(base.Owner, from c in base.Owner.Character.CardPool.GetUnlockedCards(base.Owner.UnlockState, base.Owner.RunState.CardMultiplayerConstraint)
         where (c.GetType() != typeof(Shadowgraph)) && (c.Rarity == CardRarity.Common || c.Rarity == CardRarity.Uncommon || c.Rarity == CardRarity.Rare)
         select c, base.DynamicVars["Choices"].IntValue, base.Owner.RunState.Rng.CombatCardGeneration).ToList();
-        CardModel? card = null;
-        if (IsUpgraded)
+        if (base.DynamicVars["Choices"].IntValue > 3)
         {
-            card = await CardSelectCmd.FromChooseACardScreen(choiceContext, cards, base.Owner, canSkip: true);         
+            foreach (CardModel card in await CardSelectCmd.FromSimpleGrid(choiceContext, cards, base.Owner, new CardSelectorPrefs(new LocString("relics", "CHOICES_PARADOX.selectionScreenPrompt"), 1)))
+            {
+                await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, base.Owner);
+                card.SetToFreeThisTurn();
+            }
         }
-        else{
-            card = cards.FirstOrDefault();
-        }
-        if (card != null)
+        else
         {
-            card.SetToFreeThisTurn();
-            await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, base.Owner);
+            CardModel? card = null;
+            if (IsUpgraded)
+            {
+                card = await CardSelectCmd.FromChooseACardScreen(choiceContext, cards, base.Owner, canSkip: true);         
+            }
+            else{
+                card = cards.FirstOrDefault();
+            }
+            if (card != null)
+            {
+                card.SetToFreeThisTurn();
+                await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, base.Owner);
+            }
         }
     }
 

@@ -1,4 +1,10 @@
 {
+    "WARFRAMEMOD-CHESA_KUBROW.name": "寻猎型库狛",
+    "WARFRAMEMOD-CHESA_KUBROW.moves.NOTHING.title": "无",
+
+    "WARFRAMEMOD-HURAS_KUBROW.name": "匿踪型库狛",
+    "WARFRAMEMOD-HURAS_KUBROW.moves.NOTHING.title": "无",
+
     "WARFRAMEMOD-JACKAL.name": "豺狼",
     "WARFRAMEMOD-JACKAL.moves.SHOCKWAVE.title": "涟漪冲击波",
     "WARFRAMEMOD-JACKAL.moves.PLASMA_GRENADE.title": "集束离子榴弹",
@@ -17,12 +23,23 @@
     "WARFRAMEMOD-NEMES_RT.name": "自爆机RT",
     "WARFRAMEMOD-NEMES_RT.moves.EXPLODE.title": "自爆",
 
+    "WARFRAMEMOD-PHORID.name": "Phorid",
+    "WARFRAMEMOD-PHORID.moves.CLAW_SWIPE.title": "利爪挥击",
+    "WARFRAMEMOD-PHORID.moves.SONIC_SCREAM.title": "嚎叫",
+    "WARFRAMEMOD-PHORID.moves.SPINE_STRIKE.title": "尖刺打击",
+
+    "WARFRAMEMOD-RAKSA_KUBROW.name": "防护型库狛",
+    "WARFRAMEMOD-RAKSA_KUBROW.moves.NOTHING.title": "无",
+
     "WARFRAMEMOD-RAPTOR.name": "猛禽{Type}",
     "WARFRAMEMOD-RAPTOR.moves.RESPAWN.title": "重生",
     "WARFRAMEMOD-RAPTOR.moves.LASER_BOLT.title": "闪电激光",
     "WARFRAMEMOD-RAPTOR.moves.ENERGY_MORTAR.title": "能量迫击炮",
     "WARFRAMEMOD-RAPTOR.moves.NEMES_RT.title": "部署自爆机",
     "WARFRAMEMOD-RAPTOR.moves.LASER_BARRAGE.title": "巨型激光",
+
+    "WARFRAMEMOD-SAHASA_KUBROW.name": "突击型库狛",
+    "WARFRAMEMOD-SAHASA_KUBROW.moves.NOTHING.title": "无",
     
     "WARFRAMEMOD-SHIK_TAL.name": "希克·塔尔",
     "WARFRAMEMOD-SHIK_TAL.moves.MARELOK.title": "玛瑞火枪",
@@ -33,6 +50,9 @@
     "WARFRAMEMOD-SHIK_TAL.banter4": "[jitter]你臣服在我们脚下！[/jitter]",
     "WARFRAMEMOD-SHIK_TAL.banter5": "[jitter]他们其中有人戴着披巾吗？[/jitter]",
     "WARFRAMEMOD-SHIK_TAL.teammateDeathLine": "[jitter]这家伙是难以取代的。[/jitter]",
+
+    "WARFRAMEMOD-SUNIKA_KUBROW.name": "猎杀型库狛",
+    "WARFRAMEMOD-SUNIKA_KUBROW.moves.NOTHING.title": "无",
 
     "WARFRAMEMOD-THE_SERGEANT.name": "海军陆战队中士",
     "WARFRAMEMOD-THE_SERGEANT.moves.LANKA.title": "兰卡",

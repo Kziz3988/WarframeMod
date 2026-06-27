@@ -1,12 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Factories;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using WarframeMod.Code.Extensions;
@@ -33,20 +35,35 @@ public class Kumihimo() : WarframeModCard(1, CardType.Attack, CardRarity.Rare, T
 			where (c.GetType() != typeof(Kumihimo)) && c.Tags.Contains((CardTag)WarframeModCardTag.Element) && (c.Rarity == CardRarity.Common || c.Rarity == CardRarity.Uncommon || c.Rarity == CardRarity.Rare)
 			select c, base.DynamicVars["Choices"].IntValue, base.Owner.RunState.Rng.CombatCardGeneration)
             .ToList();
-            CardModel? chosenCard = await CardSelectCmd.FromChooseACardScreen(choiceContext, cards, base.Owner, canSkip: true);
-            if (chosenCard != null)
+            if (base.DynamicVars["Choices"].IntValue > 3)
             {
-                int cost = chosenCard.EnergyCost.GetAmountToSpend();
-                costs.Add(cost);
-                costSum += cost;
-                elements += chosenCard.GetElements();
-                await CardPileCmd.AddGeneratedCardToCombat(chosenCard, PileType.Hand, base.Owner);
+                foreach (CardModel chosenCard in await CardSelectCmd.FromSimpleGrid(choiceContext, cards, base.Owner, new CardSelectorPrefs(new LocString("relics", "CHOICES_PARADOX.selectionScreenPrompt"), 1)))
+                {
+                    await CardPileCmd.AddGeneratedCardToCombat(chosenCard, PileType.Hand, base.Owner);
+                    int cost = chosenCard.EnergyCost.GetAmountToSpend();
+                    costs.Add(cost);
+                    costSum += cost;
+                    elements += chosenCard.GetElements();
+                }
             }
             else
             {
-                // Not making a choice is a choice.
-                costs.Add(-1);
+                CardModel? chosenCard = await CardSelectCmd.FromChooseACardScreen(choiceContext, cards, base.Owner, canSkip: true);
+                if (chosenCard != null)
+                {
+                    int cost = chosenCard.EnergyCost.GetAmountToSpend();
+                    costs.Add(cost);
+                    costSum += cost;
+                    elements += chosenCard.GetElements();
+                    await CardPileCmd.AddGeneratedCardToCombat(chosenCard, PileType.Hand, base.Owner);
+                }
+                else
+                {
+                    // Not making a choice is a choice.
+                    costs.Add(-1);
+                }             
             }
+
         }
         await DamageCmd.Attack(costSum).FromCard(this)
 			.TargetingAllOpponents(base.CombatState)
