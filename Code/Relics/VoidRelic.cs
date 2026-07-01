@@ -25,7 +25,7 @@ public abstract class VoidRelic : WarframeModRelic
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DynamicVar("TotalEnemies", TotalEnemies),
         new DynamicVar("RemainingEnemies", TotalEnemies),
-        new BoolVar("IsTriggered", Convert.ToBoolean(IsTriggered))
+        new StringVar("IsTriggered")
     ];
 
     //Bug: bool type is always deserialized after int type!
@@ -43,7 +43,7 @@ public abstract class VoidRelic : WarframeModRelic
 		{
 			AssertMutable();
 			_isTriggered = value;
-            ((BoolVar)base.DynamicVars["IsTriggered"]).BoolVal = Convert.ToBoolean(_isTriggered);
+            ((StringVar)base.DynamicVars["IsTriggered"]).StringValue = Convert.ToBoolean(_isTriggered) ? "Placeholder" : string.Empty;
 		}
     }
 

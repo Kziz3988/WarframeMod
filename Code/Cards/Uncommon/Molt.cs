@@ -8,7 +8,7 @@ using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Powers;
+using WarframeMod.Code.Extensions;
 
 namespace WarframeMod.Code.Cards.Uncommon;
 
@@ -22,11 +22,11 @@ public class Molt() : WarframeModCard(2, CardType.Skill, CardRarity.Uncommon, Ta
     {
 		Creature self = base.Owner.Creature;
 		var powersToDecrement = self.Powers
-			.Where(p => p.GetType() == typeof(HardenedShellPower) || p.StackType == PowerStackType.Counter && p.Type == PowerType.Debuff)
+			.Where(p => p.StackType == PowerStackType.Counter && p.IsTheLessTheBetter() && ((p.Type == PowerType.Debuff && p.Amount > 0) || (p.Type == PowerType.Buff && p.Amount < 0)))
 			.ToList();
 
 		var powersToIncrement = self.Powers
-			.Where(p => p.StackType == PowerStackType.Counter && p.Type == PowerType.Buff && p.Amount < 0)
+			.Where(p => p.StackType == PowerStackType.Counter && p.IsTheMoreTheBetter() && ((p.Type == PowerType.Debuff && p.Amount > 0) || (p.Type == PowerType.Buff && p.Amount < 0)))
 			.ToList();
 		
 		foreach (PowerModel power in powersToDecrement)

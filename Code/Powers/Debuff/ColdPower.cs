@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.MonsterMoves.Intents;
@@ -36,19 +37,36 @@ public partial class ColdPower : WarframeModPower
 		return 1m;
     }
 
-    public override async Task BeforeApplied(Creature target, decimal amount, Creature? applier, CardModel? cardSource)
+    public override async Task AfterApplied(Creature? applier, CardModel? cardSource)
     {
-        if(amount >= 10)
-		{
-			await Stun(target);
-		}
+        for (int i = 0; i < base.Amount / 10; i++)
+        {
+            Flash();
+            await Stun(base.Owner);
+        }
     }
 
     public override async Task BeforePowerAmountChanged(PowerModel power, decimal amount, Creature target, Creature? applier, CardModel? cardSource)
     {
-        if (power == this && base.Amount / 10 != (base.Amount + (int)amount) / 10)
+        if (power == this)
         {
-            await Stun(base.Owner);
+            for (int i = 0; i < (base.Amount + (int)amount) / 10; i++)
+            {
+                Flash();
+                await Stun(base.Owner);
+            }
+        }
+    }
+
+    public override async Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
+    {
+        if (power == this)
+        {
+            this.SetAmount(base.Amount % 10);
+            if (base.Amount == 0)
+            {
+                await PowerCmd.Remove(this);
+            }
         }
     }
 

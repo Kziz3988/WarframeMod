@@ -1,0 +1,25 @@
+{
+    "WARFRAMEMOD-BLIND_RAGE.title": "盲怒",
+    "WARFRAMEMOD-BLIND_RAGE.description": "这张牌额外造成[blue]{Increment}%[/blue]伤害。当你打出这张牌时，失去{Energy:energyIcons()}。",
+    "WARFRAMEMOD-BLIND_RAGE.extraCardText": "失去{Energy:energyIcons()}。",
+
+    "WARFRAMEMOD-DEPLETED_RELOAD.title": "耗竭装填",
+    "WARFRAMEMOD-DEPLETED_RELOAD.description": "当你打出这张牌时，丢弃[blue]{Cards}[/blue]张牌。在下个回合开始时额外抽[blue]{Increment}[/blue]张牌。",
+    "WARFRAMEMOD-DEPLETED_RELOAD.extraCardText": "丢弃[blue]{Cards}[/blue]张牌。在下个回合开始时额外抽[blue]{Increment}[/blue]张牌。",
+
+    "WARFRAMEMOD-HEAVY_CALIBER.title": "重口径",
+    "WARFRAMEMOD-HEAVY_CALIBER.description": "这张牌额外造成[blue]{Increment}%[/blue]伤害。这张牌的目标变为随机敌人。",
+    "WARFRAMEMOD-HEAVY_CALIBER.extraCardText": "这张牌的目标变为随机敌人。",
+
+    "WARFRAMEMOD-NARROW_MINDED.title": "心志偏狭",
+    "WARFRAMEMOD-NARROW_MINDED.description": "当你打出这张牌时，获得{Energy:energyIcons()}。这张牌获得[gold]消耗[/gold]。",
+    "WARFRAMEMOD-NARROW_MINDED.extraCardText": "获得{Energy:energyIcons()}。",
+
+    "WARFRAMEMOD-OVEREXTENDED.title": "过度延展",
+    "WARFRAMEMOD-OVEREXTENDED.description": "当你打出这张牌时，额外对所有剩余敌人打出一次。这张牌造成的伤害减少[blue]{Decrement}%[/blue]。",
+    "WARFRAMEMOD-OVEREXTENDED.extraCardText": "额外对所有剩余敌人打出一次。",
+
+    "WARFRAMEMOD-TAINTED_MAG.title": "腐败弹匣",
+    "WARFRAMEMOD-TAINTED_MAG.description": "当你打出这张牌时，抽[blue]{Cards}[/blue]张牌。下个回合少抽[blue]{Decrement}[/blue]张牌。",
+    "WARFRAMEMOD-TAINTED_MAG.extraCardText": "抽[blue]{Cards}[/blue]张牌。下个回合少抽[blue]{Decrement}[/blue]张牌。"
+}

@@ -33,7 +33,7 @@
     "WARFRAMEMOD-ARCANE_BARRIER.flavor": "[red]这个遗物的细节将在未来揭晓……[/red]",
 
     "WARFRAMEMOD-AXI.title": "后纪",
-    "WARFRAMEMOD-AXI.description": "杀死[blue]{RemainingEnemies}[/blue]名非爪牙敌人后，在战斗结束时获得[blue]1[/blue]件随机[gold]遗物[/gold]。{IsTriggered:\n[red]这个虚空遗物已经被打开。[/red]|}",
+    "WARFRAMEMOD-AXI.description": "杀死[blue]{RemainingEnemies}[/blue]名非爪牙敌人后，在战斗结束时获得[blue]1[/blue]件随机[gold]遗物[/gold]。{IsTriggered.StringValue:cond:\n[red]这个虚空遗物已经被打开。[/red]|}",
     "WARFRAMEMOD-AXI.flavor": "[red]这个遗物的细节将在未来揭晓……[/red]",
     "WARFRAMEMOD-DRIPPY.title": "阿耶精华？？？",
     "WARFRAMEMOD-DRIPPY.description": "你感觉被骗了。",
@@ -45,15 +45,15 @@
     "WARFRAMEMOD-KUBROW_RELIC.description": "拾起时，获得一张随机[gold]库狛牌[/gold]。一头[gold]库狛[/gold]会在战斗中陪伴你。",
     "WARFRAMEMOD-KUBROW_RELIC.flavor": "[red]这个遗物的细节将在未来揭晓……[/red]",
     "WARFRAMEMOD-LITH.title": "古纪",
-    "WARFRAMEMOD-LITH.description": "杀死[blue]{RemainingEnemies}[/blue]名非爪牙敌人后，在战斗结束时获得[blue]1[/blue]瓶随机[gold]药水[/gold]。{IsTriggered:\n[red]这个虚空遗物已经被打开。[/red]|}",
+    "WARFRAMEMOD-LITH.description": "杀死[blue]{RemainingEnemies}[/blue]名非爪牙敌人后，在战斗结束时获得[blue]1[/blue]瓶随机[gold]药水[/gold]。{IsTriggered.StringValue:cond:\n[red]这个虚空遗物已经被打开。[/red]|}",
     "WARFRAMEMOD-LITH.flavor": "[red]这个遗物的细节将在未来揭晓……[/red]",
     "WARFRAMEMOD-MESO.title": "前纪",
-    "WARFRAMEMOD-MESO.description": "杀死[blue]{RemainingEnemies}[/blue]名非爪牙敌人后，在战斗结束时额外获得[blue]1[/blue]次卡牌奖励。{IsTriggered:\n[red]这个虚空遗物已经被打开。[/red]|}",
+    "WARFRAMEMOD-MESO.description": "杀死[blue]{RemainingEnemies}[/blue]名非爪牙敌人后，在战斗结束时额外获得[blue]1[/blue]次卡牌奖励。{IsTriggered.StringValue:cond:\n[red]这个虚空遗物已经被打开。[/red]|}",
     "WARFRAMEMOD-MESO.flavor": "[red]这个遗物的细节将在未来揭晓……[/red]",
     "WARFRAMEMOD-NEO.title": "中纪",
-    "WARFRAMEMOD-NEO.description": "杀死[blue]{RemainingEnemies}[/blue]名非爪牙敌人后，在战斗结束时获得[blue]1[/blue]次无色卡牌奖励。{IsTriggered:\n[red]这个虚空遗物已经被打开。[/red]|}",
+    "WARFRAMEMOD-NEO.description": "杀死[blue]{RemainingEnemies}[/blue]名非爪牙敌人后，在战斗结束时获得[blue]1[/blue]次无色卡牌奖励。{IsTriggered.StringValue:cond:\n[red]这个虚空遗物已经被打开。[/red]|}",
     "WARFRAMEMOD-NEO.flavor": "[red]这个遗物的细节将在未来揭晓……[/red]",
     "WARFRAMEMOD-REQUIEM.title": "安魂",
-    "WARFRAMEMOD-REQUIEM.description": "杀死[blue]{RemainingEnemies}[/blue]名非爪牙敌人后，在战斗结束时获得[blue]1[/blue]次包含其他颜色的卡牌奖励。{IsTriggered:\n[red]这个虚空遗物已经被打开。[/red]|}",
+    "WARFRAMEMOD-REQUIEM.description": "杀死[blue]{RemainingEnemies}[/blue]名非爪牙敌人后，在战斗结束时获得[blue]1[/blue]次包含其他颜色的卡牌奖励。{IsTriggered.StringValue:cond:\n[red]这个虚空遗物已经被打开。[/red]|}",
     "WARFRAMEMOD-REQUIEM.flavor": "[red]这个遗物的细节将在未来揭晓……[/red]"
 }

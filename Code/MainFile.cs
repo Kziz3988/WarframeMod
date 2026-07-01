@@ -1,7 +1,9 @@
+using BaseLib.Config;
 using Godot;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Logging;
 using MegaCrit.Sts2.Core.Modding;
+using WarframeMod.Code.Config;
 namespace WarframeMod.Code;
 
 [ModInitializer(nameof(Initialize))]
@@ -15,6 +17,7 @@ public partial class MainFile : Node
     public static void Initialize()
     {
         Log.Info("[Warframe Mod] Initializing...");
+        ModConfigRegistry.Register(ModId, new WarframeModConfig());
         Harmony harmony = new(ModId);
         harmony.PatchAll();
         Log.Info("[Warframe Mod] Loaded successfully.");

@@ -10,8 +10,8 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.MonsterMoves.Intents;
+using WarframeMod.Code.Extensions;
 
 namespace WarframeMod.Code.Cards.Rare;
 
@@ -32,11 +32,11 @@ public class Silence() : WarframeModCard(2, CardType.Skill, CardRarity.Rare, Tar
 		Creature target = cardPlay.Target;
         await CreatureCmd.Stun(target);
 		var powersToDecrement = target.Powers
-			.Where(p => p.StackType == PowerStackType.Counter && p.Type == PowerType.Buff)
+			.Where(p => p.StackType == PowerStackType.Counter && p.IsTheMoreTheBetter() && ((p.Type == PowerType.Buff && p.Amount > 0) || (p.Type == PowerType.Debuff && p.Amount < 0)))
 			.ToList();
 
 		var powersToIncrement = target.Powers
-			.Where(p => p.GetType() == typeof(HardenedShellPower) || p.StackType == PowerStackType.Counter && p.Type == PowerType.Debuff && p.Amount < 0)
+			.Where(p => p.StackType == PowerStackType.Counter && p.IsTheLessTheBetter() && ((p.Type == PowerType.Buff && p.Amount > 0) || (p.Type == PowerType.Debuff && p.Amount < 0)))
 			.ToList();
 		
 		foreach (PowerModel power in powersToDecrement)

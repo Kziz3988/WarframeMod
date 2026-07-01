@@ -28,7 +28,7 @@ public sealed class ZanukaHunter : CustomMonsterModel
 
     private int FrostBombDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 21, 19);
 
-	private int DebuffColdApply => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 3, 2);
+	private int DebuffColdApply => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 6, 4);
 
 	public override DamageSfxType TakeDamageSfxType => DamageSfxType.ArmorBig;
 

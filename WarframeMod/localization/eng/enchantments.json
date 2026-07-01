@@ -1,0 +1,25 @@
+{
+    "WARFRAMEMOD-BLIND_RAGE.title": "Blind Rage",
+    "WARFRAMEMOD-BLIND_RAGE.description": "This card deals an additional [blue]{Increment}%[/blue]damage. When you play this card, lose {Energy:energyIcons()}.",
+    "WARFRAMEMOD-BLIND_RAGE.extraCardText": "Lose {Energy:energyIcons()}.",
+
+    "WARFRAMEMOD-DEPLETED_RELOAD.title": "Depleted Reload",
+    "WARFRAMEMOD-DEPLETED_RELOAD.description": "When you play this card, discard [blue]{Cards}[/blue] {Cards:plural:card|cards}. Next turn, draw [blue]{Increment}[/blue] {Increment:plural:card|cards}.",
+    "WARFRAMEMOD-DEPLETED_RELOAD.extraCardText": "Discard [blue]{Cards}[/blue] {Cards:plural:card|cards}. Next turn, draw [blue]{Increment}[/blue] {Increment:plural:card|cards}.",
+
+    "WARFRAMEMOD-HEAVY_CALIBER.title": "Heavy Caliber",
+    "WARFRAMEMOD-HEAVY_CALIBER.description": "This card deals an additional [blue]{Increment}%[/blue] damage. This card targets a random enemy.",
+    "WARFRAMEMOD-HEAVY_CALIBER.extraCardText": "This card targets a random enemy.",
+
+    "WARFRAMEMOD-NARROW_MINDED.title": "Narrow Minded",
+    "WARFRAMEMOD-NARROW_MINDED.description": "When you play this card, gain {Energy:energyIcons()}. This card has [gold]Exhaust[/gold].",
+    "WARFRAMEMOD-NARROW_MINDED.extraCardText": "Gain {Energy:energyIcons()}.",
+
+    "WARFRAMEMOD-OVEREXTENDED.title": "Overextended",
+    "WARFRAMEMOD-OVEREXTENDED.description": "When you play this card, play an extra against ALL remaining enemies. This card deals [blue]{Decrement}%[/blue] less damage.",
+    "WARFRAMEMOD-OVEREXTENDED.extraCardText": "Play an extra against ALL remaining enemies.",
+
+    "WARFRAMEMOD-TAINTED_MAG.title": "Tainted Mag",
+    "WARFRAMEMOD-TAINTED_MAG.description": "When you play this card, draw [blue]{Cards}[/blue] {Cards:plural:card|cards}. Draw [blue]{Decrement}[/blue] less {Decrement:plural:card|cards} next turn.",
+    "WARFRAMEMOD-TAINTED_MAG.extraCardText": "Draw [blue]{Cards}[/blue] {Cards:plural:card|cards}. Draw [blue]{Decrement}[/blue] less {Decrement:plural:card|cards} next turn."
+}

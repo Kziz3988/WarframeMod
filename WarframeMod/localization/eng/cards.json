@@ -52,7 +52,7 @@
     "WARFRAMEMOD-WHIPCLAW.description": "Deal {Damage:diff()} damage to all enemies {Repeat:diff()} times.\nWhenever an enemy is hit, temporarily increase the damage by {Increment:diff()}.",
 
     "WARFRAMEMOD-AEGIS_STORM.title": "Aegis Storm",
-    "WARFRAMEMOD-AEGIS_STORM.description": "Remove all [gold]Shield[/gold] of yours.\nFor every 1 [gold]Shield[/gold] removed, deal {ExtraDamage:diff()} damage to all enemies.{InCombat:\n(Deal {CalculatedDamage:diff()} damage)|}",
+    "WARFRAMEMOD-AEGIS_STORM.description": "Gain {NewSoarPower} [gold]Soar[/gold].\nRemove all [gold]Shield[/gold] of yours.\nFor every 1 [gold]Shield[/gold] removed, deal {ExtraDamage:diff()} damage to all enemies.{InCombat:\n(Deal {CalculatedDamage:diff()} damage)|}",
     "WARFRAMEMOD-ARCSPHERE.title": "Arcsphere",
     "WARFRAMEMOD-ARCSPHERE.description": "Deal {Damage:diff()} damage and apply {ElectricityPower:diff()} [gold]Electricity[/gold] to all enemies.\nIf this card hit 3 enemies, deal damage again.",
     "WARFRAMEMOD-BALLISTIC_BATTERY.title": "Ballistic Battery",

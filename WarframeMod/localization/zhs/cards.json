@@ -52,7 +52,7 @@
     "WARFRAMEMOD-WHIPCLAW.description": "对所有敌人造成{Damage:diff()}点伤害{Repeat:diff()}次。\n每次击中敌人，将伤害临时增加{Increment:diff()}点。",
     
     "WARFRAMEMOD-AEGIS_STORM.title": "神盾风暴",
-    "WARFRAMEMOD-AEGIS_STORM.description": "移除你的所有[gold]护盾[/gold]。\n每移除1点[gold]护盾[/gold]，就对所有敌人造成{ExtraDamage:diff()}点伤害。{InCombat:\n（造成{CalculatedDamage:diff()}点伤害）|}",
+    "WARFRAMEMOD-AEGIS_STORM.description": "获得{NewSoarPower:diff()}层[gold]翱翔[/gold]。\n移除你的所有[gold]护盾[/gold]。\n每移除1点[gold]护盾[/gold]，就对所有敌人造成{ExtraDamage:diff()}点伤害。{InCombat:\n（造成{CalculatedDamage:diff()}点伤害）|}",
     "WARFRAMEMOD-ARCSPHERE.title": "电弧球",
     "WARFRAMEMOD-ARCSPHERE.description": "对所有敌人造成{Damage:diff()}点伤害，给予{ElectricityPower:diff()}层[gold]电击[/gold]。\n如果这张牌击中了3个敌人，则额外造成一次伤害。",
     "WARFRAMEMOD-BALLISTIC_BATTERY.title": "弹道蓄能",
