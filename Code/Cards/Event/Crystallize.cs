@@ -25,14 +25,14 @@ public class Crystallize() : WarframeModCard(1, CardType.Attack, CardRarity.Even
 		new DynamicVar("Decrement", 1m)
 	];
 
-    private async Task DealDamage(Queue<(int, decimal, decimal)> queue, PlayerChoiceContext choiceContext)
+    private async Task DealDamage(Queue<(int, decimal, decimal)> queue, PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         (int target, decimal amount, decimal calculated) = queue.Dequeue();
         if (calculated <= 0 || target < 0 || target >= base.CombatState.HittableEnemies.Count)
         {
             return;
         }
-        await DamageCmd.Attack(amount).FromCard(this).Targeting(base.CombatState.HittableEnemies[target])
+        await DamageCmd.Attack(amount).FromCard(this, cardPlay).Targeting(base.CombatState.HittableEnemies[target])
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
     }
@@ -47,7 +47,7 @@ public class Crystallize() : WarframeModCard(1, CardType.Attack, CardRarity.Even
         while (queue.Count > 0)
         {
             (int target, decimal amount, decimal calculated) = queue.Peek();
-            await DealDamage(queue, choiceContext);
+            await DealDamage(queue, choiceContext, cardPlay);
             if (calculated <= 0 || target < 0 || target >= base.CombatState.HittableEnemies.Count)
             {
                 continue;

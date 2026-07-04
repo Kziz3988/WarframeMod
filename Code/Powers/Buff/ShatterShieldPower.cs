@@ -55,7 +55,7 @@ public sealed class ShatterShieldPower : WarframeModPower
         }
         decimal multiplier = base.Amount / 100m;
         decimal reflectAmount = amount * multiplier;
-        await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), dealer, reflectAmount, ValueProp.Unpowered, base.Owner, null);
+        await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), dealer, reflectAmount, ValueProp.Unpowered, base.Owner, null, null);
     }
 
     public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)

@@ -59,6 +59,7 @@ public static class PowerModelExtensions
                 _isNotBetterOrWorse = [
                     typeof(ArmorPlatePower),
                     typeof(PlowPower),
+                    typeof(ShieldPower),
                     typeof(ShriekPower),
                 ];
             }

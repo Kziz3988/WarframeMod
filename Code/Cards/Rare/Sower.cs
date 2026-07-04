@@ -18,7 +18,7 @@ public class Sower() : WarframeModCard(1, CardType.Skill, CardRarity.Rare, Targe
 	{
         ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
         DamageVar damage = new(cardPlay.Target.CurrentHp * (base.DynamicVars["DamagePercent"].BaseValue / 100m), ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move);
-		await CreatureCmd.Damage(choiceContext, cardPlay.Target, damage, this);
+		await CreatureCmd.Damage(choiceContext, cardPlay.Target, damage, this, cardPlay);
 	}
 
 	protected override void OnUpgrade()

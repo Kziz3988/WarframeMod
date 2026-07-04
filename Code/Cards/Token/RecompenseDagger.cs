@@ -26,7 +26,7 @@ public class RecompenseDagger() : WarframeModCard(1, CardType.Attack, CardRarity
     {
         await CreatureCmd.Heal(base.Owner.Creature, base.DynamicVars.Heal.BaseValue);
         ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
-        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
+        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this, cardPlay).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
     }
@@ -34,7 +34,7 @@ public class RecompenseDagger() : WarframeModCard(1, CardType.Attack, CardRarity
     protected override async Task OnTurnEndInHand(PlayerChoiceContext choiceContext)
 	{
 		VfxCmd.PlayOnCreatureCenter(base.Owner.Creature, "vfx/vfx_bloody_impact");
-		await CreatureCmd.Damage(choiceContext, base.Owner.Creature, base.DynamicVars["SelfDamage"].BaseValue, ValueProp.Unpowered, this);
+		await CreatureCmd.Damage(choiceContext, base.Owner.Creature, base.DynamicVars["SelfDamage"].BaseValue, ValueProp.Unpowered, this, null);
 	}
 
     protected override void OnUpgrade()

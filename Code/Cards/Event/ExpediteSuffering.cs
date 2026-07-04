@@ -55,7 +55,7 @@ public class ExpediteSuffering() : WarframeModCard(1, CardType.Skill, CardRarity
         ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
         PoisonPower? poisonPower = cardPlay.Target.GetPower<PoisonPower>();
         SlashPower? slashPower = cardPlay.Target.GetPower<SlashPower>();
-        await CreatureCmd.Damage(choiceContext, cardPlay.Target, base.DynamicVars.CalculatedDamage.BaseValue, ValueProp.Unpowered, null, this);
+        await CreatureCmd.Damage(choiceContext, cardPlay.Target, base.DynamicVars.CalculatedDamage.BaseValue, ValueProp.Unpowered, null, cardPlay);
         await PowerCmd.Remove(poisonPower);
         await PowerCmd.Remove(slashPower);
     }

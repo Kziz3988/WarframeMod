@@ -29,7 +29,7 @@ public class ChromaticBlade() : WarframeModCard(0, CardType.Attack, CardRarity.A
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
 		int num = ResolveEnergyXValue();
-		await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount(num).FromCard(this)
+		await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount(num).FromCard(this, cardPlay)
 			.TargetingAllOpponents(base.CombatState)
 			.WithHitFx("vfx/vfx_giant_horizontal_slash")
 			.Execute(choiceContext);

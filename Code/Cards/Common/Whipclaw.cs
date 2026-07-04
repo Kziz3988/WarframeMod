@@ -23,7 +23,7 @@ public class Whipclaw() : WarframeModCard(1, CardType.Attack, CardRarity.Common,
         {
             foreach (Creature hittableEnemy in base.CombatState.HittableEnemies)
             {
-                await DamageCmd.Attack(tempDamage).FromCard(this).Targeting(hittableEnemy)
+                await DamageCmd.Attack(tempDamage).FromCard(this, cardPlay).Targeting(hittableEnemy)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
                 tempDamage += base.DynamicVars["Increment"].BaseValue;

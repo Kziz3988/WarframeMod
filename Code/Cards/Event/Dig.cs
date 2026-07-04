@@ -25,7 +25,7 @@ public class Dig() : WarframeModCard(0, CardType.Skill, CardRarity.Event, Target
         await PlayerCmd.GainEnergy(base.DynamicVars.Energy.BaseValue, base.Owner);
         CardModel? card = CardFactory.GetDistinctForCombat(base.Owner, from c in base.Owner.Character.CardPool.GetUnlockedCards(base.Owner.UnlockState, base.Owner.RunState.CardMultiplayerConstraint)
             where c.Rarity == CardRarity.Common || c.Rarity == CardRarity.Uncommon || c.Rarity == CardRarity.Rare
-            select c, base.DynamicVars["Choices"].IntValue, base.Owner.RunState.Rng.CombatCardGeneration).ToList().FirstOrDefault();
+            select c, base.DynamicVars.Cards.IntValue, base.Owner.RunState.Rng.CombatCardGeneration).ToList().FirstOrDefault();
         if (card != null)
         {
             card.SetToFreeThisTurn();

@@ -7,9 +7,9 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using WarframeMod.Code.Powers.Buff;
 
-namespace WarframeMod.Code.Cards.Rare;
+namespace WarframeMod.Code.Cards.Uncommon;
 
-public class CelestialTwin() : WarframeModCard(2, CardType.Power, CardRarity.Rare, TargetType.Self)
+public class CelestialTwin() : WarframeModCard(2, CardType.Power, CardRarity.Uncommon, TargetType.Self)
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromKeyword(CardKeyword.Exhaust)];
     protected override IEnumerable<DynamicVar> CanonicalVars => [new EnergyVar(3)];

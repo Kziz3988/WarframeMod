@@ -33,7 +33,7 @@ public class UnleashedSavagery() : WarframeModCard(0, CardType.Attack, CardRarit
             {
                 damage *= 3;
             }
-            await DamageCmd.Attack(damage).FromCard(this).Targeting(enemy)
+            await DamageCmd.Attack(damage).FromCard(this, cardPlay).Targeting(enemy)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
             await PowerCmd.Apply<WeakPower>(choiceContext, enemy, base.DynamicVars.Weak.BaseValue, base.Owner.Creature, this);        

@@ -12,6 +12,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.MonsterMoves.Intents;
 using WarframeMod.Code.Extensions;
+using WarframeMod.Code.Powers.Buff;
 
 namespace WarframeMod.Code.Cards.Rare;
 
@@ -46,6 +47,11 @@ public class Silence() : WarframeModCard(2, CardType.Skill, CardRarity.Rare, Tar
 		foreach (PowerModel power in powersToIncrement)
 		{
 			await PowerCmd.ModifyAmount(choiceContext, power, base.DynamicVars["Decrement"].BaseValue, target, this);
+		}
+		ShieldPower? shield = target.GetPower<ShieldPower>();
+		if (shield != null)
+		{
+			await ShieldPower.ApplyShield(target, -1, -1, -1, base.Owner.Creature, this);
 		}
     }
 

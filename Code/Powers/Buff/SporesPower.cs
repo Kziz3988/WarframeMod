@@ -3,6 +3,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -37,7 +38,7 @@ public sealed class SporesPower : WarframeModPower
 		return new HoverTip(this, stringBuilder.ToString(), true);
 	}
 
-    public override decimal ModifyDamageMultiplicative(Creature? target, decimal amount, ValueProp props, Creature? dealer, CardModel? cardSource)
+    public override decimal ModifyDamageMultiplicative(Creature? target, decimal amount, ValueProp props, Creature? dealer, CardModel? cardSource, CardPlay? cardPlay)
 	{
 		if (!props.IsPoweredAttack())
 		{
@@ -69,7 +70,7 @@ public sealed class SporesPower : WarframeModPower
                 return;
             }
             Flash();
-            await CreatureCmd.Damage(choiceContext, target, base.Amount, ValueProp.Unpowered, base.Owner, null);
+            await CreatureCmd.Damage(choiceContext, target, base.Amount, ValueProp.Unpowered, base.Owner, null, null);
             await PowerCmd.Apply<FrailPower>(choiceContext, target, base.Amount, base.Owner, null);
         }        
     }

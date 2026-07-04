@@ -50,6 +50,7 @@ public sealed class OrokinVault : CustomEventModel
 
     public override bool IsAllowed(IRunState runState)
     {
+        if (runState.Players.Count > 1) return false; //Temporarily removed from multiplayer
         return runState.Players.All(p => HasCard(p));
     }
 

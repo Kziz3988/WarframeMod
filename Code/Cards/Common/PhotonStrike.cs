@@ -23,7 +23,7 @@ public class PhotonStrike() : WarframeModCard(1, CardType.Attack, CardRarity.Com
         {
             damage *= 2;
         }
-        await DamageCmd.Attack(damage).FromCard(this).Targeting(cardPlay.Target)
+        await DamageCmd.Attack(damage).FromCard(this, cardPlay).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
     }

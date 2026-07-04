@@ -29,7 +29,7 @@ public class BlazingChakram() : WarframeModCard(3, CardType.Attack, CardRarity.U
 		bool flag = false;
 		foreach (Creature hittableEnemy in base.CombatState.HittableEnemies)
 		{
-			if ((await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(hittableEnemy)
+			if ((await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this, cardPlay).Targeting(hittableEnemy)
 			.WithHitFx("vfx/vfx_attack_slash")
 			.Execute(choiceContext)).Results.SelectMany((List<DamageResult> r) => r).Any((DamageResult r) => r.WasTargetKilled))
 			{

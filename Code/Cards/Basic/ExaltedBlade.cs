@@ -24,7 +24,7 @@ public class ExaltedBlade() : WarframeModCard(0, CardType.Attack, CardRarity.Bas
     {
 		ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
         int num = ResolveEnergyXValue();
-		await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount(num).FromCard(this)
+		await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount(num).FromCard(this, cardPlay)
 			.Targeting(cardPlay.Target)
 			.WithHitFx("vfx/vfx_giant_horizontal_slash")
 			.Execute(choiceContext);

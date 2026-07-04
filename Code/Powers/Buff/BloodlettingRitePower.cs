@@ -48,7 +48,7 @@ public sealed class BloodlettingRitePower : WarframeModPower
     {
         if (base.Owner.Player != null && side == base.Owner.Side)
         {
-            await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), base.Owner, HpLossAmount, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, base.Owner, null);
+            await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), base.Owner, HpLossAmount, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, base.Owner, null, null);
             await PlayerCmd.GainEnergy(base.Amount, base.Owner.Player);
         }
     }

@@ -65,7 +65,7 @@ public class Kumihimo() : WarframeModCard(1, CardType.Attack, CardRarity.Rare, T
             }
 
         }
-        await DamageCmd.Attack(costSum).FromCard(this)
+        await DamageCmd.Attack(costSum).FromCard(this, cardPlay)
 			.TargetingAllOpponents(base.CombatState)
 			.WithHitFx("vfx/vfx_attack_slash")
 			.Execute(choiceContext);

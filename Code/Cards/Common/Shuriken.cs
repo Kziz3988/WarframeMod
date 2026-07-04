@@ -24,7 +24,7 @@ public class Shuriken() : WarframeModCard(0, CardType.Attack, CardRarity.Common,
     {
         ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
         await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount(base.DynamicVars.Repeat.IntValue)
-            .FromCard(this).Targeting(cardPlay.Target)
+            .FromCard(this, cardPlay).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
 		await PowerCmd.Apply<SlashPower>(choiceContext, cardPlay.Target, base.DynamicVars["SlashPower"].BaseValue, base.Owner.Creature, this);

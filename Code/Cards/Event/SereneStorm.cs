@@ -29,7 +29,7 @@ public class SereneStorm() : WarframeModCard(0, CardType.Attack, CardRarity.Even
 			{
 				continue;
 			}
-            await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(enemy)
+            await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this, cardPlay).Targeting(enemy)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
 		}

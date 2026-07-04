@@ -645,7 +645,7 @@ public class Riven() : WarframeModCard(1, CardType.Attack, CardRarity.Event, Tar
             
             //Damage and Repeat
             await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount(Math.Max(1, base.DynamicVars.Repeat.IntValue))
-                .FromCard(this).Targeting(cardPlay.Target)
+                .FromCard(this, cardPlay).Targeting(cardPlay.Target)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
 
@@ -662,7 +662,7 @@ public class Riven() : WarframeModCard(1, CardType.Attack, CardRarity.Event, Tar
         {
             //Damage and Repeat
             await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).WithHitCount(Math.Max(1, base.DynamicVars.Repeat.IntValue))
-                .FromCard(this).TargetingAllOpponents(base.CombatState)
+                .FromCard(this, cardPlay).TargetingAllOpponents(base.CombatState)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
             

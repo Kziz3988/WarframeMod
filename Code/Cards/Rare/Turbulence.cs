@@ -6,9 +6,9 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using WarframeMod.Code.Powers.Buff;
 
-namespace WarframeMod.Code.Cards.Uncommon;
+namespace WarframeMod.Code.Cards.Rare;
 
-public class Turbulence() : WarframeModCard(2, CardType.Power, CardRarity.Uncommon, TargetType.Self)
+public class Turbulence() : WarframeModCard(2, CardType.Power, CardRarity.Rare, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new PowerVar<TurbulencePower>(30m),

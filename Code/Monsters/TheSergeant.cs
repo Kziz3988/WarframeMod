@@ -40,10 +40,12 @@ public sealed class TheSergeant : CustomMonsterModel
 
 	public override DamageSfxType TakeDamageSfxType => DamageSfxType.Armor;
 
-	private LocString GetNextBanter()
+	private void PlayNextBanter()
 	{
 		int lineIndex = RunRng.MonsterAi.NextInt(1, 6);
-		return MonsterModel.L10NMonsterLookup($"WARFRAMEMOD-THE_SERGEANT.banter{lineIndex}");
+		LocString banter = MonsterModel.L10NMonsterLookup($"WARFRAMEMOD-THE_SERGEANT.banter{lineIndex}");
+		TalkCmd.Play(banter, base.Creature, VfxColor.Cyan);
+		SfxCmd.Play($"the_sergeant_banter{lineIndex}.mp3".SFXPath());
 	}
 
 	public override async Task AfterAddedToRoom()
@@ -69,14 +71,14 @@ public sealed class TheSergeant : CustomMonsterModel
 
 	private async Task LankaMove(IReadOnlyList<Creature> targets)
 	{
-        TalkCmd.Play(GetNextBanter(), base.Creature, VfxColor.Cyan);
+        PlayNextBanter();
         await DamageCmd.Attack(LankaDamage).FromMonster(this)
 			.Execute(null);
 	}
 
 	private async Task FlashBangMove(IReadOnlyList<Creature> targets)
 	{
-        TalkCmd.Play(GetNextBanter(), base.Creature, VfxColor.Cyan);
+        PlayNextBanter();
 		await PowerCmd.Apply<WeakPower>(new ThrowingPlayerChoiceContext(), targets, DebuffWeakApply, base.Creature, null);
 		await PowerCmd.Apply<InvisiblePower>(new ThrowingPlayerChoiceContext(), base.Creature, BuffInvisibleGain, base.Creature, null);
 	}

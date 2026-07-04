@@ -32,7 +32,7 @@ public class Pyrotechnics() : WarframeModCard(1, CardType.Attack, CardRarity.Unc
 			{
 				continue;
 			}
-            await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(enemy)
+            await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this, cardPlay).Targeting(enemy)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
 			await PowerCmd.Apply<HeatPower>(choiceContext, enemy, base.DynamicVars["HeatPower"].BaseValue, base.Owner.Creature, this);

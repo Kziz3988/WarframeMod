@@ -115,6 +115,10 @@ public sealed class ShieldPower : WarframeModPower
 
     public void DamageShield(int amount, Creature? applier = null, CardModel? cardSource = null)
     {
+        if (amount > 0 && TotalShield > 0)
+        {
+            Flash();
+        }
         ModifyShield(-amount, 0, 0);
         OnShieldDamaged?.Invoke(this, amount, applier, cardSource);
     }

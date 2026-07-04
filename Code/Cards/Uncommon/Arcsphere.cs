@@ -25,7 +25,7 @@ public class Arcsphere() : WarframeModCard(2, CardType.Attack, CardRarity.Uncomm
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         int enemyCount = base.CombatState.HittableEnemies.Count;
-        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this)
+        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this, cardPlay)
 			.TargetingAllOpponents(base.CombatState)
 			.WithHitFx("vfx/vfx_attack_slash")
 			.Execute(choiceContext);
@@ -33,7 +33,7 @@ public class Arcsphere() : WarframeModCard(2, CardType.Attack, CardRarity.Uncomm
 
         if (enemyCount >= 3)
         {
-            await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this)
+            await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this, cardPlay)
                 .TargetingAllOpponents(base.CombatState)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);

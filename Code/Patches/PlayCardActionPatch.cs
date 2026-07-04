@@ -17,7 +17,15 @@ public static class PlayCardActionPatch
         if (card.TargetType == TargetType.AnyEnemy && card.Enchantment is HeavyCaliber)
         {
             var combatState = card.CombatState ?? card.Owner.Creature.CombatState;
+            if (combatState == null)
+            {
+                return true;
+            }
             var target = card.Owner.RunState.Rng.CombatTargets.NextItem(combatState.HittableEnemies);
+            if (target == null)
+            {
+                return true;
+            }
             __result = target.CombatId;
             return false;
         }

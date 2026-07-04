@@ -26,7 +26,7 @@ public class AxiosJavelin() : WarframeModCard(1, CardType.Attack, CardRarity.Tok
         {
             return;
         }
-        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(enemy)
+        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this, cardPlay).Targeting(enemy)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
     }

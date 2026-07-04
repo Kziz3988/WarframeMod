@@ -17,7 +17,7 @@ public class Roar() : WarframeModCard(2, CardType.Skill, CardRarity.Common, Targ
     ];
     protected override IEnumerable<DynamicVar> CanonicalVars => [
 		new PowerVar<StrengthPower>(1),
-        new PowerVar<VulnerablePower>(1)
+        new PowerVar<VulnerablePower>(2)
 	];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

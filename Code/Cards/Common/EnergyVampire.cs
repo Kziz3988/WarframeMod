@@ -45,7 +45,7 @@ public class EnergyVampire() : WarframeModCard(1, CardType.Attack, CardRarity.Co
 		{
 			if (enemy.GetPower<EnergyVampirePower>() != null)
 			{
-				await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(enemy)
+				await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this, cardPlay).Targeting(enemy)
 					.WithHitFx("vfx/vfx_attack_slash")
 					.Execute(choiceContext);
 			}

@@ -24,8 +24,6 @@ public sealed class RivenMaker : CustomEventModel
 {
     public override string? CustomInitialPortraitPath => "riven_maker.png".EventBackgroundPath();
 
-    public override bool IsShared => true;
-
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new GoldVar("PriceOfOneRiven", 50),
         new GoldVar("PriceOfTwoRivens", 100),
@@ -51,6 +49,7 @@ public sealed class RivenMaker : CustomEventModel
 
     public override bool IsAllowed(IRunState runState)
 	{
+        if (runState.Players.Count > 1) return false; //Temporarily removed from multiplayer
 		return runState.Players.All(p => p.Gold >= base.DynamicVars["PriceOfOneRiven"].BaseValue);
 	}
 

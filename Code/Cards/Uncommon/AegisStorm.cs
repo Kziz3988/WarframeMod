@@ -33,7 +33,7 @@ public class AegisStorm() : WarframeModCard(0, CardType.Attack, CardRarity.Uncom
         {
             return;
         }
-        await DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this)
+        await DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this, cardPlay)
 			.TargetingAllOpponents(base.CombatState)
 			.WithHitFx("vfx/vfx_giant_horizontal_slash")
 			.Execute(choiceContext);
