@@ -25,7 +25,7 @@ public class Pillager() : WarframeModCard(1, CardType.Skill, CardRarity.Common, 
 	{
 		ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
         int blockAmount = cardPlay.Target.Block;
-		await CreatureCmd.LoseBlock(cardPlay.Target, blockAmount);
+		await CreatureCmd.LoseBlock(choiceContext, cardPlay.Target, blockAmount, base.Owner.Creature);
         int TotalShield = blockAmount / base.DynamicVars["BlockAmount"].IntValue * base.DynamicVars["TotalShield"].IntValue;
         await ShieldPower.ApplyShield(base.Owner.Creature, TotalShield, 0, 0, base.Owner.Creature, this);
 	}

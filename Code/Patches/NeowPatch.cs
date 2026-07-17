@@ -35,7 +35,7 @@ public static class NeowPatch
         {
             return true;
         }
-        __result = RelicOption<NeowsTalisman>(__instance, "INITIAL", "NEOW.pages.DONE.POSITIVE.description");
+        __result = RelicOption<NewNeowsTalisman>(__instance, "INITIAL", "NEOW.pages.DONE.POSITIVE.description");
         return false;
     }
 

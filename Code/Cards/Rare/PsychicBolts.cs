@@ -34,7 +34,7 @@ public class PsychicBolts() : WarframeModCard(2, CardType.Attack, CardRarity.Rar
             await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this, cardPlay).Targeting(enemy)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
-            await CreatureCmd.LoseBlock(enemy, base.DynamicVars["TotalShield"].BaseValue);
+            await CreatureCmd.LoseBlock(choiceContext, enemy, base.DynamicVars["TotalShield"].BaseValue, base.Owner.Creature);
 			await ShieldPower.ApplyShield(base.Owner.Creature, base.DynamicVars["TotalShield"].IntValue, 0, 0, base.Owner.Creature, this);
 		}
     }
