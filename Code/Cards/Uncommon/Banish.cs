@@ -24,6 +24,7 @@ public class Banish() : WarframeModCard(1, CardType.Attack, CardRarity.Uncommon,
         new DamageVar(3m, ValueProp.Move),
 		new PowerVar<BanishmentPower>(1)
 	];
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
 	{
@@ -37,6 +38,6 @@ public class Banish() : WarframeModCard(1, CardType.Attack, CardRarity.Uncommon,
 
     protected override void OnUpgrade()
     {
-        base.EnergyCost.UpgradeBy(-1);
+        RemoveKeyword(CardKeyword.Exhaust);
     }
 }

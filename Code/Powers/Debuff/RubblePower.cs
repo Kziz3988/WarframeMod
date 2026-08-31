@@ -15,6 +15,7 @@ public partial class RubblePower : WarframeModPower
 {
 	public override PowerType Type => PowerType.Debuff;
     public override PowerStackType StackType => PowerStackType.Counter;
+    public override PowerInstanceType InstanceType => PowerInstanceType.InstancedPerApplier;
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
 		HoverTipFactory.Static(StaticHoverTip.Block)

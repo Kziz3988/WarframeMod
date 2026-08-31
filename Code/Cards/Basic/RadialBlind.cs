@@ -1,14 +1,17 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.MonsterMoves.Intents;
+using WarframeMod.Code.Character;
 
 namespace WarframeMod.Code.Cards.Basic;
 
+[Pool(typeof(ExcaliburCardPool))]
 public class RadialBlind() : WarframeModCard(2, CardType.Skill, CardRarity.Basic, TargetType.AllEnemies)
 {
 	protected override IEnumerable<IHoverTip> ExtraHoverTips => [StunIntent.GetStaticHoverTip()];

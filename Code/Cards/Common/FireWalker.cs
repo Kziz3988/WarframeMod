@@ -19,7 +19,7 @@ public class FireWalker() : WarframeModCard(1, CardType.Skill, CardRarity.Common
     ];
 	protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-		new PowerVar<HeatPower>(2m),
+		new PowerVar<HeatPower>(4m),
         new CardsVar(1),
 	];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
@@ -31,6 +31,7 @@ public class FireWalker() : WarframeModCard(1, CardType.Skill, CardRarity.Common
 
     protected override void OnUpgrade()
     {
+        base.DynamicVars["HeatPower"].UpgradeValueBy(1m);
         base.DynamicVars.Cards.UpgradeValueBy(1m);
     }
 }

@@ -13,6 +13,16 @@
     "WARFRAMEMOD-JACKAL.banter2": "[shake]Enemy analysis: Organic. Threat level: Impotent.[/shake]",
     "WARFRAMEMOD-JACKAL.banter3": "[shake]Threat Level Upgraded. Classification: Pathetic.[/shake]",
 
+    "WARFRAMEMOD-LECH_KRIL.name": "Lieutenant Lech Kril",
+    "WARFRAMEMOD-LECH_KRIL.moves.BODY_ARMOR.title": "Body Armor",
+    "WARFRAMEMOD-LECH_KRIL.moves.COLD_BROKK.title": "Brokk (Cold)",
+    "WARFRAMEMOD-LECH_KRIL.moves.HEAT_BROKK.title": "Brokk (Heat)",
+    "WARFRAMEMOD-LECH_KRIL.moves.GORGON.title": "Gorgon",
+    "WARFRAMEMOD-LECH_KRIL.banter1": "[jitter]I forgot my nails... I guess you will have to do![/jitter]",
+    "WARFRAMEMOD-LECH_KRIL.banter2": "[jitter][blue]The sound of hammer shattering ice is pure auditory perfection.[/blue][/jitter]",
+    "WARFRAMEMOD-LECH_KRIL.banter3": "[jitter][orange]And I will strike down upon you with great vengeance and furious anger![/orange][/jitter]",
+    "WARFRAMEMOD-LECH_KRIL.banter4": "[jitter][blue]Hold still and I'll make this quick.[/blue][/jitter]",
+    
     "WARFRAMEMOD-LEEKTER.name": "Leekter",
     "WARFRAMEMOD-LEEKTER.moves.BROKK.title": "Brokk",
     "WARFRAMEMOD-LEEKTER.moves.FLASH_GRENADE.title": "Flash Grenade",

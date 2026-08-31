@@ -1,14 +1,17 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using WarframeMod.Code.Character;
 using WarframeMod.Code.Powers.Debuff;
 
 namespace WarframeMod.Code.Cards.Basic;
 
+[Pool(typeof(ExcaliburCardPool))]
 public class RadialJavelin() : WarframeModCard(1, CardType.Skill, CardRarity.Basic, TargetType.AllEnemies)
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<SlashPower>()];

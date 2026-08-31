@@ -1,11 +1,12 @@
-using System;
 using System.Collections.Generic;
-using System.Reflection;
+using System.Linq;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Events;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Events;
 using MegaCrit.Sts2.Core.Models.Relics;
+using WarframeMod.Code.Character;
+using WarframeMod.Code.Extensions;
 using WarframeMod.Code.Relics.Ancient;
 
 namespace WarframeMod.Code.Patches;
@@ -17,13 +18,19 @@ public static class NeowPatch
     [HarmonyPatch(typeof(Neow), "CurseOptions", MethodType.Getter)]
     static void GetCurseOptionsPatch(Neow __instance, ref IEnumerable<EventOption> __result)
     {
-        if (__instance.Owner == null || __instance.Owner.Character.Id.ToString() != "CHARACTER.WARFRAMEMOD-EXCALIBUR")
+        if (__instance.Owner == null || !__instance.Owner.Character.IsWarframe())
         {
             return;
         }
 
         var originalOptions = __result;
         var modifiedOptions = ReplaceRelicOption<LeafyPoultice, NewLeafyPoultice>(__instance, originalOptions, "NEOW.pages.DONE.CURSED.description");
+        NewLeafyPoultice? newLeafyPoultice = (NewLeafyPoultice?)modifiedOptions.First(r => r.Relic?.GetType() == typeof(NewLeafyPoultice)).Relic;
+        if (newLeafyPoultice != null)
+        {
+            newLeafyPoultice.Strike = WarframeModCardPool.CustomStrikeAndDefend[__instance.Owner.Character.Id].strike;
+            newLeafyPoultice.Defend = WarframeModCardPool.CustomStrikeAndDefend[__instance.Owner.Character.Id].defend;
+        }
         __result = modifiedOptions;
     }
 
@@ -31,31 +38,19 @@ public static class NeowPatch
     [HarmonyPatch(typeof(Neow), "NeowsTalismanOption", MethodType.Getter)]
     static bool GetNeowsTalismanOptionPatch(Neow __instance, ref EventOption __result)
     {
-        if (__instance.Owner == null || __instance.Owner.Character.Id.ToString() != "CHARACTER.WARFRAMEMOD-EXCALIBUR")
+        if (__instance.Owner == null || !__instance.Owner.Character.IsWarframe())
         {
             return true;
         }
-        __result = RelicOption<NewNeowsTalisman>(__instance, "INITIAL", "NEOW.pages.DONE.POSITIVE.description");
-        return false;
-    }
-
-    static EventOption RelicOption<T>(Neow __instance, string page, string descriptionOverride) where T : RelicModel, new()
-    {
-        var _relicOptionMethod = typeof(Neow).GetMethod(
-            "RelicOption", 
-            BindingFlags.NonPublic | BindingFlags.Instance,
-            null,
-            [typeof(string), typeof(string)],
-            null
-        );
-            
-        if (_relicOptionMethod == null)
+        var modifiedOption = __instance.RelicOption<NewNeowsTalisman>("INITIAL", "NEOW.pages.DONE.POSITIVE.description");
+        NewNeowsTalisman? newNeowsTalisman = (NewNeowsTalisman?)modifiedOption.Relic;
+        if (newNeowsTalisman != null)
         {
-            throw new InvalidOperationException("Cannot find RelicOption method");
+            newNeowsTalisman.Strike = WarframeModCardPool.CustomStrikeAndDefend[__instance.Owner.Character.Id].strike;
+            newNeowsTalisman.Defend = WarframeModCardPool.CustomStrikeAndDefend[__instance.Owner.Character.Id].defend;
         }
-        
-        var genericMethod = _relicOptionMethod.MakeGenericMethod(typeof(T));
-        return (EventOption)genericMethod.Invoke(__instance, [page, descriptionOverride]);
+        __result = modifiedOption;
+        return false;
     }
 
     static IEnumerable<EventOption> ReplaceRelicOption<TOriginal, TReplacement>(Neow __instance, IEnumerable<EventOption> originalOptions, string description)
@@ -68,7 +63,7 @@ public static class NeowPatch
         {
             if (option.Relic is TOriginal)
             {
-                var newOption = RelicOption<TReplacement>(__instance, "INITIAL", description);
+                var newOption = __instance.RelicOption<TReplacement>("INITIAL", description);
                 result.Add(newOption);
             }
             else

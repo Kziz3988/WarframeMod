@@ -4,6 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Context;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -155,7 +156,8 @@ public sealed class ShieldPower : WarframeModPower
         locString.Add("ShieldRecharge", ShieldRecharge);
         locString.Add("NormalShield", NormalShield);
         locString.Add("OverShield", OverShield);
-        locString.Add("OnPlayer", base.Owner.IsPlayer);
+        locString.Add("OwnerName", base.Owner.Name);
+        locString.Add("OnPlayer", LocalContext.IsMe(base.Owner));
 		DynamicVars.AddTo(locString);
 		stringBuilder.Append(locString.GetFormattedText());
 		return new HoverTip(this, stringBuilder.ToString(), true);

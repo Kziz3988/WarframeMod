@@ -12,7 +12,7 @@ namespace WarframeMod.Code.Cards.Uncommon;
 public class ParasiticLink() : WarframeModCard(1, CardType.Skill, CardRarity.Uncommon, TargetType.AnyAlly)
 {
     public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<ParasiticLinkPower>(50m)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<ParasiticLinkPower>(100m)];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
@@ -24,6 +24,6 @@ public class ParasiticLink() : WarframeModCard(1, CardType.Skill, CardRarity.Unc
 
     protected override void OnUpgrade()
     {
-		base.DynamicVars["ParasiticLinkPower"].UpgradeValueBy(25m);
+		base.DynamicVars["ParasiticLinkPower"].UpgradeValueBy(50m);
     }
 }

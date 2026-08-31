@@ -19,7 +19,7 @@ public class Landslide() : WarframeModCard(1, CardType.Attack, CardRarity.Common
     ];
 	protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(2m, ValueProp.Move),
+        new DamageVar(3m, ValueProp.Move),
         new RepeatVar(3),
 		new PowerVar<RubblePower>(3m)
 	];
@@ -36,6 +36,6 @@ public class Landslide() : WarframeModCard(1, CardType.Attack, CardRarity.Common
     protected override void OnUpgrade()
     {
         base.DynamicVars.Repeat.UpgradeValueBy(1m);
-		base.DynamicVars["RubblePower"].UpgradeValueBy(2m);
+		base.DynamicVars["RubblePower"].UpgradeValueBy(1m);
     }
 }

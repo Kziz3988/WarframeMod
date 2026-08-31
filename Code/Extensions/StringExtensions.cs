@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using Godot;
+using WarframeMod.Code.Character;
 
 namespace WarframeMod.Code.Extensions;
 
@@ -138,5 +139,10 @@ public static class StringExtensions
     public static string VfxPath(this string path)
     {
         return Path.Join(MainFile.ResPath, "scenes", "vfx", path);
+    }
+
+    public static bool IsWarframe(this string id)
+    {
+        return WarframeModCardPool.WarframeCardPoolTitles.Contains(id);
     }
 }

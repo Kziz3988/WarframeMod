@@ -20,10 +20,6 @@ public class Razorwing() : WarframeModCard(0, CardType.Skill, CardRarity.Rare, T
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         int num = ResolveEnergyXValue();
-		if (base.IsUpgraded)
-		{
-			num++;
-		}
 		if (num > 0) {
 			await PowerCmd.Apply<NewSoarPower>(choiceContext, base.Owner.Creature, num, base.Owner.Creature, this);
 			await Cmd.Wait(0.1f);

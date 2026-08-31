@@ -6,7 +6,7 @@ using WarframeMod.Code.Powers.Buff;
 
 namespace WarframeMod.Code.Cards.Rare;
 
-public class Dispensary() : WarframeModCard(3, CardType.Power, CardRarity.Rare, TargetType.Self)
+public class Dispensary() : WarframeModCard(2, CardType.Power, CardRarity.Rare, TargetType.Self)
 {
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

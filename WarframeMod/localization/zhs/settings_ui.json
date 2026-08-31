@@ -1,4 +1,7 @@
 {
     "WARFRAMEMOD.mod_title": "星际战甲Mod",
-    "WARFRAMEMOD-ENABLE_MULTIPLAYER_REBALANCE.title": "启用多人游戏平衡调整"
+    "WARFRAMEMOD-ENABLE_MULTIPLAYER_REBALANCE.title": "启用多人游戏平衡调整",
+    "WARFRAMEMOD-ENABLE_MULTIPLAYER_REBALANCE.hover.desc": "使所有敌人每回合免疫数次[gold]击晕[/gold]，以匹配单人游戏的难度。\n不建议在玩家中有多于一名[gold]Volt[/gold]时启用此选项。",
+    "WARFRAMEMOD-REPLACE_PRISMATIC_GEM.title": "将棱彩宝石替换为海玻璃",
+    "WARFRAMEMOD-REPLACE_PRISMATIC_GEM.hover.desc": "当你使用[gold]战甲[/gold]进行游戏时，是否将[gold]棱彩宝石[/gold]替换为[gold]海玻璃[/gold]。\n由于[gold]棱彩宝石[/gold]会显著降低游戏难度，推荐尝试启用此选项。"
 }

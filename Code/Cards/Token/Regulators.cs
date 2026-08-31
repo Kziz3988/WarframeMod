@@ -19,7 +19,7 @@ public class Regulators() : WarframeModCard(0, CardType.Attack, CardRarity.Token
 {
 	protected override IEnumerable<DynamicVar> CanonicalVars => [
         new CalculationBaseVar(6m),
-        new ExtraDamageVar(3m),
+        new ExtraDamageVar(2m),
         new CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) => PileType.Exhaust.GetPile(card.Owner).Cards.Where((CardModel c) => c.GetType() == typeof(Regulators)).Count())
     ];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];

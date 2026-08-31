@@ -28,7 +28,7 @@ public static class NCreaturePatch
 					break;
 				
 				case "Cast":
-					PlayAnim(__instance, "Cast", true);
+					PlayAnim(__instance, "Attack", true);
 					break;
 
 				case "Dead":

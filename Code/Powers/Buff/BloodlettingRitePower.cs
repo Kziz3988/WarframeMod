@@ -39,6 +39,7 @@ public sealed class BloodlettingRitePower : WarframeModPower
         locString.Add("Amount", base.Amount);
         locString.Add("HpLossPercent", HpLossPercent);
         locString.Add("HpLossAmount", HpLossAmount);
+        locString.Add("OwnerName", base.Owner.Name);
 		DynamicVars.AddTo(locString);
 		stringBuilder.Append(locString.GetFormattedText());
 		return new HoverTip(this, stringBuilder.ToString(), true);

@@ -1,4 +1,6 @@
 {
+    "SEA_GLASS.WARFRAMEMOD-EXCALIBUR.title": "虚空玻璃",
+    
     "WARFRAMEMOD-ARCANE_HUSK.title": "赋能·外壳",
     "WARFRAMEMOD-ARCANE_HUSK.description": "在每场战斗开始时，获得[blue]{TotalShield}[/blue]点[gold]护盾[/gold]、[blue]{ShieldCapacity}[/blue]点[gold]护盾容量[/gold]和[blue]{ShieldRecharge}[/blue]点[gold]护盾恢复[/gold]。",
     "WARFRAMEMOD-ARCANE_HUSK.flavor": "[red]这个遗物的细节将在未来揭晓……[/red]",
@@ -32,12 +34,12 @@
     "WARFRAMEMOD-ARCANE_BARRIER.description": "在每场战斗开始时，获得[blue]{TotalShield}[/blue]点[gold]护盾[/gold]、[blue]{ShieldCapacity}[/blue]点[gold]护盾容量[/gold]和[blue]{ShieldRecharge}[/blue]点[gold]护盾恢复[/gold]。\n当[gold]护盾[/gold]受到伤害时，回复所有[gold]护盾[/gold]，然后休眠[blue]{Turns}[/blue]回合。",
     "WARFRAMEMOD-ARCANE_BARRIER.flavor": "[red]这个遗物的细节将在未来揭晓……[/red]",
     "WARFRAMEMOD-NEW_LEAFY_POULTICE.title": "树叶药膏",
-    "WARFRAMEMOD-NEW_LEAFY_POULTICE.description": "拾起时，[gold]变化[/gold]你的[blue]1[/blue]张[gold]突斩[/gold]和[blue]1[/blue]张[gold]广域致盲[/gold]，然后失去[blue]{MaxHp}[/blue]点最大生命。",
-    "WARFRAMEMOD-NEW_LEAFY_POULTICE.eventDescription": "[gold]变化[/gold]你的[blue]1[/blue]张[gold]突斩[/gold]和[blue]1[/blue]张[gold]广域致盲[/gold]，然后失去[red]{MaxHp}[/red]点最大生命。",
+    "WARFRAMEMOD-NEW_LEAFY_POULTICE.description": "拾起时，[gold]变化[/gold]你的[blue]1[/blue]张[gold]{Strike.StringValue:cond:{}|打击}[/gold]和[blue]1[/blue]张[gold]{Defend.StringValue:cond:{}|防御}[/gold]，然后失去[blue]{MaxHp}[/blue]点最大生命。",
+    "WARFRAMEMOD-NEW_LEAFY_POULTICE.eventDescription": "[gold]变化[/gold]你的[blue]1[/blue]张[gold]{Strike.StringValue:cond:{}|打击}[/gold]和[blue]1[/blue]张[gold]{Defend.StringValue:cond:{}|防御}[/gold]，然后失去[red]{MaxHp}[/red]点最大生命。",
     "WARFRAMEMOD-NEW_LEAFY_POULTICE.flavor": "[red]这个遗物的细节将在未来揭晓……[/red]",
     "WARFRAMEMOD-NEW_NEOWS_TALISMAN.title": "涅奥的护符",
-    "WARFRAMEMOD-NEW_NEOWS_TALISMAN.description": "拾起时，[gold]升级[/gold]你的[blue]1[/blue]张[gold]突斩[/gold]和[blue]1[/blue]张[gold]广域致盲[/gold]。",
-    "WARFRAMEMOD-NEW_NEOWS_TALISMAN.eventDescription": "[gold]升级[/gold]你的[blue]1[/blue]张[gold]突斩[/gold]和[blue]1[/blue]张[gold]广域致盲[/gold]。",
+    "WARFRAMEMOD-NEW_NEOWS_TALISMAN.description": "拾起时，[gold]升级[/gold]你的[blue]1[/blue]张[gold]{Strike.StringValue:cond:{}|打击}[/gold]和[blue]1[/blue]张[gold]{Defend.StringValue:cond:{}|防御}[/gold]。",
+    "WARFRAMEMOD-NEW_NEOWS_TALISMAN.eventDescription": "[gold]升级[/gold]你的[blue]1[/blue]张[gold]{Strike.StringValue:cond:{}|打击}[/gold]和[blue]1[/blue]张[gold]{Defend.StringValue:cond:{}|防御}[/gold]。",
     "WARFRAMEMOD-NEW_NEOWS_TALISMAN.flavor": "[red]这个遗物的细节将在未来揭晓……[/red]",
 
     "WARFRAMEMOD-AXI.title": "后纪",

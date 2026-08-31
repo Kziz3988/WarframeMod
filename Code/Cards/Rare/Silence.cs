@@ -16,7 +16,7 @@ using WarframeMod.Code.Powers.Buff;
 
 namespace WarframeMod.Code.Cards.Rare;
 
-public class Silence() : WarframeModCard(2, CardType.Skill, CardRarity.Rare, TargetType.AnyEnemy)
+public class Silence() : WarframeModCard(1, CardType.Skill, CardRarity.Rare, TargetType.AnyEnemy)
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         StunIntent.GetStaticHoverTip()

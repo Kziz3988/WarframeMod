@@ -13,6 +13,16 @@
     "WARFRAMEMOD-JACKAL.banter2": "[shake]敌人分析：有机体。威胁级别：贫弱无力。[/shake]",
     "WARFRAMEMOD-JACKAL.banter3": "[shake]威胁等级提升。分类：不值一提。[/shake]",
 
+    "WARFRAMEMOD-LECH_KRIL.name": "Lech Kril中尉",
+    "WARFRAMEMOD-LECH_KRIL.moves.BODY_ARMOR.title": "护甲",
+    "WARFRAMEMOD-LECH_KRIL.moves.COLD_BROKK.title": "布洛克战锤（冰）",
+    "WARFRAMEMOD-LECH_KRIL.moves.HEAT_BROKK.title": "布洛克战锤（火）",
+    "WARFRAMEMOD-LECH_KRIL.moves.GORGON.title": "蛇发女妖",
+    "WARFRAMEMOD-LECH_KRIL.banter1": "[jitter]我忘了剪指甲……看来得让你来做了！[/jitter]",
+    "WARFRAMEMOD-LECH_KRIL.banter2": "[jitter][blue]锤子敲碎冰的声音是听觉上的极致享受。[/blue][/jitter]",
+    "WARFRAMEMOD-LECH_KRIL.banter3": "[jitter][orange]我会带着刻骨的仇恨和疯狂的怒火将你击败！[/orange][/jitter]",
+    "WARFRAMEMOD-LECH_KRIL.banter4": "[jitter][blue]别动，我很快就会完事。[/blue][/jitter]",
+
     "WARFRAMEMOD-LEEKTER.name": "里克特",
     "WARFRAMEMOD-LEEKTER.moves.BROKK.title": "布洛克战锤",
     "WARFRAMEMOD-LEEKTER.moves.FLASH_GRENADE.title": "闪光手雷",

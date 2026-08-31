@@ -1,4 +1,7 @@
 {
     "WARFRAMEMOD.mod_title": "Warframe Mod",
-    "WARFRAMEMOD-ENABLE_MULTIPLAYER_REBALANCE.title": "Enable Multiplayer Rebalance"
+    "WARFRAMEMOD-ENABLE_MULTIPLAYER_REBALANCE.title": "Enable Multiplayer Rebalance",
+    "WARFRAMEMOD-ENABLE_MULTIPLAYER_REBALANCE.hover.desc": "Make all enemies prevent several [gold]Stun[/gold] in each turn to match the difficulty in singleplayer games.\nIt is not recommended to enable this option when there is more than one [gold]Volt[/gold] among the players.",
+    "WARFRAMEMOD-REPLACE_PRISMATIC_GEM.title": "Replace Prismatic Gem with Sea Glass",
+    "WARFRAMEMOD-REPLACE_PRISMATIC_GEM.hover.desc": "Whether [gold]Prismatic Gem[/gold] is replaced with [gold]Sea Glass[/gold] when you are playing a [gold]Warframe[/gold].\nSince [gold]Prismatic Gem[/gold] can significantly reduce the difficulty of the game, it is recommended to try enabling this option."
 }

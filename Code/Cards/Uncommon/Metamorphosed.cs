@@ -10,7 +10,7 @@ using WarframeMod.Code.Powers.Buff;
 
 namespace WarframeMod.Code.Cards.Uncommon;
 
-public class Metamorphosed() : WarframeModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
+public class Metamorphosed() : WarframeModCard(0, CardType.Power, CardRarity.Uncommon, TargetType.Self)
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.Static(StaticHoverTip.Block),

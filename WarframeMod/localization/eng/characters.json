@@ -10,5 +10,31 @@
   "WARFRAMEMOD-EXCALIBUR.cardsModifierDescription": "Excalibur cards will now appear in rewards and shops.",
   "WARFRAMEMOD-EXCALIBUR.eventDeathPrevention": "...",
   "WARFRAMEMOD-EXCALIBUR.banter.alive.endTurnPing": "[sine]Move and strike, we have to win this![/sine]",
-  "WARFRAMEMOD-EXCALIBUR.banter.dead.endTurnPing": "..."
+  "WARFRAMEMOD-EXCALIBUR.banter.dead.endTurnPing": "...",
+
+  "WARFRAMEMOD-MAG.title": "Mag",
+  "WARFRAMEMOD-MAG.description": "Mag alters magnetic fields to provide crowd control and strip enemy defenses.",
+  "WARFRAMEMOD-MAG.titleObject": "Mag",
+  "WARFRAMEMOD-MAG.pronounObject": "her",
+  "WARFRAMEMOD-MAG.possessiveAdjective": "her",
+  "WARFRAMEMOD-MAG.pronounPossessive": "her",
+  "WARFRAMEMOD-MAG.pronounSubject": "she",
+  "WARFRAMEMOD-MAG.cardsModifierTitle": "Mag Cards",
+  "WARFRAMEMOD-MAG.cardsModifierDescription": "Mag cards will now appear in rewards and shops.",
+  "WARFRAMEMOD-MAG.eventDeathPrevention": "...",
+  "WARFRAMEMOD-MAG.banter.alive.endTurnPing": "[sine]Move and strike, we have to win this![/sine]",
+  "WARFRAMEMOD-MAG.banter.dead.endTurnPing": "...",
+
+  "WARFRAMEMOD-VOLT.title": "Volt",
+  "WARFRAMEMOD-VOLT.description": "Electricity flows through Volt. His attacks deal high damage. Enemies will be shocked.",
+  "WARFRAMEMOD-VOLT.titleObject": "Volt",
+  "WARFRAMEMOD-VOLT.pronounObject": "him",
+  "WARFRAMEMOD-VOLT.possessiveAdjective": "his",
+  "WARFRAMEMOD-VOLT.pronounPossessive": "his",
+  "WARFRAMEMOD-VOLT.pronounSubject": "he",
+  "WARFRAMEMOD-VOLT.cardsModifierTitle": "Volt Cards",
+  "WARFRAMEMOD-VOLT.cardsModifierDescription": "Volt cards will now appear in rewards and shops.",
+  "WARFRAMEMOD-VOLT.eventDeathPrevention": "...",
+  "WARFRAMEMOD-VOLT.banter.alive.endTurnPing": "[sine]Move and strike, we have to win this![/sine]",
+  "WARFRAMEMOD-VOLT.banter.dead.endTurnPing": "..."
 }

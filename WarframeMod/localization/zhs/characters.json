@@ -10,5 +10,31 @@
   "WARFRAMEMOD-EXCALIBUR.cardsModifierDescription": "Excalibur的卡牌现在会出现在奖励和商店中。",
   "WARFRAMEMOD-EXCALIBUR.eventDeathPrevention": "...",
   "WARFRAMEMOD-EXCALIBUR.banter.alive.endTurnPing": "[sine]Move and strike, we have to win this![/sine]",
-  "WARFRAMEMOD-EXCALIBUR.banter.dead.endTurnPing": "..."
+  "WARFRAMEMOD-EXCALIBUR.banter.dead.endTurnPing": "...",
+
+  "WARFRAMEMOD-MAG.title": "Mag",
+  "WARFRAMEMOD-MAG.description": "Mag通过改变磁场来提供群体控制，同时削减敌人的防御力。",
+  "WARFRAMEMOD-MAG.titleObject": "Mag",
+  "WARFRAMEMOD-MAG.pronounObject": "她",
+  "WARFRAMEMOD-MAG.possessiveAdjective": "她的",
+  "WARFRAMEMOD-MAG.pronounPossessive": "她的",
+  "WARFRAMEMOD-MAG.pronounSubject": "她",
+  "WARFRAMEMOD-MAG.cardsModifierTitle": "Mag卡牌",
+  "WARFRAMEMOD-MAG.cardsModifierDescription": "Mag的卡牌现在会出现在奖励和商店中。",
+  "WARFRAMEMOD-MAG.eventDeathPrevention": "...",
+  "WARFRAMEMOD-MAG.banter.alive.endTurnPing": "[sine]Move and strike, we have to win this![/sine]",
+  "WARFRAMEMOD-MAG.banter.dead.endTurnPing": "...",
+
+  "WARFRAMEMOD-VOLT.title": "Volt",
+  "WARFRAMEMOD-VOLT.description": "电流在Volt身上涌动。他的攻击可造成高额伤害，并震慑敌人。",
+  "WARFRAMEMOD-VOLT.titleObject": "Volt",
+  "WARFRAMEMOD-VOLT.pronounObject": "他",
+  "WARFRAMEMOD-VOLT.possessiveAdjective": "他的",
+  "WARFRAMEMOD-VOLT.pronounPossessive": "他的",
+  "WARFRAMEMOD-VOLT.pronounSubject": "他",
+  "WARFRAMEMOD-VOLT.cardsModifierTitle": "Volt卡牌",
+  "WARFRAMEMOD-VOLT.cardsModifierDescription": "Volt的卡牌现在会出现在奖励和商店中。",
+  "WARFRAMEMOD-VOLT.eventDeathPrevention": "...",
+  "WARFRAMEMOD-VOLT.banter.alive.endTurnPing": "[sine]Move and strike, we have to win this![/sine]",
+  "WARFRAMEMOD-VOLT.banter.dead.endTurnPing": "..."
 }

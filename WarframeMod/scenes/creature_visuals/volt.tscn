@@ -1,0 +1,282 @@
+[gd_scene load_steps=59 format=3 uid="uid://c17c3afp2myi4"]
+
+[ext_resource type="Texture2D" uid="uid://dhse0u6scgkbx" path="res://WarframeMod/images/animations/characters/volt/attack/volt_attack 00.png" id="1_dse55"]
+[ext_resource type="Texture2D" uid="uid://lkmjeog8acfd" path="res://WarframeMod/images/animations/characters/volt/attack/volt_attack 01.png" id="2_p073p"]
+[ext_resource type="Texture2D" uid="uid://dvymn4st3n3ew" path="res://WarframeMod/images/animations/characters/volt/attack/volt_attack 02.png" id="3_iaiw8"]
+[ext_resource type="Texture2D" uid="uid://cd5jd0tl480rb" path="res://WarframeMod/images/animations/characters/volt/attack/volt_attack 03.png" id="4_mh36j"]
+[ext_resource type="Texture2D" uid="uid://dede7fuldjlg4" path="res://WarframeMod/images/animations/characters/volt/attack/volt_attack 04.png" id="5_i8en7"]
+[ext_resource type="Texture2D" uid="uid://cfsna4xucydra" path="res://WarframeMod/images/animations/characters/volt/attack/volt_attack 05.png" id="6_0a0ep"]
+[ext_resource type="Texture2D" uid="uid://bfgg83sgr1v3c" path="res://WarframeMod/images/animations/characters/volt/attack/volt_attack 06.png" id="7_qa1ac"]
+[ext_resource type="Texture2D" uid="uid://dt60seh0t0t20" path="res://WarframeMod/images/animations/characters/volt/attack/volt_attack 07.png" id="8_40goa"]
+[ext_resource type="Texture2D" uid="uid://dxg7yps8oblx7" path="res://WarframeMod/images/animations/characters/volt/attack/volt_attack 08.png" id="9_ll77c"]
+[ext_resource type="Texture2D" uid="uid://kf0mc0l3ahmj" path="res://WarframeMod/images/animations/characters/volt/attack/volt_attack 09.png" id="10_sse5u"]
+[ext_resource type="Texture2D" uid="uid://hjg0elr8aud4" path="res://WarframeMod/images/animations/characters/volt/attack/volt_attack 10.png" id="11_uudra"]
+[ext_resource type="Texture2D" uid="uid://cm14lcaiu4oht" path="res://WarframeMod/images/animations/characters/volt/attack/volt_attack 11.png" id="12_hjoma"]
+[ext_resource type="Texture2D" uid="uid://d2ahwkf0dl5vd" path="res://WarframeMod/images/animations/characters/volt/attack/volt_attack 12.png" id="13_xny4r"]
+[ext_resource type="Texture2D" uid="uid://cof6sbgoqn6db" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 00.png" id="14_2unnc"]
+[ext_resource type="Texture2D" uid="uid://c2w2qrvlre4n8" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 01.png" id="15_jrd7t"]
+[ext_resource type="Texture2D" uid="uid://ctrigeovc3vkr" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 02.png" id="16_nsaq7"]
+[ext_resource type="Texture2D" uid="uid://b41wruecsioxx" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 03.png" id="17_uksta"]
+[ext_resource type="Texture2D" uid="uid://d4l7fujlbvl4d" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 04.png" id="18_rdx0g"]
+[ext_resource type="Texture2D" uid="uid://h23ro82okwue" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 05.png" id="19_aw2rj"]
+[ext_resource type="Texture2D" uid="uid://ckoq0f4547sht" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 06.png" id="20_swp15"]
+[ext_resource type="Texture2D" uid="uid://dg62rarjlj62d" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 07.png" id="21_4wl5q"]
+[ext_resource type="Texture2D" uid="uid://c7dggr6yth14s" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 08.png" id="22_51htj"]
+[ext_resource type="Texture2D" uid="uid://c83rbqlr3xg8t" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 09.png" id="23_t50eb"]
+[ext_resource type="Texture2D" uid="uid://wivbsv7x0caw" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 10.png" id="24_u8bsb"]
+[ext_resource type="Texture2D" uid="uid://qsaa6xqfjiup" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 11.png" id="25_1um4e"]
+[ext_resource type="Texture2D" uid="uid://dr38ulq2r2stp" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 12.png" id="26_ydfm7"]
+[ext_resource type="Texture2D" uid="uid://kdag6it300qk" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 13.png" id="27_veb84"]
+[ext_resource type="Texture2D" uid="uid://jjtrqkrpfe2r" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 14.png" id="28_fnx8h"]
+[ext_resource type="Texture2D" uid="uid://ddo0khnmqlcpo" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 15.png" id="29_edv8h"]
+[ext_resource type="Texture2D" uid="uid://cqcp21lybm34g" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 16.png" id="30_3pheb"]
+[ext_resource type="Texture2D" uid="uid://3ql2dcrdscq8" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 17.png" id="31_1chyx"]
+[ext_resource type="Texture2D" uid="uid://c8f1mqi54fxxw" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 18.png" id="32_q5omg"]
+[ext_resource type="Texture2D" uid="uid://bkiobai0405e7" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 19.png" id="33_015ng"]
+[ext_resource type="Texture2D" uid="uid://teb1pymhh56v" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 20.png" id="34_g2n2x"]
+[ext_resource type="Texture2D" uid="uid://b3rclnfsr7eqo" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 21.png" id="35_6ey84"]
+[ext_resource type="Texture2D" uid="uid://c8ap8y1uv68ku" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 22.png" id="36_fj5tn"]
+[ext_resource type="Texture2D" uid="uid://dr53310n86l8v" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 23.png" id="37_enjxp"]
+[ext_resource type="Texture2D" uid="uid://cxkvvewxnmwnh" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 24.png" id="38_akx35"]
+[ext_resource type="Texture2D" uid="uid://bsubjkj8wn6lo" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 25.png" id="39_vut3g"]
+[ext_resource type="Texture2D" uid="uid://cw0kk6wuxpc37" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 26.png" id="40_0tdfb"]
+[ext_resource type="Texture2D" uid="uid://c7j0jb85vd17h" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 27.png" id="41_ddruf"]
+[ext_resource type="Texture2D" uid="uid://jguvk57bqv10" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 28.png" id="42_r2tnk"]
+[ext_resource type="Texture2D" uid="uid://ctn0moqmmcnun" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 29.png" id="43_hg0j7"]
+[ext_resource type="Texture2D" uid="uid://bjljtasiej83y" path="res://WarframeMod/images/animations/characters/volt/dead/volt_dead 30.png" id="44_iousn"]
+[ext_resource type="Texture2D" uid="uid://cee6xxti6j8sj" path="res://WarframeMod/images/animations/characters/volt/hit/volt_hit 00.png" id="45_iaiw8"]
+[ext_resource type="Texture2D" uid="uid://b6vyqh7ctimi7" path="res://WarframeMod/images/animations/characters/volt/hit/volt_hit 01.png" id="46_mh36j"]
+[ext_resource type="Texture2D" uid="uid://c6i2pebmxlt4c" path="res://WarframeMod/images/animations/characters/volt/hit/volt_hit 02.png" id="47_i8en7"]
+[ext_resource type="Texture2D" uid="uid://cwyqhdgsnk1l" path="res://WarframeMod/images/animations/characters/volt/hit/volt_hit 03.png" id="48_0a0ep"]
+[ext_resource type="Texture2D" uid="uid://d0flk27efy7mb" path="res://WarframeMod/images/animations/characters/volt/hit/volt_hit 04.png" id="49_qa1ac"]
+[ext_resource type="Texture2D" uid="uid://dcjlnk64h02cn" path="res://WarframeMod/images/animations/characters/volt/hit/volt_hit 05.png" id="50_40goa"]
+[ext_resource type="Texture2D" uid="uid://bpnpv72pao51b" path="res://WarframeMod/images/animations/characters/volt/hit/volt_hit 06.png" id="51_ll77c"]
+[ext_resource type="Texture2D" uid="uid://dpf4qvgl8yh4r" path="res://WarframeMod/images/animations/characters/volt/hit/volt_hit 07.png" id="52_sse5u"]
+[ext_resource type="Texture2D" uid="uid://oxq7savkt5wp" path="res://WarframeMod/images/animations/characters/volt/hit/volt_hit 08.png" id="53_uudra"]
+[ext_resource type="Texture2D" uid="uid://pak3riuyqib5" path="res://WarframeMod/images/animations/characters/volt/hit/volt_hit 09.png" id="54_hjoma"]
+[ext_resource type="Texture2D" uid="uid://tdi48qx5epe2" path="res://WarframeMod/images/animations/characters/volt/hit/volt_hit 10.png" id="55_xny4r"]
+[ext_resource type="Texture2D" uid="uid://ccve2itpi18w3" path="res://WarframeMod/images/animations/characters/volt/hit/volt_hit 11.png" id="56_2unnc"]
+[ext_resource type="Texture2D" uid="uid://0ao8n2u3hs7j" path="res://WarframeMod/images/animations/characters/volt/hit/volt_hit 12.png" id="57_jrd7t"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1akuj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dse55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_p073p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_iaiw8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mh36j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_i8en7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0a0ep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qa1ac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_40goa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ll77c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_sse5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_uudra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_hjoma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xny4r")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_2unnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_jrd7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_nsaq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_uksta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_rdx0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_aw2rj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_swp15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_4wl5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_51htj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_t50eb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_u8bsb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_1um4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ydfm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_veb84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_fnx8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_edv8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_3pheb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_1chyx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_q5omg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_015ng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_g2n2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_6ey84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_fj5tn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_enjxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_akx35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_vut3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_0tdfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_ddruf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_r2tnk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_hg0j7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_iousn")
+}],
+"loop": false,
+"name": &"Dead",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_iaiw8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_mh36j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_i8en7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_0a0ep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_qa1ac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_40goa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_ll77c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_sse5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_uudra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_hjoma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_xny4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_2unnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_jrd7t")
+}],
+"loop": false,
+"name": &"Hit",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_iaiw8")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 12.0
+}]
+
+[node name="Volt" type="Node2D"]
+metadata/_edit_group_ = true
+
+[node name="Visuals" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -100)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_1akuj")
+animation = &"Idle"
+
+[node name="Bounds" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -121.0
+offset_top = -280.0
+offset_right = 121.0
+mouse_filter = 2
+
+[node name="CenterPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -165)
+
+[node name="IntentPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(20, -351)

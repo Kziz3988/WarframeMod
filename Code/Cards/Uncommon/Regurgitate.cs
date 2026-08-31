@@ -14,7 +14,8 @@ namespace WarframeMod.Code.Cards.Uncommon;
 
 public class Regurgitate() : WarframeModCard(1, CardType.Skill, CardRarity.Uncommon, TargetType.AllEnemies)
 {
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<PoisonPower>()];
+    protected override HashSet<CardTag> CanonicalTags => [(CardTag)WarframeModCardTag.Element];
+	protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<PoisonPower>()];
 	protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(1)];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

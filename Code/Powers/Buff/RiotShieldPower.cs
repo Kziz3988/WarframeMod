@@ -1,7 +1,9 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 
@@ -11,6 +13,10 @@ public sealed class RiotShieldPower : WarframeModPower
 {
 	public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.None;
+
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+		HoverTipFactory.Static(StaticHoverTip.Block)
+	];
 
     public override async Task AfterBlockGained(Creature creature, decimal amount, ValueProp props, CardModel? cardSource)
     {

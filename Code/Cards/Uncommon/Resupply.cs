@@ -15,7 +15,7 @@ namespace WarframeMod.Code.Cards.Uncommon;
 public class Resupply() : WarframeModCard(3, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [ElementData.GetStaticHoverTip()];
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(2)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(3)];
     
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
 	{
@@ -25,13 +25,12 @@ public class Resupply() : WarframeModCard(3, CardType.Skill, CardRarity.Uncommon
             .ToList();
         foreach (CardModel card in cardPool)
         {
+            if (IsUpgraded)
+            {
+                CardCmd.Upgrade(card);
+            }
             card.SetToFreeThisTurn();
             await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, base.Owner);
         }
-	}
-
-	protected override void OnUpgrade()
-	{
-		base.DynamicVars.Cards.UpgradeValueBy(1m);
 	}
 }

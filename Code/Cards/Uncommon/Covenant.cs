@@ -19,7 +19,7 @@ public class Covenant() : WarframeModCard(1, CardType.Skill, CardRarity.Uncommon
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         IEnumerable<Creature> players = from c in base.CombatState.GetTeammatesOf(base.Owner.Creature)
-			where c != null && c.IsAlive && c.IsPlayer
+			where c != null && c.IsAlive && c.IsPlayer && c != base.Owner.Creature
 			select c;
 		await PowerCmd.Apply<CovenantPower>(new ThrowingPlayerChoiceContext(), players, base.DynamicVars["CovenantPower"].BaseValue, base.Owner.Creature, this);
     }

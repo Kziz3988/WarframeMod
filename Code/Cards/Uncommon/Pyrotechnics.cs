@@ -41,6 +41,6 @@ public class Pyrotechnics() : WarframeModCard(1, CardType.Attack, CardRarity.Unc
 
     protected override void OnUpgrade()
     {
-		base.DynamicVars.Repeat.UpgradeValueBy(1m);
+		base.DynamicVars["HeatPower"].UpgradeValueBy(1m);
     }
 }

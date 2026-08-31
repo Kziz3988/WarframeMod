@@ -10,7 +10,7 @@ namespace WarframeMod.Code.Cards.Rare;
 
 public class Desecrate() : WarframeModCard(1, CardType.Power, CardRarity.Rare, TargetType.Self)
 {
-	protected override IEnumerable<DynamicVar> CanonicalVars => [new GoldVar(10)];
+	protected override IEnumerable<DynamicVar> CanonicalVars => [new GoldVar(15)];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await PowerCmd.Apply<DesecratePower>(choiceContext, base.Owner.Creature, base.DynamicVars.Gold.BaseValue, base.Owner.Creature, this);

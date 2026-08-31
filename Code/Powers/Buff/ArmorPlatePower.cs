@@ -9,6 +9,7 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
+using MegaCrit.Sts2.Core.MonsterMoves.Intents;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace WarframeMod.Code.Powers.Buff;
@@ -42,7 +43,8 @@ public sealed class ArmorPlatePower : WarframeModPower
     public override PowerStackType StackType => PowerStackType.Counter;
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
-		GetExtraHoverTip()
+		GetExtraHoverTip(),
+        StunIntent.GetStaticHoverTip()
 	];
 
 	public override int DisplayAmount => GetInternalData<Data>().damageAmount - (GetInternalData<Data>().damageReceived % GetInternalData<Data>().damageAmount);
@@ -54,6 +56,7 @@ public sealed class ArmorPlatePower : WarframeModPower
 		locString.Add("Amount", base.Amount);
         locString.Add("DisplayAmount", DisplayAmount);
         locString.Add("OwnerName", base.Owner.Name);
+        locString.Add("OnPlayer", base.Owner.Name);
 		DynamicVars.AddTo(locString);
 		stringBuilder.Append(locString.GetFormattedText());
 		return new HoverTip(this, stringBuilder.ToString(), true);

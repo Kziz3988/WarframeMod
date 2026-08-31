@@ -13,21 +13,19 @@ namespace WarframeMod.Code.Cards.Uncommon;
 public class Metronome() : WarframeModCard(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
 {
 	protected override IEnumerable<IHoverTip> ExtraHoverTips => [
-		HoverTipFactory.FromPower<InvisiblePower>(),
-		HoverTipFactory.FromPower<StrengthPower>()
+		HoverTipFactory.FromPower<StrengthPower>(),
+		HoverTipFactory.FromPower<InvisiblePower>()
 	];
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-		new PowerVar<InvisiblePower>(1),
 		new PowerVar<MetronomePower>(1)
 	];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [
-		//CardKeyword.Ethereal
+		CardKeyword.Ethereal
 	];
 
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-		await PowerCmd.Apply<InvisiblePower>(choiceContext, base.Owner.Creature, base.DynamicVars["InvisiblePower"].BaseValue, base.Owner.Creature, this);
-        await PowerCmd.Apply<MetronomePower>(choiceContext, base.Owner.Creature, base.DynamicVars["MetronomePower"].BaseValue, base.Owner.Creature, this);
+		await PowerCmd.Apply<MetronomePower>(choiceContext, base.Owner.Creature, base.DynamicVars["MetronomePower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

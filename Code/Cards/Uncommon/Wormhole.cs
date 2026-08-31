@@ -8,10 +8,10 @@ using WarframeMod.Code.Powers.Buff;
 
 namespace WarframeMod.Code.Cards.Uncommon;
 
-public class Wormhole() : WarframeModCard(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
+public class Wormhole() : WarframeModCard(0, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new PowerVar<WormholePower>(2m)
+        new PowerVar<WormholePower>(1m)
     ];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
@@ -21,6 +21,6 @@ public class Wormhole() : WarframeModCard(1, CardType.Skill, CardRarity.Uncommon
 
     protected override void OnUpgrade()
     {
-        AddKeyword(CardKeyword.Retain);
+        base.DynamicVars["WormholePower"].UpgradeValueBy(1m);
     }
 }

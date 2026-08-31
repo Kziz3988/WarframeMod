@@ -1,16 +1,19 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
+using WarframeMod.Code.Character;
 using WarframeMod.Code.Powers.Debuff;
 
 namespace WarframeMod.Code.Cards.Basic;
 
+[Pool(typeof(ExcaliburCardPool))]
 public class SlashDash() : WarframeModCard(1, CardType.Attack, CardRarity.Basic, TargetType.AnyEnemy)
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<SlashPower>()];

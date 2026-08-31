@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -7,10 +8,12 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.MonsterMoves.Intents;
 using MegaCrit.Sts2.Core.ValueProps;
+using WarframeMod.Code.Character;
 using WarframeMod.Code.Powers.Debuff;
 
 namespace WarframeMod.Code.Cards.Ancient;
 
+[Pool(typeof(ExcaliburCardPool))]
 public class ChromaticBlade() : WarframeModCard(0, CardType.Attack, CardRarity.Ancient, TargetType.AllEnemies)
 {	
 	protected override bool HasEnergyCostX => true;

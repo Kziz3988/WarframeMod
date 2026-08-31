@@ -10,7 +10,7 @@ using WarframeMod.Code.Powers.Buff;
 
 namespace WarframeMod.Code.Cards.Rare;
 
-public class Peacemaker() : WarframeModCard(1, CardType.Power, CardRarity.Rare, TargetType.Self)
+public class Peacemaker() : WarframeModCard(3, CardType.Power, CardRarity.Rare, TargetType.Self)
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromCard<Regulators>(base.IsUpgraded)];
 	protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(2)];

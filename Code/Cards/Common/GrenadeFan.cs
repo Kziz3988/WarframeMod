@@ -33,7 +33,7 @@ public class GrenadeFan() : WarframeModCard(1, CardType.Attack, CardRarity.Commo
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars.Damage.UpgradeValueBy(2m);
+        base.DynamicVars.Damage.UpgradeValueBy(1m);
 		base.DynamicVars["ShieldSatellitePower"].UpgradeValueBy(1m);
     }
 }

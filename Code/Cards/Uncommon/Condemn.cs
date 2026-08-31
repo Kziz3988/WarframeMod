@@ -21,7 +21,7 @@ public class Condemn() : WarframeModCard(1, CardType.Skill, CardRarity.Uncommon,
 
 	protected override IEnumerable<DynamicVar> CanonicalVars => [
         new CalculationBaseVar(0),
-        new CalculationExtraVar(2m),
+        new CalculationExtraVar(3m),
         new CalculatedVar("TotalShield").WithMultiplier((CardModel card, Creature? _) => CountStunnedEnemies(card.Owner.Creature))
     ];
 

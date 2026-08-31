@@ -17,7 +17,8 @@ namespace WarframeMod.Code.Cards.Rare;
 
 public class Kumihimo() : WarframeModCard(1, CardType.Attack, CardRarity.Rare, TargetType.AllEnemies)
 {
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+    protected override HashSet<CardTag> CanonicalTags => [(CardTag)WarframeModCardTag.Element];
+	protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         ElementData.GetStaticHoverTip()
     ];
 	protected override IEnumerable<DynamicVar> CanonicalVars => [

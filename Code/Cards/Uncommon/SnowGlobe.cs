@@ -14,7 +14,8 @@ namespace WarframeMod.Code.Cards.Uncommon;
 
 public class SnowGlobe() : WarframeModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
 {
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+    protected override HashSet<CardTag> CanonicalTags => [(CardTag)WarframeModCardTag.Element];
+	protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.Static(StaticHoverTip.Block),
         HoverTipFactory.FromPower<ColdPower>(),
         StunIntent.GetStaticHoverTip()

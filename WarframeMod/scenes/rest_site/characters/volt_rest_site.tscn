@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1f7kvfpmiydu"]
+
+[ext_resource type="Texture2D" uid="uid://dx3c0j4sdbejh" path="res://WarframeMod/images/animations/characters/volt/rest/volt_rest_0.png" id="1_whfq5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5iy7b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_whfq5")
+}],
+"loop": true,
+"name": &"Rest",
+"speed": 12.0
+}]
+
+[node name="VoltRestSite" type="Node2D"]
+position = Vector2(-2, 42)
+scale = Vector2(0.760006, 0.760006)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5iy7b")
+animation = &"Rest"
+frame_progress = 0.94606906
+
+[node name="ControlRoot" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Hitbox" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = -155.0
+offset_top = -351.0
+offset_right = 266.0
+offset_bottom = 332.0
+
+[node name="ThoughtBubbleRight" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 209.209
+offset_top = -317.103
+offset_right = 209.209
+offset_bottom = -317.103
+
+[node name="ThoughtBubbleLeft" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = -73.6836
+offset_top = -324.997
+offset_right = -73.6836
+offset_bottom = -324.997

@@ -1,4 +1,4 @@
-[gd_scene load_steps=97 format=3 uid="uid://c55rxaq7mb7jl"]
+[gd_scene load_steps=56 format=3 uid="uid://c55rxaq7mb7jl"]
 
 [ext_resource type="Texture2D" uid="uid://b2j6lvv0vqk4c" path="res://WarframeMod/images/animations/characters/excalibur/attack/excalibur_attack 00.png" id="1_oqa16"]
 [ext_resource type="Texture2D" uid="uid://dfnqgo1vgwfue" path="res://WarframeMod/images/animations/characters/excalibur/attack/excalibur_attack 01.png" id="2_s4g7y"]
@@ -12,29 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://bwti2he1qyhph" path="res://WarframeMod/images/animations/characters/excalibur/attack/excalibur_attack 09.png" id="10_slbgj"]
 [ext_resource type="Texture2D" uid="uid://dutpccjak8nxk" path="res://WarframeMod/images/animations/characters/excalibur/attack/excalibur_attack 10.png" id="11_38m3i"]
 [ext_resource type="Texture2D" uid="uid://76kjkplxnxtu" path="res://WarframeMod/images/animations/characters/excalibur/attack/excalibur_attack 11.png" id="12_ikao3"]
-[ext_resource type="Texture2D" uid="uid://cg8yujs33a1ph" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 00.png" id="13_58tcm"]
-[ext_resource type="Texture2D" uid="uid://dgd5sh41k328u" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 01.png" id="14_3ndeu"]
-[ext_resource type="Texture2D" uid="uid://c2gubbldqmmed" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 02.png" id="15_nsm6q"]
-[ext_resource type="Texture2D" uid="uid://c8p3flofaf18" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 03.png" id="16_chl37"]
-[ext_resource type="Texture2D" uid="uid://dpsr85s10n0k1" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 04.png" id="17_a2vf3"]
-[ext_resource type="Texture2D" uid="uid://b73hylxipij85" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 05.png" id="18_5jbo8"]
-[ext_resource type="Texture2D" uid="uid://bwn24k0xx47s0" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 06.png" id="19_amtgi"]
-[ext_resource type="Texture2D" uid="uid://dcm3p4ftjh2es" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 07.png" id="20_23su2"]
-[ext_resource type="Texture2D" uid="uid://bp6aa08jvoy72" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 08.png" id="21_awws5"]
-[ext_resource type="Texture2D" uid="uid://bodud1b8rt4ev" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 09.png" id="22_jexuw"]
-[ext_resource type="Texture2D" uid="uid://cciwvidwvrrqp" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 10.png" id="23_5test"]
-[ext_resource type="Texture2D" uid="uid://duetiouemppqr" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 11.png" id="24_yfy3d"]
-[ext_resource type="Texture2D" uid="uid://6pqmi8eioudp" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 12.png" id="25_72wh0"]
-[ext_resource type="Texture2D" uid="uid://cfrnwmkbrxmd2" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 13.png" id="26_1133u"]
-[ext_resource type="Texture2D" uid="uid://6itm4toxhgq3" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 14.png" id="27_7ycfk"]
-[ext_resource type="Texture2D" uid="uid://8ssg55hm4bbo" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 15.png" id="28_l7av6"]
-[ext_resource type="Texture2D" uid="uid://cvddh1rul3gp4" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 16.png" id="29_6h62a"]
-[ext_resource type="Texture2D" uid="uid://bfu11oatjdhbw" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 17.png" id="30_fjsyv"]
-[ext_resource type="Texture2D" uid="uid://dciuvq501w6er" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 18.png" id="31_3ns3x"]
-[ext_resource type="Texture2D" uid="uid://bmy8f5c4ejgdr" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 19.png" id="32_llkyr"]
-[ext_resource type="Texture2D" uid="uid://b7ykytpqxqbk4" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 20.png" id="33_a6tlh"]
-[ext_resource type="Texture2D" uid="uid://ct08xmrxlwb8l" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 21.png" id="34_tcp8w"]
-[ext_resource type="Texture2D" uid="uid://tof0bb4n5f75" path="res://WarframeMod/images/animations/characters/excalibur/cast/excalibur_cast 22.png" id="35_vn4gn"]
 [ext_resource type="Texture2D" uid="uid://cji8782mftkr" path="res://WarframeMod/images/animations/characters/excalibur/dead/excalibur_dead 00.png" id="36_03ofy"]
 [ext_resource type="Texture2D" uid="uid://dwfwph5g640ig" path="res://WarframeMod/images/animations/characters/excalibur/dead/excalibur_dead 01.png" id="37_u03is"]
 [ext_resource type="Texture2D" uid="uid://c560urnw0ntyl" path="res://WarframeMod/images/animations/characters/excalibur/dead/excalibur_dead 02.png" id="38_tkaxe"]
@@ -74,27 +51,9 @@
 [ext_resource type="Texture2D" uid="uid://dafakaulocug8" path="res://WarframeMod/images/animations/characters/excalibur/hit/excalibur_hit 06.png" id="72_ikao3"]
 [ext_resource type="Texture2D" uid="uid://opupjce1vu14" path="res://WarframeMod/images/animations/characters/excalibur/idle/excalibur_idle 00.png" id="72_j5kx5"]
 [ext_resource type="Texture2D" uid="uid://xctph2k6f638" path="res://WarframeMod/images/animations/characters/excalibur/hit/excalibur_hit 07.png" id="73_58tcm"]
-[ext_resource type="Texture2D" uid="uid://3c8nge7655qv" path="res://WarframeMod/images/animations/characters/excalibur/idle/excalibur_idle 01.png" id="73_cwaaq"]
 [ext_resource type="Texture2D" uid="uid://c7x07aes1f7eb" path="res://WarframeMod/images/animations/characters/excalibur/hit/excalibur_hit 08.png" id="74_3ndeu"]
-[ext_resource type="Texture2D" uid="uid://b6x30oxwlrodw" path="res://WarframeMod/images/animations/characters/excalibur/idle/excalibur_idle 02.png" id="74_ersap"]
 [ext_resource type="Texture2D" uid="uid://bd3drxvobcte1" path="res://WarframeMod/images/animations/characters/excalibur/hit/excalibur_hit 09.png" id="75_nsm6q"]
-[ext_resource type="Texture2D" uid="uid://ccqhi6ad735lj" path="res://WarframeMod/images/animations/characters/excalibur/idle/excalibur_idle 03.png" id="75_xtp28"]
 [ext_resource type="Texture2D" uid="uid://ct75ai8sgjoet" path="res://WarframeMod/images/animations/characters/excalibur/hit/excalibur_hit 10.png" id="76_chl37"]
-[ext_resource type="Texture2D" uid="uid://bsauqwj6xr4fj" path="res://WarframeMod/images/animations/characters/excalibur/idle/excalibur_idle 04.png" id="76_legtp"]
-[ext_resource type="Texture2D" uid="uid://jtwwvc3ukc1y" path="res://WarframeMod/images/animations/characters/excalibur/idle/excalibur_idle 05.png" id="77_q8ebm"]
-[ext_resource type="Texture2D" uid="uid://brif4hche375y" path="res://WarframeMod/images/animations/characters/excalibur/idle/excalibur_idle 06.png" id="78_nfo0h"]
-[ext_resource type="Texture2D" uid="uid://5xiswat6a88" path="res://WarframeMod/images/animations/characters/excalibur/idle/excalibur_idle 07.png" id="79_x2d87"]
-[ext_resource type="Texture2D" uid="uid://itka30m4xvhm" path="res://WarframeMod/images/animations/characters/excalibur/idle/excalibur_idle 08.png" id="80_jq704"]
-[ext_resource type="Texture2D" uid="uid://dn04pldnl0x4o" path="res://WarframeMod/images/animations/characters/excalibur/idle/excalibur_idle 09.png" id="81_b8tbp"]
-[ext_resource type="Texture2D" uid="uid://cj87hllv0bs67" path="res://WarframeMod/images/animations/characters/excalibur/idle/excalibur_idle 10.png" id="82_hgrbw"]
-[ext_resource type="Texture2D" uid="uid://qfvlemfmi0xw" path="res://WarframeMod/images/animations/characters/excalibur/idle/excalibur_idle 11.png" id="83_fjt2i"]
-[ext_resource type="Texture2D" uid="uid://clv4nt4bl7j4u" path="res://WarframeMod/images/animations/characters/excalibur/idle/excalibur_idle 12.png" id="84_3m00v"]
-[ext_resource type="Texture2D" uid="uid://bwcowugun55nd" path="res://WarframeMod/images/animations/characters/excalibur/idle/excalibur_idle 13.png" id="85_toalg"]
-[ext_resource type="Texture2D" uid="uid://xkho0b0uvwqr" path="res://WarframeMod/images/animations/characters/excalibur/idle/excalibur_idle 14.png" id="86_k055v"]
-[ext_resource type="Texture2D" uid="uid://cob8pjkyquhx8" path="res://WarframeMod/images/animations/characters/excalibur/idle/excalibur_idle 15.png" id="87_u8oua"]
-[ext_resource type="Texture2D" uid="uid://bjxvmag4g7gm6" path="res://WarframeMod/images/animations/characters/excalibur/idle/excalibur_idle 16.png" id="88_eeehk"]
-[ext_resource type="Texture2D" uid="uid://c5maioakrv2bd" path="res://WarframeMod/images/animations/characters/excalibur/idle/excalibur_idle 17.png" id="89_c0gag"]
-[ext_resource type="Texture2D" uid="uid://pyu0bayfr08h" path="res://WarframeMod/images/animations/characters/excalibur/idle/excalibur_idle 18.png" id="90_hi0ec"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1akuj"]
 animations = [{
@@ -137,80 +96,6 @@ animations = [{
 }],
 "loop": false,
 "name": &"Attack",
-"speed": 24.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("13_58tcm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_3ndeu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_nsm6q")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_chl37")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_a2vf3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_5jbo8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_amtgi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_23su2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_awws5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_jexuw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_5test")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_yfy3d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_72wh0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_1133u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_7ycfk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_l7av6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_6h62a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_fjsyv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_3ns3x")
-}, {
-"duration": 1.0,
-"texture": ExtResource("32_llkyr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_a6tlh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_tcp8w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_vn4gn")
-}],
-"loop": false,
-"name": &"Cast",
 "speed": 24.0
 }, {
 "frames": [{
@@ -349,60 +234,6 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("72_j5kx5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("73_cwaaq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("74_ersap")
-}, {
-"duration": 1.0,
-"texture": ExtResource("75_xtp28")
-}, {
-"duration": 1.0,
-"texture": ExtResource("76_legtp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("77_q8ebm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("78_nfo0h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("79_x2d87")
-}, {
-"duration": 1.0,
-"texture": ExtResource("80_jq704")
-}, {
-"duration": 1.0,
-"texture": ExtResource("81_b8tbp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("82_hgrbw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("83_fjt2i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("84_3m00v")
-}, {
-"duration": 1.0,
-"texture": ExtResource("85_toalg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("86_k055v")
-}, {
-"duration": 1.0,
-"texture": ExtResource("87_u8oua")
-}, {
-"duration": 1.0,
-"texture": ExtResource("88_eeehk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("89_c0gag")
-}, {
-"duration": 1.0,
-"texture": ExtResource("90_hi0ec")
 }],
 "loop": true,
 "name": &"Idle",
@@ -417,6 +248,7 @@ position = Vector2(0, -100)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_1akuj")
 animation = &"Idle"
+frame_progress = 0.44242495
 
 [node name="Bounds" type="Control" parent="."]
 unique_name_in_owner = true

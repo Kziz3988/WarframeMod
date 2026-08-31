@@ -9,7 +9,7 @@ using WarframeMod.Code.Powers.Buff;
 
 namespace WarframeMod.Code.Cards.Uncommon;
 
-public class CelestialTwin() : WarframeModCard(2, CardType.Power, CardRarity.Uncommon, TargetType.Self)
+public class CelestialTwin() : WarframeModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromKeyword(CardKeyword.Exhaust)];
     protected override IEnumerable<DynamicVar> CanonicalVars => [new EnergyVar(3)];

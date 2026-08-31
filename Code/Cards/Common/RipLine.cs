@@ -30,6 +30,6 @@ public class RipLine() : WarframeModCard(1, CardType.Attack, CardRarity.Common, 
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars.Damage.UpgradeValueBy(2m);
+        base.DynamicVars.Damage.UpgradeValueBy(3m);
     }
 }

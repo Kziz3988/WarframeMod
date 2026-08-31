@@ -20,7 +20,7 @@ public class BlazingChakram() : WarframeModCard(3, CardType.Attack, CardRarity.U
         HoverTipFactory.Static(StaticHoverTip.Block)
 	];
 	protected override IEnumerable<DynamicVar> CanonicalVars => [
-		new DamageVar(16m, ValueProp.Move),
+		new DamageVar(20m, ValueProp.Move),
 		new PowerVar<HeatPower>(3m),
 		new EnergyVar(1)
 	];

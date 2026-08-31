@@ -13,6 +13,7 @@ namespace WarframeMod.Code.Cards.Ancient;
 
 public class Reservoirs() : WarframeModCard(3, CardType.Power, CardRarity.Ancient, TargetType.Self)
 {
+	protected override HashSet<CardTag> CanonicalTags => [(CardTag)WarframeModCardTag.Element];
 	protected override IEnumerable<IHoverTip> ExtraHoverTips => [
 		HoverTipFactory.FromPower<ElectricityPower>(),
 		StunIntent.GetStaticHoverTip()

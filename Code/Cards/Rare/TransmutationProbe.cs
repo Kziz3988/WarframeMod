@@ -15,9 +15,10 @@ using WarframeMod.Code.Powers.Debuff;
 
 namespace WarframeMod.Code.Cards.Rare;
 
-public class TransmutationProbe() : WarframeModCard(1, CardType.Skill, CardRarity.Rare, TargetType.Self)
+public class TransmutationProbe() : WarframeModCard(2, CardType.Skill, CardRarity.Rare, TargetType.Self)
 {
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+    protected override HashSet<CardTag> CanonicalTags => [(CardTag)WarframeModCardTag.Element];
+	protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.FromPower<ElectricityPower>(),
         StunIntent.GetStaticHoverTip()
     ];

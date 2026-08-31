@@ -3,6 +3,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Context;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -19,7 +20,8 @@ public sealed class MetronomePower : WarframeModPower
     public override PowerStackType StackType => PowerStackType.Counter;
 	protected override IEnumerable<IHoverTip> ExtraHoverTips => [
 		GetExtraHoverTip(),
-		HoverTipFactory.FromPower<StrengthPower>()
+		HoverTipFactory.FromPower<StrengthPower>(),
+		HoverTipFactory.FromPower<InvisiblePower>()
 	];
 
 	protected override HoverTip GetExtraHoverTip()
@@ -28,6 +30,8 @@ public sealed class MetronomePower : WarframeModPower
 		LocString locString = ExtraDescription;
         locString.Add("Amount", base.Amount);
         locString.Add("TempStrengthPower", TempStrengthPower);
+		locString.Add("OwnerName", base.Owner.Name);
+		locString.Add("OnPlayer", LocalContext.IsMe(base.Owner));
 		DynamicVars.AddTo(locString);
 		stringBuilder.Append(locString.GetFormattedText());
 		return new HoverTip(this, stringBuilder.ToString(), true);
@@ -47,6 +51,9 @@ public sealed class MetronomePower : WarframeModPower
                 break;
             case CardType.Skill:
                 await CardPileCmd.Draw(context, base.Amount, base.Owner.Player);
+                break;
+			case CardType.Power:
+                await PowerCmd.Apply<InvisiblePower>(context, base.Owner, base.Amount, base.Owner, null);
                 break;
             }
 		}

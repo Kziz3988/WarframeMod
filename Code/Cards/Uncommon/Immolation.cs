@@ -23,7 +23,7 @@ public class Immolation() : WarframeModCard(0, CardType.Attack, CardRarity.Uncom
         new DamageVar(10m, ValueProp.Move),
         new PowerVar<HeatPower>(3m),
         new EnergyVar("CostIncrement", 2),
-        new EnergyVar("CostDecrement", 2)
+        new EnergyVar("CostDecrement", 3)
     ];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -47,8 +47,7 @@ public class Immolation() : WarframeModCard(0, CardType.Attack, CardRarity.Uncom
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars.Damage.UpgradeValueBy(2m);
+        base.DynamicVars.Damage.UpgradeValueBy(3m);
         base.DynamicVars["HeatPower"].UpgradeValueBy(1m);
-        base.DynamicVars["CostDecrement"].UpgradeValueBy(1m);
     }
 }

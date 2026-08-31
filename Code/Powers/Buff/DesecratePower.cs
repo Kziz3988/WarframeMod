@@ -29,6 +29,7 @@ public sealed class DesecratePower : WarframeModPower
 		LocString locString = ExtraDescription;
         locString.Add("Amount", base.Amount);
 		locString.Add("ExtraAward", ExtraAward);
+		locString.Add("OwnerName", base.Owner.Name);
 		DynamicVars.AddTo(locString);
 		stringBuilder.Append(locString.GetFormattedText());
 		return new HoverTip(this, stringBuilder.ToString(), true);

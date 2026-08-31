@@ -9,6 +9,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.MonsterMoves.Intents;
 using WarframeMod.Code.Character;
+using WarframeMod.Code.Extensions;
 
 namespace WarframeMod.Code.Powers.Buff;
 
@@ -18,6 +19,7 @@ public sealed class AncientPower : WarframeModPower
     public override PowerStackType StackType => PowerStackType.None;
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        Warframe.GetStaticHoverTip(),
         HoverTipFactory.FromPower<OverguardPower>(),
         StunIntent.GetStaticHoverTip()
     ];
@@ -26,7 +28,7 @@ public sealed class AncientPower : WarframeModPower
     {
         if (side == base.Owner.Side)
         {
-            int count = base.CombatState.GetOpponentsOf(base.Owner).Where(c => c?.Player?.Character is Excalibur).Count() - 1;
+            int count = base.CombatState.GetOpponentsOf(base.Owner).Where(c => c.Player != null && c.Player.Character.IsWarframe()).Count() - 1;
             if (count > 0)
             {
                 await PowerCmd.Apply<OverguardPower>(new ThrowingPlayerChoiceContext(), base.Owner, count, base.Owner, null);                

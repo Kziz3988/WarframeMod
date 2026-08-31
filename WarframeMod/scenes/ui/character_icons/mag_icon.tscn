@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dddi6aue1k5mo"]
+
+[ext_resource type="Texture2D" uid="uid://dqh8tjn2qwer7" path="res://WarframeMod/images/charui/character_icon_mag.png" id="1_tlrs2"]
+
+[node name="MagIcon" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_tlrs2")
+expand_mode = 1
+stretch_mode = 5
