@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dxv2fyoeouvg1"]
+
+[node name="Encounter" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="brood_mother" type="Marker2D" parent="."]
+position = Vector2(1505, 565)
+
+[node name="maggot0" type="Marker2D" parent="."]
+position = Vector2(1225, 565)
+
+[node name="maggot1" type="Marker2D" parent="."]
+position = Vector2(1505, 845)
+
+[node name="maggot2" type="Marker2D" parent="."]
+position = Vector2(1785, 565)
+
+[node name="maggot3" type="Marker2D" parent="."]
+position = Vector2(1505, 285)
+
+[node name="maggot4" type="Marker2D" parent="."]
+position = Vector2(1307, 367)
+
+[node name="maggot5" type="Marker2D" parent="."]
+position = Vector2(1307, 763)
+
+[node name="maggot6" type="Marker2D" parent="."]
+position = Vector2(1703, 763)
+
+[node name="maggot7" type="Marker2D" parent="."]
+position = Vector2(1703, 367)

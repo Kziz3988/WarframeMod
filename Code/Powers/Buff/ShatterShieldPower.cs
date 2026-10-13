@@ -1,7 +1,9 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -43,6 +45,15 @@ public sealed class ShatterShieldPower : WarframeModPower
         return Task.CompletedTask;
     }
 
+    public override decimal ModifyDamageMultiplicative(Creature? target, decimal amount, ValueProp props, Creature? dealer, CardModel? cardSource, CardPlay? cardPlay)
+    {
+        if (target == base.Owner && props.IsPoweredAttack())
+        {
+            return 0.85m;
+        }
+        return 1m;
+    }
+
     public override Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
     {
         if (shield == null && power.Owner == base.Owner && power.GetType() == typeof(ShieldPower))
@@ -65,7 +76,7 @@ public sealed class ShatterShieldPower : WarframeModPower
 
     public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
-        if (side == base.Owner.Side)
+        if (participants.Contains(base.Owner))
 		{
             if (shield != null)
             {

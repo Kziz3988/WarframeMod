@@ -11,7 +11,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
-using MegaCrit.Sts2.Core.Models.Powers;
+using WarframeMod.Code.Extensions;
 
 namespace WarframeMod.Code.Cards.Event;
 
@@ -27,13 +27,13 @@ public class SickeningPulse() : WarframeModCard(2, CardType.Skill, CardRarity.Ev
 		Creature target = cardPlay.Target;
 
 		var powersToDecrement = target.Powers
-			.Where(p => p.StackType == PowerStackType.Counter && p.Type == PowerType.Buff && p.Amount < 0)
+			.Where(p => p.StackType == PowerStackType.Counter && p.IsTheMoreTheBetter() && ((p.Type == PowerType.Debuff && p.Amount > 0) || (p.Type == PowerType.Buff && p.Amount < 0)))
 			.ToList();
 
 		var powersToIncrement = target.Powers
-			.Where(p => p.GetType() == typeof(HardenedShellPower) || p.StackType == PowerStackType.Counter && p.Type == PowerType.Debuff)
+			.Where(p => p.StackType == PowerStackType.Counter && p.IsTheLessTheBetter() && ((p.Type == PowerType.Debuff && p.Amount > 0) || (p.Type == PowerType.Buff && p.Amount < 0)))
 			.ToList();
-		
+
 		foreach (PowerModel power in powersToDecrement)
 		{
 			await PowerCmd.ModifyAmount(choiceContext, power, -base.DynamicVars["Increment"].BaseValue, target, this);

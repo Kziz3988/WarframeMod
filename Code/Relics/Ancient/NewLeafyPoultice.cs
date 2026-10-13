@@ -49,6 +49,7 @@ public sealed class NewLeafyPoultice : WarframeModRelic
 	}
 
 	public override RelicRarity Rarity => RelicRarity.Ancient;
+	public override bool HasUponPickupEffect => true;
 	protected override IEnumerable<DynamicVar> CanonicalVars => [
 		new MaxHpVar(12m),
 		new StringVar("Strike"),

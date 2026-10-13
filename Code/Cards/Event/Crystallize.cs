@@ -15,7 +15,7 @@ using WarframeMod.Code.Character;
 namespace WarframeMod.Code.Cards.Event;
 
 [Pool(typeof(EventCardPool))]
-public class Crystallize() : WarframeModCard(1, CardType.Attack, CardRarity.Event, TargetType.AnyEnemy)
+public class Crystallize() : WarframeModCard(0, CardType.Attack, CardRarity.Event, TargetType.AnyEnemy)
 {
     public override CardPoolModel VisualCardPool => ModelDb.CardPool<WarframeModCardPool>();
     

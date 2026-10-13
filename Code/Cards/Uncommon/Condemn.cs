@@ -27,7 +27,7 @@ public class Condemn() : WarframeModCard(1, CardType.Skill, CardRarity.Uncommon,
 
     private static int CountStunnedEnemies(Creature? creature)
     {
-        if (creature == null || creature.GetPower<ShieldPower>() == null || creature.CombatState == null)
+        if (creature == null || creature.CombatState == null)
         {
             return 0;
         }
@@ -44,11 +44,6 @@ public class Condemn() : WarframeModCard(1, CardType.Skill, CardRarity.Uncommon,
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-		ShieldPower? shield = base.Owner.Creature.GetPower<ShieldPower>();
-        if (shield == null)
-        {
-            return;
-        }
         int shieldAmount = (int)((CalculatedVar)base.DynamicVars["TotalShield"]).Calculate(base.Owner.Creature);
         await ShieldPower.ApplyShield(base.Owner.Creature, shieldAmount, 0, 0, base.Owner.Creature, this);
     }

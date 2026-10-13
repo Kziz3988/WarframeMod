@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
@@ -39,7 +40,7 @@ public sealed class PeacemakerUpgradedPower : WarframeModPower
 
 	public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
-        if (base.Owner.Player != null && side == base.Owner.Side)
+        if (base.Owner.Player != null && participants.Contains(base.Owner))
         {
             var cards = await WarframeModCard.CreateInHand<Regulators>(base.Owner.Player, base.Amount, combatState);
             foreach (Regulators card in cards)

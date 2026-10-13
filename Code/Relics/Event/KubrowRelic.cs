@@ -1,12 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.RelicPools;
 using MegaCrit.Sts2.Core.Random;
 using MegaCrit.Sts2.Core.Saves.Runs;
 using WarframeMod.Code.Cards;
@@ -16,6 +18,7 @@ using WarframeMod.Code.Monsters;
 
 namespace WarframeMod.Code.Relics.Event;
 
+[Pool(typeof(EventRelicPool))]
 public class KubrowRelic : WarframeModRelic
 {
     public override RelicRarity Rarity => RelicRarity.Event;

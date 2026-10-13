@@ -51,8 +51,8 @@ public sealed class LechKril : CustomMonsterModel
         coldBrokkMove.FollowUpState = bodyArmorMove;
         heatBrokkMove.FollowUpState = heatBrokkMove;
         bodyArmorMove.FollowUpState = elementBranchState;
-        elementBranchState.AddState(coldBranchState, () => base.Creature.CurrentHp > MaxInitialHp / 2);
-        elementBranchState.AddState(heatBrokkMove, () => base.Creature.CurrentHp <= MaxInitialHp / 2);
+        elementBranchState.AddState(coldBranchState, () => base.Creature.CurrentHp > base.Creature.MaxHp / 2);
+        elementBranchState.AddState(heatBrokkMove, () => base.Creature.CurrentHp <= base.Creature.MaxHp / 2);
         coldBranchState.AddBranch(gorgonMove, MoveRepeatType.CanRepeatForever);
         coldBranchState.AddBranch(coldBrokkMove, MoveRepeatType.CanRepeatForever);
 		list.Add(gorgonMove);

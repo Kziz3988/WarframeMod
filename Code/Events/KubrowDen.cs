@@ -9,7 +9,6 @@ using MegaCrit.Sts2.Core.Events;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Acts;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Models.Monsters;
 using MegaCrit.Sts2.Core.Runs;
@@ -23,7 +22,7 @@ public sealed class KubrowDen : CustomEventModel
 {
     public override string? CustomInitialPortraitPath => "kubrow_den.png".EventBackgroundPath();
 
-    public override ActModel[] Acts => [ModelDb.Act<Hive>()];
+    public override ActModel[] Acts => ModelDb.Acts.Where(a => a.Index == 1).ToArray();
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [new HealVar(20m)];
 

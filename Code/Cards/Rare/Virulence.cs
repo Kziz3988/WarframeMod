@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Saves.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
@@ -83,6 +84,10 @@ public class Virulence() : WarframeModCard(2, CardType.Attack, CardRarity.Rare, 
         CurrenctDamage = InitialDamage * Doubling;
         base.DynamicVars.Damage.BaseValue = CurrenctDamage;
     }
+
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        HoverTipFactory.ForEnergy(this)
+    ];
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [

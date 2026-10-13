@@ -24,6 +24,7 @@ public class Excalibur : Warframe
     ];
     
     public override CardPoolModel CardPool => ModelDb.CardPool<ExcaliburCardPool>();
+    public override RelicPoolModel RelicPool => ModelDb.RelicPool<ExcaliburRelicPool>();
     
     public override string CustomIconPath => "excalibur_icon.tscn".CharacterIconScenePath();
     public override string CustomIconTexturePath => "character_icon_excalibur.png".CharacterUiPath();

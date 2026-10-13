@@ -14,7 +14,10 @@ namespace WarframeMod.Code.Powers.Buff;
 
 public sealed class CelestialTwinPower : WarframeModPower
 {
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromKeyword(CardKeyword.Exhaust)];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        HoverTipFactory.ForEnergy(this),
+        HoverTipFactory.FromKeyword(CardKeyword.Exhaust)
+    ];
 	public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
     public override PowerInstanceType InstanceType => PowerInstanceType.Instanced;
@@ -22,7 +25,7 @@ public sealed class CelestialTwinPower : WarframeModPower
     public override async Task AfterCardPlayed(PlayerChoiceContext context, CardPlay cardPlay)
     {
         ArgumentNullException.ThrowIfNull(base.Owner.Player, "base.Owner.Player");
-        if (cardPlay.Card.Owner.Creature == base.Owner && cardPlay.Card.EnergyCost.GetAmountToSpend() >= base.Amount)
+        if (cardPlay.Player.Creature == base.Owner && cardPlay.Card.EnergyCost.GetAmountToSpend() >= base.Amount)
         {
             if (cardPlay.Card.Type == CardType.Attack)
             {

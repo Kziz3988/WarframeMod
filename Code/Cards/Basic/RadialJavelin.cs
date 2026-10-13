@@ -15,7 +15,7 @@ namespace WarframeMod.Code.Cards.Basic;
 public class RadialJavelin() : WarframeModCard(1, CardType.Skill, CardRarity.Basic, TargetType.AllEnemies)
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<SlashPower>()];
-	protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<SlashPower>(2m)];
+	protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<SlashPower>(3m)];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
 		await PowerCmd.Apply<SlashPower>(choiceContext, base.CombatState.HittableEnemies, base.DynamicVars["SlashPower"].BaseValue, base.Owner.Creature, this);

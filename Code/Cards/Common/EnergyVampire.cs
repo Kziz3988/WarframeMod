@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 using WarframeMod.Code.Powers.Debuff;
@@ -24,11 +25,11 @@ public class EnergyVampire() : WarframeModCard(1, CardType.Attack, CardRarity.Co
 			return TargetType.AllEnemies;
 		}
 	}
+	protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.ForEnergy(this)];
     protected override IEnumerable<DynamicVar> CanonicalVars => [
 		new EnergyVar(1),
 		new DamageVar(5m, ValueProp.Move)
 	];
-
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
 	{
 		if (base.IsUpgraded)

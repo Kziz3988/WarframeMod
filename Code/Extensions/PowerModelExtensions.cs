@@ -58,7 +58,9 @@ public static class PowerModelExtensions
             {
                 _isNotBetterOrWorse = [
                     typeof(ArmorPlatePower),
+                    typeof(KuvaLichPower),
                     typeof(PlowPower),
+                    typeof(RequiemCorrectPower),
                     typeof(ShieldPower),
                     typeof(ShriekPower),
                 ];
@@ -77,5 +79,10 @@ public static class PowerModelExtensions
     {
         Type powerType = power.GetType();
         return !IsNotBetterOrWorse.Contains(powerType) && ((power.Type == PowerType.Buff && BuffTheLessTheBetter.Contains(powerType)) || (power.Type == PowerType.Debuff && !DebuffTheMoreTheBetter.Contains(powerType)));
+    }
+
+    public static bool IsElement(this PowerModel power)
+    {
+        return ElementData.PowerTypeMap.ContainsValue(power.GetType());
     }
 }

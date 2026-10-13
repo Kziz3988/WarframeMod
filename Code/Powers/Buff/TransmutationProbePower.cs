@@ -33,7 +33,7 @@ public sealed class TransmutationProbePower : WarframeModPower
             isCardSourceFinished = true;
             return;
         }
-        if (cardPlay.Card.Owner.Creature == base.Owner && cardPlay.Card.Type == CardType.Attack)
+        if (cardPlay.Player.Creature == base.Owner && cardPlay.Card.Type == CardType.Attack)
 		{
             await PowerCmd.Decrement(this);
 		}

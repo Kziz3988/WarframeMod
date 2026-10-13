@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
@@ -9,6 +10,7 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
+using MegaCrit.Sts2.Core.Random;
 using MegaCrit.Sts2.Core.ValueProps;
 using WarframeMod.Code.Powers;
 using WarframeMod.Code.Powers.Debuff;
@@ -19,7 +21,9 @@ public class ElementData
 {
     public Dictionary<string, decimal> Elements { get; set; }
 
-    private static readonly Dictionary<string, Type> PowerTypeMap = new()
+    public decimal Amount => Elements.Values.Sum();
+
+    public static readonly Dictionary<string, Type> PowerTypeMap = new()
     {
         {"ColdPower", typeof(ColdPower)},
         {"ElectricityPower", typeof(ElectricityPower)},
@@ -46,6 +50,24 @@ public class ElementData
             result.Elements[name] = a.Elements[name] + b.Elements[name];
         }
         return result;
+    }
+
+    public static ElementData operator *(int a, ElementData b)
+    {
+        ElementData result = new();
+        foreach (string name in result.Elements.Keys)
+        {
+            result.Elements[name] = a * b.Elements[name];
+        }
+        return result;
+    }
+
+    public static ElementData RandomElement(Rng rng)
+    {
+        ElementData element = new();
+        string key = rng.NextItem(PowerTypeMap.Keys) ?? PowerTypeMap.Keys.First();
+        element.Elements[key] = 1;
+        return element;
     }
 
     public async Task Apply(PlayerChoiceContext choiceContext, Creature target, Creature? applier, CardModel? cardSource, bool silent = false)

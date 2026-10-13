@@ -17,7 +17,8 @@ public class Immolation() : WarframeModCard(0, CardType.Attack, CardRarity.Uncom
     protected override HashSet<CardTag> CanonicalTags => [(CardTag)WarframeModCardTag.Element];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.FromPower<HeatPower>(),
-        HoverTipFactory.Static(StaticHoverTip.Block)
+        HoverTipFactory.Static(StaticHoverTip.Block),
+        HoverTipFactory.ForEnergy(this)
     ];
 	protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(10m, ValueProp.Move),

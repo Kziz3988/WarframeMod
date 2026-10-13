@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b1dnsm5836jvl" path="res://WarframeMod/images/monsters/lech_kril.png" id="1_1w3yo"]
 
-[node name="Jackal2" type="Node2D"]
+[node name="LechKril" type="Node2D"]
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 

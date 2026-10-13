@@ -8,7 +8,6 @@ using MegaCrit.Sts2.Core.Entities.Gold;
 using MegaCrit.Sts2.Core.Events;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Acts;
 using MegaCrit.Sts2.Core.Runs;
 using WarframeMod.Code.Extensions;
 using WarframeMod.Code.Relics;
@@ -20,8 +19,8 @@ public sealed class MaroosBazaar : CustomEventModel
 {
     public override string? CustomInitialPortraitPath => "maroos_bazaar.png".EventBackgroundPath();
 
-    public override ActModel[] Acts => [ModelDb.Act<Overgrowth>(), ModelDb.Act<Underdocks>()];
-
+    public override ActModel[] Acts => ModelDb.Acts.Where(a => a.Index == 0).ToArray();
+    
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
         new DynamicVar("PriceOfRelic", 25m),
@@ -30,8 +29,8 @@ public sealed class MaroosBazaar : CustomEventModel
 
     public override bool IsAllowed(IRunState runState)
 	{
-        if (runState.Players.Count > 1) return false; //Temporarily removed from multiplayer
-		return runState.Players.All(p => p.Gold >= base.DynamicVars["PriceOfRelic"].BaseValue);
+        if (runState.Players.Count() > 1) return false; //Temporarily removed from multiplayer
+        return runState.Players.All(p => p.Gold >= base.DynamicVars["PriceOfRelic"].BaseValue);
 	}
 
     protected override IReadOnlyList<EventOption> GenerateInitialOptions()
@@ -45,16 +44,7 @@ public sealed class MaroosBazaar : CustomEventModel
     private async Task RandomRelic()
     {
         await PlayerCmd.LoseGold(base.DynamicVars["PriceOfRelic"].BaseValue, base.Owner, GoldLossType.Spent);
-        List<VoidRelic> relics = 
-        [
-            ModelDb.Relic<Axi>(),
-            ModelDb.Relic<Lith>(),
-            ModelDb.Relic<Meso>(),
-            ModelDb.Relic<Neo>(),
-            ModelDb.Relic<Requiem>()
-        ];
-
-        await RelicCmd.Obtain(base.Rng.NextItem(relics).ToMutable(), base.Owner);
+        await RelicCmd.Obtain(base.Owner.PlayerRng.Rewards.NextItem(VoidRelic.Relics).ToMutable(), base.Owner);
         SetEventFinished(L10NLookup("WARFRAMEMOD-MAROOS_BAZAAR.pages.TOOK_A_RELIC.description"));
     }
 

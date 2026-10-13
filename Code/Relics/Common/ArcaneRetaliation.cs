@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
@@ -10,10 +12,12 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Rooms;
 using MegaCrit.Sts2.Core.ValueProps;
+using WarframeMod.Code.Character;
 using WarframeMod.Code.Powers.Buff;
 
 namespace WarframeMod.Code.Relics.Common;
 
+[Pool(typeof(MagRelicPool))]
 public class ArcaneRetaliation : WarframeModRelic
 {
     public override RelicRarity Rarity => RelicRarity.Common;
@@ -77,7 +81,7 @@ public class ArcaneRetaliation : WarframeModRelic
 
     public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
-        if (shield != null && side == base.Owner.Creature.Side)
+        if (shield != null && participants.Contains(base.Owner.Creature))
         {
             for (int i = 0; i < DamageCount; i++)
             {

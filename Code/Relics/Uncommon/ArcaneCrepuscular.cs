@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -7,10 +8,12 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Rooms;
+using WarframeMod.Code.Character;
 using WarframeMod.Code.Powers.Buff;
 
 namespace WarframeMod.Code.Relics.Uncommon;
 
+[Pool(typeof(MagRelicPool))]
 public class ArcaneCrepuscular : WarframeModRelic
 {
     public override RelicRarity Rarity => RelicRarity.Uncommon;

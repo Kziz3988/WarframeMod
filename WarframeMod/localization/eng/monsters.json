@@ -1,9 +1,48 @@
 {
+    "WARFRAMEMOD-AMBULAS.name": "Ambulas",
+    "WARFRAMEMOD-AMBULAS.moves.CAPITAL_SHIP_LASER.title": "Captial Ship Laser",
+    "WARFRAMEMOD-AMBULAS.moves.ELECTRO_MORTAR.title": "Electro-Mortar",
+    "WARFRAMEMOD-AMBULAS.moves.FUSION_THROWER.title": "Fushion Thrower",
+    "WARFRAMEMOD-AMBULAS.moves.REMECH_SUMMON.title": "Summon Remech Osprey",
+    
+    "WARFRAMEMOD-ANCIENT_DISRUPTOR.name": "Ancient Disruptor",
+    "WARFRAMEMOD-ANCIENT_DISRUPTOR.moves.GRAPPLING_HOOK.title": "Grappling Hook",
+    "WARFRAMEMOD-ANCIENT_DISRUPTOR.moves.DISRUPTION_PULSE.title": "Disruption Pulse",
+    
+    "WARFRAMEMOD-ANCIENT_HEALER.name": "Ancient Healer",
+    "WARFRAMEMOD-ANCIENT_HEALER.moves.GRAPPLING_HOOK.title": "Grappling Hook",
+    "WARFRAMEMOD-ANCIENT_HEALER.moves.HEALING_PULSE.title": "Healing Pulse",
+    "WARFRAMEMOD-ANCIENT_HEALER.moves.PURIFY_PULSE.title": "Purify Pulse",
+    
+    "WARFRAMEMOD-ANCIENT_INFESTED.name": "Ancient Infested",
+    "WARFRAMEMOD-ANCIENT_INFESTED.moves.EMERGE_FROM_GROUND.title": "Emerge from the Ground",
+    "WARFRAMEMOD-ANCIENT_INFESTED.moves.GO_UNDERGROUND.title": "Go Underground",
+    "WARFRAMEMOD-ANCIENT_INFESTED.moves.SPORE_BOMB.title": "Spore Bomb",
+    
+    "WARFRAMEMOD-BROOD_MOTHER.name": "Brood Mother",
+    "WARFRAMEMOD-BROOD_MOTHER.moves.CHARGE.title": "Charge",
+    "WARFRAMEMOD-BROOD_MOTHER.moves.SPAWN.title": "Spawn Massive Maggots",
+    "WARFRAMEMOD-BROOD_MOTHER.moves.SPAWN_ATTACK.title": "Spawn Maggots",
+
+    "WARFRAMEMOD-CHARGER.name": "Charger",
+    "WARFRAMEMOD-CHARGER.moves.POUNCE.title": "Pounce",
+
     "WARFRAMEMOD-CHESA_KUBROW.name": "Chesa Kubrow",
     "WARFRAMEMOD-CHESA_KUBROW.moves.NOTHING.title": "Nothing",
 
     "WARFRAMEMOD-HURAS_KUBROW.name": "Huras Kubrow",
     "WARFRAMEMOD-HURAS_KUBROW.moves.NOTHING.title": "Nothing",
+
+    "WARFRAMEMOD-INFESTED_CORPUS.name": "Infested Corpus",
+    "WARFRAMEMOD-INFESTED_CORPUS.moves.EMERGE_FROM_GROUND.title": "Emerge from the Ground",
+    "WARFRAMEMOD-INFESTED_CORPUS.moves.GO_UNDERGROUND.title": "Go Underground",
+    "WARFRAMEMOD-INFESTED_CORPUS.moves.POISON_GRENADE.title": "Poison Grenade",
+    "WARFRAMEMOD-INFESTED_CORPUS.moves.SPAWN_POD.title": "Spawn Pod",
+    
+    "WARFRAMEMOD-INFESTED_GRINEER.name": "Infested Grineer",
+    "WARFRAMEMOD-INFESTED_GRINEER.moves.EMERGE_FROM_GROUND.title": "Emerge from the Ground",
+    "WARFRAMEMOD-INFESTED_GRINEER.moves.GO_UNDERGROUND.title": "Go Underground",
+    "WARFRAMEMOD-INFESTED_GRINEER.moves.SCYTHE_ARM.title": "Scythe Arm",
     
     "WARFRAMEMOD-JACKAL.name": "Jackal",
     "WARFRAMEMOD-JACKAL.moves.SHOCKWAVE.title": "Rippling Shockwave",
@@ -13,6 +52,19 @@
     "WARFRAMEMOD-JACKAL.banter2": "[shake]Enemy analysis: Organic. Threat level: Impotent.[/shake]",
     "WARFRAMEMOD-JACKAL.banter3": "[shake]Threat Level Upgraded. Classification: Pathetic.[/shake]",
 
+    "WARFRAMEMOD-KUVA_LICH.name": "Kuva Lich",
+    "WARFRAMEMOD-KUVA_LICH.moves.ICE_BLAST.title": "Ice Blast",
+    "WARFRAMEMOD-KUVA_LICH.moves.LIGHTNING_BOLT.title": "Lightning Bolt",
+    "WARFRAMEMOD-KUVA_LICH.moves.MIASMA.title": "Miasma",
+    "WARFRAMEMOD-KUVA_LICH.moves.PLASMA_FLARE.title": "Plasma Flare",
+    "WARFRAMEMOD-KUVA_LICH.moves.CARAPACE.title": "Carapace",
+    "WARFRAMEMOD-KUVA_LICH.moves.CURSED_GROUND.title": "Cursed Ground",
+    "WARFRAMEMOD-KUVA_LICH.moves.FROZEN_FORTRESS.title": "Frozen Fortress",
+    "WARFRAMEMOD-KUVA_LICH.moves.LICH_STOMP.title": "Lich Stomp",
+    
+    "WARFRAMEMOD-LEAPER.name": "Leaper",
+    "WARFRAMEMOD-LEAPER.moves.LEAP.title": "Leap",
+    
     "WARFRAMEMOD-LECH_KRIL.name": "Lieutenant Lech Kril",
     "WARFRAMEMOD-LECH_KRIL.moves.BODY_ARMOR.title": "Body Armor",
     "WARFRAMEMOD-LECH_KRIL.moves.COLD_BROKK.title": "Brokk (Cold)",
@@ -30,13 +82,27 @@
     "WARFRAMEMOD-LEEKTER.banter2": "[jitter]You looks so... slippery.[/jitter]",
     "WARFRAMEMOD-LEEKTER.teammateDeathLine": "[jitter]You are going to suffer for that![/jitter]",
 
+    "WARFRAMEMOD-LEPHANTIS.banter1": "[shake]Unburden yourself from this mortal coil. Join Us.[/shake]",
+    "WARFRAMEMOD-LEPHANTIS.banter2": "[shake]Why do you destroy us? We are your flesh.[/shake]",
+    "WARFRAMEMOD-LEPHANTIS.banter3": "[shake]We are countless. Consume us. Be reborn.[/shake]",
+    "WARFRAMEMOD-LEPHANTIS.banter4": "[shake]We embrace you. Why do you defile us?[/shake]",
+
+    "WARFRAMEMOD-MAGGOT.name": "Maggot",
+    "WARFRAMEMOD-MAGGOT.moves.LATCH.title": "Latch",
+    
     "WARFRAMEMOD-NEMES_RT.name": "Nemes RT",
     "WARFRAMEMOD-NEMES_RT.moves.EXPLODE.title": "Explode",
 
+    "WARFRAMEMOD-ORBITAL_STRIKE_DRONE.name": "Orbital Strike Drone",
+    "WARFRAMEMOD-ORBITAL_STRIKE_DRONE.moves.ORBITAL_STRIKE.title": "Orbital Strike",
+    
     "WARFRAMEMOD-PHORID.name": "Phorid",
     "WARFRAMEMOD-PHORID.moves.CLAW_SWIPE.title": "Claw Swipe",
     "WARFRAMEMOD-PHORID.moves.SONIC_SCREAM.title": "Sonic Scream",
     "WARFRAMEMOD-PHORID.moves.SPINE_STRIKE.title": "Spine Strike",
+
+    "WARFRAMEMOD-PROPAGANDA_DRONE.name": "Propaganda Drone",
+    "WARFRAMEMOD-PROPAGANDA_DRONE.moves.PROPAGANDA.title": "Propaganda Broadcast",
 
     "WARFRAMEMOD-RAKSA_KUBROW.name": "Raksa Kubrow",
     "WARFRAMEMOD-RAKSA_KUBROW.moves.NOTHING.title": "Nothing",
@@ -47,6 +113,9 @@
     "WARFRAMEMOD-RAPTOR.moves.ENERGY_MORTAR.title": "Energy Mortar",
     "WARFRAMEMOD-RAPTOR.moves.NEMES_RT.title": "Summon Nemes",
     "WARFRAMEMOD-RAPTOR.moves.LASER_BARRAGE.title": "Laser Barrage",
+    
+    "WARFRAMEMOD-REMECH_OSPREY.name": "Remech Osprey",
+    "WARFRAMEMOD-REMECH_OSPREY.moves.REMECH_LASER.title": "Remech Laser",
     
     "WARFRAMEMOD-SAHASA_KUBROW.name": "Sahasa Kubrow",
     "WARFRAMEMOD-SAHASA_KUBROW.moves.NOTHING.title": "Nothing",
@@ -73,11 +142,25 @@
     "WARFRAMEMOD-THE_SERGEANT.banter4": "I grow tired of waiting.",
     "WARFRAMEMOD-THE_SERGEANT.banter5": "You call that skill?",
 
+    "WARFRAMEMOD-TOXIC_ANCIENT.name": "Toxic Ancient",
+    "WARFRAMEMOD-TOXIC_ANCIENT.moves.GRAPPLING_HOOK.title": "Grappling Hook",
+    "WARFRAMEMOD-TOXIC_ANCIENT.moves.TOXIC_PULSE.title": "Toxic Pulse",
+    
     "WARFRAMEMOD-TUSK_THUMPER.name": "Tusk Thumper",
     "WARFRAMEMOD-TUSK_THUMPER.moves.TELESCOPIC_CANNON.title": "Large Telescopic Cannon",
     "WARFRAMEMOD-TUSK_THUMPER.moves.AUTOCANNON.title": "Rapid-Fire Autocannon",
     "WARFRAMEMOD-TUSK_THUMPER.moves.GROUNDPOUNDER.title": "Pneumatic Groundpounder",
 
+    "WARFRAMEMOD-VAY_HEK.name": "Councilor Vay Hek",
+    "WARFRAMEMOD-VAY_HEK.moves.DRONE_LAUNCH.title": "Drone Launch",
+    "WARFRAMEMOD-VAY_HEK.moves.PROPAGANDA.title": "Propaganda Broadcast",
+    "WARFRAMEMOD-VAY_HEK.moves.HEK_CANNON.title": "Hek Cannon",
+    "WARFRAMEMOD-VAY_HEK.moves.HEK_BARRAGE.title": "Hek Barrage",
+    "WARFRAMEMOD-VAY_HEK.banter1": "Grineer brothers! I've done my part! Now clean up this... mess.",
+    "WARFRAMEMOD-VAY_HEK.banter2": "Why are these fools still breathing My air?! This is Unacceptable!",
+    "WARFRAMEMOD-VAY_HEK.banter3": "Must I do everything myself?!",
+    "WARFRAMEMOD-VAY_HEK.banter4": "Now we finish this business. Once and for all!!",
+    
     "WARFRAMEMOD-VEM_TABOOK.name": "Vem Tabook",
     "WARFRAMEMOD-VEM_TABOOK.moves.HEK.title": "Hek",
     "WARFRAMEMOD-VEM_TABOOK.moves.LEADER.title": "Leader",
@@ -85,6 +168,9 @@
     "WARFRAMEMOD-VEM_TABOOK.banter2": "[jitter]Are you the best they have?![/jitter]",
     "WARFRAMEMOD-VEM_TABOOK.teammateDeathLine": "[jitter]Unacceptable![/jitter]",
 
+    "WARFRAMEMOD-VOLATILE_RUNNER.name": "Volatile Runner",
+    "WARFRAMEMOD-VOLATILE_RUNNER.moves.EXPLODE.title": "Explode",
+    
     "WARFRAMEMOD-ZANUKA_HUNTER.name": "Zanuka Hunter",
     "WARFRAMEMOD-ZANUKA_HUNTER.moves.MISSILE_STRIKE.title": "Missile Strike",
     "WARFRAMEMOD-ZANUKA_HUNTER.moves.FROST_BOMB.title": "Frost Bomb"

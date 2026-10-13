@@ -39,7 +39,7 @@ public sealed class RadialDisarmPower : WarframeModPower
 
     public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
-        if (base.Owner.Player != null && side == base.Owner.Side)
+        if (base.Owner.Player != null && participants.Contains(base.Owner))
         {
             foreach (Creature creature in base.CombatState.HittableEnemies)
             {

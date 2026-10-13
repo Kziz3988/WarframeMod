@@ -26,6 +26,7 @@ public class Volt : Warframe
     ];
     
     public override CardPoolModel CardPool => ModelDb.CardPool<VoltCardPool>();
+    public override RelicPoolModel RelicPool => ModelDb.RelicPool<VoltRelicPool>();
     
     public override string CustomIconPath => "volt_icon.tscn".CharacterIconScenePath();
     public override string CustomIconTexturePath => "character_icon_volt.png".CharacterUiPath();

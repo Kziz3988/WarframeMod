@@ -11,6 +11,7 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
+using WarframeMod.Code.Character;
 using WarframeMod.Code.Extensions;
 
 namespace WarframeMod.Code.Cards.Rare;
@@ -32,8 +33,8 @@ public class Kumihimo() : WarframeModCard(1, CardType.Attack, CardRarity.Rare, T
         ElementData elements = new();
         for (int i = 0; i < base.DynamicVars["Chances"].IntValue; i++)
         {
-            List<CardModel> cards = CardFactory.GetDistinctForCombat(base.Owner, from c in base.Owner.Character.CardPool.GetUnlockedCards(base.Owner.UnlockState, base.Owner.RunState.CardMultiplayerConstraint)
-			where (c.GetType() != typeof(Kumihimo)) && c.Tags.Contains((CardTag)WarframeModCardTag.Element) && (c.Rarity == CardRarity.Common || c.Rarity == CardRarity.Uncommon || c.Rarity == CardRarity.Rare)
+            List<CardModel> cards = CardFactory.GetDistinctForCombat(base.Owner, from c in ModelDb.CardPool<WarframeModCardPool>().GetUnlockedCards(base.Owner.UnlockState, base.Owner.RunState.CardMultiplayerConstraint)
+			where (c.GetType() != typeof(Kumihimo)) && (c.Tags.Contains((CardTag)WarframeModCardTag.Element) || c.GetElements().Amount > 0) && (c.Rarity == CardRarity.Common || c.Rarity == CardRarity.Uncommon || c.Rarity == CardRarity.Rare)
 			select c, base.DynamicVars["Choices"].IntValue, base.Owner.RunState.Rng.CombatCardGeneration)
             .ToList();
             if (base.DynamicVars["Choices"].IntValue > 3)

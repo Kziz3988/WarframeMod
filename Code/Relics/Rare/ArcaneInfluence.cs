@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Relics;
@@ -9,10 +10,12 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.MonsterMoves.Intents;
 using MegaCrit.Sts2.Core.Rooms;
+using WarframeMod.Code.Character;
 using WarframeMod.Code.Powers.Debuff;
 
 namespace WarframeMod.Code.Relics.Rare;
 
+[Pool(typeof(VoltRelicPool))]
 public class ArcaneInfluence : WarframeModRelic
 {
     public override RelicRarity Rarity => RelicRarity.Rare;

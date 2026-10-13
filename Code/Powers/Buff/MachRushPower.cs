@@ -19,7 +19,7 @@ public sealed class MachRushPower : WarframeModPower
 
     public override async Task BeforeSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
-        if (side == base.Owner.Side)
+        if (participants.Contains(base.Owner))
 		{
             ArgumentNullException.ThrowIfNull(base.Owner.Player, "base.Owner.Player");
 		    List<CardModel> hand = PileType.Hand.GetPile(base.Owner.Player).Cards.ToList();

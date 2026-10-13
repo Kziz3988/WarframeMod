@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
@@ -19,7 +20,8 @@ public sealed class BloodlettingRitePower : WarframeModPower
     public override PowerStackType StackType => PowerStackType.Counter;
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
-		GetExtraHoverTip()
+		GetExtraHoverTip(),
+        HoverTipFactory.ForEnergy(this)
 	];
 
     public const decimal HpLossPercent = 5;
@@ -47,7 +49,7 @@ public sealed class BloodlettingRitePower : WarframeModPower
 
     public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
-        if (base.Owner.Player != null && side == base.Owner.Side)
+        if (base.Owner.Player != null && participants.Contains(base.Owner))
         {
             await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), base.Owner, HpLossAmount, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, base.Owner, null, null);
             await PlayerCmd.GainEnergy(base.Amount, base.Owner.Player);

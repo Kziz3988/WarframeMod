@@ -11,7 +11,10 @@ namespace WarframeMod.Code.Cards.Uncommon;
 
 public class CelestialTwin() : WarframeModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
 {
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromKeyword(CardKeyword.Exhaust)];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        HoverTipFactory.ForEnergy(this),
+        HoverTipFactory.FromKeyword(CardKeyword.Exhaust)
+    ];
     protected override IEnumerable<DynamicVar> CanonicalVars => [new EnergyVar(3)];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

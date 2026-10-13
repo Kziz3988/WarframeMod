@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
@@ -38,7 +39,7 @@ public sealed class OperatorFormPower : WarframeModPower
 
     public override async Task BeforeSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
-        if (side == base.Owner.Side && !isAttackPlayed)
+        if (participants.Contains(base.Owner) && !isAttackPlayed)
         {
             Flash();
             await PowerCmd.Apply<IntangiblePower>(choiceContext, base.Owner, base.Amount, base.Owner, null);
@@ -47,7 +48,7 @@ public sealed class OperatorFormPower : WarframeModPower
 
     public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
-        if (side == base.Owner.Side)
+        if (participants.Contains(base.Owner))
         {
             isAttackPlayed = false;
             await PowerCmd.Apply<TransferenceStaticPower>(new ThrowingPlayerChoiceContext(), base.Owner, base.Amount, base.Owner, null);

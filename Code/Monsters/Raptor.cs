@@ -33,7 +33,7 @@ public sealed class Raptor : CustomMonsterModel
 
     public override string? CustomVisualPath => "raptor.tscn".CharacterAnimationScenePath();
 
-	public override int MinInitialHp => AscensionHelper.GetValueIfAscension(AscensionLevel.ToughEnemies, 198, 190);
+	public override int MinInitialHp => AscensionHelper.GetValueIfAscension(AscensionLevel.ToughEnemies, 330, 310);
 
 	public override int MaxInitialHp => MinInitialHp;
 
@@ -45,9 +45,11 @@ public sealed class Raptor : CustomMonsterModel
 
     private int LaserBarrageDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 39, 36);
 
-    private int BuffStrengthGain => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 2, 1);
+    private int BuffStrengthGain => 3;
 
     private int BuffSoarGain => AscensionHelper.GetValueIfAscension(AscensionLevel.ToughEnemies, 2, 1);
+
+    private int BuffStrengthReviveGain => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 5, 4);
 
     public override LocString Title
 	{
@@ -60,8 +62,23 @@ public sealed class Raptor : CustomMonsterModel
 	}
 
     public override bool ShouldDisappearFromDoom => false;
+
+    private int _deaths = 0;
     
     private MoveState _deadState;
+
+    private int Deaths
+	{
+		get
+		{
+			return _deaths;
+		}
+		set
+		{
+			AssertMutable();
+			_deaths = value;
+		}
+	}
     
     private MoveState DeadState
 	{
@@ -114,11 +131,13 @@ public sealed class Raptor : CustomMonsterModel
 		decimal scaledHp = Creature.ScaleHpForMultiplayer(baseRespawnHp, base.CombatState.Encounter, base.CombatState.Players.Count, base.CombatState.RunState.CurrentActIndex);
 		await CreatureCmd.SetMaxHp(base.Creature, scaledHp);
 		await CreatureCmd.Heal(base.Creature, scaledHp);
+        await PowerCmd.Apply<StrengthPower>(new ThrowingPlayerChoiceContext(), base.Creature, Deaths * BuffStrengthReviveGain, base.Creature, null);
 	}
 
     public Task TriggerDeadState()
 	{
 		SetMoveImmediate(DeadState, forceTransition: true);
+        Deaths++;
         return Task.CompletedTask;
 	}
     

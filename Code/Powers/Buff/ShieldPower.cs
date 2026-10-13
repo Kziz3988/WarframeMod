@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
@@ -186,7 +187,7 @@ public sealed class ShieldPower : WarframeModPower
 
     public override Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
-        if (side == base.Owner.Side && base.Owner.IsAlive)
+        if (participants.Contains(base.Owner) && base.Owner.IsAlive)
         {
             RechargeShield();
         }

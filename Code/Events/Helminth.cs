@@ -11,7 +11,6 @@ using MegaCrit.Sts2.Core.Events;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Acts;
 using MegaCrit.Sts2.Core.Runs;
 using WarframeMod.Code.Cards;
 using WarframeMod.Code.Cards.Event;
@@ -29,21 +28,21 @@ public sealed class Helminth : CustomEventModel
         new StringVar("RareCardName")
     ];
     
-    public override ActModel[] Acts => [ModelDb.Act<Hive>()];
+    public override ActModel[] Acts => ModelDb.Acts.Where(a => a.Index == 1).ToArray();
 
-	private static CardModel[] CommonCards =>
+	public static CardModel[] CommonCards =>
 	[
 		ModelDb.Card<Empower>(),
 		ModelDb.Card<RebuildShield>()
     ];
 
-    private static CardModel[] UncommonCards =>
+    public static CardModel[] UncommonCards =>
 	[
 		ModelDb.Card<InfestedMobility>(),
         ModelDb.Card<SickeningPulse>()
     ];
 
-    private static CardModel[] RareCards =>
+    public static CardModel[] RareCards =>
 	[
 		ModelDb.Card<EnergizedMunitions>(),
 		ModelDb.Card<ExpediteSuffering>()
@@ -90,7 +89,7 @@ public sealed class Helminth : CustomEventModel
 		
         if (CountCards(base.Owner).common > 0)
 		{
-            CardModel commonCard = base.Owner.RunState.CreateCard(base.Rng.NextItem(CommonCards), base.Owner);
+            CardModel commonCard = base.Owner.RunState.CreateCard(base.Owner.PlayerRng.Rewards.NextItem(CommonCards), base.Owner);
             ((StringVar)base.DynamicVars["CommonCardName"]).StringValue = WarframeModCard.GetCard(commonCard.GetType()).Title;
             list.Add(new EventOption(this, () => Inject(commonCard, CardRarity.Common), "WARFRAMEMOD-HELMINTH.pages.INITIAL.options.FEED_COMMON", new CardHoverTip(commonCard)));
 		}
@@ -101,7 +100,7 @@ public sealed class Helminth : CustomEventModel
 
         if (CountCards(base.Owner).uncommon > 0)
 		{
-            CardModel uncommonCard = base.Owner.RunState.CreateCard(base.Rng.NextItem(UncommonCards), base.Owner);
+            CardModel uncommonCard = base.Owner.RunState.CreateCard(base.Owner.PlayerRng.Rewards.NextItem(UncommonCards), base.Owner);
 			((StringVar)base.DynamicVars["UncommonCardName"]).StringValue = WarframeModCard.GetCard(uncommonCard.GetType()).Title;
             list.Add(new EventOption(this, () => Inject(uncommonCard, CardRarity.Uncommon), "WARFRAMEMOD-HELMINTH.pages.INITIAL.options.FEED_UNCOMMON", new CardHoverTip(uncommonCard)));
 		}
@@ -112,7 +111,7 @@ public sealed class Helminth : CustomEventModel
 
         if (CountCards(base.Owner).rare > 0)
 		{
-            CardModel rareCard = base.Owner.RunState.CreateCard(base.Rng.NextItem(RareCards), base.Owner);
+            CardModel rareCard = base.Owner.RunState.CreateCard(base.Owner.PlayerRng.Rewards.NextItem(RareCards), base.Owner);
 			((StringVar)base.DynamicVars["RareCardName"]).StringValue = WarframeModCard.GetCard(rareCard.GetType()).Title;
             list.Add(new EventOption(this, () => Inject(rareCard, CardRarity.Rare), "WARFRAMEMOD-HELMINTH.pages.INITIAL.options.FEED_RARE", new CardHoverTip(rareCard)));
 		}

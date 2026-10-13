@@ -9,7 +9,6 @@ using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.Events;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Acts;
 using MegaCrit.Sts2.Core.Rewards;
 using MegaCrit.Sts2.Core.Runs;
 using WarframeMod.Code.Encounters;
@@ -24,7 +23,7 @@ public sealed class DeathMarkOfGrineer : CustomEventModel
 
     public override bool IsShared => true;
 
-    public override ActModel[] Acts => [ModelDb.Act<Hive>(), ModelDb.Act<Glory>()];
+    public override ActModel[] Acts => ModelDb.Acts.Where(a => a.Index == 2).ToArray();
 
     public override bool IsAllowed(IRunState runState)
     {

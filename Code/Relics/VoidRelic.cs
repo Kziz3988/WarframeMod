@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -9,11 +10,14 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.RelicPools;
 using MegaCrit.Sts2.Core.Rooms;
 using MegaCrit.Sts2.Core.Saves.Runs;
+using WarframeMod.Code.Relics.Event;
 
 namespace WarframeMod.Code.Relics;
 
+[Pool(typeof(EventRelicPool))]
 public abstract class VoidRelic : WarframeModRelic
 {
     public const int TotalEnemies = 10;
@@ -68,6 +72,15 @@ public abstract class VoidRelic : WarframeModRelic
             }
 		}
 	}
+
+    public static List<VoidRelic> Relics =>
+    [
+        ModelDb.Relic<Axi>(),
+        ModelDb.Relic<Lith>(),
+        ModelDb.Relic<Meso>(),
+        ModelDb.Relic<Neo>(),
+        ModelDb.Relic<Requiem>()
+    ];
 
     public static HoverTip GetStaticHovertip()
     {

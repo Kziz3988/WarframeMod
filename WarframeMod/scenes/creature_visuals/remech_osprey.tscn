@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo0c6bndwfw6p"]
+
+[ext_resource type="Texture2D" uid="uid://be55bandh8qed" path="res://WarframeMod/images/monsters/remech_osprey.png" id="1_fh7hu"]
+
+[node name="RemechOsprey" type="Node2D"]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Visuals" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -64)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_fh7hu")
+
+[node name="Bounds" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -59.0
+offset_top = -104.0
+offset_right = 59.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CenterPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-10, -64)
+
+[node name="IntentPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-10, -118)

@@ -12,7 +12,8 @@ namespace WarframeMod.Code.Cards.Common;
 public class RallyPoint() : WarframeModCard(1, CardType.Skill, CardRarity.Common, TargetType.Self)
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
-        HoverTipFactory.FromPower<ShieldPower>()
+        HoverTipFactory.FromPower<ShieldPower>(),
+        HoverTipFactory.ForEnergy(this)
     ];
     protected override IEnumerable<DynamicVar> CanonicalVars => [
 		new EnergyVar(2),

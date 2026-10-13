@@ -49,8 +49,7 @@ public sealed class RivenMaker : CustomEventModel
 
     public override bool IsAllowed(IRunState runState)
 	{
-        if (runState.Players.Count > 1) return false; //Temporarily removed from multiplayer
-		return runState.Players.All(p => p.Gold >= base.DynamicVars["PriceOfOneRiven"].BaseValue);
+        return runState.Players.All(p => p.Gold >= base.DynamicVars["PriceOfOneRiven"].BaseValue);
 	}
 
     protected override IReadOnlyList<EventOption> GenerateInitialOptions()
@@ -81,7 +80,7 @@ public sealed class RivenMaker : CustomEventModel
     private Riven CreateRiven()
     {
         Riven riven = base.Owner.RunState.CreateCard<Riven>(base.Owner);
-        riven.Cycle(base.Rng);
+        riven.Cycle(base.Owner.PlayerRng.Rewards);
         return riven;
     }
 

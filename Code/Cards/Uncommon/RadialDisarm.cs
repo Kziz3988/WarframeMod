@@ -18,6 +18,8 @@ public class RadialDisarm() : WarframeModCard(1, CardType.Power, CardRarity.Unco
         HoverTipFactory.FromPower<WeakPower>()
     ];
 	protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<WeakPower>(2m)];
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Innate];
+    
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await PowerCmd.Apply<RadialDisarmPower>(choiceContext, base.Owner.Creature, base.DynamicVars.Weak.BaseValue, base.Owner.Creature, this);

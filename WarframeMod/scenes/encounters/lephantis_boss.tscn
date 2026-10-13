@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bkynwubbjd278"]
+
+[node name="Encounter" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="infested_corpus" type="Marker2D" parent="."]
+position = Vector2(1185, 775)
+
+[node name="ancient_infested" type="Marker2D" parent="."]
+position = Vector2(1505, 835)
+
+[node name="infested_grineer" type="Marker2D" parent="."]
+position = Vector2(1825, 775)
+
+[node name="infested0" type="Marker2D" parent="."]
+position = Vector2(1355, 256)
+
+[node name="infested1" type="Marker2D" parent="."]
+position = Vector2(1655, 256)
+
+[node name="infested2" type="Marker2D" parent="."]
+position = Vector2(1505, 246)

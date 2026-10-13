@@ -27,6 +27,6 @@ public sealed class PhoridBoss() : CustomEncounterModel(RoomType.Boss)
 
     public override bool IsValidForAct(ActModel act)
     {
-        return act is Overgrowth || act is Underdocks;
+        return act is Underdocks;
     }
 }

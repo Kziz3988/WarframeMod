@@ -5,11 +5,16 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 
 namespace WarframeMod.Code.Powers.Debuff;
 
 public partial class EnergyVampirePower : WarframeModPower
 {
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+		HoverTipFactory.ForEnergy(this)
+	];
+
 	public override PowerType Type => PowerType.Debuff;
     public override PowerStackType StackType => PowerStackType.Counter;
 

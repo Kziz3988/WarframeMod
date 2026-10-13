@@ -24,6 +24,7 @@ public class Mag : Warframe
     ];
     
     public override CardPoolModel CardPool => ModelDb.CardPool<MagCardPool>();
+    public override RelicPoolModel RelicPool => ModelDb.RelicPool<MagRelicPool>();
     
     public override string CustomIconPath => "mag_icon.tscn".CharacterIconScenePath();
     public override string CustomIconTexturePath => "character_icon_mag.png".CharacterUiPath();

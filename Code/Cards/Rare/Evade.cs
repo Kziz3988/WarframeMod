@@ -27,9 +27,8 @@ public class Evade() : WarframeModCard(0, CardType.Attack, CardRarity.Rare, Targ
     [
         new DamageVar(6m, ValueProp.Move),
 		new PowerVar<InvisiblePower>(1m),
-        new HealVar(4m)
+        new HealVar(1m)
 	];
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -49,6 +48,5 @@ public class Evade() : WarframeModCard(0, CardType.Attack, CardRarity.Rare, Targ
     {
         base.DynamicVars.Damage.UpgradeValueBy(2m);
 		base.DynamicVars["InvisiblePower"].UpgradeValueBy(1m);
-        base.DynamicVars.Heal.UpgradeValueBy(1m);
     }
 }

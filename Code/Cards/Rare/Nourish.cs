@@ -12,7 +12,10 @@ namespace WarframeMod.Code.Cards.Rare;
 
 public class Nourish() : WarframeModCard(2, CardType.Power, CardRarity.Rare, TargetType.Self)
 {
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<VulnerablePower>()];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        HoverTipFactory.FromPower<VulnerablePower>(),
+        HoverTipFactory.ForEnergy(this)
+    ];
 	protected override IEnumerable<DynamicVar> CanonicalVars => [
         new PowerVar<VulnerablePower>(1m),
         new EnergyVar(1)

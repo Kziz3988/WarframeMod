@@ -36,5 +36,18 @@
   "WARFRAMEMOD-VOLT.cardsModifierDescription": "Volt cards will now appear in rewards and shops.",
   "WARFRAMEMOD-VOLT.eventDeathPrevention": "...",
   "WARFRAMEMOD-VOLT.banter.alive.endTurnPing": "[sine]Move and strike, we have to win this![/sine]",
-  "WARFRAMEMOD-VOLT.banter.dead.endTurnPing": "..."
+  "WARFRAMEMOD-VOLT.banter.dead.endTurnPing": "...",
+
+  "WARFRAMEMOD-WARFRAME.title": "Warframe",
+  "WARFRAMEMOD-WARFRAME.description": "",
+  "WARFRAMEMOD-WARFRAME.titleObject": "Warframe",
+  "WARFRAMEMOD-WARFRAME.pronounObject": "him",
+  "WARFRAMEMOD-WARFRAME.possessiveAdjective": "his",
+  "WARFRAMEMOD-WARFRAME.pronounPossessive": "his",
+  "WARFRAMEMOD-WARFRAME.pronounSubject": "he",
+  "WARFRAMEMOD-WARFRAME.cardsModifierTitle": "Warframe Cards",
+  "WARFRAMEMOD-WARFRAME.cardsModifierDescription": "Warframe cards will now appear in rewards and shops.",
+  "WARFRAMEMOD-WARFRAME.eventDeathPrevention": "...",
+  "WARFRAMEMOD-WARFRAME.banter.alive.endTurnPing": "[sine]Move and strike, we have to win this![/sine]",
+  "WARFRAMEMOD-WARFRAME.banter.dead.endTurnPing": "..."
 }

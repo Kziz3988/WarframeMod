@@ -18,13 +18,15 @@ public static class NeowPatch
     [HarmonyPatch(typeof(Neow), "CurseOptions", MethodType.Getter)]
     static void GetCurseOptionsPatch(Neow __instance, ref IEnumerable<EventOption> __result)
     {
+        var originalOptions = __result;
+        var modifiedOptions = AddRelicOption<Plastids>(__instance, originalOptions, "NEOW.pages.DONE.CURSED.description");
+        modifiedOptions = AddRelicOption<RivenSliver>(__instance, modifiedOptions, "NEOW.pages.DONE.CURSED.description");
+        __result = modifiedOptions;
         if (__instance.Owner == null || !__instance.Owner.Character.IsWarframe())
         {
             return;
         }
-
-        var originalOptions = __result;
-        var modifiedOptions = ReplaceRelicOption<LeafyPoultice, NewLeafyPoultice>(__instance, originalOptions, "NEOW.pages.DONE.CURSED.description");
+        modifiedOptions = ReplaceRelicOption<LeafyPoultice, NewLeafyPoultice>(__instance, modifiedOptions, "NEOW.pages.DONE.CURSED.description");
         NewLeafyPoultice? newLeafyPoultice = (NewLeafyPoultice?)modifiedOptions.First(r => r.Relic?.GetType() == typeof(NewLeafyPoultice)).Relic;
         if (newLeafyPoultice != null)
         {
@@ -51,6 +53,25 @@ public static class NeowPatch
         }
         __result = modifiedOption;
         return false;
+    }
+
+    [HarmonyPostfix]
+    [HarmonyPatch(typeof(Neow), "PositiveOptions", MethodType.Getter)]
+    static void GetPositiveOptionsPatch(Neow __instance, ref IEnumerable<EventOption> __result)
+    {
+        var originalOptions = __result;
+        var modifiedOptions = AddRelicOption<TemporalDust>(__instance, originalOptions, "NEOW.pages.DONE.POSITIVE.description");
+        modifiedOptions = AddRelicOption<VoidTraces>(__instance, modifiedOptions, "NEOW.pages.DONE.POSITIVE.description");
+        __result = modifiedOptions;
+    }
+
+    static IEnumerable<EventOption> AddRelicOption<T>(Neow __instance, IEnumerable<EventOption> originalOptions, string description)
+        where T : RelicModel, new()
+    {
+        List<EventOption> result = originalOptions.ToList();
+        var newOption = __instance.RelicOption<T>("INITIAL", description);
+        result.Add(newOption);
+        return result;
     }
 
     static IEnumerable<EventOption> ReplaceRelicOption<TOriginal, TReplacement>(Neow __instance, IEnumerable<EventOption> originalOptions, string description)

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
@@ -12,7 +13,7 @@ using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
-using WarframeMod.Code.Cards.Uncommon;
+using WarframeMod.Code.Cards.Event;
 
 namespace WarframeMod.Code.Powers.Buff;
 
@@ -35,7 +36,8 @@ public sealed class ThuriblePower : WarframeModPower
     public override int DisplayAmount => GetInternalData<Data>().totalEnergyGain;
 
 	protected override IEnumerable<IHoverTip> ExtraHoverTips => [
-		GetExtraHoverTip()
+		GetExtraHoverTip(),
+        HoverTipFactory.ForEnergy(this)
 	];
 
 	protected override HoverTip GetExtraHoverTip()
@@ -73,7 +75,7 @@ public sealed class ThuriblePower : WarframeModPower
 
     public override Task BeforeSideTurnStart(PlayerChoiceContext choiceContext, CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
-        if (side == base.Owner.Side)
+        if (participants.Contains(base.Owner))
         {
             GetInternalData<Data>().totalEnergyGain += base.Amount;
             InvokeDisplayAmountChanged();

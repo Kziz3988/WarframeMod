@@ -16,7 +16,10 @@ public sealed class RaptorBoss() : CustomEncounterModel(RoomType.Boss)
     public override string BossNodePath => "raptor_boss_icon".UiPath();
     public override MegaSkeletonDataResource? BossNodeSpineResource => null;
 
-	public override IEnumerable<MonsterModel> AllPossibleMonsters => [ModelDb.Monster<Raptor>()];
+	public override IEnumerable<MonsterModel> AllPossibleMonsters => [
+        ModelDb.Monster<Raptor>(),
+        ModelDb.Monster<NemesRt>()
+    ];
 
 	protected override IReadOnlyList<(MonsterModel, string?)> GenerateMonsters()
 	{

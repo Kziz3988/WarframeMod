@@ -17,11 +17,12 @@ public class BlazingChakram() : WarframeModCard(3, CardType.Attack, CardRarity.U
 	protected override HashSet<CardTag> CanonicalTags => [(CardTag)WarframeModCardTag.Element];
 	protected override IEnumerable<IHoverTip> ExtraHoverTips => [
 		HoverTipFactory.FromPower<HeatPower>(),
-        HoverTipFactory.Static(StaticHoverTip.Block)
+        HoverTipFactory.Static(StaticHoverTip.Block),
+		HoverTipFactory.ForEnergy(this)
 	];
 	protected override IEnumerable<DynamicVar> CanonicalVars => [
 		new DamageVar(20m, ValueProp.Move),
-		new PowerVar<HeatPower>(3m),
+		new PowerVar<HeatPower>(5m),
 		new EnergyVar(1)
 	];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
@@ -49,6 +50,6 @@ public class BlazingChakram() : WarframeModCard(3, CardType.Attack, CardRarity.U
     protected override void OnUpgrade()
     {
 		base.DynamicVars.Damage.UpgradeValueBy(4m);
-        base.DynamicVars["HeatPower"].UpgradeValueBy(1m);
+        base.DynamicVars["HeatPower"].UpgradeValueBy(2m);
     }
 }

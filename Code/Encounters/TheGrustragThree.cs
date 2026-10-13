@@ -1,13 +1,12 @@
 using System.Collections.Generic;
 using BaseLib.Abstracts;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Acts;
 using MegaCrit.Sts2.Core.Rooms;
 using WarframeMod.Code.Monsters;
 
 namespace WarframeMod.Code.Encounters;
 
-public sealed class TheGrustragThree() : CustomEncounterModel(RoomType.Monster, false)
+public sealed class TheGrustragThree() : CustomEncounterModel(RoomType.Monster)
 {
 	public override IEnumerable<MonsterModel> AllPossibleMonsters =>
     [
@@ -28,6 +27,6 @@ public sealed class TheGrustragThree() : CustomEncounterModel(RoomType.Monster, 
 
     public override bool IsValidForAct(ActModel act)
     {
-        return act is Hive || act is Glory;
+        return false;
     }
 }

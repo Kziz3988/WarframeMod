@@ -240,7 +240,7 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="Mag" type="Node2D"]
+[node name="Volt" type="Node2D"]
 metadata/_edit_group_ = true
 
 [node name="Visuals" type="AnimatedSprite2D" parent="."]

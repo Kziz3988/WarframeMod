@@ -1,34 +1,18 @@
-using System.Collections.Generic;
+using System.Linq;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Events;
-using WarframeMod.Code.Cards.Event;
+using WarframeMod.Code.Character;
 
 namespace WarframeMod.Code.Patches;
 
 [HarmonyPatch(typeof(TrashHeap))]
 public static class TrashHeapPatch
-{
-    private static CardModel[] _cachedCustomCards;
-    
+{  
     [HarmonyPostfix]
     [HarmonyPatch("get_Cards")]
     static void GetCardsPatch(ref CardModel[] __result)
     {
-        if (_cachedCustomCards == null)
-        {
-            var customCardList = new List<CardModel>(__result)
-            {
-                ModelDb.Card<CollectiveCurse>(),
-                ModelDb.Card<Crystallize>(),
-                ModelDb.Card<FinalStand>(),
-                ModelDb.Card<SereneStorm>(),
-                ModelDb.Card<WyrdScythes>(),
-            };
-            
-            _cachedCustomCards = customCardList.ToArray();
-        }
-        
-        __result = _cachedCustomCards;
+        __result = __result.Concat(ModelDb.CardPool<WarframeTrashHeapCardPool>().AllCards).ToArray();
     }
 }

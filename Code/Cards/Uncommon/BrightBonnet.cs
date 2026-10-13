@@ -12,7 +12,10 @@ namespace WarframeMod.Code.Cards.Uncommon;
 
 public class BrightBonnet() : WarframeModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
 {
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromCard<Sproudling>()];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        HoverTipFactory.FromCard<Sprodling>(),
+        HoverTipFactory.ForEnergy(this)
+    ];
 	protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(1)];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

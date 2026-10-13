@@ -21,7 +21,7 @@ public sealed class TuskThumper : CustomMonsterModel
 {
     public override string? CustomVisualPath => "tusk_thumper.tscn".CharacterAnimationScenePath();
 
-	public override int MinInitialHp => AscensionHelper.GetValueIfAscension(AscensionLevel.ToughEnemies, 112, 100);
+	public override int MinInitialHp => AscensionHelper.GetValueIfAscension(AscensionLevel.ToughEnemies, 180, 160);
 
 	public override int MaxInitialHp => MinInitialHp;
 
@@ -37,7 +37,7 @@ public sealed class TuskThumper : CustomMonsterModel
 
     private int ArmorPlateHp => MinInitialHp / 4;
 
-	private int BuffStrengthGain => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 3, 2);
+	private int BuffStrengthGain => 3;
 
     private int DebuffWeakApply => AscensionHelper.GetValueIfAscension(AscensionLevel.ToughEnemies, 3, 2);
 

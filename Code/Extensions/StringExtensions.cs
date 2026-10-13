@@ -131,6 +131,11 @@ public static class StringExtensions
         return Path.Join(MainFile.ResPath, "images", "enchantments", path);
     }
 
+    public static string EncounterScenePath(this string path)
+    {
+        return Path.Join(MainFile.ResPath, "scenes", "encounters", path);
+    }
+
     public static string SFXPath(this string path)
     {
         return Path.Join(MainFile.ResPath, "sfx", path);

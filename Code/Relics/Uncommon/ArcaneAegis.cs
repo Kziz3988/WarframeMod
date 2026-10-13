@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Relics;
@@ -8,10 +10,12 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Rooms;
+using WarframeMod.Code.Character;
 using WarframeMod.Code.Powers.Buff;
 
 namespace WarframeMod.Code.Relics.Uncommon;
 
+[Pool(typeof(MagRelicPool))]
 public sealed class ArcaneAegis : WarframeModRelic
 {
 
@@ -120,7 +124,7 @@ public sealed class ArcaneAegis : WarframeModRelic
 
 	public override Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
-		if (side == base.Owner.Creature.Side)
+		if (participants.Contains(base.Owner.Creature))
 		{
 			Cooldown--;
 			if (Cooldown <= 0)

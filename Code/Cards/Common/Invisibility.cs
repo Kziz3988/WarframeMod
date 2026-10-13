@@ -15,6 +15,8 @@ public class Invisibility() : WarframeModCard(1, CardType.Skill, CardRarity.Comm
     protected override IEnumerable<DynamicVar> CanonicalVars => [
 		new PowerVar<InvisiblePower>(3)
 	];
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
+
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
 		await PowerCmd.Apply<InvisiblePower>(choiceContext, base.Owner.Creature, base.DynamicVars["InvisiblePower"].BaseValue, base.Owner.Creature, this);
@@ -22,6 +24,6 @@ public class Invisibility() : WarframeModCard(1, CardType.Skill, CardRarity.Comm
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars["InvisiblePower"].UpgradeValueBy(2m);
+        base.DynamicVars["InvisiblePower"].UpgradeValueBy(1m);
     }
 }

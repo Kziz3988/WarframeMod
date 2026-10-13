@@ -9,7 +9,6 @@ using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Events;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Acts;
 using MegaCrit.Sts2.Core.Runs;
 using WarframeMod.Code.Enchantments;
 using WarframeMod.Code.Extensions;
@@ -22,7 +21,7 @@ public sealed class OrokinVault : CustomEventModel
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [new HealVar(20m)];
     
-    public override ActModel[] Acts => [ModelDb.Act<Glory>()];
+    public override ActModel[] Acts => ModelDb.Acts.Where(a => a.Index == 2).ToArray();
 
 	private static EnchantmentModel[] AttackEnchantments =>
 	[
@@ -50,7 +49,6 @@ public sealed class OrokinVault : CustomEventModel
 
     public override bool IsAllowed(IRunState runState)
     {
-        if (runState.Players.Count > 1) return false; //Temporarily removed from multiplayer
         return runState.Players.All(p => HasCard(p));
     }
 
@@ -65,7 +63,7 @@ public sealed class OrokinVault : CustomEventModel
         }
         else
         {
-            EnchantmentModel enchantment = base.Rng.NextItem(attackEnchantments);
+            EnchantmentModel enchantment = base.Owner.PlayerRng.Rewards.NextItem(attackEnchantments);
             list.Add(new EventOption(this, () => Corrupt(enchantment), $"WARFRAMEMOD-OROKIN_VAULT.pages.INITIAL.options.{enchantment.Id}", WarframeModEnchantment.GetHoverTips(enchantment.GetType())));
         }
 
@@ -76,7 +74,7 @@ public sealed class OrokinVault : CustomEventModel
         }
         else
         {
-            EnchantmentModel enchantment = base.Rng.NextItem(skillEnchantments);
+            EnchantmentModel enchantment = base.Owner.PlayerRng.Rewards.NextItem(skillEnchantments);
             list.Add(new EventOption(this, () => Corrupt(enchantment), $"WARFRAMEMOD-OROKIN_VAULT.pages.INITIAL.options.{enchantment.Id}", WarframeModEnchantment.GetHoverTips(enchantment.GetType())));
         }
 

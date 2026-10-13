@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BaseLib.Abstracts;
+using BaseLib.Extensions;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Relics;
@@ -11,7 +12,6 @@ using MegaCrit.Sts2.Core.Extensions;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Acts;
 using MegaCrit.Sts2.Core.Rewards;
 using MegaCrit.Sts2.Core.Runs;
 using WarframeMod.Code.Cards;
@@ -27,7 +27,7 @@ public sealed class DeathMarkOfCorpus : CustomEventModel
 
     public override bool IsShared => true;
 
-    public override ActModel[] Acts => [ModelDb.Act<Hive>(), ModelDb.Act<Glory>()];
+    public override ActModel[] Acts => ModelDb.Acts.Where(a => a.Index == 1).ToArray();
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(3)];
 

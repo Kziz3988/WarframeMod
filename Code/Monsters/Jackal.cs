@@ -27,15 +27,15 @@ public sealed class Jackal : CustomMonsterModel
 
 	public override int MaxInitialHp => AscensionHelper.GetValueIfAscension(AscensionLevel.ToughEnemies, 330, 310);
 
-    private int ShockwaveDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 22, 19);
+    private int ShockwaveDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 25, 22);
 
-    private int PlasmaGrenadeDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 6, 5);
+    private int PlasmaGrenadeDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 7, 6);
 
     private int PlasmaGrenadeRepeat => 3;
 
-	private int BuffStrengthGain => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 2, 1);
+	private int BuffStrengthGain => 2;
 
-    private int GridWallBlock => AscensionHelper.GetValueIfAscension(AscensionLevel.ToughEnemies, 9, 5);
+    private int GridWallBlock => AscensionHelper.GetValueIfAscension(AscensionLevel.ToughEnemies, 15, 10);
 
 	public override DamageSfxType TakeDamageSfxType => DamageSfxType.ArmorBig;
 

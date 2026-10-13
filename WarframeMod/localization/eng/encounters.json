@@ -1,8 +1,18 @@
 {
+    "WARFRAMEMOD-AMBULAS_ELITE.title": "Ambulas",
+    "WARFRAMEMOD-AMBULAS_ELITE.loss": "Incursion Probability: Negligent. {character} Mortality Probability: Inevitable.",
+    "WARFRAMEMOD-ANCIENT_INFESTATION_ELITE.title": "Ancient Infestation",
+    "WARFRAMEMOD-ANCIENT_INFESTATION_ELITE.loss": "{character} wished they could also cooperate so tacitly like these infestations.",
+    "WARFRAMEMOD-BROOD_MOTHER_ELITE.title": "Brood Mother",
+    "WARFRAMEMOD-BROOD_MOTHER_ELITE.loss": "{character} was completely devoured by maggots.",
     "WARFRAMEMOD-LECH_KRIL_BOSS.title": "Lieutenant Lech Kril",
     "WARFRAMEMOD-LECH_KRIL_BOSS.loss": "{character}'s loss is decided by Kril's trusty hammer.",
+    "WARFRAMEMOD-LEPHANTIS_BOSS.title": "Lephantis",
+    "WARFRAMEMOD-LEPHANTIS_BOSS.loss": "{character} joined Lephantis and became its fourth head.",
     "WARFRAMEMOD-JACKAL_BOSS.title": "Jackal",
     "WARFRAMEMOD-JACKAL_BOSS.loss": "{character} destruction analytics: Recorded.",
+    "WARFRAMEMOD-KUVA_LICH_ELITE.title": "Kuva Lich",
+    "WARFRAMEMOD-KUVA_LICH_ELITE.loss": "{character}'s murder of me is now redefined as attempted murder of me.",
     "WARFRAMEMOD-PHORID_BOSS.title": "Phorid",
     "WARFRAMEMOD-PHORID_BOSS.loss": "{character} assimilated into the Phorid.",
     "WARFRAMEMOD-RAPTOR_BOSS.title": "Raptor",
@@ -13,6 +23,8 @@
     "WARFRAMEMOD-THE_SERGEANT_ELITE.loss": "{character} looks great hanging on The Sergeant's wall.",
     "WARFRAMEMOD-TUSK_THUMPER_ELITE.title": "Tusk Thumper",
     "WARFRAMEMOD-TUSK_THUMPER_ELITE.loss": "The Tusk Thumper delivered a simple message to {character}: boom.",
+    "WARFRAMEMOD-VAY_HEK_BOSS.title": "Councilor Vay Hek",
+    "WARFRAMEMOD-VAY_HEK_BOSS.loss": "{character} was not ready for a sacrifice.",
     "WARFRAMEMOD-ZANUKA_HUNTER_EVENT.title": "Zanuka Hunter",
     "WARFRAMEMOD-ZANUKA_HUNTER_EVENT.loss": "This {character}'s bones will make Zanuka a fine sibling."
 }

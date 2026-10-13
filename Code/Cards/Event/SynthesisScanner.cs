@@ -28,7 +28,7 @@ public class SynthesisScanner() : WarframeModCard(1, CardType.Attack, CardRarity
     ];
 	protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(1m, ValueProp.Move)];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [
-		CardKeyword.Eternal,
+		CardKeyword.Exhaust,
 		CardKeyword.Retain
 	];
 

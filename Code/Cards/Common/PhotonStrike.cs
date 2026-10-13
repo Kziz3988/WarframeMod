@@ -30,6 +30,6 @@ public class PhotonStrike() : WarframeModCard(1, CardType.Attack, CardRarity.Com
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars.Damage.UpgradeValueBy(3m);
+        base.DynamicVars.Damage.UpgradeValueBy(5m);
     }
 }

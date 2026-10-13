@@ -15,7 +15,7 @@ public class Blessing() : WarframeModCard(2, CardType.Skill, CardRarity.Rare, Ta
     public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
     protected override IEnumerable<DynamicVar> CanonicalVars => [
 		new HealVar(5),
-        new PowerVar<BlessingPower>(2m)
+        new PowerVar<BlessingPower>(1m)
 	];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     

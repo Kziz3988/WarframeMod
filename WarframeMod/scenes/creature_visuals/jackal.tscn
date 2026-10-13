@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c0p4ihnqrtnhr" path="res://WarframeMod/images/monsters/jackal.png" id="1_4ofra"]
 
-[node name="Jackal2" type="Node2D"]
+[node name="Jackal" type="Node2D"]
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 

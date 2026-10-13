@@ -18,7 +18,7 @@ public class StalkToHunt() : WarframeModCard(0, CardType.Attack, CardRarity.Even
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<InvisiblePower>()];
 	protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new PowerVar<InvisiblePower>(3m),
+        new PowerVar<InvisiblePower>(2m),
         new DamageVar(10m, ValueProp.Move)
     ];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

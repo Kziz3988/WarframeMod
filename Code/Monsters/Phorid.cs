@@ -13,6 +13,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using WarframeMod.Code.Powers.Buff;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace WarframeMod.Code.Monsters;
 
@@ -34,11 +35,14 @@ public sealed class Phorid : CustomMonsterModel
 
     private int SpineStrikeRepeat => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 3, 2);
 
+	private int BuffStrengthGain => 2;
+
 	public override DamageSfxType TakeDamageSfxType => DamageSfxType.Slime;
 
     public override async Task AfterAddedToRoom()
     {
-		await PowerCmd.Apply<InfestedPower>(new ThrowingPlayerChoiceContext(), base.Creature, BuffInfestedGain, base.Creature, null);
+		await base.AfterAddedToRoom();
+		await PowerCmd.Apply<InfestationPower>(new ThrowingPlayerChoiceContext(), base.Creature, BuffInfestedGain, base.Creature, null);
     }
 
 	protected override MonsterMoveStateMachine GenerateMoveStateMachine()
@@ -66,6 +70,7 @@ public sealed class Phorid : CustomMonsterModel
 	{
         await CardPileCmd.AddToCombatAndPreview<Dazed>(targets, PileType.Discard, SonicScreamCards, null);
         await PowerCmd.Apply<ToxicPower>(new ThrowingPlayerChoiceContext(), base.Creature, 2m, base.Creature, null);
+		await PowerCmd.Apply<StrengthPower>(new ThrowingPlayerChoiceContext(), base.Creature, BuffStrengthGain, base.Creature, null);
 	}
 
     private async Task SpineStrikeMove(IReadOnlyList<Creature> targets)

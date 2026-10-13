@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b87j0e4ulwvuo" path="res://WarframeMod/images/monsters/the_sergeant.png" id="1_5pulj"]
 
-[node name="Jackal2" type="Node2D"]
+[node name="TheSergeant" type="Node2D"]
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 

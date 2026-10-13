@@ -1,8 +1,18 @@
 {
+    "WARFRAMEMOD-AMBULAS_ELITE.title": "Ambulas",
+    "WARFRAMEMOD-AMBULAS_ELITE.loss": "侵入概率: 忽略不计。{character}死亡概率: 不可避免。",
+    "WARFRAMEMOD-ANCIENT_INFESTATION_ELITE.title": "来自远古的感染者们",
+    "WARFRAMEMOD-ANCIENT_INFESTATION_ELITE.loss": "{character}希望自己的团队也能像这些感染者一样配合默契。",
+    "WARFRAMEMOD-BROOD_MOTHER_ELITE.title": "病变虫母",
+    "WARFRAMEMOD-BROOD_MOTHER_ELITE.loss": "{character}被蛆虫啃噬殆尽。",
     "WARFRAMEMOD-LECH_KRIL_BOSS.title": "Lech Kril中尉",
     "WARFRAMEMOD-LECH_KRIL_BOSS.loss": "{character}的失败归功于Kril那把可靠的战锤。",
+    "WARFRAMEMOD-LEPHANTIS_BOSS.title": "雷凡魔像",
+    "WARFRAMEMOD-LEPHANTIS_BOSS.loss": "{character}加入了雷凡魔像，成为了它的第四个头。",
     "WARFRAMEMOD-JACKAL_BOSS.title": "豺狼",
     "WARFRAMEMOD-JACKAL_BOSS.loss": "{character}消灭过程分析：已记录。",
+    "WARFRAMEMOD-KUVA_LICH_ELITE.title": "赤毒玄骸",
+    "WARFRAMEMOD-KUVA_LICH_ELITE.loss": "{character}对我的谋杀现在被重新定义为对我谋杀未遂。",
     "WARFRAMEMOD-PHORID_BOSS.title": "Phorid",
     "WARFRAMEMOD-PHORID_BOSS.loss": "{character}与Phorid同化为一体。",
     "WARFRAMEMOD-RAPTOR_BOSS.title": "猛禽",
@@ -13,6 +23,8 @@
     "WARFRAMEMOD-THE_SERGEANT_ELITE.loss": "{character}成为了海军陆战队中士墙上的装饰。",
     "WARFRAMEMOD-TUSK_THUMPER_ELITE.title": "巨牙重击者",
     "WARFRAMEMOD-TUSK_THUMPER_ELITE.loss": "巨牙重击者向{character}传达了一封简单的消息：爆炸。",
+    "WARFRAMEMOD-VAY_HEK_BOSS.title": "韦·海克议员",
+    "WARFRAMEMOD-VAY_HEK_BOSS.loss": "{character}还没做好牺牲的决心。",
     "WARFRAMEMOD-ZANUKA_HUNTER_EVENT.title": "Zanuka猎犬",
     "WARFRAMEMOD-ZANUKA_HUNTER_EVENT.loss": "这副{character}的骨头能为Zanuka造个好兄弟。"
 }

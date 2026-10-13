@@ -24,11 +24,11 @@ public sealed class TheSergeant : CustomMonsterModel
 {
     public override string? CustomVisualPath => "the_sergeant.tscn".CharacterAnimationScenePath();
 
-	public override int MinInitialHp => AscensionHelper.GetValueIfAscension(AscensionLevel.ToughEnemies, 70, 60);
+	public override int MinInitialHp => AscensionHelper.GetValueIfAscension(AscensionLevel.ToughEnemies, 90, 80);
 
-	public override int MaxInitialHp => AscensionHelper.GetValueIfAscension(AscensionLevel.ToughEnemies, 80, 70);
+	public override int MaxInitialHp => AscensionHelper.GetValueIfAscension(AscensionLevel.ToughEnemies, 100, 90);
 
-    private int LankaDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 19, 17);
+    private int LankaDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 22, 19);
 
     private int InitialShield => AscensionHelper.GetValueIfAscension(AscensionLevel.ToughEnemies, 15, 10);
 

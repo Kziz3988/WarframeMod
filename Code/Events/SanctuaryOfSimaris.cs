@@ -1,5 +1,6 @@
 
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using BaseLib.Abstracts;
 using MegaCrit.Sts2.Core.Commands;
@@ -7,7 +8,6 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Events;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Acts;
 using WarframeMod.Code.Cards.Event;
 using WarframeMod.Code.Extensions;
 
@@ -17,7 +17,7 @@ public sealed class SanctuaryOfSimaris : CustomEventModel
 {
     public override string? CustomInitialPortraitPath => "sanctuary_of_simaris.png".EventBackgroundPath();
 
-    public override ActModel[] Acts => [ModelDb.Act<Overgrowth>(), ModelDb.Act<Underdocks>()];
+    public override ActModel[] Acts => ModelDb.Acts.Where(a => a.Index == 0).ToArray();
 
     private List<SynthesisScanner> GetScanner(int count, bool isUpgraded = false)
     {

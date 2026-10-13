@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
@@ -66,7 +67,7 @@ public sealed class TurbulencePower : WarframeModPower
 
     public override Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
-        if (side == base.Owner.Side)
+        if (participants.Contains(base.Owner))
         {
             GetInternalData<Data>().cardsDrawn = 0;
             InvokeDisplayAmountChanged();

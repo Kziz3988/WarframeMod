@@ -17,7 +17,7 @@ namespace WarframeMod.Code.Cards.Event;
 public class SereneStorm() : WarframeModCard(1, CardType.Attack, CardRarity.Event, TargetType.AnyEnemy)
 {
     public override CardPoolModel VisualCardPool => ModelDb.CardPool<WarframeModCardPool>();
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(9m, ValueProp.Move)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(10m, ValueProp.Move)];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -31,6 +31,6 @@ public class SereneStorm() : WarframeModCard(1, CardType.Attack, CardRarity.Even
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars.Damage.UpgradeValueBy(3m);
+        base.DynamicVars.Damage.UpgradeValueBy(4m);
     }
 }

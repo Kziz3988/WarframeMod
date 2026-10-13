@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Relics;
@@ -9,10 +10,12 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Rooms;
 using MegaCrit.Sts2.Core.ValueProps;
+using WarframeMod.Code.Character;
 using WarframeMod.Code.Powers.Buff;
 
 namespace WarframeMod.Code.Relics.Shop;
 
+[Pool(typeof(MagRelicPool))]
 public class ArcaneOvercharge : WarframeModRelic
 {
     public override RelicRarity Rarity => RelicRarity.Shop;

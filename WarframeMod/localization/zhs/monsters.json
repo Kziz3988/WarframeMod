@@ -1,9 +1,48 @@
 {
+    "WARFRAMEMOD-AMBULAS.name": "Ambulas",
+    "WARFRAMEMOD-AMBULAS.moves.CAPITAL_SHIP_LASER.title": "母舰激光",
+    "WARFRAMEMOD-AMBULAS.moves.ELECTRO_MORTAR.title": "电磁迫击炮",
+    "WARFRAMEMOD-AMBULAS.moves.FUSION_THROWER.title": "护盾融合炮",
+    "WARFRAMEMOD-AMBULAS.moves.REMECH_SUMMON.title": "召唤再启动鱼鹰",
+    
+    "WARFRAMEMOD-ANCIENT_DISRUPTOR.name": "远古干扰者",
+    "WARFRAMEMOD-ANCIENT_DISRUPTOR.moves.GRAPPLING_HOOK.title": "抓钩",
+    "WARFRAMEMOD-ANCIENT_DISRUPTOR.moves.DISRUPTION_PULSE.title": "干扰脉冲",
+    
+    "WARFRAMEMOD-ANCIENT_HEALER.name": "远古治愈者",
+    "WARFRAMEMOD-ANCIENT_HEALER.moves.GRAPPLING_HOOK.title": "抓钩",
+    "WARFRAMEMOD-ANCIENT_HEALER.moves.HEALING_PULSE.title": "治愈脉冲",
+    "WARFRAMEMOD-ANCIENT_HEALER.moves.PURIFY_PULSE.title": "净化脉冲",
+    
+    "WARFRAMEMOD-ANCIENT_INFESTED.name": "远古感染者",
+    "WARFRAMEMOD-ANCIENT_INFESTED.moves.EMERGE_FROM_GROUND.title": "冲出地面",
+    "WARFRAMEMOD-ANCIENT_INFESTED.moves.GO_UNDERGROUND.title": "钻入地下",
+    "WARFRAMEMOD-ANCIENT_INFESTED.moves.SPORE_BOMB.title": "孢子炸弹",
+    
+    "WARFRAMEMOD-BROOD_MOTHER.name": "病变虫母",
+    "WARFRAMEMOD-BROOD_MOTHER.moves.CHARGE.title": "冲刺",
+    "WARFRAMEMOD-BROOD_MOTHER.moves.SPAWN.title": "滋生大量蛆虫",
+    "WARFRAMEMOD-BROOD_MOTHER.moves.SPAWN_ATTACK.title": "滋生蛆虫",
+    
+    "WARFRAMEMOD-CHARGER.name": "疾冲者",
+    "WARFRAMEMOD-CHARGER.moves.POUNCE.title": "猛扑",
+    
     "WARFRAMEMOD-CHESA_KUBROW.name": "寻猎型库狛",
     "WARFRAMEMOD-CHESA_KUBROW.moves.NOTHING.title": "无",
 
     "WARFRAMEMOD-HURAS_KUBROW.name": "匿踪型库狛",
     "WARFRAMEMOD-HURAS_KUBROW.moves.NOTHING.title": "无",
+
+    "WARFRAMEMOD-INFESTED_CORPUS.name": "Corpus感染者",
+    "WARFRAMEMOD-INFESTED_CORPUS.moves.EMERGE_FROM_GROUND.title": "冲出地面",
+    "WARFRAMEMOD-INFESTED_CORPUS.moves.GO_UNDERGROUND.title": "钻入地下",
+    "WARFRAMEMOD-INFESTED_CORPUS.moves.POISON_GRENADE.title": "毒性榴弹",
+    "WARFRAMEMOD-INFESTED_CORPUS.moves.SPAWN_POD.title": "产卵荚",
+
+    "WARFRAMEMOD-INFESTED_GRINEER.name": "Grineer感染者",
+    "WARFRAMEMOD-INFESTED_GRINEER.moves.EMERGE_FROM_GROUND.title": "冲出地面",
+    "WARFRAMEMOD-INFESTED_GRINEER.moves.GO_UNDERGROUND.title": "钻入地下",
+    "WARFRAMEMOD-INFESTED_GRINEER.moves.SCYTHE_ARM.title": "镰刀手臂",
 
     "WARFRAMEMOD-JACKAL.name": "豺狼",
     "WARFRAMEMOD-JACKAL.moves.SHOCKWAVE.title": "涟漪冲击波",
@@ -13,6 +52,19 @@
     "WARFRAMEMOD-JACKAL.banter2": "[shake]敌人分析：有机体。威胁级别：贫弱无力。[/shake]",
     "WARFRAMEMOD-JACKAL.banter3": "[shake]威胁等级提升。分类：不值一提。[/shake]",
 
+    "WARFRAMEMOD-KUVA_LICH.name": "赤毒玄骸",
+    "WARFRAMEMOD-KUVA_LICH.moves.ICE_BLAST.title": "冰封爆裂",
+    "WARFRAMEMOD-KUVA_LICH.moves.LIGHTNING_BOLT.title": "风驰电闪",
+    "WARFRAMEMOD-KUVA_LICH.moves.MIASMA.title": "瘴气",
+    "WARFRAMEMOD-KUVA_LICH.moves.PLASMA_FLARE.title": "等离子闪焰",
+    "WARFRAMEMOD-KUVA_LICH.moves.CARAPACE.title": "壳化坚甲",
+    "WARFRAMEMOD-KUVA_LICH.moves.CURSED_GROUND.title": "衰变诅咒",
+    "WARFRAMEMOD-KUVA_LICH.moves.FROZEN_FORTRESS.title": "冰封堡垒",
+    "WARFRAMEMOD-KUVA_LICH.moves.LICH_STOMP.title": "玄骸践踏",
+    
+    "WARFRAMEMOD-LEAPER.name": "奔跳者",
+    "WARFRAMEMOD-LEAPER.moves.LEAP.title": "跳跃",
+    
     "WARFRAMEMOD-LECH_KRIL.name": "Lech Kril中尉",
     "WARFRAMEMOD-LECH_KRIL.moves.BODY_ARMOR.title": "护甲",
     "WARFRAMEMOD-LECH_KRIL.moves.COLD_BROKK.title": "布洛克战锤（冰）",
@@ -23,6 +75,11 @@
     "WARFRAMEMOD-LECH_KRIL.banter3": "[jitter][orange]我会带着刻骨的仇恨和疯狂的怒火将你击败！[/orange][/jitter]",
     "WARFRAMEMOD-LECH_KRIL.banter4": "[jitter][blue]别动，我很快就会完事。[/blue][/jitter]",
 
+    "WARFRAMEMOD-LEPHANTIS.banter1": "[shake]从这尘世的烦恼中脱离, 加入我们吧。[/shake]",
+    "WARFRAMEMOD-LEPHANTIS.banter2": "[shake]你为什么要摧毁我们？我们是你的血肉。[/shake]",
+    "WARFRAMEMOD-LEPHANTIS.banter3": "[shake]我们无穷无尽, 与我为一, 重获新生。[/shake]",
+    "WARFRAMEMOD-LEPHANTIS.banter4": "[shake]我们拥抱你，为什么你要反抗我们？[/shake]",
+
     "WARFRAMEMOD-LEEKTER.name": "里克特",
     "WARFRAMEMOD-LEEKTER.moves.BROKK.title": "布洛克战锤",
     "WARFRAMEMOD-LEEKTER.moves.FLASH_GRENADE.title": "闪光手雷",
@@ -30,13 +87,22 @@
     "WARFRAMEMOD-LEEKTER.banter2": "[jitter]你看起来还真……脆弱啊。[/jitter]",
     "WARFRAMEMOD-LEEKTER.teammateDeathLine": "[jitter]你将为此承受苦痛！[/jitter]",
 
+    "WARFRAMEMOD-MAGGOT.name": "蛆虫",
+    "WARFRAMEMOD-MAGGOT.moves.LATCH.title": "攀附",
+    
     "WARFRAMEMOD-NEMES_RT.name": "自爆机RT",
     "WARFRAMEMOD-NEMES_RT.moves.EXPLODE.title": "自爆",
 
+    "WARFRAMEMOD-ORBITAL_STRIKE_DRONE.name": "卫星冲击无人机",
+    "WARFRAMEMOD-ORBITAL_STRIKE_DRONE.moves.ORBITAL_STRIKE.title": "轨道打击",
+    
     "WARFRAMEMOD-PHORID.name": "Phorid",
     "WARFRAMEMOD-PHORID.moves.CLAW_SWIPE.title": "利爪挥击",
     "WARFRAMEMOD-PHORID.moves.SONIC_SCREAM.title": "嚎叫",
     "WARFRAMEMOD-PHORID.moves.SPINE_STRIKE.title": "尖刺打击",
+
+    "WARFRAMEMOD-PROPAGANDA_DRONE.name": "宣传无人机",
+    "WARFRAMEMOD-PROPAGANDA_DRONE.moves.PROPAGANDA.title": "宣传广播",
 
     "WARFRAMEMOD-RAKSA_KUBROW.name": "防护型库狛",
     "WARFRAMEMOD-RAKSA_KUBROW.moves.NOTHING.title": "无",
@@ -47,6 +113,9 @@
     "WARFRAMEMOD-RAPTOR.moves.ENERGY_MORTAR.title": "能量迫击炮",
     "WARFRAMEMOD-RAPTOR.moves.NEMES_RT.title": "部署自爆机",
     "WARFRAMEMOD-RAPTOR.moves.LASER_BARRAGE.title": "巨型激光",
+
+    "WARFRAMEMOD-REMECH_OSPREY.name": "再启动鱼鹰",
+    "WARFRAMEMOD-REMECH_OSPREY.moves.REMECH_LASER.title": "再启动光束",
 
     "WARFRAMEMOD-SAHASA_KUBROW.name": "突击型库狛",
     "WARFRAMEMOD-SAHASA_KUBROW.moves.NOTHING.title": "无",
@@ -73,17 +142,34 @@
     "WARFRAMEMOD-THE_SERGEANT.banter4": "我厌倦了等待。",
     "WARFRAMEMOD-THE_SERGEANT.banter5": "你把这个称为技能？",
 
+    "WARFRAMEMOD-TOXIC_ANCIENT.name": "远古剧毒者",
+    "WARFRAMEMOD-TOXIC_ANCIENT.moves.GRAPPLING_HOOK.title": "抓钩",
+    "WARFRAMEMOD-TOXIC_ANCIENT.moves.TOXIC_PULSE.title": "剧毒脉冲",
+
     "WARFRAMEMOD-TUSK_THUMPER.name": "巨牙重击者",
     "WARFRAMEMOD-TUSK_THUMPER.moves.TELESCOPIC_CANNON.title": "大型伸缩式加农炮",
     "WARFRAMEMOD-TUSK_THUMPER.moves.AUTOCANNON.title": "快速射击式自动加农炮",
     "WARFRAMEMOD-TUSK_THUMPER.moves.GROUNDPOUNDER.title": "气动式捶地机",
 
+    "WARFRAMEMOD-VAY_HEK.name": "韦·海克议员",
+    "WARFRAMEMOD-VAY_HEK.moves.DRONE_LAUNCH.title": "部署无人机",
+    "WARFRAMEMOD-VAY_HEK.moves.PROPAGANDA.title": "宣传广播",
+    "WARFRAMEMOD-VAY_HEK.moves.HEK_CANNON.title": "海克加农炮",
+    "WARFRAMEMOD-VAY_HEK.moves.HEK_BARRAGE.title": "海克弹幕",
+    "WARFRAMEMOD-VAY_HEK.banter1": "Grineer兄弟们！我已完成了我的职责！现在收拾这些……乱子吧。",
+    "WARFRAMEMOD-VAY_HEK.banter2": "为什么这些傻瓜还在呼吸我的空气？！这是无法接受的！",
+    "WARFRAMEMOD-VAY_HEK.banter3": "为什么我总得一个人做所有事情？！",
+    "WARFRAMEMOD-VAY_HEK.banter4": "让我们结束这一切。一劳永逸！",
+    
     "WARFRAMEMOD-VEM_TABOOK.name": "维姆·塔布克",
     "WARFRAMEMOD-VEM_TABOOK.moves.HEK.title": "海克",
     "WARFRAMEMOD-VEM_TABOOK.moves.LEADER.title": "领队",
     "WARFRAMEMOD-VEM_TABOOK.banter1": "[jitter]你是他们之中最弱小的。[/jitter]",
     "WARFRAMEMOD-VEM_TABOOK.banter2": "[jitter]你是他们之中最强的？[/jitter]",
     "WARFRAMEMOD-VEM_TABOOK.teammateDeathLine": "[jitter]不可接受！[/jitter]",
+
+    "WARFRAMEMOD-VOLATILE_RUNNER.name": "爆炸奔跑者",
+    "WARFRAMEMOD-VOLATILE_RUNNER.moves.EXPLODE.title": "自爆",
 
     "WARFRAMEMOD-ZANUKA_HUNTER.name": "Zanuka猎犬",
     "WARFRAMEMOD-ZANUKA_HUNTER.moves.MISSILE_STRIKE.title": "飞弹打击",

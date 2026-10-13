@@ -26,7 +26,7 @@ public sealed class AncientPower : WarframeModPower
 
     public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
-        if (side == base.Owner.Side)
+        if (participants.Contains(base.Owner))
         {
             int count = base.CombatState.GetOpponentsOf(base.Owner).Where(c => c.Player != null && c.Player.Character.IsWarframe()).Count() - 1;
             if (count > 0)
