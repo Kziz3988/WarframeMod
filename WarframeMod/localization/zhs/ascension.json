@@ -1,0 +1,8 @@
+{
+    "DREAD.JACKAL.description" : "在战斗开始时，所有敌人获得[blue]3[/blue]层[gold]感电[/gold]。",
+    "DREAD.LECH_KRIL.description" : "在战斗开始时，获得[blue]5[/blue]层[gold]火焰[/gold]。",
+    "DREAD.LEPHANTIS.description" : "每[blue]3[/blue]个回合结束时，所有敌人获得[blue]1[/blue]层[gold]无实体[/gold]。",
+    "DREAD.PHORID.description" : "在战斗开始时，向你的[gold]弃牌堆[/gold]中加入[blue]5[/blue]张[gold]晕眩[/gold]。",
+    "DREAD.RAPTOR.description" : "所有敌人从第[blue]2[/blue]回合开始，每回合开始时获得[blue]1[/blue]层[gold]翱翔[/gold]。",
+    "DREAD.VAY_HEK.description" : "在第[blue]2[/blue]回合开始时，失去[blue]1[/blue]点[gold]能量[/gold]。"
+}

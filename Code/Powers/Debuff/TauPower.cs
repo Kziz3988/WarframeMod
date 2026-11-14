@@ -77,7 +77,7 @@ public partial class TauPower : WarframeModPower
 
 	public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
-        if (side != base.Owner.Side)
+        if (!participants.Contains(base.Owner))
 		{
 			return;
 		}

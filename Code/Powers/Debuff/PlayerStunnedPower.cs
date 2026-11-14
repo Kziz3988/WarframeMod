@@ -29,7 +29,7 @@ public sealed class PlayerStunnedPower : WarframeModPower
 
     public override Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
-        if (side != base.Owner.Side)
+        if (!participants.Contains(base.Owner))
         {
             return Task.CompletedTask;
         }

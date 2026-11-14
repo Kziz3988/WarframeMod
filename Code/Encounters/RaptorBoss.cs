@@ -3,7 +3,9 @@ using BaseLib.Abstracts;
 using MegaCrit.Sts2.Core.Bindings.MegaSpine;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Acts;
+using MegaCrit.Sts2.Core.Models.Dread;
 using MegaCrit.Sts2.Core.Rooms;
+using WarframeMod.Code.Dominions;
 using WarframeMod.Code.Extensions;
 using WarframeMod.Code.Monsters;
 
@@ -31,5 +33,10 @@ public sealed class RaptorBoss() : CustomEncounterModel(RoomType.Boss)
     public override bool IsValidForAct(ActModel act)
     {
         return act is Glory;
+    }
+
+    public override DominionModel? GetDominion()
+    {
+        return ModelDb.Dominion<RaptorDominion>();
     }
 }

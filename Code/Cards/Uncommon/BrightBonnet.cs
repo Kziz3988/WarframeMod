@@ -12,6 +12,7 @@ namespace WarframeMod.Code.Cards.Uncommon;
 
 public class BrightBonnet() : WarframeModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
 {
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Innate];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.FromCard<Sprodling>(),
         HoverTipFactory.ForEnergy(this)
@@ -24,6 +25,6 @@ public class BrightBonnet() : WarframeModCard(1, CardType.Power, CardRarity.Unco
 
     protected override void OnUpgrade()
     {
-        base.AddKeyword(CardKeyword.Innate);
+        base.EnergyCost.UpgradeBy(-1);
     }
 }

@@ -3,9 +3,11 @@ using BaseLib.Abstracts;
 using MegaCrit.Sts2.Core.Bindings.MegaSpine;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Acts;
+using MegaCrit.Sts2.Core.Models.Dread;
 using MegaCrit.Sts2.Core.Models.Encounters;
 using MegaCrit.Sts2.Core.Random;
 using MegaCrit.Sts2.Core.Rooms;
+using WarframeMod.Code.Dominions;
 using WarframeMod.Code.Extensions;
 using WarframeMod.Code.Monsters;
 
@@ -35,5 +37,10 @@ public sealed class JackalBoss() : CustomEncounterModel(RoomType.Boss)
     public override BackgroundAssets? CustomEncounterBackground(ActModel parentAct, Rng rng)
     {
         return new BackgroundAssets(ModelDb.Encounter<KnowledgeDemonBoss>().Id.Entry.ToLowerInvariant(), Rng);
+    }
+
+    public override DominionModel? GetDominion()
+    {
+        return ModelDb.Dominion<JackalDominion>();
     }
 }

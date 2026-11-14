@@ -1,0 +1,8 @@
+{
+    "DREAD.JACKAL.description" : "At the start of combat, all enemies gain [blue]3[/blue] [gold]Electrified[/gold].",
+    "DREAD.LECH_KRIL.description" : "At the start of combat, gain [blue]5[/blue] [gold]Heat[/gold].",
+    "DREAD.LEPHANTIS.description" : "At the end of every [blue]3[/blue] turns, all enemies gain [blue]1[/blue] [gold]Intangible[/gold].",
+    "DREAD.PHORID.description" : "At the start of combat, add [blue]5[/blue] [gold]Dazed[/gold] to your [gold]Discard Pile[/gold].",
+    "DREAD.RAPTOR.description" : "All enemies gain [blue]1[/blue] [gold]Soar[/gold] at the start of [blue]2nd[/blue] turn, and every turn after that.",
+    "DREAD.VAY_HEK.description" : "At the start of turn [blue]2[/blue], lose [blue]1[/blue] [gold]Energy[/gold]."
+}

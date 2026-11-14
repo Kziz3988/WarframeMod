@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
@@ -20,7 +21,7 @@ public partial class DisruptedPower : WarframeModPower
 
     public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
-        if (side != base.Owner.Side || base.Owner.Player == null)
+        if (!participants.Contains(base.Owner) || base.Owner.Player == null)
         {
             return;
         }

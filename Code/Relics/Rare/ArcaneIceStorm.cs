@@ -27,7 +27,7 @@ public class ArcaneIceStorm : WarframeModRelic
         HoverTipFactory.FromPower<StrengthPower>()
     ];
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new PowerVar<ColdPower>(20m),
+        new PowerVar<ColdPower>(15m),
         new PowerVar<StrengthPower>(1m)
     ];
 

@@ -1,6 +1,7 @@
 using Godot;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Nodes.Combat;
+using WarframeMod.Code.Extensions;
 
 namespace WarframeMod.Code.Patches;
 
@@ -16,7 +17,7 @@ public static class NCreaturePatch
 			return;
 		}
 
-		if (__instance.Entity.ModelId.ToString() == "CHARACTER.WARFRAMEMOD-EXCALIBUR")
+		if (__instance.Entity.ModelId.IsWarframe())
 			switch (trigger)
 			{
 				case "Hit":
@@ -45,7 +46,7 @@ public static class NCreaturePatch
 	[HarmonyPatch("ImmediatelySetIdle")]
 	static bool ImmediatelySetIdlePatch(NCreature __instance)
 	{
-		if (__instance.Entity != null && __instance.Entity.ModelId.ToString() == "CHARACTER.WARFRAMEMOD-EXCALIBUR")
+		if (__instance.Entity != null && __instance.Entity.ModelId.IsWarframe())
 		{
 			PlayAnim(__instance, "Idle", false);
 			return false;
@@ -57,7 +58,7 @@ public static class NCreaturePatch
 	[HarmonyPatch("_Ready")]
 	static void ReadyPatch(NCreature __instance)
 	{
-		if (__instance.Entity != null && __instance.Entity.ModelId.ToString() == "CHARACTER.WARFRAMEMOD-EXCALIBUR")
+		if (__instance.Entity != null && __instance.Entity.ModelId.IsWarframe())
 		{
 			PlayAnim(__instance, "Idle", false);
 		}
@@ -65,7 +66,7 @@ public static class NCreaturePatch
 
 	static void PlayAnim(NCreature node, string animName, bool fromEnd)
 	{
-		var visual = node.GetNodeOrNull<Node2D>("Excalibur");
+		var visual = node.GetNodeOrNull<Node2D>("Warframe");
 		if (visual == null)
 		{
 			return;			

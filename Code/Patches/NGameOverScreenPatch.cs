@@ -20,7 +20,7 @@ public static class NGameOverScreenPatch
 		var children = _creatureContainer.GetChildren();
 		foreach(Node child in children)
 		{
-			if (child is Node2D visual && visual.Name.ToString().StartsWith("Excalibur"))
+			if (child is Node2D visual && visual.Name.ToString().StartsWith("Warframe"))
 			{
 				var anim = visual.GetNodeOrNull<AnimatedSprite2D>("Visuals");
 				anim?.Play("Dead");

@@ -21,7 +21,7 @@ public class SnowGlobe() : WarframeModCard(1, CardType.Power, CardRarity.Uncommo
         StunIntent.GetStaticHoverTip()
     ];
 	protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new BlockVar(3m, ValueProp.Move),
+        new BlockVar(6m, ValueProp.Move),
         new PowerVar<SnowGlobePower>(2m)
     ];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

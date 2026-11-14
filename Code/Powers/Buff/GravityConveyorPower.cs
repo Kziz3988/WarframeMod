@@ -7,6 +7,7 @@ using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Models;
 using WarframeMod.Code.Cards.Status;
 using WarframeMod.Code.Monsters;
 
@@ -39,9 +40,9 @@ public sealed class GravityConveyorPower : WarframeModPower
 		GetInternalData<Data>().isReviving = false;
 	}
 
-    public override async Task AfterDeath(PlayerChoiceContext choiceContext, Creature creature, bool wasRemovalPrevented, float deathAnimLength)
-	{
-		if (!wasRemovalPrevented && creature == base.Owner && creature.Monster is Raptor raptor)
+    public override async Task AfterDeath(PlayerChoiceContext choiceContext, Creature creature, CardModel? source, bool wasRemovalPrevented, float deathAnimLength)
+    {
+        if (!wasRemovalPrevented && creature == base.Owner && creature.Monster is Raptor raptor)
 		{
 			GetInternalData<Data>().isReviving = true;
 			await raptor.TriggerDeadState();
@@ -50,7 +51,7 @@ public sealed class GravityConveyorPower : WarframeModPower
                 await CardPileCmd.AddToCombatAndPreview<ExplosivePowerCell>(player, PileType.Discard, 1, null);
             }
 		}
-	}
+    }
 
     public override bool ShouldAllowHitting(Creature creature)
 	{

@@ -21,7 +21,7 @@ public class FusionStrike() : WarframeModCard(3, CardType.Attack, CardRarity.Rar
 		HoverTipFactory.FromPower<TauPower>()
 	];
 	protected override IEnumerable<DynamicVar> CanonicalVars => [
-		new DamageVar(4m, ValueProp.Move),
+		new DamageVar(6m, ValueProp.Move),
 		new RepeatVar(3),
 		new PowerVar<FrailPower>(3),
 		new PowerVar<TauPower>(1)

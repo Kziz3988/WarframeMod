@@ -21,7 +21,7 @@ public class Avalanche() : WarframeModCard(3, CardType.Attack, CardRarity.Rare, 
 		HoverTipFactory.FromPower<FrailPower>()
 	];
 	protected override IEnumerable<DynamicVar> CanonicalVars => [
-		new DamageVar(13m, ValueProp.Move),
+		new DamageVar(20m, ValueProp.Move),
         new PowerVar<ColdPower>(7),
 		new PowerVar<FrailPower>(3)
 	];
@@ -37,7 +37,7 @@ public class Avalanche() : WarframeModCard(3, CardType.Attack, CardRarity.Rare, 
 
     protected override void OnUpgrade()
     {
-		base.DynamicVars.Damage.UpgradeValueBy(3m);
+		base.DynamicVars.Damage.UpgradeValueBy(4m);
         base.DynamicVars["ColdPower"].UpgradeValueBy(2m);
         base.DynamicVars["FrailPower"].UpgradeValueBy(1m);
     }

@@ -24,7 +24,8 @@ public class ArcaneMelt : WarframeModRelic
         HoverTipFactory.Static(StaticHoverTip.Block)
     ];
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new PowerVar<HeatPower>(10m)
+        new PowerVar<HeatPower>(10m),
+        new DynamicVar("Increment", 3m)
     ];
 
     private int heatCounter = 0;
@@ -65,7 +66,7 @@ public class ArcaneMelt : WarframeModRelic
                 if (creature != null)
                 {
                     isApplyingEffect = true;
-                    await PowerCmd.Apply<HeatPower>(choiceContext, creature, deltaEffect, base.Owner.Creature, null);
+                    await PowerCmd.Apply<HeatPower>(choiceContext, creature, base.DynamicVars["Increment"].BaseValue * deltaEffect, base.Owner.Creature, null);
                     isApplyingEffect = false;
                 }
                 effectCounter = targetEffectCounter;

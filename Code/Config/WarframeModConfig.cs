@@ -9,5 +9,8 @@ internal class WarframeModConfig : SimpleModConfig
     public static bool EnableMultiplayerRebalance { get; set; } = true;
 
     [ConfigHoverTip]
+    public static bool RemoveVanillaBosses { get; set; } = false;
+
+    [ConfigHoverTip]
     public static bool ReplacePrismaticGem { get; set; } = false;
 }

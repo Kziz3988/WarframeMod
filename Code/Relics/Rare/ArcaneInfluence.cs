@@ -25,7 +25,8 @@ public class ArcaneInfluence : WarframeModRelic
         StunIntent.GetStaticHoverTip()
     ];
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new PowerVar<ElectricityPower>(5m)
+        new PowerVar<ElectricityPower>(5m),
+        new DynamicVar("Increment", 1m)
     ];
 
     private int electricityCounter = 0;
@@ -63,7 +64,7 @@ public class ArcaneInfluence : WarframeModRelic
             {
                 Flash();
                 isApplyingEffect = true;
-                await PowerCmd.Apply<ElectricityPower>(choiceContext, base.Owner.Creature.CombatState.HittableEnemies, deltaEffect, base.Owner.Creature, null);
+                await PowerCmd.Apply<ElectricityPower>(choiceContext, base.Owner.Creature.CombatState.HittableEnemies, base.DynamicVars["Increment"].BaseValue * deltaEffect, base.Owner.Creature, null);
                 isApplyingEffect = false;
                 effectCounter = targetEffectCounter;
             }

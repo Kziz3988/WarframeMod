@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
@@ -15,11 +16,11 @@ public partial class TransferenceStaticPower : WarframeModPower
 
     public override async Task BeforeSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
-    	if (side != base.Owner.Side)
+    	if (!participants.Contains(base.Owner))
 		{
 			return;
 		}
         Flash();
-        await CreatureCmd.LoseMaxHp(new ThrowingPlayerChoiceContext(), base.Owner, base.Amount, false);
+        await CreatureCmd.LoseMaxHp(new ThrowingPlayerChoiceContext(), base.Owner, base.Amount, null);
     }
 }

@@ -19,7 +19,6 @@ using MegaCrit.Sts2.Core.MonsterMoves;
 using MegaCrit.Sts2.Core.ValueProps;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.Runs;
-using MegaCrit.Sts2.Core.Models.Singleton;
 
 namespace WarframeMod.Code.Monsters;
 

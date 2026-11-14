@@ -1,5 +1,3 @@
-
-
 using System;
 using System.Collections.Generic;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -29,6 +27,7 @@ public static class PowerModelExtensions
                     typeof(HardToKillPower),
                     typeof(HatchPower),
                     typeof(SandpitPower),
+                    typeof(SlumberPower),
                     typeof(WitheringPresencePower),
                 ];
             }
@@ -58,7 +57,9 @@ public static class PowerModelExtensions
             {
                 _isNotBetterOrWorse = [
                     typeof(ArmorPlatePower),
+                    typeof(DispensaryPower),
                     typeof(KuvaLichPower),
+                    typeof(LephantisDominionPower),
                     typeof(PlowPower),
                     typeof(RequiemCorrectPower),
                     typeof(ShieldPower),

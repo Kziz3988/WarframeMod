@@ -89,9 +89,9 @@ public abstract class VoidRelic : WarframeModRelic
 
     protected abstract void AddExtraReward(CombatRoom combatRoom);
 
-    public override Task AfterDeath(PlayerChoiceContext choiceContext, Creature creature, bool wasRemovalPrevented, float deathAnimLength)
+    public override Task AfterDeath(PlayerChoiceContext choiceContext, Creature creature, CardModel? source, bool wasRemovalPrevented, float deathAnimLength)
     {
-        AbstractRoom? currentRoom = creature.CombatState?.RunState.CurrentRoom ?? null;
+                AbstractRoom? currentRoom = creature.CombatState?.RunState.CurrentRoom ?? null;
 		if (currentRoom is not CombatRoom combatRoom)
         {
             return Task.CompletedTask;

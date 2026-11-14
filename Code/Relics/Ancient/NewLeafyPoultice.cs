@@ -59,7 +59,7 @@ public sealed class NewLeafyPoultice : WarframeModRelic
 
 	public override async Task AfterObtained()
 	{
-		await CreatureCmd.LoseMaxHp(new ThrowingPlayerChoiceContext(), base.Owner.Creature, base.DynamicVars.MaxHp.BaseValue, isFromCard: false);
+		await CreatureCmd.LoseMaxHp(new ThrowingPlayerChoiceContext(), base.Owner.Creature, base.DynamicVars.MaxHp.BaseValue, null);
 		IEnumerable<CardModel> source = PileType.Deck.GetPile(base.Owner).Cards;
 		CardModel? strike = source.FirstOrDefault(c => c.GetType() == ModelDb.GetById<CardModel>(Strike).GetType());
 		CardModel? defend = source.FirstOrDefault(c => c.GetType() == ModelDb.GetById<CardModel>(Defend).GetType());

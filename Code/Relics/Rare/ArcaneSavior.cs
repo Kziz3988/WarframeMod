@@ -4,10 +4,8 @@ using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Relics;
-using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models.Powers;
+using MegaCrit.Sts2.Core.Rooms;
 using MegaCrit.Sts2.Core.Saves.Runs;
 using WarframeMod.Code.Character;
 
@@ -22,14 +20,7 @@ public class ArcaneSavior : WarframeModRelic
 
 	public override bool IsUsedUp => _wasUsed;
 
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
-        HoverTipFactory.FromPower<BufferPower>()
-    ];
-
-	protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new HealVar(1m),
-        new PowerVar<BufferPower>(1m)
-    ];
+	protected override IEnumerable<DynamicVar> CanonicalVars => [new HealVar(1m)];
 
 	[SavedProperty]
 	public bool WasUsed
@@ -45,6 +36,10 @@ public class ArcaneSavior : WarframeModRelic
 			if (IsUsedUp)
 			{
 				base.Status = RelicStatus.Disabled;
+			}
+			else
+			{
+				base.Status = RelicStatus.Normal;
 			}
 		}
 	}
@@ -67,6 +62,11 @@ public class ArcaneSavior : WarframeModRelic
 		Flash();
 		WasUsed = true;
 		await CreatureCmd.Heal(creature, base.DynamicVars.Heal.BaseValue);
-        await PowerCmd.Apply<BufferPower>(new ThrowingPlayerChoiceContext(), base.Owner.Creature, base.DynamicVars["BufferPower"].BaseValue, base.Owner.Creature, null);
 	}
+
+    public override Task AfterCombatEnd(CombatRoom room)
+    {
+        WasUsed = false;
+		return Task.CompletedTask;
+    }
 }

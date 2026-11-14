@@ -35,9 +35,9 @@ public partial class RubblePower : WarframeModPower
 		return Task.CompletedTask;
 	}
 
-	public override async Task AfterDeath(PlayerChoiceContext choiceContext, Creature creature, bool wasRemovalPrevented, float deathAnimLength)
-	{
-		if (creature != base.Owner)
+    public override async Task AfterDeath(PlayerChoiceContext choiceContext, Creature creature, CardModel? source, bool wasRemovalPrevented, float deathAnimLength)
+    {
+        if (creature != base.Owner)
 		{
             return;
 		}
@@ -47,5 +47,5 @@ public partial class RubblePower : WarframeModPower
 		    await CreatureCmd.GainBlock(base.Applier, new BlockVar(base.Amount, ValueProp.Unpowered), null);
         }
         await PowerCmd.Remove(this);
-	}
+    }
 }

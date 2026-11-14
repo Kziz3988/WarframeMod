@@ -24,13 +24,10 @@ public class WyrdScythes() : WarframeModCard(2, CardType.Attack, CardRarity.Even
         HoverTipFactory.FromPower<VulnerablePower>()
 	];
 	protected override IEnumerable<DynamicVar> CanonicalVars => [
-		new DamageVar(4m, ValueProp.Move),
+		new DamageVar(5m, ValueProp.Move),
         new RepeatVar(2),
         new PowerVar<VulnerablePower>(1m)
 	];
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [
-        CardKeyword.Exhaust
-    ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -50,6 +47,6 @@ public class WyrdScythes() : WarframeModCard(2, CardType.Attack, CardRarity.Even
 
     protected override void OnUpgrade()
     {
-		base.DynamicVars.Repeat.UpgradeValueBy(1m);
+		base.DynamicVars.Damage.UpgradeValueBy(2m);
     }
 }

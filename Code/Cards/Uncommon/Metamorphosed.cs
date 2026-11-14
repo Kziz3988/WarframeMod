@@ -17,8 +17,8 @@ public class Metamorphosed() : WarframeModCard(0, CardType.Power, CardRarity.Unc
         HoverTipFactory.FromPower<ShieldPower>()
     ];
 	protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new BlockVar(2m, ValueProp.Move),
-        new DynamicVar("ShieldCapacity", 2m)
+        new BlockVar(5m, ValueProp.Move),
+        new DynamicVar("ShieldCapacity", 5m)
     ];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -28,7 +28,7 @@ public class Metamorphosed() : WarframeModCard(0, CardType.Power, CardRarity.Unc
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars.Block.UpgradeValueBy(1m);
-        base.DynamicVars["ShieldCapacity"].UpgradeValueBy(1m);
+        base.DynamicVars.Block.UpgradeValueBy(2m);
+        base.DynamicVars["ShieldCapacity"].UpgradeValueBy(2m);
     }
 }

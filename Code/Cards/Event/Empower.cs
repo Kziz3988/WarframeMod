@@ -14,7 +14,7 @@ namespace WarframeMod.Code.Cards.Event;
 public class Empower() : WarframeModCard(1, CardType.Skill, CardRarity.Event, TargetType.Self)
 {
 	protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new PowerVar<EmpowerPower>(5m)
+        new PowerVar<EmpowerPower>(8m)
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
@@ -24,6 +24,6 @@ public class Empower() : WarframeModCard(1, CardType.Skill, CardRarity.Event, Ta
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars["EmpowerPower"].UpgradeValueBy(3m);
+        AddKeyword(CardKeyword.Retain);
     }
 }

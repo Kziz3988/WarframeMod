@@ -79,7 +79,7 @@ public class Magnetize() : WarframeModCard(1, CardType.Attack, CardRarity.Basic,
         return Task.CompletedTask;
     }
 
-    public override Task AfterDeath(PlayerChoiceContext choiceContext, Creature creature, bool wasRemovalPrevented, float deathAnimLength)
+    public override Task AfterDeath(PlayerChoiceContext choiceContext, Creature creature, CardModel? source, bool wasRemovalPrevented, float deathAnimLength)
     {
         if (creature == base.Owner.Creature)
         {

@@ -46,7 +46,7 @@ public sealed class VemTabook : CustomMonsterModel
 		await PowerCmd.Apply<GrustragLeaderPower>(new ThrowingPlayerChoiceContext(), base.Creature, 1m, base.Creature, null);
     }
 
-	public override Task AfterDeath(PlayerChoiceContext choiceContext, Creature creature, bool wasRemovalPrevented, float deathAnimLength)
+    public override Task AfterDeath(PlayerChoiceContext choiceContext, Creature creature, CardModel? source, bool wasRemovalPrevented, float deathAnimLength)
     {
         if (creature != base.Creature && creature.Side == base.Creature.Side)
 		{

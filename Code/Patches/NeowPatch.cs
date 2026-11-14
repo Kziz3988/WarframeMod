@@ -19,14 +19,14 @@ public static class NeowPatch
     static void GetCurseOptionsPatch(Neow __instance, ref IEnumerable<EventOption> __result)
     {
         var originalOptions = __result;
-        var modifiedOptions = AddRelicOption<Plastids>(__instance, originalOptions, "NEOW.pages.DONE.CURSED.description");
-        modifiedOptions = AddRelicOption<RivenSliver>(__instance, modifiedOptions, "NEOW.pages.DONE.CURSED.description");
+        var modifiedOptions = AddRelicOption<Plastids>(__instance, originalOptions);
+        modifiedOptions = AddRelicOption<RivenSliver>(__instance, modifiedOptions);
         __result = modifiedOptions;
         if (__instance.Owner == null || !__instance.Owner.Character.IsWarframe())
         {
             return;
         }
-        modifiedOptions = ReplaceRelicOption<LeafyPoultice, NewLeafyPoultice>(__instance, modifiedOptions, "NEOW.pages.DONE.CURSED.description");
+        modifiedOptions = ReplaceRelicOption<LeafyPoultice, NewLeafyPoultice>(__instance, modifiedOptions);
         NewLeafyPoultice? newLeafyPoultice = (NewLeafyPoultice?)modifiedOptions.First(r => r.Relic?.GetType() == typeof(NewLeafyPoultice)).Relic;
         if (newLeafyPoultice != null)
         {
@@ -44,7 +44,7 @@ public static class NeowPatch
         {
             return true;
         }
-        var modifiedOption = __instance.RelicOption<NewNeowsTalisman>("INITIAL", "NEOW.pages.DONE.POSITIVE.description");
+        var modifiedOption = __instance.RelicOption<NewNeowsTalisman>();
         NewNeowsTalisman? newNeowsTalisman = (NewNeowsTalisman?)modifiedOption.Relic;
         if (newNeowsTalisman != null)
         {
@@ -60,21 +60,21 @@ public static class NeowPatch
     static void GetPositiveOptionsPatch(Neow __instance, ref IEnumerable<EventOption> __result)
     {
         var originalOptions = __result;
-        var modifiedOptions = AddRelicOption<TemporalDust>(__instance, originalOptions, "NEOW.pages.DONE.POSITIVE.description");
-        modifiedOptions = AddRelicOption<VoidTraces>(__instance, modifiedOptions, "NEOW.pages.DONE.POSITIVE.description");
+        var modifiedOptions = AddRelicOption<TemporalDust>(__instance, originalOptions);
+        modifiedOptions = AddRelicOption<VoidTraces>(__instance, modifiedOptions);
         __result = modifiedOptions;
     }
 
-    static IEnumerable<EventOption> AddRelicOption<T>(Neow __instance, IEnumerable<EventOption> originalOptions, string description)
+    static IEnumerable<EventOption> AddRelicOption<T>(Neow __instance, IEnumerable<EventOption> originalOptions)
         where T : RelicModel, new()
     {
         List<EventOption> result = originalOptions.ToList();
-        var newOption = __instance.RelicOption<T>("INITIAL", description);
+        var newOption = __instance.RelicOption<T>();
         result.Add(newOption);
         return result;
     }
 
-    static IEnumerable<EventOption> ReplaceRelicOption<TOriginal, TReplacement>(Neow __instance, IEnumerable<EventOption> originalOptions, string description)
+    static IEnumerable<EventOption> ReplaceRelicOption<TOriginal, TReplacement>(Neow __instance, IEnumerable<EventOption> originalOptions)
         where TOriginal : RelicModel, new()
         where TReplacement : RelicModel, new()
     {
@@ -84,7 +84,7 @@ public static class NeowPatch
         {
             if (option.Relic is TOriginal)
             {
-                var newOption = __instance.RelicOption<TReplacement>("INITIAL", description);
+                var newOption = __instance.RelicOption<TReplacement>("INITIAL");
                 result.Add(newOption);
             }
             else

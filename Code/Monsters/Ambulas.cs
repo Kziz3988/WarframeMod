@@ -13,8 +13,8 @@ using WarframeMod.Code.Extensions;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using System.Linq;
 using WarframeMod.Code.Powers.Buff;
-using MegaCrit.Sts2.Core.Models.Singleton;
 using MegaCrit.Sts2.Core.Runs;
+using MegaCrit.Sts2.Core.Models;
 
 namespace WarframeMod.Code.Monsters;
 
