@@ -17,6 +17,6 @@ public class JackalDominion : DominionModel
 
     protected override Task AfterEnemiesEnteredCombat(IEnumerable<Creature> creatures)
 	{
-		return PowerCmd.Apply<ElectrifiedPower>(new ThrowingPlayerChoiceContext(), creatures, 3m, null, null);
+		return PowerCmd.Apply<ElectrifiedPower>(new ThrowingPlayerChoiceContext(), creatures, 1m, null, null);
 	}
 }

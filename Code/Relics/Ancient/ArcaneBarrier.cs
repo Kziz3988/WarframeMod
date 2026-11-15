@@ -55,9 +55,9 @@ public sealed class ArcaneBarrier : WarframeModRelic
 
 	protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DynamicVar("Turns", 6m),
-        new DynamicVar("TotalShield", 10m),
-        new DynamicVar("ShieldCapacity", 10m),
-        new DynamicVar("ShieldRecharge", 1m),
+        new DynamicVar("TotalShield", 15m),
+        new DynamicVar("ShieldCapacity", 15m),
+        new DynamicVar("ShieldRecharge", 3m),
     ];
 
     public override async Task AfterRoomEntered(AbstractRoom room)

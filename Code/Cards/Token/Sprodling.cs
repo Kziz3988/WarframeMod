@@ -9,6 +9,7 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
+using WarframeMod.Code.Powers.Buff;
 
 namespace WarframeMod.Code.Cards.Token;
 
@@ -18,6 +19,7 @@ public class Sprodling() : WarframeModCard(0, CardType.Skill, CardRarity.Token, 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.ForEnergy(this)];
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new EnergyVar(1),
+        new PowerVar<SprodlingPower>(1m),
         new DynamicVar("CardsAmount", 5m)
     ];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
@@ -43,10 +45,12 @@ public class Sprodling() : WarframeModCard(0, CardType.Skill, CardRarity.Token, 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await PlayerCmd.GainEnergy(base.DynamicVars.Energy.BaseValue, base.Owner);
+        await PowerCmd.Apply<SprodlingPower>(choiceContext, base.Owner.Creature, base.DynamicVars["SprodlingPower"].BaseValue, base.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()
     {
+        base.DynamicVars["SprodlingPower"].UpgradeValueBy(1m);
         base.DynamicVars["CardsAmount"].UpgradeValueBy(3m);
     }
 }

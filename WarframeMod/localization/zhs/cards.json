@@ -223,7 +223,7 @@
     "WARFRAMEMOD-REGULATORS.title": "监察者双枪",
     "WARFRAMEMOD-REGULATORS.description": "造成{CalculatedDamage:diff()}点伤害。你的[gold]消耗牌堆[/gold]中每有一张[gold]监察者双枪[/gold]，这张牌就额外造成{ExtraDamage:diff()}点伤害。",
     "WARFRAMEMOD-SPRODLING.title": "菌宝",
-    "WARFRAMEMOD-SPRODLING.description": "获得{Energy:energyIcons()}。\n你的[gold]消耗牌堆[/gold]中每有{CardsAmount:diff()}张牌，这张牌的耗能就增加{energyPrefix:energyIcons(1)}。",
+    "WARFRAMEMOD-SPRODLING.description": "获得{Energy:energyIcons()}。\n在本回合内临时获得{SprodlingPower:diff()}点[gold]力量[/gold]。\n你的[gold]消耗牌堆[/gold]中每有{CardsAmount:diff()}张牌，这张牌的耗能就增加{energyPrefix:energyIcons(1)}。",
     "WARFRAMEMOD-TALON.title": "利爪",
     "WARFRAMEMOD-TALON.description": "给予所有敌人{SlashPower:diff()}层[gold]切割[/gold]。",
 
