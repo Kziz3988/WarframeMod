@@ -22,7 +22,7 @@ public sealed class OrbitalStrikeDrone : CustomMonsterModel
 
 	public override int MaxInitialHp => MinInitialHp;
 
-	private int OrbitalStrikeDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 30, 25);
+	private int OrbitalStrikeDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 20, 15) + (AscensionHelper.IsDread() ? 10 : 0);
 
 	public override DamageSfxType TakeDamageSfxType => DamageSfxType.Armor;
 

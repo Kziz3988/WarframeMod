@@ -29,7 +29,7 @@ public sealed class Phorid : CustomMonsterModel
 
     private int ClawSwipeDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 18, 15);
 
-    private int SonicScreamCards => 5;
+    private int SonicScreamCards => 5 + (AscensionHelper.IsDread() ? 1 : 0);
 
     private int SpineStrikeDamage => 5;
 

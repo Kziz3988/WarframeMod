@@ -22,9 +22,7 @@ public sealed class PropagandaDrone : CustomMonsterModel
 
 	public override int MaxInitialHp => MinInitialHp;
 
-	private int BuffStrengthGain => 2;
-
-    private int EnergyLose => -1;
+	private int BuffStrengthGain => 1 + (AscensionHelper.IsDread() ? 1 : 0);
 
 	public override DamageSfxType TakeDamageSfxType => DamageSfxType.Armor;
 
@@ -46,6 +44,5 @@ public sealed class PropagandaDrone : CustomMonsterModel
 	private async Task PropagandaMove(IReadOnlyList<Creature> targets)
 	{
 		await PowerCmd.Apply<StrengthPower>(new ThrowingPlayerChoiceContext(), base.CombatState.HittableEnemies, BuffStrengthGain, base.Creature, null);
-        await PowerCmd.Apply<EnergyNextTurnPower>(new ThrowingPlayerChoiceContext(), targets, EnergyLose, base.Creature, null);
 	}
 }

@@ -29,7 +29,7 @@ public sealed class Jackal : CustomMonsterModel
 
     private int ShockwaveDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 25, 22);
 
-    private int PlasmaGrenadeDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 7, 6);
+    private int PlasmaGrenadeDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 7, 6) + (AscensionHelper.IsDread() ? 1 : 0);
 
     private int PlasmaGrenadeRepeat => 3;
 

@@ -132,6 +132,7 @@ public sealed class Raptor : CustomMonsterModel
 		await CreatureCmd.SetMaxHp(base.Creature, scaledHp);
 		await CreatureCmd.Heal(base.Creature, scaledHp);
         await PowerCmd.Apply<StrengthPower>(new ThrowingPlayerChoiceContext(), base.Creature, Deaths * BuffStrengthReviveGain, base.Creature, null);
+        await ApplySoarIfDread();
 	}
 
     public Task TriggerDeadState()
@@ -140,13 +141,22 @@ public sealed class Raptor : CustomMonsterModel
         Deaths++;
         return Task.CompletedTask;
 	}
+
+    private async Task ApplySoarIfDread()
+    {
+        if (AscensionHelper.IsDread())
+        {
+            await PowerCmd.Apply<NewSoarPower>(new ThrowingPlayerChoiceContext(), base.Creature, 2m, base.Creature, null);
+        }
+    }
     
     public override async Task AfterAddedToRoom()
     {
         await base.AfterAddedToRoom();
-        await PowerCmd.Apply<GravityConveyorPower>(new ThrowingPlayerChoiceContext(), base.Creature, 1, base.Creature, null);
+        await PowerCmd.Apply<GravityConveyorPower>(new ThrowingPlayerChoiceContext(), base.Creature, 1m, base.Creature, null);
         NextType = RaptorType.NS;
         SwitchToNextType();
+        await ApplySoarIfDread();
     }
 
     protected override MonsterMoveStateMachine GenerateMoveStateMachine()

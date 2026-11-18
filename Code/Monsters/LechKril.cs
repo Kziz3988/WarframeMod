@@ -32,9 +32,9 @@ public sealed class LechKril : CustomMonsterModel
 
     private int BrokkDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 29, 26);
 
-	private int DebuffColdApply => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 3, 2);
+	private int DebuffColdApply => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 3, 2) + (AscensionHelper.IsDread() ? 1 : 0);
 
-    private int DebuffHeatApply => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 3, 2);
+    private int DebuffHeatApply => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 3, 2) + (AscensionHelper.IsDread() ? 1 : 0);
 
 	public override DamageSfxType TakeDamageSfxType => DamageSfxType.ArmorBig;
 

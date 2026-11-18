@@ -258,7 +258,7 @@
     "WARFRAMEMOD-SICKENING_PULSE.title": "Sickening Pulse",
     "WARFRAMEMOD-SICKENING_PULSE.description": "Increase [gold]Debuffs[/gold] of an enemy by {Increment:diff()}.",
     "WARFRAMEMOD-SERENE_STORM.title": "Serene Storm",
-    "WARFRAMEMOD-SERENE_STORM.description": "Deal {Damage:diff()} damage.\nAdd a copy of this card into your [gold]Draw Pile[/gold].",
+    "WARFRAMEMOD-SERENE_STORM.description": "Deal {Damage:diff()} damage twice.\nAdd a copy of this card into your [gold]Draw Pile[/gold].",
     "WARFRAMEMOD-SPORES.title": "Spores",
     "WARFRAMEMOD-SPORES.description": "At the start of each turn, deal {SporesPower:diff()} damage and apply {SporesPower:diff()} [gold]Frail[/gold] to a random enemy.\nDeal an additional {Increment:diff()}% damage to [gold]Frail[/gold] enemies.",
     "WARFRAMEMOD-STALK_TO_HUNT.title": "Stalk to Hunt",

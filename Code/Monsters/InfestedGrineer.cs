@@ -27,7 +27,7 @@ public sealed class InfestedGrineer : CustomMonsterModel
 
     private int ScytheArmDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 37, 33);
 
-    private int BuffStrengthGain => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 3, 2);
+    private int BuffStrengthGain => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 3, 2) + (AscensionHelper.IsDread() ? 1 : 0);
 
 	public override DamageSfxType TakeDamageSfxType => DamageSfxType.Slime;
 

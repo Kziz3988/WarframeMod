@@ -256,7 +256,7 @@
     "WARFRAMEMOD-REBUILD_SHIELD.title": "重塑护盾",
     "WARFRAMEMOD-REBUILD_SHIELD.description": "回复你的[gold]护盾[/gold]，直到其达到[gold]护盾容量[/gold]。{InCombat:\n（获得{TotalShield:diff()}点[gold]护盾[/gold]）|}",
     "WARFRAMEMOD-SERENE_STORM.title": "宁静风暴",
-    "WARFRAMEMOD-SERENE_STORM.description": "造成{Damage:diff()}点伤害。\n将一张此牌的复制品加入你的[gold]抽牌堆[/gold]。",
+    "WARFRAMEMOD-SERENE_STORM.description": "造成{Damage:diff()}点伤害两次。\n将一张此牌的复制品加入你的[gold]抽牌堆[/gold]。",
     "WARFRAMEMOD-SICKENING_PULSE.title": "恶疾脉冲",
     "WARFRAMEMOD-SICKENING_PULSE.description": "将一名敌人的[gold]负面效果[/gold]的层数增加{Increment:diff()}。",
     "WARFRAMEMOD-SPORES.title": "毒性孢子",

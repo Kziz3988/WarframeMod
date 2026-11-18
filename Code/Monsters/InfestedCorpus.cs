@@ -32,9 +32,9 @@ public sealed class InfestedCorpus : CustomMonsterModel
 
     private int PoisonGrenadeDamage => 2;
 
-    private int PoisonGrenadeRepeat => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 10, 9);
+    private int PoisonGrenadeRepeat => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 10, 9) + (AscensionHelper.IsDread() ? 1 : 0);
 
-	private int SpawnPodDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 7, 6);
+	private int SpawnPodDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 7, 6) + (AscensionHelper.IsDread() ? 1 : 0);
 
     private int SpawnPodRepeat => 3;
     

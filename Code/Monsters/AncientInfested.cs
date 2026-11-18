@@ -25,7 +25,7 @@ public sealed class AncientInfested : CustomMonsterModel
 
 	public override int MaxInitialHp => AscensionHelper.GetValueIfAscension(AscensionLevel.ToughEnemies, 220, 210);
 
-    private int SporeBombDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 11, 9);
+    private int SporeBombDamage => AscensionHelper.GetValueIfAscension(AscensionLevel.DeadlyEnemies, 11, 9) + (AscensionHelper.IsDread() ? 1 : 0);
 
     private int SporeBombRepeat => 2;
 
